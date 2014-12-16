@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+<title>SIGCSE 2013</title>
+<link rel="icon" href="./images/icon.gif" type="image/gif">
+<script type="text/javascript" src="./script/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="./script/jquery-ui-1.8.18.custom.min.js"></script>
+<!--<script src='./script/stickyfloat.min.js' /></script>-->
+<script>
+	$(document).ready(function(){
+		// init the pluging and bind it to the #menu element
+		//$('.social').stickyfloat({lockBottom:true});
+       	$.ajax({type: "get",dataType:'json',url: './proxy.php?page=news',success: function(msg){
+       		var t=unescape(msg.content).replace(/\&quot;/g,'"');
+       		$('#news').html(t);
+       	}}); 
+	});
+	function hide_sponsors(){
+		$('.green_box').slideUp('fast');
+		$('#green_down').fadeIn('slow').css('display','inline');
+		
+	}
+	function show_sponsors(){
+		$('.green_box').slideDown('fast');
+		$('#green_down').hide();
+	}
+</script>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+<script type="text/javascript">
+			(function() {
+    			var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    			po.src = 'https://apis.google.com/js/plusone.js';
+    			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+    		})();
+		</script>
+<link rel="stylesheet" type="text/css" href="./css/style.css" media="screen"/>
+<link rel="stylesheet" type="text/css" href="./css/custom-theme/jquery-ui-1.8.18.custom.min.css" media="screen"/>
+<!--[if lt IE 8]>
+	<script type="text/javascript">
+		alert("Did you know that your Internet Explorer is out of date?\nTo experience the full functionality of this site, you should either update to IE 9 or use Firefox or Chrome.");
+	</script>
+<![endif]-->
+</head>
+<body>
+<div id="main_container">
+	<div id="header">
+    	<div id="logo">
+    		<a href="./index.php"><img src="./images/logo.jpg" alt="" title="" border="0"></a>
+    		<img src="./images/logoText.jpg" alt="" title="" border="0">
+    		<span style="color:white;font-size:2em;position:relative;top:-17px;font-family:Trebuchet MS;font-variant:small-caps">March 6-9, 2013</span>
+    		<img style="margin-left:90px" src="./images/logoM.jpg" alt="" title="" border="0">
+    	</div>
+        
+        <div id="menu">
+			   <ul id="nav-container" class="nav-container">
+      <li><a href="./index.php">home</a></li>
+      <li><a href="#">authors</a>
+         <ul style="width:230px;">
+         	<li><a href="./authors/call.php">call for participation</a></li><br/>
+         	<li><a href="./authors/papers.php">papers</a></li><br/>
+         	<li><a href="./authors/panels.php" >panels</a></li><br/>
+         	<li><a href="./authors/sessions.php" >special sessions</a></li><br/>
+         	<li><a href="./authors/studComp.php" >student research competition</a></li><br/>
+         	<li><a href="./authors/authworkshops.php" >workshops</a></li><br/>
+         	<li><a href="./authors/posters.php" >posters</a></li><br/>
+         	<li><a href="./authors/bof.php" >birds of a feather (bof)</a></li><br/>
+         	<li><a href="./authors/finalSub.php" >final submission instructions</a></li><br/>
+         	<li><a href="./authors/formatting.php">formatting/pub guidlines</a></li><br/>
+         	<li><a href="./authors/noShow.php" >presenter no-show policy</a></li><br/>
+         	<li><a href="./authors/createPdf.php" >creating pdfs</a></li><br/>
+         </ul>
+      </li>
+      <li><a href="#" >attendees</a>
+         <ul style="width:230px;">
+         	<li><a href="./attendees/generalInfo.php" >general information</a></li><br/>
+         	<li><a href="http://db.grinnell.edu/sigcse/sigcse2013/Program/Program.asp">symposium program</a></li><br/>
+         	<li><a href="./attendees/keynotes.php" >keynote speakers</a></li><br/>
+         	<li><a href="./attendees/supporter.php" >supporter sessions</a></li><br/>
+         	<li><a href="./attendees/workshops.php" >workshop schedule</a></li><br/>
+         	<li><a href="./pdf/SIGCSE_13_Exhibit_Guide.pdf" >exhibit guide (pdf)</a></li><br/>
+         	<li><a href="./attendees/preSymposiumEvents.php" >pre-symposium events</a></li><br/>
+         	<li><a href="./attendees/studentResearch.php" >student research competition</a></li><br/>
+         	<li><a href="./attendees/symposiumEvaluations.php" >symposium evaluations</a></li><br/><!--
+         	<li><a href="./attendees/registration.php" >registration</a></li><br/>-->
+         	<li><a href="./attendees/symposiumFees.php" >symposium fees</a></li><br/>
+         	<li><a href="http://www.regonline.com/sigcse2013">registration</a></li><br/>
+         	<li><a href="http://www.denver.org/visitDenver/sigcse2013" target="_blank">visit denver</a></li><br/>
+         	<li><a href="./attendees/travelInformation.php" >travel information</a></li><br/>
+         	<li><a href="./attendees/accommodations.php" >accommodations</a></li><br/>
+         	<li><a href="./attendees/visaInformation.php" >visa information</a></li><br/>
+         	<li><a href="./attendees/kidsCamp.php" >kids camp</a></li><br/>
+         	<!--<li><a href="./attendees/floorPlans.php" >floor plans</a></li><br/>
+         -->
+         </ul>
+      </li>
+      <li><a href="#" >reviewers</a>
+         <ul style="width:300px;">
+         	<li><a href="./reviewers/information.php" >reviewer information</a></li><br/>
+         	<li><a href="./reviewers/paperReview.php" >paper review guide</a></li><br/>
+         	<li><a href="./reviewers/panelReview.php" >panel Review guide</a></li><br/>
+         	<li><a href="./reviewers/sessionReview.php" >special session review guide</a></li><br/>
+         	<li><a href="./reviewers/workshopReview.php" >workshop review guide</a></li><br/>
+         	<li><a href="./reviewers/birdReview.php" >birds of a feathers (bofs) review guide</a></li><br/>
+         	<li><a href="./reviewers/posterReview.php" >poster review guide</a></li><br/>
+         	<li><a href="./reviewers/metaReviews.php" >meta-reviews</a></li><br/>
+         	<li><a href="./reviewers/reviewsFaq.php" >reviewers faqs</a></li><br/>
+         </ul>
+      </li>
+      
+      <li><a href="#" >students</a>
+         <ul style="width:230px;">
+         	<li><a href="./students/involved.php" >how can i get involved?</a></li><br/>
+         	<li><a href="./students/volunteer.php" >student volunteers</a></li><br/>
+         </ul>
+      </li>
+      <li><a href="./exhibitors.php" >exhibitors/supporters</a></li>
+     <!-- <li><a href="./faqs.php" >faq</a></li>-->
+      <li><a href="./committee.php">committee</a></li>
+  </ul>
+  <script type="text/javascript">
+	//hilite menu
+  	$('a[href$="index.php"]').addClass('mCurrent');  </script> 
+    	</div>
+        
+    </div>
+	<div class="wrap">
+    <div class="green_box">
+        <div class="text_content" style="margin-left:100px">
+       		<h1>Platinum Plus Supporter</h1>
+        	<a href="http://www.microsoft.com/faculty"><img src="./images/logos/mslogoWhite.png"/></a>
+        	<h1>Silver Supporter</h1>
+        	<a href="https://academy.oracle.com/"><img src="./images/logos/oracle.png"/></a>
+  			<h1 style="padding-top:10px;font-size:1em">
+        		<a href="./pdf/SIGCSE13_EP_Rev0508.pdf" target="_blank" style="color:white;text-decoration:underline;">Support and Exhibiting Opportunities</a>
+        	</h1>
+        </div>
+        
+        <div id="right_nav" class="text_content">
+            <h1>Platinum Supporters</h1>
+            <a style="" href="http://www.abet.org/"><img src="./images/logos/ABET_LOGO.png"/></a><br/>
+        	<a style="" href="http://www.google.com/edu/"><img style="margin-top:15px;" src="./images/logos/google.png"/></a>
+        	<a href="http://software.intel.com/academic" style="position:relative;left:10px;"><img src="./images/logos/intellogo2.png"/></a>
+        	<!--
+        	<h1>Additional Support Provided By:</h1>
+        	<div style="width:270px;height:43px;background:grey;"></div> -->
+        </div>       
+        
+    	<div style="margin-left:880px;font-size:2em;color:#fff;cursor:pointer;" onclick="hide_sponsors()" id="green_up">&and;</div>
+    	<div style="clear:both;padding-top:20px;text-align:center;">
+    	</div>
+    </div><!--end of green box-->
+	<div id="main_content">
+    	<div style="margin-left:860px;font-size:2em;color:#50a842;cursor:pointer;display:none;" onclick="show_sponsors()" id="green_down">&or;</div>
+    	     
+<script type="text/javascript">
+    $(document).ready(function(){
+       	/*$.ajax({type: "get",dataType:'json',url: 'inc/proxy.php?page=home',success: function(msg){
+       		var t=unescape(msg.content).replace(/\&quot;/g,'"');
+       		$('#cont').html(t);
+       	}});*/
+    });   
+</script>
+	<div id="cont">
+		<h2>Welcome to SIGCSE 2013</h2>
+<p><a href="http://www.streamtext.net/player?event=CFI-SIGCSE" target="_blank">Captioning</a> is available</p>
+<p>For the ballrooms ABC, the wireless username/password are ACM13/ACM13 Note:  It's different for the hotel rooms - ACM2013/ACM2013</p>
+<p>SIGCSE 2013 continues our long tradition of bringing together colleagues from around the world to present papers, panels, posters, special sessions, and workshops, and to discuss computer science education in birds-of-a-feather sessions and informal settings. The SIGCSE Technical Symposium addresses problems common among educators working to develop, implement and/or evaluate computing programs, curricula, and courses. The symposium provides a forum for sharing new ideas for syllabi, laboratories, and other elements of teaching and pedagogy, at all levels of instruction.</p>
+<p>Submissions in line with the conference theme, "The Changing Face of Computing", are ideal. The theme focuses our attention on how computing is changing, and how we must change in education to address the changes in computing.</p>
+<p>The conference is being held at the Sheraton Downtown Denver, March 6-9, 2013.</p>
+<h2>Best Paper of 2013 Conference</h2>
+<p><a href="https://dl.acm.org/citation.cfm?id=2445196.2445248&coll=DL&dl=GUIDE&CFID=400251913&CFTOKEN=25267007">Retaining nearly one-third more majors with a trio of instructional best practices in CS1</a></p>
+<ul><li>Leo Porter, Skidmore College, Saratoga Springs, NY, USA</li>
+<li>Beth Simon, University of California, San Diego, La Jolla, CA, USA</li>
+</ul>
+
+<!--<h2>Call for participation</h2>
+<p><a href="authors/call.php">View the SIGCSE 2013 call for participation.</a></p>-->
+<h2>Denver</h2>
+<p><a href="http://www.denver.org/visitdenver/SIGCSE2013">Discover Denver!</a></p>
+	</div>
+    <div style=" clear:both;"></div>
+    </div><!--end of main content-->
+      <div id="footer">
+      <div id="footerInner">
+     	<div class="copyright">
+     		<div  style="">
+			<g:plusone annotation="none""></g:plusone>
+		</div>
+		<div style="margin:3px 0">
+			<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.sigcse.org/sigcse2013/" data-count="none">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+		</div>
+		<div style="width:auto;">
+			<div class="fb-like" data-href="http://www.sigcse.org/sigcse2013/" style="float:left;" data-send="false" data-layout="button_count" data-width="40" data-show-faces="false"></div>
+		</div>
+        </div>
+    	<div class="footer_links">
+    		<!--<div style="width:298px;height:74px;background:white;padding:3px;">
+     			<a href=""><img src="./images/acm_logo.gif" alt="" title="" border="0"></a>
+     		</div>
+     		<div style="width:335px;height:53px;padding:3px;">
+        		<a href=""><img src="./images/sigcse.gif"/></a>
+			</div>-->
+			<div style="padding:7px 0;">
+     			<a href=""><img style="float:left;" src="./images/acmLogo.gif" alt="" title="" border="0"></a>
+        		<a href=""><img style="float:left;" src="./images/sigcse.gif"/></a>
+			</div>
+        </div>  
+        <!--
+        <div class="social">
+		<div  style="float:left;">
+			<g:plusone annotation="none""></g:plusone>
+		</div>
+		<div style="float:left;margin:0 5px;">
+			<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.sigcse.org/sigcse2013/" data-count="none">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+		</div>
+		<div style="float:left;width:30px;">
+			<div class="fb-like" data-href="http://www.sigcse.org/sigcse2013/" style="float:left;" data-send="false" data-layout="button_count" data-width="40" data-show-faces="false"></div>
+		</div>
+		<h2 style="clear:both;">twitter:</h2>
+		<div style="width:165px;height:140px;whitespace:no-wrap;overflow:auto;font-size:1em;color:#416271;">
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent dictum suscipit lectus.<hr/> Sed placerat, mi vitae ultrices tristique, ligula lectus vehicula nibh, vitae condimentum est mi id quam.<hr/> Maecenas tincidunt iaculis arcu sed pretium?<hr/> Sed dignissim magna vel tellus tempor interdum.<hr/> Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;<hr/> Sed porta dolor et est tempor vel suscipit odio volutpat. Quisque vitae felis sit amet dui sollicitudin vulputate. <hr/>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis a mauris nec nunc posuere fringilla! Aliquam cursus elit quis sem convallis ultrices! Donec sit amet pharetra tortor.<hr/> Ut viverra metus dictum mauris tempor hendrerit.	
+		</div>
+		<h2>news:</h2>
+		<div style="width:165px;height:140px;whitespace:no-wrap;overflow:auto;font-size:1em;color:#416271;" id="news" class="news_archive">
+		</div>
+	</div>
+        -->
+    </div>
+    </div>
+    </div>
+</div> <!--end of main container-->
+
+</body></html> 

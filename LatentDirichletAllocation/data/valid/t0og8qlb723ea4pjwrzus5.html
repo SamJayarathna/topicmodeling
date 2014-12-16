@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>POPL 2015: 42nd ACM SIGACT-SIGPLAN Symposium on Principles of Programming Languages</title>
+<style type="text/css">
+  body,h1,h2,h3,h4,p,div,td { font-family: Arial, Helvetica, sans-serif; line-height: 120% }
+  a.acmlogo { float: left; }
+
+  table.tt { table-layout: fixed; width: 100%; border-spacing: 5px; }
+  
+  a:link    {text-decoration: none; color: #0033BB}
+  a:visited {text-decoration: none; color: #0033BB;}
+  a:active  {text-decoration: none; color: #0033BB;}
+  a:hover   {text-decoration: underline; color: #0033BB;}
+
+  .red          {text-decoration: none; color: #FF3333}
+  a.red:link    {text-decoration: none; color: #FF3333}
+  a.red:visited {text-decoration: none; color: #FF3333;}
+  a.red:active  {text-decoration: none; color: #FF3333;}
+  a.red:hover   {text-decoration: underline; color: #FF3333;}
+ 
+  
+  h1 { text-align: left; color: #15317e; font-size: 150% }
+  h2 { border-style: solid; border-width: thin;
+      font-size: 120%;
+      color: #15317e;
+      padding-top: 8px;
+      padding-bottom: 8px;
+      background-color: #afdcec;
+      text-align: center;
+      clear: both; border-radius: 5px;
+  }
+  h3 { margin-bottom: 0; font-size: 110%; margin-top:5px; }
+  h4 { margin-bottom: 0; }
+
+  td.cal { text-align: center; padding-left: 10px; padding-right: 10px }
+  td.logos { text-align: center }
+
+  .clogo { margin: 10px; vertical-align: middle; }
+
+@media print { #menu, #menu2 { display:none; } }
+
+@media screen {
+  #wrapper { margin-left: auto; margin-right: auto; width: 800px; }
+  #main { padding: 15px; float:left; width: 800px }
+  #menu { padding: 0.5em 0 0.5em 0; width: 800px; text-align: center; 
+          border-style: solid; border-width: thin; border-radius: 5px;
+          background-color: #afdcec; }
+  #menu2 { padding: 10px; margin-top: 10px; width: 230px; 
+          border-style: solid; border-width: thin; float:right; border-radius: 5px;
+          background-color: #afdcec; }
+}
+
+@media screen and (max-device-width: 480px) {
+  #wrapper, #main { padding:0; width: 100%!important; }
+  #menu { padding: 0.5em 0 0.5em 0; width: 100%; text-align: center; 
+          border-style: solid; border-width: thin; border-radius: 5px;
+          background-color: #afdcec; }
+  #menu2 { display:none!important; }
+}
+
+  #footer { clear: both; text-align: center; font-size: small; }
+ 
+  .mitem { display: inline; padding: 0 0.5em 0 0.5em; }
+  td.desc { width: 200px; }
+  td.photo { width: 95px; }
+  td.datesh { width: 240px; }
+
+  table.dates { margin-top: 0em; }
+  div.indent { margin-left: +1em; }
+
+
+</style>
+<script type="text/javascript"> 
+function toggle(showHideDiv,switchTextDiv) {
+	var ele = document.getElementById(showHideDiv);
+	var text = document.getElementById(switchTextDiv);
+	if(ele.style.display == "block") {
+    		ele.style.display = "none";
+		text.innerHTML = "<i>[Show]</i>";
+  	}
+	else {
+		ele.style.display = "block";
+		text.innerHTML = "<i>[Hide]</i>";
+	}
+}
+</script>
+</head>
+<body>
+
+<div id="wrapper">
+
+<div id="menu">
+<!--div class="mitem"><a href="index.html">Home</a></div-->
+<!--div class="mitem"><a href="cfp.html">Call for papers</a></div-->
+<div class="mitem"><a href="posters.html">Call for posters</a></div>
+<div class="mitem"><a href="tutorials.html">Call for tutorials</a></div>
+<div class="mitem"><a href="funding.html">Funding info</a></div>
+<!--div class="mitem"><a href="http://popl.lambda-calcul.us/2015/">Call for co-located events</a></div-->
+<div class="mitem"><a href="http://w3.kwconferences.com/popl/visa.html">Local info</a></div>
+<div class="mitem"><a href="sponsor.html">Sponsorship info</a></div>
+</div>
+      
+<div id="main">
+<table class="tt"><tr><td style="width:320px">
+<img src="popl2015-logo.png" style="width:302px" alt="POPL 2015 logo" /><br />
+</td><td>
+<h1>POPL 2015: 42nd ACM SIGPLAN-SIGACT Symposium on Principles of Programming Languages</h1>
+<h3>Tata Institute of Fundamental Research, Mumbai, India<br />
+January 12-18, 2015</h3>
+</td></tr></table>
+
+<h2>Scope</h2>
+
+<p>The annual Symposium on Principles of Programming Languages is a forum
+for the discussion of all aspects of programming languages and
+programming systems. Both theoretical and experimental papers are
+welcome, on topics ranging from formal frameworks to experience
+reports.</p>
+
+<p>For more information, please see the <a href="cfp.html">call for papers</a>.
+This year, authors of accepted POPL papers may submit their artifacts to the
+<a href="http://popl15-aec.cs.umass.edu/">artifact evaluation committee</a>.</p>
+
+<p>A document that details principles underlying organizational and reviewing
+policies can be found <a href="../PrinciplesofPOPL.pdf">here</a>.</p>
+
+<p> A document containing frequently asked questions about the reviewing and
+submission process, especially as it pertains to double-blind reviewing, can be
+found <a href="http://www.cs.princeton.edu/~dpw/popl/15/dbr-faq.html">here</a>.
+
+<p>
+POPL is sponsored by:
+<a href="http://www.acm.org/"><img height="60" class="clogo" src="logos/acm-logo.png" alt="ACM" /></a>
+<a href="http://www.sigplan.org/"><img height="45" class="clogo" src="logos/sigplan.png" alt="SIGPLAN" /></a>
+</p>
+
+<h2>Important Information</h2>
+
+<table class="dates"><tbody>
+
+<tr><td class="datesh"><b>Paper registration</b></td>
+<td><b><a style="text-decoration:line-through" href="http://www.timeanddate.com/worldclock/fixedtime.html?msg=POPL+2015+Paper+Registration&amp;iso=20140703T15&amp;p1=179">3 July 2014, 15:00 US EDT (UTC-4)</a></b>
+&nbsp; (<a href="cfp.html">Call for papers</a>)
+</td>
+</tr>
+
+<tr><td class="datesh"><b>Paper submission</b></td>
+<td><b><a style="text-decoration:line-through" href="http://www.timeanddate.com/worldclock/fixedtime.html?msg=POPL+2015+Paper+Submission&amp;iso=20140708T15&amp;p1=179">8 July 2014, 15:00 US EDT (UTC-4)</a></b></td>
+</tr>
+
+<tr><td class="datesh"><b>Submission URL</b></td>
+<td><b><a class="red" href="https://popl15.hotcrp.com/">https://popl15.hotcrp.com/</a></b> (Closed: there were 227 submissions)</td>
+</tr>
+   
+<tr><td class="datesh"><b>Author response period</b></td>
+<td><a style="text-decoration:line-through" href="http://www.timeanddate.com/worldclock/fixedtime.html?msg=POPL+2015+Author+Response&amp;iso=20140910T12&amp;p1=179">6 Sep. 2014, 12:00 US EDT - 10 Sep. 2014, 12:00 US EDT (UTC-4)</a></td></tr>
+
+<tr><td class="datesh"><b>Author notification</b></td><td>30 September 2014</td></tr>
+
+<tr><td class="datesh"><b>Camera-ready deadline</b></td><td>28 October 2014</td></tr>
+
+<tr><td class="datesh"><b>Main conference</b></td><td>15-17 January 2015</td></tr>
+<tr><td class="datesh"><b>Co-located events</b></td><td>12-14,18 January 2015</td></tr>
+<!--tr><td class="datesh"><b><a href="http://popl.lambda-calcul.us/2015/">Call for co-located events</a></b></td>
+<td>Deadline: <b style="color:red">26 April 2014</b></td-->
+<tr><td class="datesh"><b><a href="tutorials.html">Call for tutorials</a></b></td>
+<td>Submission Deadline: <b style="text-decoration:line-through">22 September</b>; Notification: 1 October</td>
+<tr><td class="datesh"><b><a href="posters.html">Call for student posters</a></b></td>
+<td>Submission Deadline: <b style="color:red">29 September (Extended!)</b>; Notification: 1 October</td>
+</tr>
+
+<tr><td class="datesh"><b>Registration URL</b></td>
+<td><b><a class="red" href="https://regmaster4.com/2015conf/POPL15/register.php">https://regmaster4.com/2015conf/POPL15/register.php</a></b></td>
+</tr>
+
+<tr><td class="datesh"><b>Pre-registration deadline</b></td>
+<td><b style="color:red">10 October 2014</b> (for visa purposes)</td>
+</tr>
+
+ </tbody></table>
+
+<p>
+Please visit the <a href="http://w3.kwconferences.com/popl/visa.html">Local Information
+page</a> where you will find information about the venue, nearby hotels and
+<em>getting a visa</em> to travel to India.</p>
+
+<p><a href="funding.html">Sources of funding for attending POPL (especially for students)</a></p>
+
+
+<h2>Co-located events</h2>
+
+<table style="margin:auto"><tr>
+<td class="cal">Mon<br/>12 Jan</td>
+<td class="cal">Tue<br />13 Jan</td>
+<td class="cal">Wed<br />14 Jan</td>
+<td class="cal">Thu<br />15 Jan</td>
+<td class="cal">Fri<br />16 Jan</td>
+<td class="cal">Sat<br />17 Jan</td>
+<td class="cal">Sun<br />18 Jan</td></tr>
+<tr><td colspan="3" style="text-align:center;background:#ff3333;border-radius:3px">CPP</td>
+<td colspan="3" rowspan="4" style="text-align:center;background:#3386cc;border-radius:3px"><b>POPL</b></td>
+<td style="text-align:center;background:#aa3333;border-radius:3px">CoqPL</td></tr>
+<tr><td colspan="3" style="text-align:center;background:#ffcc33">VMCAI</td>
+<td style="text-align:center;background:#aaaa00;border-radius:3px">OBT</td></tr>
+<tr><td style="text-align:center;background:#ccff33;border-radius:3px">PLVNET</td><td colspan="2" style="text-align:center;background:#33cc33">PEPM</td>
+<td style="text-align:center;background:#11aa11;border-radius:3px">WEPL</td></tr>
+<tr><td>&nbsp;</td><td style="text-align:center;background:#3386cc;border-radius:3px">Tutorials</td>
+<td style="text-align:center;background:#cc33cc;border-radius:3px">PLMW</td>
+<td>&nbsp;</td></tr>
+<!--td style="text-align:center;background:#6633ff;border-radius:3px">Posters</td-->
+</table>
+
+<ul>
+<li><a href="http://cpp2015.inria.fr/">CPP</a>: Certified Programs and Proofs (12-14 January)</li>
+<li><a href="http://coqpl.cs.washington.edu/">CoqPL</a>: Coq for Programming Languages - A Coq users and developers meeting (18 January)</li>
+<li><a href="http://obt15.rice.edu/">OBT</a>: Off the Beaten Track: New Frontiers for Programming Languages Research (18 January)</li>
+<li><a href="http://conf.researchr.org/home/pepm2015">PEPM</a>: Partial Evaluation and Program Manipulation (13-14 January)</li>
+<!--li><a href="">PiP</a>: Principles in Practice (18 January)</li-->
+<li><a href="http://plmw15.iisc-seal.net/">PLMW</a>: Programming Languages Mentoring Workshop (14 January)</li>
+<li><a href="http://research.microsoft.com/en-us/events/vmcai2015/">VMCAI</a>: Verification, Model Checking and Abstract Interpretation (12-14 January)</li>
+<li><a href="http://ecee.colorado.edu/plvnet2015/">PLVNET</a>: Programming Languages and Verification Technology for
+Networking (12 January)</li>
+<li><a href="http://events.csa.iisc.ernet.in/WEPL/">WEPL</a>: IMPECS-POPL
+Workshop on Emerging Research and Development Trends in Programming Languages (18 January)</a>
+</ul>
+
+<h2>Organization</h2>
+
+<div class="indent">
+<table class="tt"><tbody>
+<tr><td class="desc"><b>General Chair:</b></td>
+<td class="photo"><img alt="" src="sriram.jpg" height="89" /></td><td>
+<a href="http://research.microsoft.com/en-us/people/sriram/">Sriram Rajamani</a>
+<br />Microsoft Research
+</td></tr>
+
+<tr><td class="desc"><b>Local Chair:</b></td>
+<td class="photo"><img alt="" src="pandya.jpg" height="89" /></td><td>
+<a href="http://www.tcs.tifr.res.in/~pandya/">Paritosh Pandya</a>
+<br />Tata Inst. of Fundamental Research
+</td></tr>
+
+
+<tr><td class="desc"><b>Program Chair:</b></td>
+<td class="photo"><img alt="" src="walker.jpg" height="89" /></td><td>
+<a href="http://www.cs.princeton.edu/~dpw/">David Walker</a>
+<br />Princeton University
+</td></tr>
+
+<tr><td class="desc"><b>Workshop Chair:</b></td>
+<td class="photo"><img alt="" src="vanhorn.jpg" height="89" /></td><td>
+<a href="http://www.cs.umd.edu/~dvanhorn/">David Van Horn</a><br />
+University of Maryland</td></tr>
+
+<tr><td class="desc"><b>Treasurer:</b></td>
+<td class="photo"><img alt="" src="tate.jpg" height="89" /></td>
+<td><a href="http://www.cs.cornell.edu/~ross/">Ross Tate</a><br />Cornell University</td></tr>
+
+<tr><td class="desc"><b>Publicity Chairs:</b></td>
+<td class="photo"><img alt="" src="ruzica.jpg" height="89" /></td>
+<td><a href="http://www.cs.yale.edu/homes/piskac/">Ruzica Piskac</a><br />Yale University</td></tr>
+
+<tr><td class="desc">&nbsp;</td>
+<td class="photo"><img alt="" src="viktor.jpg" height="89" /></td>
+<td><a href="http://www.mpi-sws.org/~viktor/">Viktor Vafeiadis</a><br />MPI-SWS</td></tr>
+
+<tr><td class="desc"><b>Student Activities Chair:</b></td>
+<!--td class="photo"><img alt="" src="turon.jpg" height="89" /></td>
+<td><a href="http://www.mpi-sws.org/~turon/">Aaron Turon</a><br />MPI-SWS</td></tr-->
+<td class="photo"><img alt="" src="matt.jpg" height="89" /></td>
+<td><a href="http://research.microsoft.com/en-us/people/mattpark/">Matthew Parkinson</a><br />Microsoft Research</td></tr>
+
+<tr><td class="desc"><b>Program Committee:</b></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr></tbody></table>
+
+<table style="border-spacing:4px;padding-left:1cm"><tbody>
+<tr><td><a href="http://www.umut-acar.org">Umut Acar</a></td><td> Carnegie Mellon University</td></tr>
+<tr><td><a href="http://www.ccs.neu.edu/home/amal/">Amal Ahmed</a></td><td> Northeastern University</td></tr>
+<tr><td><a href="http://www0.cs.ucl.ac.uk/staff/J.Alglave/">Jade Alglave</a></td><td> University College London</td></tr>
+<tr><td><a href="http://prosecco.gforge.inria.fr/personal/karthik/">Karthikeyan Bhargavan</a></td><td> Inria</td></tr>
+<tr><td><a href="http://www.cs.berkeley.edu/~bodik/">Rastislav Bodik</a></td><td> UC Berkeley</td></tr>
+<tr><td><a href="http://www.pps.univ-paris-diderot.fr/~gc/">Giuseppe Castagna</a></td><td> CNRS - Universit&eacute; Paris Diderot</td></tr>
+<tr><td><a href="https://sites.google.com/site/schandraacmorg/">Satish Chandra</a></td><td> Samsung Electronics</td></tr>
+<tr><td><a href="http://www.cs.rice.edu/~sc40/">Swarat Chaudhuri</a></td><td> Rice University</td></tr>
+<tr><td><a href="http://goto.ucsd.edu/~ravi/">Ravi Chugh</a></td><td> UC San Diego</td></tr>
+<tr><td><a href="http://www.di.ens.fr/~cousot/">Patrick Cousot</a></td><td> CIMS, New York University</td></tr>
+<tr><td><a href="http://www.eecs.northwestern.edu/~robby/">Robby Findler</a></td><td> Northwestern University</td></tr>
+<tr><td><a href="https://www.cs.umd.edu/~jfoster/">Jeff Foster</a></td><td> University of Maryland</td></tr>
+<tr><td><a href="http://research.microsoft.com/en-us/um/people/fournet/">C&eacute;dric Fournet</a></td><td> Microsoft Research</td></tr>
+<tr><td><a href="http://www.mpi-sws.org/~dg/">Deepak Garg</a></td><td> MPI-SWS</td></tr>
+<tr><td><a href="https://people.cs.umass.edu/~arjun/">Arjun Guha</a></td><td> University of Massachusetts, Amherst</td></tr>
+<tr><td><a href="http://www.cs.ox.ac.uk/ralf.hinze/">Ralf Hinze</a></td><td> University of Oxford</td></tr>
+<tr><td><a href="http://www.tcs.ifi.lmu.de/mitarbeiter/martin-hofmann">Martin Hofmann</a></td><td> Ludwig-Maximilians-Universitat</td></tr>
+<tr><td><a href="http://www.comp.nus.edu.sg/~joxan/">Joxan Jaffar</a></td><td> Singapore</td></tr>
+<tr><td><a href="http://cs.appstate.edu/~johannp/">Patricia Johann</a></td><td> Appalachian State University</td></tr>
+<tr><td><a href="http://www-kb.is.s.u-tokyo.ac.jp/~koba/">Naoki Kobayashi</a></td><td> University of Tokyo</td></tr>
+<tr><td><a href="http://www.cse.unsw.edu.au/~keller/">Gabriele Keller</a></td><td> University of New South Wales and NICTA</td></tr>
+<tr><td><a href="http://dlicata.web.wesleyan.edu">Dan Licata</a></td><td> Wesleyan University</td></tr>
+<tr><td><a href="http://pag.gatech.edu/naik/">Mayur Naik</a></td><td> Georgia Institute of Technology</td></tr>
+<tr><td><a href="http://www.irisa.fr/celtique/pichardie/">David Pichardie</a></td><td> ENS Rennes / IRISA</td></tr>
+<tr><td><a href="http://www.cs.mcgill.ca/~bpientka/">Brigitte Pientka</a></td><td> McGill University</td></tr>
+<tr><td><a href="http://www.cs.uiuc.edu/~madhu/">Madhusudan Parthasarathy</a></td><td> University of Illinois, Urbana-Champaign</td></tr>
+<tr><td><a href="http://pauillac.inria.fr/~fpottier/">Fran&ccedil;ois Pottier</a></td><td> Inria</td></tr>
+<tr><td><a href="http://research.microsoft.com/en-us/people/qadeer/">Shaz Qadeer</a></td><td> Microsoft Research</td></tr>
+<tr><td><a href="http://research.microsoft.com/en-us/people/grama/">Ganesan Ramalingam</a></td><td> Microsoft Research</td></tr>
+<tr><td><a href="http://gretay.org/">Greta Yorsh</a></td><td> Queen Mary University of London</td></tr>
+</tbody></table>
+
+<p><b>Artifact Evaluation Committee Chairs:</b><p>
+ 
+<table style="border-spacing:4px;padding-left:1cm"><tbody>
+<tr><td><a href="https://people.cs.umass.edu/~arjun/">Arjun Guha</a></td><td> University of Massachusetts, Amherst</td></tr>
+<tr><td><a href="https://www.cs.purdue.edu/homes/jv/">Jan Vitek</a></td><td> Purdue University</td></tr>
+</table>
+
+<p><b>External Reviewing Committee:</b> &nbsp; <a id="extid" href="javascript:toggle('extcomm', 'extid');"><i>[Show]</i></a></p>
+
+<div id="extcomm" style="display:none">
+<table style="border-spacing:4px;padding-left:1cm"><tbody>
+<tr><td><a href="http://www.tcs.ifi.lmu.de/~abel">Andreas Abel</a></td><td>Gothenburg University</td></tr>
+<tr><td><a href="http://www.disi.unige.it/person/AnconaD/">Davide Ancona</a></td><td>DIBRIS - Universit&agrave; di Genova</td></tr>
+<tr><td><a href="http://homepages.inf.ed.ac.uk/da">David Aspinall</a></td><td>University of Edinburgh</td></tr>
+<tr><td><a href="http://www.cs.ox.ac.uk/michael.benedikt/">Michael Benedikt</a></td><td>Oxford University</td></tr>
+<tr><td><a href="http://research.microsoft.com/en-us/um/people/nick/">Nick Benton</a></td><td>Microsoft Research</td></tr>
+<tr><td><a href="http://research.microsoft.com/~jjb">Josh Berdine</a></td><td>Microsoft Research</td></tr>
+<tr><td><a href="http://www.cs.umass.edu/~emery">Emery Berger</a></td><td>University of Massachusetts Amherst</td></tr>
+<tr><td><a href="http://www.cs.au.dk/~birke">Lars Birkedal</a></td><td>Aarhus University</td></tr>
+<tr><td><a href="http://www.cse.iitb.ac.in/~supratik/">Supratik Chakraborty</a></td><td>IIT Bombay</td></tr>
+<tr><td><a href="http://www.cs.colorado.edu/~bec/">Bor-Yuh Evan Chang</a></td><td>University of Colorado Boulder</td></tr>
+<tr><td><a href="http://arthur.chargueraud.org">Arthur Charguéraud</a></td><td>Inria</td></tr>
+<tr><td><a href="http://www.cs.umd.edu/~avik">Avik Chaudhuri</a></td><td>Facebook</td></tr>
+<tr><td><a href="http://www.comp.nus.edu.sg/~chinwn">Wei-Ngan Chin</a></td><td>National University of Singapore</td></tr>
+<tr><td><a href="http://people.seas.harvard.edu/~chong/">Stephen Chong</a></td><td>Harvard University</td></tr>
+<tr><td><a href="http://faculty.cs.gwu.edu/~clarkson/">Michael Clarkson</a></td><td>George Washington University</td></tr>
+<tr><td><a href="http://www.irisa.fr/celtique/demange/">Delphine Demange</a></td><td>IRISA - University of Rennes 1</td></tr>
+<tr><td><a href="http://www.doc.ic.ac.uk/~afd">Alastair Donaldson</a></td><td>Imperial College London</td></tr>
+<tr><td><a href="https://parasol.tamu.edu/~gdr/">Gabriel Dos Reis</a></td><td>Microsoft</td></tr>
+<tr><td><a href="http://www.mpi-sws.org/~dreyer/">Derek Dreyer</a></td><td> MPI-SWS</td></tr>
+<tr><td><a href="http://software.imdea.org/people/michael.emmi/index.html">Michael Emmi</a></td><td>IMDEA Software Institute</td></tr>
+<tr><td><a href="http://staff.ustc.edu.cn/~xyfeng">Xinyu Feng</a></td><td>University of Science and Technology of China</td></tr>
+<tr><td><a href="http://www.cs.tufts.edu/~kfisher/Kathleen_Fisher/Home.html">Kathleen Fisher</a></td><td>Tufts University</td></tr>
+<tr><td><a href="http://www.cs.cornell.edu/~jnfoster/">Nate Foster</a></td><td>Cornell University</td></tr>
+<tr><td><a href="http://www.pierresoft.com/pierre.geneves/">Pierre Genevès</a></td><td>CNRS</td></tr>
+<tr><td><a href="http://www.cs.bham.ac.uk/~drg/">Dan Ghica</a></td><td>University of Birmingham</td></tr>
+<tr><td><a href="http://research.microsoft.com/~adg">Andrew D. Gordon</a></td><td>Microsoft Research and University of Edinburgh</td></tr>
+<tr><td><a href="http://homes.cs.washington.edu/~djg/">Dan Grossman</a></td><td>University of Washington</td></tr>
+<tr><td><a href="http://research.microsoft.com/en-us/um/people/sumitg/index.html">Sumit Gulwani</a></td><td>Microsoft Research</td></tr>
+<tr><td><a href="http://www.diku.dk/~henglein">Fritz Henglein</a></td><td>University of Copenhagen</td></tr>
+<tr><td><a href="http://www.comp.nus.edu.sg/~hobor/">Aquinas Hobor</a></td><td>National University of Singapore</td></tr>
+<tr><td><a href="http://www.cs.yale.edu/~hoffmann">Jan Hoffmann</a></td><td>Yale University</td></tr>
+<tr><td><a href="http://research.nii.ac.jp/~hu/">Zhenjiang Hu</a></td><td>National Institute of Informatics</td></tr>
+<tr><td><a href="http://www.freeflygeek.com/">Shan Shan Huang</a></td><td>LogicBlox, Inc.</td></tr>
+<tr><td><a href="http://ropas.snu.ac.kr/~gil.hur/">Chung-Kil Hur</a></td><td>Seoul National University</td></tr>
+<tr><td><a href="http://www.fos.kuis.kyoto-u.ac.jp/~igarashi/">Atsushi Igarashi</a></td><td>Kyoto University</td></tr>
+<tr><td><a href="http://www.cs.cornell.edu/~kozen">Dexter Kozen</a></td><td>Cornell University</td></tr>
+<tr><td><a href="http://www.cs.bham.ac.uk/~krishnan">Neelakantan Krishnaswami</a></td><td>University of Birmingham</td></tr>
+<tr><td><a href="http://www.csa.iisc.ernet.in/~raghavan/">Raghavan Komondoor</a></td><td>Indian Institute of Science, Bangalore</td></tr>
+<tr><td><a href="http://research.microsoft.com/~shuvendu">Shuvendu Lahiri</a></td><td>Microsoft Research</td></tr>
+<tr><td><a href="http://gallium.inria.fr/~xleroy/">Xavier Leroy</a></td><td>Inria</td></tr>
+<tr><td><a href="http://research.microsoft.com/~livshits/">Ben Livshits</a></td><td>Microsoft Research</td></tr>
+<tr><td><a href="http://www.sps.cs.uni-saarland.de/maffei/">Matteo Maffei</a></td><td>CISPA, Saarland University</td></tr>
+<tr><td><a href="http://www.mpi-sws.org/~rupak/">Rupak Majumdar</a></td><td>Max Planck Institute for Software Systems</td></tr>
+<tr><td><a href="http://faculty.cs.byu.edu/~jay">Jay McCarthy</a></td><td>Brigham Young University</td></tr>
+<tr><td><a href="http://matt.might.net/">Matthew Might</a></td><td>University of Utah</td></tr>
+<tr><td><a href="http://www.di.ens.fr/~mine/">Antoine Min&eacute;</a></td><td>CNRS &amp; &Eacute;cole normale sup&eacute;rieure</td></tr>
+<tr><td><a href="http://warwick.ac.uk/amurawski">Andrzej Murawski</a></td><td>University of Warwick</td></tr>
+<tr><td><a href="http://www.nicta.com.au/people/tmurray">Toby Murray</a></td><td>NICTA and University of New South Wales</td></tr>
+<tr><td><a href="http://research.microsoft.com/en-us/people/mattpark/">Matthew Parkinson</a></td><td>Microsoft Research</td></tr>
+<tr><td><a href="http://www.cs.cmu.edu/~fp">Frank Pfenning</a></td><td>Carnegie Mellon University</td></tr>
+<tr><td><a href="http://www.di.ens.fr/~rival/">Xavier Rival</a></td><td>CNRS, ENS, INRIA</td></tr>
+<tr><td><a href="http://www.cs.tau.ac.il/~msagiv/">Mooly Sagiv</a></td><td> Tel Aviv University</td></tr>
+<tr><td><a href="http://www2.in.tum.de">Helmut Seidl</a></td><td>TU München</td></tr>
+<tr><td><a href="http://researcher.watson.ibm.com/researcher/view.php?person=in-nishant.sinha">Nishant Sinha</a></td><td>IBM Research India</td></tr>
+<tr><td><a href="http://manu.sridharan.net">Manu Sridharan</a></td><td>Samsung Research America</td></tr>
+<tr><td><a href="http://research.microsoft.com/~nswamy">Nikhil Swamy</a></td><td>Microsoft Research</td></tr>
+<tr><td><a href="http://homes.cs.washington.edu/~ztatlock/">Zachary Tatlock</a></td><td>University of Washington</td></tr>
+<tr><td><a href="http://www.informatik.uni-freiburg.de/~thiemann/">Peter Thiemann</a></td><td>University of Freiburg</td></tr>
+<tr><td><a href="http://homes.soic.indiana.edu/samth/">Sam Tobin-Hochstadt</a></td><td>Indiana University</td></tr>
+<tr><td><a href="http://people.csail.mit.edu/emina/">Emina Torlak</a></td><td>UC Berkeley</td></tr>
+<tr><td><a href="http://research.microsoft.com/~kapilv">Kapil Vaswani</a></td><td>Microsoft Research India</td></tr>
+<tr><td><a href="http://www0.cs.ucl.ac.uk/staff/J.Villard/">Jules Villard</a></td><td>Imperial College London</td></tr>
+<tr><td><a href="http://homepages.inf.ed.ac.uk/wadler/">Philip Wadler</a></td><td>University of Edinburgh</td></tr>
+<tr><td><a href="http://www.cis.upenn.edu/~sweirich">Stephanie Weirich</a></td><td>University of Pennsylvania</td></tr>
+<tr><td><a href="http://www.cse.unsw.edu.au/~jingling">Jingling Xue</a></td><td>UNSW</td></tr>
+<tr><td><a href="http://www.cs.technion.ac.il/~yahave/">Eran Yahav</a></td><td>Technion</td></tr>
+<tr><td><a href="http://www.cs.ox.ac.uk/people/hongseok.yang/Public/Home.html">Hongseok Yang</a></td><td>University of Oxford</td></tr>
+</tbody></table>
+</div>
+
+<h2>Supporters</h2>
+<p style="text-align:center">
+<a href="http://research.microsoft.com/"><img height="50" class="clogo" src="logos/microsoft.jpg" alt="Microsoft Research" /></a>
+<br />
+<a href="http://www.facebook.com/"><img height="50" class="clogo" src="logos/facebook.jpg" alt="Facebook" /></a>
+<a href="http://www.persistent.com/"><img height="70" class="clogo" src="logos/pers.png" alt="Persistent" /></a>
+<a href="http://www.samsung.com/"><img height="50" class="clogo" src="logos/samsung.jpg" alt="Samsung" /></a>
+<br />
+<a href="http://research.google.com/"><img height="45" class="clogo" src="logos/google.png" alt="Google" /></a>
+<a href="http://www.janestreet.com/"><img height="45" class="clogo" src="logos/janestreet.jpg" alt="Jane Street" /></a>
+<br />
+<a href="http://www.research.ibm.com/"><img height="40" class="clogo" src="logos/ibm.jpg" alt="IBM Research" /></a>
+<a href="http://www.tifr.res.in/"><img height="45" class="clogo" src="logos/tifr.png" alt="TIFR" /></a>
+<a href="http://www.xerox.com/"><img height="40" class="clogo" src="logos/xerox.png" alt="Xerox" /></a>
+<!--a href="http://www.nec-labs.com/"><img height="50" class="clogo" src="logos/nec.gif" alt="NEC" /></a-->
+<!--a href="http://www.oracle.com/"><img height="50" class="clogo" src="logos/oracle.jpg" alt="Oracle" /></a-->
+</p>
+
+
+</div>
+
+<!--div id="bottom">
+<a href="http://validator.w3.org/check?uri=referer"><img
+   style="border:0;width:88px;height:31px;float:right"
+   src="http://www.w3.org/Icons/valid-xhtml10"
+   alt="Valid XHTML 1.0 Strict" /></a>
+<a href="http://jigsaw.w3.org/css-validator/check/referer?profile=css3"><img
+   style="border:0;width:88px;height:31px;float:right"
+   src="http://jigsaw.w3.org/css-validator/images/vcss"
+   alt="Valid CSS!"/>
+</a>
+</div-->
+
+</div>
+</div>
+
+</body>
+</html>

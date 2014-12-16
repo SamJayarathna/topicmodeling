@@ -1,0 +1,165 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<META NAME="keywords" CONTENT="
+theory math maths mathematics 2011
+foga11 foga2011 isgec
+proof limits convergence
+analysis
+hands george bayer
+bill langdon
+ai gp ec ga
+genetic computer
+computers artificial computational intelligence ">
+
+<title>FOGA 2011 - Foundations of Genetic Algorithms XI</title>
+
+<style type="text/css">
+<!--
+body,td,th {
+	color: #000;
+}
+body {
+	background-color: #666;
+}
+-->
+</style>
+<link href="texts.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+<!--
+a:link {
+	color: #369;
+}
+a:visited {
+	color: #369;
+}
+a:hover {
+	color: #369;
+}
+a:active {
+	color: #369;
+}
+-->
+</style></head>
+
+<body topmargin="0">
+<table width="900" border="0" align="center"    cellpadding="0" cellspacing="0">
+  <tr>
+    <td align="left" valign="top"><table width="900" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="437" rowspan="2" align="left" valign="top"><img src="images/home/logo.gif" width="437" height="166" hspace="0" vspace="0" border="0" /></td>
+        <td width="377" rowspan="2" align="left" valign="top"><img src="images/home/top1.jpg" width="377" height="166" hspace="0" vspace="0" border="0" /></td>
+        <td width="86" height="83" align="left" valign="top"><a href="http://www.acm.org/"><img src="images/home/logo-acm.jpg" width="86" height="83" hspace="0" vspace="0" border="0" /></a></td>
+      </tr>
+      <tr>
+        <td width="86" height="83" align="left" valign="top"><img src="images/home/top2.jpg" width="86" height="83" hspace="0" vspace="0" border="0" /></td>
+      </tr>
+      <tr>
+        <td colspan="3" align="left" valign="top"><table width="900" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="437" height="82" align="left" valign="top"><img src="images/home/top3.jpg" width="437" height="82" hspace="0" vspace="0" border="0" /></td>
+            <td width="463" height="82" align="left" valign="top"><img src="images/home/top4.jpg" width="463" height="82" hspace="0" vspace="0" border="0" /></td>
+          </tr>
+        </table></td>
+      </tr>
+      <tr>
+        <td colspan="3" align="left" valign="top"><table width="900" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="151" height="25" align="left" valign="top"><a href="http://www.sigevo.org/"><img src="images/home/logo-sigevo.jpg" width="151" height="25" hspace="0" vspace="0" border="0" /></a></td>
+            <td width="749" height="25" align="left" valign="top"><img src="images/home/top5.jpg" width="749" height="25" hspace="0" vspace="0" border="0" /></td>
+          </tr>
+        </table></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td align="right" valign="top" bgcolor="#00A4E8" class="menum"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="98%" height="25" align="right" valign="middle"><a href="papers.html"><span class="menum">Papers</span></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="accepted.html"><span class="menum">Papers to be presented</span></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="submissions.html"><span class="menum">Submissions</span></a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="organizers.html"><span class="menum">Organizers</span></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="programme-committee.html"><span class="menum">Programme Committee</span></a></td>
+        <td width="2%">&nbsp;</td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td align="left" valign="top" bgcolor="#0099DB"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="98%" height="25" align="right" valign="middle" ><a href="programme.html"><span class="menum">Programme</span></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="registration.html"><span class="menum">Registration</span></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="venue.html"><span class="menum">Venue</span></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="keynote.html"><span class="menum">Keynote</span></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="supporters.html"><span class="menum">Supporters</span></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://campus.acm.org/Public/login_gensigqj.cfm?CFID=2475849&amp;CFTOKEN=98111526&amp;rdr=https://campus.acm.org/public/gensigqj/gensigqj_control.cfm?promo=QJSIG&amp;offering=052&amp;form_type=SIG" ><span class="menum">Join SIGEVO</span></a></td>
+        <td width="2%">&nbsp;</td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td align="center" valign="top" bgcolor="#D8E3E9"><table width="860" border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td width="425" height="40" align="left" valign="middle"><span class="title">What's
+          New:</span></td>
+        <td width="10" align="left" valign="middle"><p><br />
+          </p></td>
+        <td width="425" align="left" valign="middle"><span class="title">Important
+          Dates:</span></td>
+      </tr>
+      <tr>
+        <td width="425" align="left" valign="top" bgcolor="#C0CCD6"><table width="100%" border="0" cellspacing="0" cellpadding="12">
+          <tr>
+            <td align="left" valign="top"><span class="textsmall">              </span>
+              <p> <span class="text"><span class="textsmall">February 28, 2012:</span></span><strong><span class="text"><span class="textsmall"><br />
+<b><img src="images/home/dot.gif" width="6" height="6" hspace="0" vspace="0" border="0" /> <img src="images/home/dot.gif" width="6" height="6" hspace="0" vspace="0" border="0" /></b></span> <a href="http://www.sigevo.org/foga-2013/">FOGA 2013</a></span></strong><span class="textsmall"><br />
+                <br />
+                <br />
+                September 14, 2011:<br />
+                  <b><span class="text"><img src="images/home/dot.gif" width="6" height="6" hspace="0" vspace="0" border="0" /> <img src="images/home/dot.gif" width="6" height="6" hspace="0" vspace="0" border="0" /></span></b></span><span class="title"> <a href="docs/FOGA-Call-V3.pdf">Call for Proposals to Host the next Foundation of  Genetic Algorithms</a></span><span class="textsmall"> <b><span class="text"><img src="images/home/dot.gif" width="6" height="6" hspace="0" vspace="0" border="0" /> <img src="images/home/dot.gif" width="6" height="6" hspace="0" vspace="0" border="0" /></span></b> <br />
+                <br />
+                <br />
+                <br />
+                January 21, 2011:<br />
+                  </span><b><span class="text"><span class="textsmall"><img src="images/home/dot.gif" width="6" height="6" hspace="0" vspace="0" border="0" /> <img src="images/home/dot.gif" width="6" height="6" hspace="0" vspace="0" border="0" /> <img src="images/home/dot.gif" width="6" height="6" hspace="0" vspace="0" border="0" /></span> <a href="attendees.html">FOGA 2011 attendees</a></span></b><span class="textsmall"> <b><span class="text"><img src="images/home/dot.gif" width="6" height="6" hspace="0" vspace="0" border="0" /></span></b> <b><span class="text"><img src="images/home/dot.gif" width="6" height="6" hspace="0" vspace="0" border="0" /></span></b> <b><span class="text"><img src="images/home/dot.gif" width="6" height="6" hspace="0" vspace="0" border="0" /></span></b><br />
+                <br />
+                <br />
+                <br />
+                </span></p></td>
+          </tr>
+        </table></td>
+        <td align="left" valign="top">&nbsp;</td>
+        <td width="425" align="left" valign="top" bgcolor="#C0CCD6">&nbsp;</td>
+      </tr>
+      <tr>
+        <td colspan="3" align="left" valign="top">&nbsp;</td>
+        </tr>
+      <tr>
+        <td colspan="3" align="center" valign="top" bgcolor="#D8E3E9"><img src="images/home/bar-hotel.jpg" width="860" height="96" hspace="0" vspace="0" border="0" usemap="#Map" /></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td align="left" valign="top" bgcolor="#D8E3E9">&nbsp;</td>
+  </tr>
+  <tr>
+    <td align="left" valign="top" bgcolor="#0099DB">&nbsp;</td>
+  </tr>
+  <tr>
+    <td align="left" valign="top" bgcolor="#FFFFFF"><table width="900" border="0" cellspacing="0" cellpadding="12">
+      <tr>
+        <td align="center" valign="middle"><em> <span class="text">This workshop is
+          sponsored by <a href="http://www.sigevo.org/">SIGEVO</a>, the ACM Special
+          Interest Group on Genetic and Evolutionary Computation. <br />
+You can <a href="https://campus.acm.org/Public/login_gensigqj.cfm?CFID=2475849&amp;CFTOKEN=98111526&amp;rdr=https://campus.acm.org/public/gensigqj/gensigqj_control.cfm?promo=QJSIG&amp;offering=052&amp;form_type=SIG">join
+  SIGEVO</a> here. </span><br />
+         </em>
+          <p class="text"><a href="http://www.sigevo.org/foga-2013/" target="_blank">FOGA 2013</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.sigevo.org/foga-2011/" target="_blank">FOGA 2011</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.sigevo.org/foga-2009/" target="_blank">FOGA 2009</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.sigevo.org/foga-2007/" target="_blank">&nbsp;FOGA 2007</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.springer.com/computer/foundations/book/978-3-540-27237-3" target="_blank">FOGA
+            2005</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.amazon.ca/Foundations-Genetic-Algorithms-2003-FOGA/dp/product-description/0122081552" target="_blank">FOGA
+            7</a> </p>
+          <p class="text">* First seven FOGA (1990 -- 2002) published by Morgan Kaufmann<em><font color="#000000" size="2" face="Geneva, Arial, Helvetica, sans-serif"><br />
+          </font></em></p></td>
+        </tr>
+    </table></td>
+  </tr>
+</table>
+
+<map name="Map" id="Map">
+  <area shape="rect" coords="71,62,195,78" href="http://news.bbc.co.uk/weather/forecast/54/" />
+  <area shape="rect" coords="5,61,66,79" href="http://www.schwarzenberg.org/MOBOTIX/test.jpg" />
+  <area shape="rect" coords="8,17,639,58" href="venue.html" />
+</map>
+</body>
+</html>

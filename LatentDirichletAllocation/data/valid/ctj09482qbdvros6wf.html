@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>POPL 2014: 41st ACM SIGACT-SIGPLAN Symposium on Principles of Programming Languages</title>
+<style type="text/css">
+  body,h1,h2,h3,h4,p,div,td { font-family: Arial, Helvetica, sans-serif; line-height: 120% }
+  a.acmlogo { float: left; }
+
+  table.tt { table-layout: fixed; width: 100%; border-spacing: 5px; }
+  
+  a:link    {text-decoration: none; color: #0033BB}
+  a:visited {text-decoration: none; color: #0033BB;}
+  a:active  {text-decoration: none; color: #0033BB;}
+  a:hover   {text-decoration: underline; color: #0033BB;}
+
+  .red          {text-decoration: none; color: #FF3333}
+  a.red:link    {text-decoration: none; color: #FF3333}
+  a.red:visited {text-decoration: none; color: #FF3333;}
+  a.red:active  {text-decoration: none; color: #FF3333;}
+  a.red:hover   {text-decoration: underline; color: #FF3333;}
+ 
+  
+  h1 { text-align: left; color: #15317e; font-size: 150% }
+  h2 { border-style: solid; border-width: thin;
+      font-size: 120%;
+      color: #15317e;
+      padding-top: 8px;
+      padding-bottom: 8px;
+      background-color: #afdcec;
+      text-align: center;
+      clear: both; border-radius: 5px;
+  }
+  h3 { margin-bottom: 0; font-size: 110%; margin-top:5px; }
+  h4 { margin-bottom: 0; }
+
+  td.cal { text-align: center; padding-left: 10px; padding-right: 10px }
+  td.logos { text-align: center }
+
+  .clogo { margin: 10px; vertical-align: middle; }
+
+@media print { #menu, #menu2 { display:none; } }
+
+@media screen {
+  #wrapper { margin-left: auto; margin-right: auto; width: 1000px; }
+  #main { padding: 15px; float:left; width: 715px }
+  #menu { padding: 0.5em 0 0.5em 0; width: 1000px; text-align: center; 
+          border-style: solid; border-width: thin; border-radius: 5px;
+          background-color: #afdcec; }
+  #menu2 { padding: 10px; margin-top: 10px; width: 230px; 
+          border-style: solid; border-width: thin; float:right; border-radius: 5px;
+          background-color: #afdcec; }
+}
+
+@media screen and (max-device-width: 480px) {
+  #wrapper, #main { padding:0; width: 100%!important; }
+  #menu { padding: 0.5em 0 0.5em 0; width: 100%; text-align: center; 
+          border-style: solid; border-width: thin; border-radius: 5px;
+          background-color: #afdcec; }
+  #menu2 { display:none!important; }
+}
+
+  #footer { clear: both; text-align: center; font-size: small; }
+ 
+  .mitem { display: inline; padding: 0 0.5em 0 0.5em; }
+  td.desc { width: 200px; }
+  td.photo { width: 95px; }
+  td.datesh { width: 240px; }
+
+  table.dates { margin-top: 0em; }
+  div.indent { margin-left: +1em; }
+
+
+</style>
+<script type="text/javascript"> 
+function toggle(showHideDiv,switchTextDiv) {
+	var ele = document.getElementById(showHideDiv);
+	var text = document.getElementById(switchTextDiv);
+	if(ele.style.display == "block") {
+    		ele.style.display = "none";
+		text.innerHTML = "<i>[Show]</i>";
+  	}
+	else {
+		ele.style.display = "block";
+		text.innerHTML = "<i>[Hide]</i>";
+	}
+}
+</script>
+</head>
+<body>
+
+<div id="wrapper">
+
+<div id="menu">
+
+<div class="mitem"><a href="index.html">Home</a></div>
+<!--div class="mitem"><a href="cfp.html">Call for papers (HTML)</a></div-->
+<!--div class="mitem"><a href="popl2013-cfp.pdf">Call for papers (PDF)</a></div-->
+<div class="mitem"><a href="schedule.html">Conference program</a></div>
+<div class="mitem"><a href="accepted.html">Accepted papers</a></div>
+<!--div class="mitem"><a href="#events">Co-located events</a></div-->
+<!--div class="mitem"><a href="http://popl.lambda-calcul.us/2014/">Call for co-located events</a></div-->
+<div class="mitem"><a href="tutorials2.html">Tutorials</a></div>
+<!--div class="mitem"><a href="http://wrigstad.com/popl13/">Student session</a></div-->
+<!--div class="mitem"><a href="http://popl13.di.univr.it/">Local arrangements</a></div-->
+<div class="mitem"><a href="#organisers">Organisers</a></div>
+<div class="mitem"><a href="#sponsors">Sponsors</a></div>
+<!--div class="mitem"><a href="index.html">SIGPLAN awards</a></div-->
+</div>
+      
+<div id="main">
+<table class="tt"><tr><td style="width:320px">
+<img src="popl2014-logo.png" style="width:302px" alt="POPL 2014 logo" /><br />
+</td><td>
+<h1>POPL 2014: 41st ACM SIGPLAN-SIGACT Symposium on Principles of Programming Languages</h1>
+<h3>San Diego, USA<br />January 22-24, 2014</h3>
+</td></tr></table>
+
+<h2>Important information</h2>
+<div class="indent">
+
+<table class="dates"><tbody>
+<tr><td class="datesh"><b>Conference hotel</b></td>
+<td><a href="http://www.usgrant.net/">The US Grant</a>, San Diego, CA, USA 
+<a href="https://maps.google.com/maps?q=THE+US+GRANT,+San+Diego&hl=en&sll=37.0625,-95.677068&sspn=62.098123,68.203125&hq=THE+US+GRANT,+San+Diego&t=m&z=15">[see map]</a>
+</td></tr>
+
+<tr><td class="datesh"><b>Paper registration</b></td>
+<td><b><a href="http://www.timeanddate.com/worldclock/fixedtime.html?msg=POPL+2014+Paper+Registration&iso=20130705T16&p1=211">Friday July 5, 2013, 16:00 UTC</a></b></td>
+</tr>
+
+<tr><td class="datesh"><b>Paper submission</b></td>
+<td><b><a href="http://www.timeanddate.com/worldclock/fixedtime.html?msg=POPL+2014+Paper+Submission&iso=20130712T16&p1=211">Friday July 12, 2013, 16:00 UTC</a></b></td>
+</tr>
+
+<tr><td class="datesh"><b>Submission URL</b></td>
+<td><b><a class="red" href="http://svr-hotcrp.cl.cam.ac.uk/hotcrp/popl_2014/index.php">http://svr-hotcrp.cl.cam.ac.uk/hotcrp/popl_2014/</a></b></td>
+</tr>
+   
+<tr><td class="datesh"><b>Author response period</b></td>
+<td>Tuesday September 10, 2013 to Friday September 13, 2013</td></tr>
+
+<tr><td class="datesh"><b>Author notification</b></td>
+<td>Wednesday October 2, 2013</td></tr>
+
+<!--tr><td class="datesh"><a href="http://popl.lambda-calcul.us/2014/"><b>Call for co-located events</b></a></td>
+<td>Deadline: April 26, 2013</td></tr-->
+
+<!--tr><td class="datesh"><a href="tutorials.html"><b>Call for tutorials</b></a></td>
+<td>Deadline: September 15, 2013</td></tr-->
+
+<tr><td class="datesh"><a href="http://wrigstad.com/popl14/"><b>Call for posters</b></a></td>
+<td>Deadline: November 30, 2013</td></tr>
+
+<!--tr><td class="datesh"><b>Camera-ready deadline</b></td>
+<td>October 29, 2013</td></tr-->
+
+<tr><td class="datesh"><b>Early registration deadline</b></td>
+<td><b class="red">December 31, 2013</b></td></tr>
+
+<tr><td class="datesh"><b>Cutoff for hotel discounted rate</b></td>
+<td>December 30, 2013</td></tr>
+
+<tr><td class="datesh"><b>Registration URL</b></td>
+<td><b><a href="https://regmaster3.com/2014conf/POPL14/register.php">https://regmaster3.com/2014conf/POPL14/register.php</a></b></td></tr>
+
+<!--tr><td class="datesh"><b>Student Session URL</b></td>
+<td><b><a href="http://wrigstad.com/popl13/">http://wrigstad.com/popl13/</a></b></td></tr-->
+
+</tbody></table>
+</div>
+
+<p>The <a href="schedule.html">conference program</a> and the list of <a
+href="accepted.html">accepted papers</a> are available.  In total 51 papers were
+accepted out of 220 submissions.  More statistics can be found in the <a
+href="http://www.cl.cam.ac.uk/~pes20/popl2014-pc-chair-report.pdf">PC Chair's
+report</a>.</p>
+
+<div style="background:#ffffcc;padding:10px;border:dashed black 2px">
+The POPL'14 proceedings are now available for individual download from the
+<!--a href="http://dl.acm.org/citation.cfm?id=2535838"--><a
+href="toc.html">ACM digital library</a>.</div>
+
+<h2>Scope</h2>
+<p>
+The annual Symposium on Principles of Programming Languages is a forum
+for the discussion of all aspects of programming languages and
+systems, with emphasis on how principles underpin practice. Both
+theoretical and experimental papers are welcome, on topics ranging
+from formal frameworks to experience reports. 
+</p>
+
+<p>For more information, please see the <a href="cfp.html">call for
+papers</a>.</p>
+
+<h2>Co-located events</h2>
+
+<table style="margin:auto"><tr>
+<td class="cal">Sun<br/>19 Jan</td>
+<td class="cal">Mon<br />20 Jan</td>
+<td class="cal">Tue<br />21 Jan</td>
+<td class="cal">Wed<br />22 Jan</td>
+<td class="cal">Thu<br />23 Jan</td>
+<td class="cal">Fri<br />24 Jan</td>
+<td class="cal">Sat<br />25 Jan</td></tr>
+<tr><td colspan="3" style="text-align:center;background:#ff3333;border-radius:3px">VMCAI</td>
+<td colspan="3" rowspan="4" style="text-align:center;background:#3386cc;border-radius:3px"><b>POPL</b></td>
+<td style="text-align:center;background:#aa3333;border-radius:3px">DCP</td></tr>
+<tr><td>&nbsp;</td><td colspan="2" style="text-align:center;background:#ffcc33">PADL</td>
+<td style="text-align:center;background:#aaaa00;border-radius:3px">OBT</td></tr>
+<tr><td>&nbsp;</td><td colspan="2" style="text-align:center;background:#33cc33">PEPM</td>
+<td style="text-align:center;background:#11aa11;border-radius:3px">PiP</td></tr>
+<tr><td>&nbsp;</td><td rowspan="2" style="text-align:center;background:#3386cc;border-radius:3px">Tutorials</td>
+<td style="text-align:center;background:#668866;border-radius:3px">PLPV</td>
+<td style="text-align:center;background:#aaaaaa;border-radius:3px">PPREW</td></tr>
+<tr><td>&nbsp;</td>
+<td style="text-align:center;background:#cc33cc;border-radius:3px">PLMW</td>
+<td style="text-align:center;background:#6633ff;border-radius:3px">Posters</td></tr>
+</table>
+
+
+<ul>
+<li><a href="http://vmcai2014.di.ens.fr/">VMCAI 2014</a>: Verification, Model Checking, and Abstract Interpretation (19-21 January)</li>
+<li><a href="http://www.ist.unomaha.edu/padl2014/">PADL 2014</a>: Practical Aspects of Declarative Languages (20-21 January)</li>
+<li><a href="http://www.program-transformation.org/PEPM14">PEPM 2014</a>: Partial Evaluation and Program Manipulation (20-21 January)</li>
+<li><a href="tutorials2.html">POPL Tutorials</a> (20 January)</li>
+<li><a href="http://plmw2014.inria.fr/">PLMW 2014</a>: Programming Language Mentoring Workshop (21 January)</li>
+<li><a href="http://www.cse.chalmers.se/~nad/plpv-2014/">PLPV 2014</a>: Programming Languages meets Program Verification (21 January)</li>
+<li><a href="http://research.microsoft.com/en-us/events/dcp2014/">DCP 2014</a>: Data-Centric Programming (25 January)</li>
+<li><a href="http://popl-obt-2014.cs.brown.edu">OBT 2014</a>: Off The Beaten Track (25 January)</li>
+<li><a href="http://www.cl.cam.ac.uk/~pes20/pip2014.html">PiP 2014</a>: Principles in Practice (25 January)</li>
+<li><a href="http://www.pprew.org/">PPREW 2014</a>: Program Protection and Reverse Engineering Workshop (25 January)</li>
+</ul>
+
+<p><a href="floor-plans.pdf">Hotel floor plans (PDF)</a></p>
+
+<p><a href="http://wrigstad.com/popl14/">Student posters</a></p>
+
+<h2><a id="location">Location</a></h2>
+
+<p>
+POPL'14 will be held at the <a href="http://www.usgrant.net/">The US Grant</a> in
+San Diego, CA, USA.
+</p>
+
+<p> A link to the hotel on-line reservation service with special pricing for
+POPL attendees will be provided when you register for the conference. The link
+is provided in your registration receipt.  The discounted daily hotel 
+rates are $179 for non-students and $109 for students.
+The cutoff for the discounted hotel rate is <b>December 30th, 2013</b>.</p>
+
+
+<p>We encourage POPL attendees to stay at the conference hotel. For more information
+why, please see <a href="http://www.cse.psu.edu/popl/12/staying-at-hotel.html">here</a>.</p>
+
+<p>
+<span class="red"><b>Update (2013-12-20):</b></span> The reserved block of rooms at
+the conference hotel are fully booked for Thursday night. Here is an incomplete
+list of the less expensive hotels in the area. Please note that ACM/POPL 2014
+has not arranged a block of rooms and there is not a guaranteed rate at any of
+these hotels.
+</p>
+
+<ul>
+<li>
+<a href="http://www.wyndham.com/hotels/california/san-diego/wyndham-san-diego-bayside/hotel-overview">Wyndham San Diego Bayside</a>, 1355 N Harbor Dr, San Diego, CA 92101
+(20 minute walk to US Grant)</li>
+
+<li><a href="http://embassysuites3.hilton.com/en/hotels/california/embassy-suites-san-diego-bay-downtown-SANDNES/index.html">Embassy Suites San Diego Bay - Downtown</a>,
+601 Pacific Highway, San Diego, CA 92101
+(16 minute walk)</li>
+
+<li><a href="http://www.ihg.com/hotelindigo/hotels/us/en/san-diego/sanis/hoteldetail">Hotel Indigo San Diego-Gaslamp Quarter</a>,
+509 9th Avenue, San Diego, CA 92101
+(13 minute walk)</li>
+</ul>
+
+<p>The POPL banquet will be held at the <a href="http://www.midway.org/">USS Midway</a>,
+which is an easy 16 minute walk from the hotel. Limited capacity shuttle buses will also
+be available. For more information, see <a href="banquet.pdf">this PDF</a>.</p>
+
+
+<h2>Visa support letters</h2>
+
+<p>Requests for visa support letters for purposes of attending or presenting at
+POPL 2014 are handled by ACM.  For more information, go <a href="visa.html">here</a>.</p>
+
+<h2>Student Attendees</h2>
+
+<p>Students with accepted papers or students who are participating in the student
+session are encouraged to apply for a <a
+href="http://www.sigplan.org/PAC/Main">SIGPLAN PAC grant</a> that will help
+covering travel expenses. </p>
+
+
+<h2 id="organisers">Organisers</h2>
+
+<div class="indent">
+<table class="tt"><tbody>
+<tr><td class="desc"><b>General Chair:</b></td>
+<td class="photo"><img alt="" src="suresh.jpg" height="89" /></td><td>
+<a href="http://www.cs.purdue.edu/homes/suresh/">Suresh Jagannathan</a>
+<br />Purdue University, USA
+</td></tr>
+
+<tr><td class="desc"><b>Program Chair:</b></td>
+<td class="photo"><img alt="" src="sewell.jpg" height="89" /></td><td>
+<a href="http://www.cl.cam.ac.uk/~pes20/">Peter Sewell</a>
+<br />University of Cambridge, UK
+</td></tr>
+
+<tr><td class="desc"><b>Workshop Chair:</b></td>
+<td class="photo"><img alt="" src="vanhorn.jpg" height="89" /></td><td>
+<a href="http://www.ccs.neu.edu/home/dvanhorn/">David Van Horn</a><br />
+Northeastern University, USA</td></tr>
+
+<tr><td class="desc"><b>Treasurer Co-Chairs:</b></td>
+<td class="photo"><img alt="" src="tate.jpg" height="89" /></td>
+<td><a href="http://www.cs.cornell.edu/~ross/">Ross Tate</a><br />Cornell University, USA</td></tr>
+
+<tr><td class="desc">&nbsp;</td>
+<td class="photo"><img alt="" src="chang.jpg" height="89" /></td>
+<td><a href="http://www.cs.colorado.edu/~bec/">Bor-Yuh Evan Chang</a><br />University of Colorado at Boulder, USA</td></tr>
+
+<tr><td class="desc"><b>Publicity Chair:</b></td>
+<td class="photo"><img alt="" src="viktor.jpg" height="89" /></td>
+<td><a href="http://www.mpi-sws.org/~viktor/">Viktor Vafeiadis</a><br />MPI-SWS, Germany</td></tr>
+
+<tr><td class="desc"><b>Student Activities Chair:</b></td>
+<td class="photo"><img alt="" src="wrigstad.jpg" height="89" /></td>
+<td><a href="http://wrigstad.com/">Tobias Wrigstad</a><br />Uppsala University, Sweden</td></tr>
+
+<tr><td class="desc"><b>Program Committee:</b></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr></tbody></table>
+
+<table style="border-spacing:4px;padding-left:1cm"><tbody>
+<tr><td><a href="http://www.cs.princeton.edu/~appel/">Andrew W. Appel</a></td><td> Princeton</td></tr>
+<tr><td><a href="http://software.imdea.org/people/gilles.barthe/">Gilles Barthe</a></td><td>   IMDEA</td></tr>
+<tr><td><a href="http://research.microsoft.com/en-us/um/people/nick/">Nick Benton</a></td><td>     MSR Cambridge</td></tr>
+<tr><td><a href="http://www.cs.au.dk/~birke/">Lars Birkedal</a></td><td>   Aarhus University</td></tr>
+<tr><td><a href="http://www.liafa.jussieu.fr/~abou/">Ahmed Bouajjani</a></td><td>  University Paris Diderot</td></tr>
+<tr><td><a href="http://homepages.inf.ed.ac.uk/jcheney/">James Cheney</a></td><td>    University of Edinburgh</td></tr>
+<tr><td><a href="http://www.csc.kth.se/~mfd/">Mads Dam</a></td><td>        KTH Royal Institute of Technology</td></tr>
+<tr><td><a href="http://www.eecs.qmul.ac.uk/~ddino/">Dino Distefano</a></td><td> Facebook and Queen Mary, University of London</td></tr>
+<tr><td><a href="http://www.cs.wm.edu/~tdillig/">Thomas Dillig</a></td><td>   College of William &amp; Mary </td></tr>
+<tr><td><a href="http://www.doc.ic.ac.uk/~scd/">Sophia Drossopoulou</a></td><td>  Imperial College London</td></tr>
+<tr><td><a href="http://www.cs.cornell.edu/~jnfoster/">Nate Foster</a></td><td>     Cornell University</td></tr>
+<tr><td><a href="http://www.sato.kuis.kyoto-u.ac.jp/~igarashi/index.html.en">Atsushi Igarashi</a></td><td>  Kyoto University</td></tr>
+<tr><td><a href="http://ect.bell-labs.com/who/ajeffrey/">Alan Jeffrey</a></td><td>  Alcatel-Lucent Bell Labs</td></tr>
+<tr><td><a href="http://www.mpi-sws.org/~neelk">Neelakantan R. Krishnaswami</a></td><td>  University of Birmingham</td></tr>
+<tr><td><a href="http://research.microsoft.com/en-us/people/adityan/">Aditya V. Nori</a></td><td>  MSR India</td></tr>
+<tr><td><a href="http://www.cs.tau.ac.il/~maon/">Noam Rinetzky</a></td><td> Tel Aviv University</td></tr>
+<tr><td><a href="http://www.di.ens.fr/~rival/">Xavier Rival</a></td><td>   INRIA Paris-Rocquencourt, ENS Paris, CNRS</td></tr>
+<tr><td><a href="http://www7.in.tum.de/~rybal/">Andrey Rybalchenko</a></td><td>  TUM</td></tr>
+<tr><td><a href="http://ecee.colorado.edu/~siek/">Jeremy G. Siek</a></td><td>  University of Colorado at Boulder</td></tr>
+<tr><td><a href="http://research.microsoft.com/en-us/people/nswamy/">Nikhil Swamy</a></td><td>   MSR Redmond</td></tr>
+<tr><td><a href="http://www.cs.cornell.edu/~ross/">Ross Tate</a></td><td>  Cornell University </td></tr>
+<tr><td><a href="http://www.liafa.univ-paris-diderot.fr/~touili/">Tayssir Touili</a></td><td>  CNRS Paris</td></tr>
+<tr><td><a href="http://www.ccs.neu.edu/home/turon/">Aaron J. Turon</a></td><td>  MPI-SWS</td></tr>
+<tr><td><a href="http://www.mpi-sws.org/~viktor">Viktor Vafeiadis</a></td><td>  MPI-SWS</td></tr>
+<tr><td><a href="http://www.cis.upenn.edu/~sweirich/">Stephanie Weirich</a></td><td>  University of Pennsylvania</td></tr>
+<tr><td><a href="http://cs.nyu.edu/wies/">Thomas Wies</a></td><td>  New York University</td></tr>
+<!--tr><td><a href="http://gretay.org/">Greta Yorsh</a></td><td>  ARM</td></tr-->
+<tr><td><a href="http://www.disi.unige.it/person/ZuccaE/">Elena Zucca</a></td><td>  Universit&agrave; degli Studi di Genova</td></tr>
+</tbody></table>
+
+
+<h2 id="sponsors">Sponsors</h2>
+
+
+
+<!--
+<a href="http://research.google.com/"><img width=200 src="googlelogo.jpg"></a>
+<a href="http://www.research.ibm.com/"><img width=300 src="ibm-research-logo.jpg"></a>
+<a href="http://www.intel.com/"><img width=100 src="intel-logo.jpg"></a>
+<a href="http://research.microsoft.com/"><img width=250 src="microsoft.jpg"></a>
+<a href="http://www.oracle.com/"><img width=250 src="Oracle_logo.gif"></a>
+<a href="http://www.nec-labs.com/"><img width=130 src="nec-blue.gif"></a>
+<a href="http://www.nsf.gov/"><img width=130 align=middle src="nsf-logo.gif"></a>
+-->
+
+<p style="text-align:center">
+<a href="http://www.facebook.com/"><img height="50" class="clogo" src="logos/facebook.jpg" alt="Facebook" /></a>
+<a href="http://research.google.com/"><img height="50" class="clogo" src="logos/google.png" alt="Google" /></a>
+<a href="http://www.research.ibm.com/"><img height="45" class="clogo" src="logos/ibm.jpg" alt="IBM Research" /></a>
+<a href="http://www.janestreet.com/"><img height="50" class="clogo" src="logos/janestreet.jpg" alt="Jane Street" /></a>
+<a href="http://research.microsoft.com/"><img height="40" class="clogo" src="logos/microsoft.jpg" alt="Microsoft Research" /></a>
+<!--a href="http://www.monoidics.com/"><img height="50" class="clogo" src="logos/monoidics.jpg" alt="Monoidics" /></a--> 
+<a href="http://www.nec-labs.com/"><img height="50" class="clogo" src="logos/nec.gif" alt="NEC" /></a>
+<a href="http://www.oracle.com/"><img height="50" class="clogo" src="logos/oracle.jpg" alt="Oracle" /></a>
+<a href="http://www.samsung.com/"><img height="50" class="clogo" src="logos/samsung.jpg" alt="Samsung" /></a>
+</p>
+
+<!--div id="bottom">
+<a href="http://validator.w3.org/check?uri=referer"><img
+   style="border:0;width:88px;height:31px;float:right"
+   src="http://www.w3.org/Icons/valid-xhtml10"
+   alt="Valid XHTML 1.0 Strict" /></a>
+<a href="http://jigsaw.w3.org/css-validator/check/referer?profile=css3"><img
+   style="border:0;width:88px;height:31px;float:right"
+   src="http://jigsaw.w3.org/css-validator/images/vcss"
+   alt="Valid CSS!"/>
+</a>
+</div-->
+
+</div>
+</div>
+
+<div id="menu2">
+
+<a href="http://www.usgrant.net/">The US Grant</a>, San Diego, CA
+
+<iframe width="230" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=THE+US+GRANT,+San+Diego,+Broadway,+San+Diego,+CA,+United+States&amp;aq=0&amp;oq=US+Grant,+San+&amp;sll=41.917607,12.490082&amp;sspn=0.2266,0.262299&amp;ie=UTF8&amp;hq=THE+US+GRANT,&amp;hnear=Broadway+San+Diego,+3666+4th+Ave,+San+Diego,+California+92103&amp;t=m&amp;ll=32.734988,-117.16168&amp;spn=0.045408,0.038418&amp;output=embed"></iframe><br /><small><a href="http://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=THE+US+GRANT,+San+Diego,+Broadway,+San+Diego,+CA,+United+States&amp;aq=0&amp;oq=US+Grant,+San+&amp;sll=41.917607,12.490082&amp;sspn=0.2266,0.262299&amp;ie=UTF8&amp;hq=THE+US+GRANT,&amp;hnear=Broadway+San+Diego,+3666+4th+Ave,+San+Diego,+California+92103&amp;t=m&amp;ll=32.734988,-117.16168&amp;spn=0.045408,0.038418" style="color:#0000FF;text-align:left">View Larger Map</a></small>
+
+<hr />
+
+
+<!--script type="text/javascript" src="http://widgets.twimg.com/j/2/widget.js">
+</script><script type="text/javascript">
+new TWTR.Widget({
+  version: 2,
+  type: 'profile',
+  rpp: 4,
+  interval: 30000,
+  width: 230,
+  height: 400,
+  theme: {
+    shell: {
+      background: '#afdcec' ,
+      color: '#000000'
+    },
+    tweets: {
+      background: '#ffffff',
+      color: '#000000',
+      links: '#0033bb'
+    }
+  },
+  features: {
+    scrollbar: false,
+    loop: false,
+    live: false,
+    hashtags: true,
+    timestamp: true,
+    avatars: false,
+    behavior: 'all'
+  }
+}).render().setUser('POPL2013').start();
+</script>
+
+</div-->
+</div>
+
+
+</body>
+</html>

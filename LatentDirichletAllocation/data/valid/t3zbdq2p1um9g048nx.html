@@ -1,0 +1,805 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="en-us" http-equiv="Content-Language" />
+<title>COM.Geo 2012: The 3rd International Conference and Exhibition on Computing for Geospatial Research & Application - Location Based Service, Cloud Computing, Mobile Computing, Internet of Things, Big Data Computing, GPU Computing, Buniness Intelligence, 3D, GIS, RS, GPS, Open Source Geospatial Software, LIDAR
+</title>
+<link href="styles/home.css" rel="stylesheet" type="text/css" />
+<link href="styles/menu_style.css" rel="stylesheet" type="text/css" />
+<!--<link href="styles/jquery/jquery-ui-1.8.11.custom.css" rel="stylesheet" type="text/css" />-->
+<script src="../common/scripts/jquery/jquery-1.7.2.min.js" type="text/javascript"></script>
+<!--<script src="scripts/jquery/jquery-ui-1.8.11.custom.min.js" type="text/javascript"></script>-->
+<link href="../common/scripts/fancybox/source/jquery.fancybox.css?v=2.0.6" media="screen" rel="stylesheet" type="text/css" />
+<script src="../common/scripts/fancybox/source/jquery.fancybox.pack.js?v=2.0.6" type="text/javascript"></script>
+<link href="styles/slides.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.auto-style1 {
+	color: #000000;
+}
+.auto-style4 {
+	color: #000000;
+}
+.dig_count {
+	font-family: 'HelveticaNeueLTStd75Bold',Helvetica,Arial,sans-serif;
+	font-size: 50px;
+	color: #6600CC;
+	text-align: center;
+	font-weight: bolder;
+	font-style: normal;
+}
+.auto-style5 {
+	vertical-align: top;
+	text-align: left;
+}
+.auto-style8 {
+	color: #000000;
+	vertical-align: middle;
+}
+.auto-style9 {
+	vertical-align: middle;
+}
+.auto-style10 {
+	vertical-align: middle;
+	text-align: center;
+}
+.auto-style11 {
+	vertical-align: top;
+}
+.auto-style12 {
+	padding: 5px;
+	-moz-transition: all 0.3s ease-out 0s;
+	box-shadow: 2px 2px 5px 2px #999999;
+	vertical-align: top;
+}
+.simply-scroll {
+	width: 590px;
+	height: 100px;
+	margin-bottom: 1em;
+}
+/* Clip DIV */
+.simply-scroll .simply-scroll-clip {
+	width: 590px;
+	height: 100px;
+}
+/* Explicitly set height/width of each list item */
+.simply-scroll .simply-scroll-list li {
+	float: left; /* Horizontal scroll only */;
+	width: 185px;
+	height: 100px;
+	vertical-align: middle;
+}
+.auto-style14 {
+	font-weight: bold;
+}
+.auto-style15 {
+	font-size: small;
+}
+.auto-style16 {
+	vertical-align: middle;
+	text-align: center;
+	font-size: x-small;
+}
+.auto-style17 {
+	color: #AA0000;
+	font-style: normal;
+}
+.auto-style18 {
+	font-style: normal;
+}
+.auto-style19 {
+	font-size: 12px;
+}
+.auto-style20 {
+	font-size: 14px;
+}
+</style>
+</head>
+
+<body>
+
+<script type="text/javascript">
+var totalSlides = 0;
+var currentSlide = 1;
+var contentSlides = "";
+$(document).ready(function() {
+		//$("#tabs").tabs({ selected: 1 });	
+		
+	  window.setInterval('autoScroll()', 4000);
+	  
+	  $("#slideshow-previous").click(showPreviousSlide);
+	  $("#slideshow-next").click(showNextSlide);
+	 
+	  var totalWidth = 0;
+	  contentSlides = $(".slideshow-content");
+	  contentSlides.each(function(i){
+	    totalWidth += this.clientWidth;
+	    totalSlides++;
+	  });
+	  $("#slideshow-holder").width(totalWidth);
+	  $("#slideshow-scroller").attr({scrollLeft: 0});
+	  updateButtons();
+	  
+	  $(".link_speakers").fancybox({
+	    type        :'ajax',
+		maxWidth	: 800,
+		maxHeight	: 600,
+		fitToView	: false,
+		width		: '50%',
+		height		: '50%',
+		autoSize	: true,
+		closeClick	: false,
+		openEffect	: 'none',
+		closeEffect	: 'none'
+		});
+
+});
+
+function showPreviousSlide()
+{
+  currentSlide--;
+  updateContentHolder();
+  updateButtons();
+}
+
+function showNextSlide()
+{
+  currentSlide++;
+  updateContentHolder();
+  updateButtons();
+}
+
+function updateContentHolder()
+{
+  var scrollAmount = 0;
+  contentSlides.each(function(i){
+    if(currentSlide - 1 > i) {
+      scrollAmount += this.clientWidth;
+    }
+  });
+  $("#slideshow-scroller").animate({scrollLeft: scrollAmount}, 1000);
+}
+
+function updateButtons()
+{
+  if(currentSlide < totalSlides) {
+    $("#slideshow-next").show();
+  } else {
+    $("#slideshow-next").hide();
+  }
+  if(currentSlide > 1) {
+    $("#slideshow-previous").show();
+  } else {
+    $("#slideshow-previous").hide();
+  }
+}
+
+function autoScroll()
+{
+	//currentSlide--;
+	if(currentSlide <3) {
+		currentSlide++;
+		updateContentHolder();
+		updateButtons(); 
+	}
+	else if (currentSlide == 3) {
+		currentSlide = 1;
+		updateContentHolder();
+		updateButtons();
+	}
+}
+</script>
+<script type="text/javascript">
+dateFuture = new Date(2012,6,1,0,0,0);
+function GetCount(){
+
+	dateNow = new Date();									//grab current date
+	amount = dateFuture.getTime() - dateNow.getTime();		//calc milliseconds between dates
+	delete dateNow;
+
+	// time is already past
+	if(amount < 0){
+		document.getElementById('countdown_days').innerHTML="Now!";
+	}
+	// date is still good
+	else{
+		days=0;hours=0;mins=0;secs=0;out="";
+
+		amount = Math.floor(amount/1000);//kill the "milliseconds" so just secs
+
+		days=Math.floor(amount/86400);//days
+		amount=amount%86400;
+
+		if(days != 0){out += days ;}
+				document.getElementById('countdown_days').innerHTML=out;
+
+		setTimeout("GetCount()", 1000);
+	}
+}
+
+window.onload=GetCount;//call when everything has loaded
+</script>
+<div id="page">
+	<div id="header">
+		<a class="logo" href="index_2012_0405.htm"></a></div>
+	<!-- MAIN CONTAINER -->
+	<!-- /#menu blocks -->
+	<div id="header-blocks">
+		<script language="javascript" src="scripts/menubar.js" type="text/javascript"></script>
+		<div id="slideshow">
+			<div id="slideshow-area">
+				<div id="slideshow-scroller">
+					<div id="slideshow-holder">
+						<div class="slideshow-content">
+							<img src="images/slides/slide2.jpg" />&nbsp;&nbsp;&nbsp;&nbsp;
+						</div>
+						<div class="slideshow-content">
+							<img src="images/slides/slide3.jpg" /> </div>
+						<div class="slideshow-content">
+							<img src="images/slides/slide1.jpg" /> </div>
+					</div>
+				</div>
+				<div id="slideshow-previous">
+				</div>
+				<div id="slideshow-next">
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="content_container_homepage">
+		<div id="content_container_center_homepage">
+		</div>
+		<!-- center content -->
+		<div id="content_container_left_homepage" style="width: 210px">
+			<div class="connections">
+				<a class="twitter" href="http://twitter.com/#!/COMGeoI"></a>
+				<div class="addthisbar">
+					<!-- AddThis Button BEGIN -->
+					<div class="addthis_toolbox addthis_default_style">
+						<a class="addthis_button_twitter"></a>
+						<a class="addthis_button_facebook"></a>
+						<a class="addthis_button_email"></a>
+						<a class="addthis_button_compact"></a></div>
+				</div>
+				<script src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4dacf3fd682faac8" type="text/javascript"></script>
+				<!-- Add this Button END --></div>
+			<div class="view-block">
+			<div class="title">COM.Geo 2013 
+				<a href="http://www.com-geo.org/conferences/2013/">
+
+								<img height="116" src="../../images/comgeo2013_pic.jpg" width="200" /></a>
+								</div>
+								
+<div class="title">COM.Geo 2012 Conference Videos
+			<br />
+					<strong> <a href="video_keynotes_highlights.htm">
+					<span class="auto-style19">COM.Geo 2012 Keynotes 
+				Highlights</span></a></strong>
+				<a href="video_keynotes_highlights.htm">
+
+								<img height="116" src="images/videos/keynotehighlights_w200.png" width="200" /></a><br />
+				</div>
+<div class="title"><strong> <a href="video_panels_highlights.htm">
+					<span class="auto-style19">COM.Geo 2012 Panels 
+				Highlights</span></a></strong>
+				<a href="video_panels_highlights.htm">
+
+								<img height="116" src="images/videos/panelhighlights_w200.png" width="200" /></a><br />
+				</div>
+				<p></p>
+			<div class="title">
+					<span class="auto-style20">
+					<a href="http://dl.acm.org/citation.cfm?id=2345316"><strong>COM.Geo 2012 
+					Conference Proceedings Available in ACM Digital Library
+					</strong></a></span> <br />
+				</div>
+								
+				<p></p>
+				<div class="title">
+					COM.Geo 2012 <br />
+					A Huge Success </div>
+								
+				<div class="text" style="background-color: #FFECD9">
+					&nbsp;COM.Geo 
+					2012 was a huge success on July 1-3! All of our organizers 
+					and attendees overcome various kinds of the difficulties 
+					caused by the broadest power outage in history of DC area 
+					due to unexpected natural disasters. Thanks all of you who 
+					helped make this conference such a huge success under such circumstances. <br />
+			</div>
+
+								
+					<p>&nbsp;</p>
+		<strong><span class="auto-style15">&nbsp;&nbsp;&nbsp; Full Conference Program</span></strong><br />
+				<a href="doc/COMGeo2012Agenda.pdf">
+				<img height="150" src="images/agenda_coverpg.jpg" width="116" style="padding-top: 8px; padding-left: 35px;" /></a><br />
+				<a href="doc/COMGeo2012Agenda.pdf">
+				<img height="150" src="images/comgeo2012_cover2_s200.jpg" width="116" style="padding-top: 8px; padding-left: 35px;" /></a><br />
+				<div class="text" style="text-align: center;">
+					<strong><br />
+					<span class="auto-style15">Microsoft Workshop: Getting Started with Creating Windows 8 Apps Using Geospatial Data</span><br />
+					<a href="prog_workshops.htm">
+					<img alt=""  src="images/presentations/Windows8MetroUISample.jpg" width="180" /></a><br />
+					</strong></div>
+				<div class="title">
+					Highlights </div>
+				<div class="subtitle_1" style="background-color: #FFECD9">
+					<a href="program.htm">What's Inside the COM.Geo 2012 Highlights?
+					</a></div>
+				<div class="text" style="background-color: #FFECD9">
+					Let's reveal these at COM.Geo 2012 through our leading industrial, 
+					governmental, and academic experts' insightful thoughts and 
+					inspiring discussions in their keynote speeches, panel discussions, 
+					paper presentations, technical talks,&nbsp; workshops, courses, 
+					posters, etc. <a href="program.htm">&gt;&gt;</a></div>
+				<div class="subtitle_1">
+					<a href="topics.htm">Big Data Computing for Geospatial R&amp;A</a></div>
+				<div class="text">
+					US President Barack Obama’s administration announced a ‘Big 
+					Data’ research and development initiative in response to processing 
+					the large amount of data collected by geospatial and other systems. 
+					Under this initiative, several federal government agencies, 
+					NSF, USGS, DARPA, DOD, NIH, and DOE, commitment for the programs 
+					total $200 million. <a href="topics.htm">&gt;&gt;</a></div>
+				<div class="subtitle_1">
+					<a href="topics.htm">GPU/GPGPU Computing for Geospatial R&amp;A</a></div>
+				<div class="text">
+					Today's GPUs are powerful for general purpose computing -- General 
+					Purpose Computing on the Graphics Processing Unit (GPGPU). GPGPU 
+					leverages the microprocessors that power many modern graphics 
+					cards. GPGPU has great promise for bringing the distributing 
+					processes to the geospatial research and application.
+					<a href="topics.htm">&gt;&gt;</a></div>
+				<div class="subtitle_1">
+					<a href="topics.htm">Sensor Computing for Geospatial R&amp;A</a></div>
+				<div class="text">
+					What will be a world characterized by sensors everywhere? How 
+					to handle sensor data explosion in such a world? COM.Geo 2012 
+					will further bring more new thoughts to explore sensor computing 
+					for geospatial research and application.
+					<a href="topics.htm">&gt;&gt;</a></div>
+			</div>
+			<div class="latest-updates">
+				<div class="latest-updates view" style="width: 193px">
+					<span class="title">Latest Updates</span>
+					<div class="latest-updates date-display-single">
+						
+						<div class="latest-updates date-display-single">
+							May 25, 2012</div>
+						<div class="latest-updates update-title">
+							<a href="program.htm"><strong>Program At-A-Glance Available
+							</strong></a></div>
+						<div class="latest-updates date-display-single">
+							Aug. 2, 2011</div>
+						<div class="latest-updates update-title">
+							<a href="http://dl.acm.org/citation.cfm?id=1999320">
+							COM.Geo 2011 Proceedings Published by ACM Available</a></div>
+						<div class="latest-updates update-text" style="text-align: left">
+							<a href="http://dl.acm.org/citation.cfm?id=1999320">
+							COM.Geo 2011 proceedings</a> have been published by 
+							ACM, and available now at A<a href="http://dl.acm.org/citation.cfm?id=1999320">CM 
+							Digital Library</a> for world distribution.<a href="org_archive.htm"></a></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="content_container_middle_content_homepage">
+			<div class="title ">
+				Keynote/Featured Note Speakers</div>
+			<table align="left" style="height: 529px; vertical-align: top;">
+				<tr>
+					<td style="width: 28px; height: 19px;"></td>
+					<td class="auto-style11" style="width: 136px; height: 19px;">
+					<div class="keynote_agency">
+						<span class="ui-priority-primary"><strong>COM.Geo</strong></span></div>
+					</td>
+					<td class="auto-style11" style="width: 145px; height: 19px;">
+					<div class="keynote_agency">
+						<strong>USGS</strong></div>
+					</td>
+					<td class="auto-style11" style="width: 139px; height: 19px;">
+					<div class="keynote_agency">
+						<strong>GWU/COM.Geo</strong></div>
+					</td>
+					<td class="auto-style11" style="height: 19px; width: 145px;">
+					<div class="keynote_agency">
+						<span class="ui-priority-primary"><strong>OG</strong><span class="auto-style14">C</span></span></div>
+					</td>
+				</tr>
+				<tr>
+					<td class="auto-style5" style="width: 28px; height: 206px;">
+					</td>
+					<td class="auto-style5" style="width: 145px; height: 206px;">
+					<div class="subtitle_1">
+						<a class="link_speakers fancybox.ajax" data-fancybox-type="ajax" href="http://www.com-geo.org/conferences/2012/papers_get_single_present_forpopup.php?session_id=S6&amp;session_order=0&amp;year=2012">
+						<img alt="" class="auto-style12" height="135" src="images/presentations/liao_photo.jpg" />
+						</a>
+						<div class="keynote_speaker">
+							<strong>Dr. Lindi Liao</strong> </div>
+						<div class="keynote_speaker_title">
+							President &amp; Chief Scientist<br />
+							COM.Geo Conference General Chair </div>
+					</div>
+					</td>
+					<td class="auto-style5" style="width: 145px; height: 206px;">
+					<div class="subtitle_1" style="width: 136px">
+						<a class="link_speakers fancybox.ajax" data-fancybox-type="ajax" href="http://www.com-geo.org/conferences/2012/papers_get_single_present_forpopup.php?session_id=S6&amp;session_order=1&amp;year=2012">
+						<img alt="" class="auto-style12" height="135" src="images/presentations/ks_140w_usgs_applegate.jpg" />
+						</a>
+						<div class="keynote_speaker">
+							<strong>Dr. David Applegate </strong></div>
+						<div class="keynote_speaker_title">
+							Associate Director, Natural Hazards, USGS; Chair for 
+							NSTC's Subcommittee for the White House Office </div>
+					</div>
+					</td>
+					<td class="auto-style5" style="width: 139px; height: 206px;">
+					<div class="subtitle_1" style="width: 136px">
+						<a class="link_speakers" href="http://www.com-geo.org/conferences/2012/papers_get_single_present_forpopup.php?session_id=S6&amp;session_order=6&amp;year=2012">
+						<img alt="" class="auto-style12" height="135" src="images/presentations/berkovich_photo1.jpg" />
+						</a>
+						<div class="keynote_speaker">
+							<strong>Dr. Simon Berkovich</strong></div>
+						<div class="keynote_speaker_title">
+							Professor of Engineering &amp; Applied Science, George 
+							Washington University, <span class="auto-style1">Senior
+							<a href="../../inst_advisory_board.htm">
+							<span class="auto-style4">COM.Geo</span></a> Advisor
+							</span> </div>
+					</div>
+					</td>
+					<td class="auto-style5" style="width: 145px; height: 206px;">
+					<div class="subtitle_1" style="text-align: left">
+						<a class="link_speakers" href="http://www.com-geo.org/conferences/2012/papers_get_single_present_forpopup.php?session_id=S6&amp;session_order=3&amp;year=2012">
+						<img alt="" class="auto-style12" height="135" src="images/presentations/ks_george_percivall.jpg" /></a><a class="link_speakers" href="doc/COMGeo2012Agenda.pdf">
+						</a>
+						<div class="keynote_speaker">
+						<div class="keynote_speaker">
+							<strong>Mr. George Percivall<div class="keynote_speaker_title">
+							Chief Architect &amp; Executive Director - Interoperability 
+							Program
+							<br />
+						</div>
+							</strong></div>
+						</div>
+					</div>
+					</td>
+				</tr>
+				<tr>
+					<td class="auto-style5" style="width: 28px; height: 29px;">
+					</td>
+					<td class="auto-style5" style="width: 145px; height: 29px;">
+					<div class="keynote_speaker_title">
+						<span class="auto-style17"><strong>Keynote Video Slides:</strong></span></br>
+						<span class="auto-style18">
+					<a href="http://www.com-geo.org/conferences/2012/video_keynotes_highlights.htm">A Promising Future of Computing for Geospatial Technologies</a></span></div>
+					</td>
+					<td class="auto-style5" style="width: 145px; height: 29px;">
+					<div class="keynote_speaker_title">
+						<span class="auto-style17"><strong>Keynote Video Slides:</strong></span></br>
+						<span class="auto-style18">
+					<a href="http://www.com-geo.org/conferences/2012/video_keynotes_highlights.htm">Science in Times of Crisis: Delivering Situational Awareness to Emergency Managers and the Public When Disaster Strikes</a></span></div>
+					</td>
+					<td class="auto-style5" style="width: 139px; height: 29px;">
+					<div class="keynote_speaker_title">
+						<span class="auto-style17"><strong>Keynote Video Slides:</strong></span></br>
+						<span class="auto-style18">
+					<a href="http://www.com-geo.org/conferences/2012/video_keynotes_highlights.htm">On Clusterization in "Big Data" Streams</a></span></div>
+					</td>
+					<td class="auto-style5" style="width: 145px; height: 29px;">
+					<div class="keynote_speaker_title">
+						<span class="auto-style17"><strong>Keynote Slides:</strong></span></br>
+						<span class="auto-style18">
+					<a href="https://portal.opengeospatial.org/files/?artifact_id=49661">Emergent Forms in the Internet of Things</a></span><br />
+						<span class="auto-style17">(<a href="video_keynotes_highlights.htm"><strong>Keynote 
+						Video</strong></a>)</span></div></td>
+				</tr>
+				<tr>
+					<td style="width: 28px; height: 5px;"></td>
+					<td class="auto-style11" style="width: 136px; height: 5px;">
+					</td>
+					<td class="auto-style11" style="width: 145px; height: 5px;">
+					</td>
+					<td class="auto-style11" style="width: 139px; height: 5px;">
+					</td>
+					<td class="auto-style11" style="height: 5px; width: 145px;">
+					</td>
+				</tr>
+				<tr>
+					<td style="width: 28px; height: 25px;"></td>
+					<td class="auto-style11" style="width: 136px; height: 25px;">
+					<div class="keynote_agency">
+						<strong>Oracle</strong></div>
+					</td>
+					<td class="auto-style11" style="width: 145px; height: 25px;">
+					<div class="keynote_agency">
+						<strong>Nokia </strong></div>
+					</td>
+					<td class="auto-style11" style="width: 139px; height: 25px;">
+					<div class="keynote_agency">
+						<strong>ICF International</strong></div>
+					</td>
+					<td class="auto-style11" style="height: 25px; width: 145px;">
+					<div class="keynote_agency">
+						<strong>U.S. DOT</strong></div>
+					</td>
+				</tr>
+				<tr>
+					<td style="width: 28px; height: 224px;"></td>
+					<td class="auto-style11" style="width: 136px; height: 224px;">
+					<div class="subtitle_1" style="width: 134px; height: 215px;">
+						<a class="link_speakers" href="http://www.com-geo.org/conferences/2012/papers_get_single_present_forpopup.php?session_id=S6&amp;session_order=4&amp;year=2012">
+						<img alt="" class="auto-style12" height="135" src="images/presentations/ks_xlopez.jpg" /></a><a class="link_speakers" href="http://www.com-geo.org/conferences/2012/papers_get_single_present_forpopup.php?session_id=S6&amp;session_order=3&amp;year=2012">
+						<div class="keynote_speaker">
+							<strong>Dr. Xavier Lopez </strong></div>
+						<div class="keynote_speaker_title">
+							Director, Spatial and Semantic Technologies, Oracle</div>
+						</a>
+					</div>
+					</td>
+					<td class="auto-style11" style="width: 145px; height: 224px;">
+					<div class="subtitle_1" style="width: 134px; height: 215px;">
+						<a class="link_speakers" href="http://www.com-geo.org/conferences/2012/papers_get_single_present_forpopup.php?session_id=S6&amp;session_order=5&amp;year=2012">
+						<img alt="" class="auto-style12" height="135" src="images/presentations/ks_olli-pekka1.jpg" style="vertical-align: top" /></a><a class="link_speakers" href="http://www.com-geo.org/conferences/2012/papers_get_single_present_forpopup.php?session_id=S6&amp;session_order=4&amp;year=2012">
+						<div class="keynote_speaker">
+							<strong>Dr. Olli-Pekka Tossavainen</strong></div>
+						<div class="keynote_speaker_title">
+							Researcher, Nokia Research Center <br />
+						</div>
+						</a>
+					</div>
+					</td>
+					<td class="auto-style11" style="width: 139px; height: 224px;">
+					<div class="subtitle_1" style="width: 134px; height: 215px;">
+						<a class="link_speakers" href="http://www.com-geo.org/conferences/2012/papers_get_single_present_forpopup.php?session_id=S6&amp;session_order=7&amp;year=2012">
+						<img alt="" class="auto-style12" height="135" src="images/presentations/ks_pino.jpg" /></a><a class="link_speakers" href="http://www.com-geo.org/conferences/2012/papers_get_single_present_forpopup.php?session_id=S6&amp;session_order=5&amp;year=2012">
+						<div class="keynote_speaker">
+							<strong>Dr. Robinson E. Pino </strong></div>
+						<div class="keynote_speaker_title">Senior Scientist, ICF International
+							</div>
+						</a>
+					</div>
+					</td>
+					<td class="auto-style11" style="height: 224px; width: 145px;">
+					<div class="subtitle_1" style="width: 134px; height: 215px;">
+						<img alt="" class="auto-style12" height="135" src="images/presentations/wphil_000.jpg" />
+						
+						<div class="keynote_speaker">
+							<strong>Dr. Phil Yen </strong></div>
+						<div class="keynote_speaker_title">Principal Bridge Engineer & Program Manager, U.S.DOT-FHWA,
+COM.Geo 2012 Keynote Chair
+							</div>
+					</div>
+					</td>
+				</tr>
+				<tr>
+					<td style="width: 28px; height: 21px;"></td>
+					<td class="auto-style11" style="width: 136px; height: 21px;">
+					<div class="keynote_speaker_title">
+						<span class="auto-style17"><strong>Keynote Video:</strong></span></br>
+						<span class="auto-style18">
+					<a href="http://www.com-geo.org/conferences/2012/video_keynotes_highlights.htm">Big Data and Advanced Spatial Analytics</a></span></div>
+					</td>
+					<td class="auto-style11" style="width: 145px; height: 21px;">
+					<div class="keynote_speaker_title">
+						<span class="auto-style17"><strong>Keynote Video:</strong></span></br>
+						<span class="auto-style18">
+					<a href="http://www.com-geo.org/conferences/2012/video_keynotes_highlights.htm">Big Data Computing for Traffic Information by GPS Sensing</a></span></div>
+					</td>
+					<td class="auto-style11" style="width: 139px; height: 21px;">
+					<div class="keynote_speaker_title">
+						<span class="auto-style17"><strong>Keynote Video Slides:</strong></span><br/>
+						<span class="auto-style18">
+					<a href="http://www.com-geo.org/conferences/2012/video_keynotes_highlights.htm">Computational Intelligence and Neuromorphic Computing Potential for Geospatial Research and Applications</a></span></div>
+					</td>
+					<td class="auto-style11" style="height: 21px; width: 145px;">
+					<div class="keynote_speaker_title">
+						<span class="auto-style17"><strong>Panel Video:</strong></span><br/>
+						<span class="auto-style18">
+					<a href="http://www.com-geo.org/conferences/2012/video_panels_highlights.htm">Big Data Computing for Transportation / Traffic</a></span></div>
+					</td>
+				</tr>
+			</table>
+			<div class="title ">
+				Emerging Tech Panels+</div>
+			<div class="panel_title">
+				<a href="prog_panels.htm"><strong>Realizing the Geospatial Potential of Mobile, Internet of Things (IoT), and Big Data</strong></a></div>
+			<p class="panel_text">What happens when you have connected sensors in everyone's pockets, homes, vehicles, workspaces, street corners, shopping areas, and more? With the convergence of Mobile Computing, the Internet of Things (IoT), and the ability to gather and analyze this Big Data, the availability of massive amounts of information will continue to be gathered and you can expect the unexpected to happen. 
+			<a href="prog_panels.htm">Read More &gt;&gt;</a></p>
+			<p class="panel_text"><strong>Moderator</strong>: George Percivall,
+			<em>Chief Architect &amp; Executive Director - Interoperability Program,
+			<strong>OGC</strong></em><br />
+			<strong>Panelist</strong>:<br />
+			Xavier Lopez, <em>Director, Spatial and Semantic Technologies,
+			<strong>Oracle</strong></em><br />
+			Kipp Jones,<em> Chief Architect, <strong>Skyhook Wireless</strong></em><br />
+			Paul Wilson, <em>Market Segment Leader,<strong> GE Energy / MapFrame 
+			Mobile Solutions</strong></em><br />
+			Joel Reyes, <em>Senior Developer Evangelist for Mobile Computing,<strong> 
+			Microsoft<br /></strong></em>
+			Kevin Montgomery, <em>CEO,<strong> Intelesense Technologies</strong></em>
+</p>
+			<div class="panel_title">
+				<a href="prog_panels.htm"><strong>Cloud Computing &amp; Big Data Computing</strong></a></div>
+			<p class="panel_text">The amount of data each organization deals 
+			with today has been rapidly growing. However, analyzing large 
+			datasets commonly referred to as “big data” has been a huge 
+			challenge due to lack of suitable tools and adequate computing 
+			resources. Why are organizations, both in public sector and private 
+			sector, so keen on unlocking business insights from all structured 
+			and unstructured data? What is the current state of big data 
+			solutions and service providers? How effective are some of the 
+			solutions that have been put into real world practices? What’s the 
+			current state of cloud computing technologies? What impacts have 
+			cloud computing technologies available in public clouds and private 
+			clouds had on the way organizations addressing big data challenges? 
+			How to secure big data in the clouds? What are the future roadmaps 
+			for cloud-based big data solutions, <a href="prog_panels.htm">Read More &gt;&gt;</a></p>
+			<p class="panel_text"><strong>Moderator</strong>: Dr. Zhiming Xue,
+			<em>Senior Architect Evangelist for Windows Azure cloud computing at</em>
+			<strong><em>Microsoft</em></strong><br />
+			<strong>Panelists</strong>:<br />
+			Dr. Simon Y. Berkovich, <em>Professor, <strong>George Washington University</strong>, 
+			Senior Advisor<strong> </strong>at <strong>COM.Geo</strong> </em>
+			<br />
+			Dr. Larry Feldman, <em>Lead Associate, <strong>Booz Allen Hamilton</strong></em><br />
+			Dr. Olli-Pekka Tossavainen, <em>Researcher, <strong>Nokia</strong></em><br />
+			Dr. Shyam Parhi: <em>Computer Scientist for Airport GIS, <strong>U.S. 
+			DOT - FAA</strong></em><br/>
+			Dr. Kevin Montgomery, <em>CEO,<strong> Intelesense Technologies</strong></em>
+</p>
+			<div class="panel_title">
+				<strong><a href="prog_panels.htm">Cloud / Big Data Computing for Defense</a></strong></div>
+			<p class="panel_text">The ever growing necessity for Big Data 
+			processing within the industry, government, and specially within 
+			defense applications causes the need and requirement for the fast 
+			development of new technologies. In addition, the protection of Big 
+			Data can be a serious problem because security is commonly an 
+			afterthought during technology development, and the exponentially 
+			increasing rate at which new data is generated presents many 
+			challenges. <a href="prog_panels.htm">Read More &gt;&gt;</a></p>
+			<p class="panel_text"><strong>Moderator</strong>:
+			Dr. Robinson Pino, Senior Scientist, <strong>ICF International</strong> (ever 
+			worked at DARPA &amp; Air Force)<br />
+			<strong>Panelists</strong>:<br />
+			Dr. Douglas Kelly, <em>Branch Chief, </em> <strong><em>Army Research Laboratory</em></strong><em>, Network Security Branch</em><br/>
+			Dr. Arthur H. Edwards, <em>Senior Research Physicist, <strong>Air Force Research Laboratory, </strong>Space Vehicles Directorate</em><br />
+			Mr. Michael Shevenell,  <em>Project Manager, <strong>ICF International </strong></em><br />
+			Dr. Bryant Wysocki,  <em>Ret Maj USAF, Senior Electronics Engineer,  <strong>Air Force Research Laboratory, </strong>Information Directorate</em><br />
+			Dr. Larry Feldman, <em>Lead Associate, <strong>Booz Allen Hamilton
+			</strong>(Defense Consulting Firm)</em><br />
+			Dr. Alexander Davydov, <em>Senior Scientist, <strong>COM.Geo</strong> (ever worked 
+			for DOD)</em><br/>
+			Dr. Kevin Montgomery, <em>CEO,<strong> Intelesense Technologies</strong></em>
+			<em>&nbsp;(Defense Consulting Firm)</em></p>
+			<div class="panel_title">
+				<strong><a href="prog_panels.htm">Big Data Computing for Transportation / Traffic</a></strong></div>
+			<p class="panel_text"><strong>Moderator</strong>:
+			Dr. Phil W. Yen, <em>Principal Bridge Engineer &amp; Program Manager,
+			<strong>U.S. DOT - FHWA</strong></em><br/>
+			<em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			Member of NSTC's Subcommittee on Disaster Reduction for the White House Office
+			</em> <br />
+			<strong>Panelists</strong>:<br />
+			Gregory I. Snyder, <em>Manager, LIDAR Program Development, Land 
+			Remote Sensing Program, <strong>USGS</strong></em><br/>
+			Dr. Olli-Pekka Tossavainen, <em>Researcher, <strong>Nokia</strong></em><br />
+			Dr. Peter C. Chang, <em>Professor, <strong>University of Maryland</strong></em></p>
+
+
+			<div class="title ">
+				Sponsors</div>
+			<table align="center" style="width: 650px">
+				<tr>
+					<td class="auto-style10" style="width: 212px"><strong>
+					<a href="http://www.com-geo.org">
+					<img alt="COM.Geo" class="auto-style8" height="80" src="images/sponsors_partners/comgeoinst_logo.png" width="180" /></a></strong></td>
+					<td class="auto-style10"><a href="http://www.tridicon.de/?L=1">
+					<img alt="GWU" class="auto-style8" height="100" src="images/sponsors_partners/GTA_Logo_small_s.jpg" width="180" /></a></td>
+					<td class="auto-style10"><a href="http://www.microsoft.com">
+					<img alt="Microsoft" class="auto-style9" height="60" src="images/sponsors_partners/s_microsoft_logo.png" width="180" /></a></td>
+				</tr>
+				<tr>
+					<td class="auto-style16" style="width: 212px">Platinum 
+					Sponsor</td>
+					<td class="auto-style16" style="width: 212px">Bronze Sponsor</td>
+					<td class="auto-style16" style="width: 212px">Supporting 
+					Sponsor</td>
+				</tr>
+				<tr>
+					<td class="auto-style10" style="width: 212px"><strong>
+					<a href="http://portal.acm.org/">
+					<img border="0" class="auto-style9" height="80" src="images/sponsors_partners/s_acm_dl.png" width="180" /></a></strong></td>
+					<td class="auto-style10"><strong>
+					<a href="http://www.acm.org/">
+					<img border="0" class="auto-style9" height="100" src="images/sponsors_partners/s_ACM_ICPS.png" width="160" /></a></strong></td>
+					<td class="auto-style10">&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="auto-style16" style="width: 212px">Publishing 
+					Sponsor</td>
+					<td class="auto-style16" style="width: 212px">Publishing 
+					Sponsor</td>
+					<td class="auto-style10">&nbsp;</td>
+				</tr>
+				</table>
+			<div class="title ">
+				Partners</div>
+			<table align="center" style="width: 650px">
+				<tr>
+					<td class="auto-style10" style="width: 212px"><a href="http://www.usgs.gov">
+					<img alt="USGS" class="auto-style8" height="72" src="images/sponsors_partners/s_usgs_logo.png" width="180" /></a></td>
+					<td class="auto-style10"><strong>
+					<a href="http://www.opengeospatial.org">
+					<img alt="OGC" class="auto-style8" height="80" src="images/sponsors_partners/s_OGC_logo.png" width="160" /></a></strong></td>
+					<td class="auto-style10"><strong>
+					<a href="http://www.gwu.edu">
+					<img alt="GWU" class="auto-style8" height="80" src="images/sponsors_partners/s_gwu_logo.png" width="180" /></a></strong></td>
+				</tr>
+				<tr>
+					<td class="auto-style10" style="width: 212px"><strong>
+					<a href="http://www.nokia.com">
+					<img alt="Nokia" class="auto-style8" height="56" src="images/sponsors_partners/s_nokia_logo.png" width="180" /></a></strong></td>
+					<td class="auto-style10"><a href="http://www.oracle.com">
+					<img alt="Oracle" class="auto-style8" src="images/sponsors_partners/Oracle_ai_180w.png" width="180" /></a></td>
+					<td class="auto-style10">&nbsp;</td>
+				</tr>
+				</table>
+			<div class="title ">
+				Media Sponsors </div>
+			<table align="center" style="width: 650px">
+				<tr>
+					<td class="auto-style10" style="width: 212px"><strong>
+					<a href="http://www.directionsmag.com">
+					<img alt="Directions Magazine" class="auto-style8" height="73" src="images/sponsors_partners/directionsmagazine-logo_180w.png" width="180" /></a></strong></td>
+					<td class="auto-style10"><strong>
+					<a href="http://www.vector1media.com">
+					<img border="0" class="auto-style8" height="58" src="images/sponsors_partners/v1magazine_logo.png" width="150" /></a></strong></td>
+					<td class="auto-style10"><strong>
+					<a href="http://www.geoconnexion.com">
+					<img border="0" class="auto-style8" height="68" src="images/sponsors_partners/geoconnexion_logo.gif" width="150" /></a></strong></td>
+				</tr>
+				<tr>
+					<td class="auto-style16" style="width: 212px">Premier Media 
+					Sponsor</td>
+					<td class="auto-style10">&nbsp;</td>
+					<td class="auto-style10">&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="auto-style10" style="width: 212px"><strong>
+					<a href="http://www.mycoordinates.org">
+					<img border="0" class="auto-style8" height="38" src="images/sponsors_partners/coordinates_logo.png" width="180" /></a></strong></td>
+					<td class="auto-style10">&nbsp;</td>
+					<td class="auto-style10">&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="auto-style10" style="width: 212px">&nbsp;</td>
+					<td class="auto-style10">&nbsp;</td>
+					<td class="auto-style10">&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="auto-style10" style="width: 212px">&nbsp;</td>
+					<td class="auto-style10">&nbsp;</td>
+					<td class="auto-style10">&nbsp;</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	<!-- content -->
+	<!-- FOOTER -->
+	<!-- FOOTER START -->
+	<div id="footer">
+		<script language="javascript" src="scripts/footertxt.js" type="text/javascript"></script>
+	</div>
+	<!-- FOOTER END --></div>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+	</script>
+<script type="text/javascript">
+		_uacct = "UA-1333708-4";
+		urchinTracker();
+	</script>
+
+</body>
+
+</html>

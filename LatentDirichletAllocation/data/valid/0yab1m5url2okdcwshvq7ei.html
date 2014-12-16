@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="apple-itunes-app" content="app-id=556849449" />
+<title>POPL 2013: 40th ACM SIGACT-SIGPLAN Symposium on Principles of Programming Languages</title>
+<style type="text/css">
+  body,h1,h2,h3,h4,p,div,td { font-family: Arial, Helvetica, sans-serif; line-height: 120% }
+  a.acmlogo { float: left; }
+
+  table.tt { table-layout: fixed; width: 100%; border-spacing: 5px; }
+  
+  a:link    {text-decoration: none; color: #0033BB}
+  a:visited {text-decoration: none; color: #0033BB;}
+  a:active  {text-decoration: none; color: #0033BB;}
+  a:hover   {text-decoration: underline; color: #0033BB;}
+
+  .red          {text-decoration: none; color: #FF3333}
+  a.red:link    {text-decoration: none; color: #FF3333}
+  a.red:visited {text-decoration: none; color: #FF3333;}
+  a.red:active  {text-decoration: none; color: #FF3333;}
+  a.red:hover   {text-decoration: underline; color: #FF3333;}
+ 
+  
+  h1 { text-align: left; color: #15317e; font-size: 150% }
+  h2 { border-style: solid; border-width: thin;
+      font-size: 120%;
+      color: #15317e;
+      padding-top: 8px;
+      padding-bottom: 8px;
+      background-color: #afdcec;
+      text-align: center;
+      clear: both;
+  }
+  h3 { margin-bottom: 0; font-size: 110%; margin-top:5px; }
+  h4 { margin-bottom: 0; }
+
+  td.cal { text-align: center; padding-left: 8px; padding-right:8px }
+  td.logos { text-align: center }
+
+  .mitem { display: inline; padding: 0 0.5em 0 0.5em; }
+  td.desc { width: 200px; }
+  td.photo { width: 95px; }
+  td.datesh { width: 240px; }
+
+  table.dates { margin-top: 0em; }
+  div.indent { margin-left: +1em; }
+
+  #footer { clear: both; text-align: center; font-size: small; }
+
+@media print { #menu, #menu2 { display:none; } }
+
+@media screen {
+  #wrapper { margin-left: auto; margin-right: auto; width: 1000px; }
+  #main { padding: 15px; float:left; width: 715px }
+  #menu { padding: 0.5em 0 0.5em 0; width: 1000px; text-align: center; 
+          border-style: solid; border-width: thin;
+          background-color: #afdcec; }
+  #menu2 { padding: 10px; margin-top: 10px; width: 230px; 
+          border-style: solid; border-width: thin; float:right;
+          background-color: #afdcec; }
+}
+
+@media screen and (max-device-width: 480px) {
+  #wrapper, #main { padding:0; width: 100%!important; }
+  #menu { padding: 0.5em 0 0.5em 0; width: 100%; text-align: center; 
+          border-style: solid; border-width: thin;
+          background-color: #afdcec; }
+  #menu2 { display:none!important; }
+}
+
+</style>
+<script type="text/javascript"> 
+function toggle(showHideDiv,switchTextDiv) {
+	var ele = document.getElementById(showHideDiv);
+	var text = document.getElementById(switchTextDiv);
+	if(ele.style.display == "block") {
+    		ele.style.display = "none";
+		text.innerHTML = "<i>[Show]</i>";
+  	}
+	else {
+		ele.style.display = "block";
+		text.innerHTML = "<i>[Hide]</i>";
+	}
+}
+</script>
+</head>
+<body>
+
+<div id="wrapper">
+
+<div id="menu">
+
+<div class="mitem"><a href="index.html">Home</a></div>
+<!--div class="mitem"><a href="cfp.html">Call for papers (HTML)</a></div-->
+<!--div class="mitem"><a href="popl2013-cfp.pdf">Call for papers (PDF)</a></div-->
+<div class="mitem"><a href="program.html">Conference program</a></div>
+<!--div class="mitem"><a href="accepted.html">Accepted papers</a></div-->
+<div class="mitem"><a href="#events">Co-located events</a></div>
+<!--div class="mitem"><a href="http://matt.might.net/events/popl/2013/call-for-events/">Call for workshops</a></div-->
+<div class="mitem"><a href="http://wrigstad.com/popl13/">Student session</a></div>
+<div class="mitem"><a href="http://popl13.di.univr.it/">Local arrangements</a></div>
+<div class="mitem"><a href="#organisers">Organisers</a></div>
+<div class="mitem"><a href="#sponsors">Sponsors</a></div>
+<!--div class="mitem"><a href="index.html">SIGPLAN awards</a></div-->
+</div>
+      
+<div id="main">
+<table class="tt"><tr><td style="width:320px">
+<img src="popl2013-logo.jpg" style="width:302px" alt="POPL 2013 logo" /><br />
+</td><td>
+<h1>POPL 2013: 40th ACM SIGPLAN-SIGACT Symposium on Principles of Programming Languages</h1>
+<h3>Rome, Italy<br />January 23-25, 2013</h3>
+</td></tr></table>
+
+<h2>Important information</h2>
+<div class="indent">
+
+<table class="dates"><tbody>
+<tr><td class="datesh"><b>Paper registration</b></td>
+<td><b><a href="http://www.timeanddate.com/worldclock/city.html?n=1033">July 6, 2012, 11:59pm American Samoa time (UTC-11h)</a> (Friday)</b></td>
+</tr>
+
+<tr><td class="datesh"><b>Paper submission</b></td>
+<td><b><a href="http://www.timeanddate.com/worldclock/city.html?n=1033">July 10, 2012, 11:59pm American Samoa time (UTC-11h)</a> (Tuesday, <i>firm</i>)</b></td>
+</tr>
+
+<tr><td class="datesh"><b>Submission URL</b></td>
+<td><b><a href="https://popl2013.di.ens.fr/">https://popl2013.di.ens.fr/</a></b></td>
+</tr>
+   
+<tr><td class="datesh"><b>Author response period</b></td>
+<td>September 10, 2012 to September 13, 2012</td></tr>
+
+<tr><td class="datesh"><b>Author notification</b></td>
+<td>October 1, 2012 (Monday)</td></tr>
+
+<tr><td class="datesh"><b>Camera-ready deadline</b></td>
+<td>October 29, 2012</td></tr>
+
+<tr><td class="datesh"><b>Early registration deadline</b></td>
+<td>December 31, 2012</td></tr>
+
+<tr><td class="datesh"><b>Registration URL</b></td>
+<td><b><a href="https://regmaster3.com/2013conf/POPL13/register.php">https://regmaster4.com/2013conf/POPL13/register.php</a></b></td></tr>
+
+<tr><td class="datesh"><b>Student Session URL</b></td>
+<td><b><a href="http://wrigstad.com/popl13/">http://wrigstad.com/popl13/</a></b></td></tr>
+
+<tr><td class="datesh"><b>POPL'13 Proceedings</b></td>
+<td><b><a class="red" href="http://dl.acm.org/citation.cfm?id=2429069">http://dl.acm.org/citation.cfm?id=2429069</a></td>
+</tbody></table>
+<br />
+The list of <a href="accepted.html">accepted papers</a> and the
+<a href="program.html">conference program</a> are available.
+<br />
+<br />
+A document describing POPL (<a href="../PrinciplesofPOPL.pdf">"Principles of POPL"</a>) and the <a href="http://dl.acm.org/citation.cfm?id=2429069">POPL proceedings</a> are also
+available.
+<br />
+<br />
+<!--div style="float:left;padding-right:5px;padding-bottom:5px"><a href="http://dl.acm.org/citation.cfm?id=2429069"><img src="proc.jpg" style="height:51px;width:38px" alt="" /></a></div>
+<a href="http://dl.acm.org/citation.cfm?id=2429069">POPL proceedings</a>
+<div style="clear:both">&nbsp;</div-->
+<div style="float:left;padding-right:5px;padding-bottom:5px"><a href="http://guidebook.com/g/w7pjfk9x/"><img src="guidebook.jpg" style="width:40px;height:40px" alt="" /></a></div>
+<b>NEW:</b> Get the POPL'13 program and local information for smartphones from <a href="http://guidebook.com/g/w7pjfk9x/">Guidebook</a>
+<div style="clear:both;height:0px;">&nbsp;</div>
+<div style="float:left;padding-right:5px;padding-bottom:5px"><a href="http://confschedule.net/landing"><img src="c-logo.png" style="width:40px;height:40px" lt="" /></a></div>
+Get the POPL'13 and co-located events schedule for smartphones from <a href="http://confschedule.net/landing">ConfSchedule</a>
+</div>
+<h2>Scope</h2>
+<p>
+The annual Symposium on Principles of Programming Languages is a forum
+for the discussion of all aspects of programming languages and
+systems, with emphasis on how principles underpin practice. Both
+theoretical and experimental papers are welcome, on topics ranging
+from formal frameworks to experience reports.  Papers discussing new
+ideas and areas are most welcome, as are high-quality expositions or
+elucidations of existing concepts that are likely to yield new
+insights ("pearls").
+</p>
+
+<form action="OdysciSearchPage.html" id="search_form_odysci" method="get">
+<input type="text" placeholder="Odysci Search" name="qodysci" 
+        style="color: black;display:block;width: 100%" />
+ <a href="http://www.odysci.com" style="display: block; float: left; border: 0px; margin: 0px; width: 73px; height: 20px; overflow: hidden; clear: left;" ><img src="http://www.odysci.com/odysci_logo_h20_w73.png" width="73" height="20" alt="[Odysci logo]" /> </a>
+ <input type="submit" value="Find a POPL paper!" style="float: right;" />
+<div style="clear:both"></div>
+</form>
+
+<h2>Invited Speakers</h2>
+
+<ul>
+<li><a href="http://www.cs.cornell.edu/andru/">Andrew Myers</a> (Cornell University):
+How languages can save distributed computing</li>
+<li><a href="http://www.stanford.edu/~ngoodman/">Noah Goodman</a> (Stanford University):
+The principles and practice of probabilistic programming</li>
+<li><a href="http://www.cs.brown.edu/~sk/">Shriram Krishnamurthi</a> (Brown University):
+From principles to programming languages (and back)
+</li>
+<li><a href="http://research.microsoft.com/en-us/people/gonthier/">Georges Gonthier</a> (Microsoft Research):
+Engineering mathematics: the odd order theorem proof</li>
+</ul>
+
+<!--h2>Evaluation</h2>
+<p>
+A committee of experts will evaluate the technical contribution of each
+submission as well as its accessibility to both experts and the general POPL
+audience. All papers will be judged on significance, originality, relevance,
+correctness, and clarity. Each paper should explain its contributions in both
+general and technical terms, identifying what has been accomplished, explaining
+why it is significant, and comparing it with previous work. The submissions are
+not anonymous and should therefore include all author names, affiliations and
+contact information. More advice on writing technical papers can be found on
+the <a href="http://www.sigplan.org/Resources/Author">SIGPLAN author information page</a>.
+</p>
+
+<h2>Submission guidelines</h2>
+<p>
+Authors should submit an abstract of at most 300 words and a full paper of no
+more than 12 pages (including bibliography and appendices) formatted according
+to the ACM proceedings format. SIGPLAN conference paper templates are available
+for LaTeX and Word at <a
+href="http://www.sigplan.org/Resources/Author">http://www.sigplan.org/Resources/Author</a>
+(use the 9 pt template). Submissions must be in PDF. The submission deadline
+and length limitations are firm.
+</p><p>
+Submitted papers must adhere to the 
+<a href="http://www.sigplan.org/Resources/Policies/Republication">SIGPLAN Re-publication Policy</a>
+and the <a href="http://www.acm.org/publications/policies/plagiarism_policy">ACM Policy on Plagiarism</a>. Concurrent submissions to other conferences, workshops,
+journals, or similar forums of publication are not allowed. Submissions that do
+not meet these guidelines may not be considered.
+</p><p>
+The URL for submission of abstracts and papers is: <a
+class="red" href="http://popl2013.ens.fr">http://popl2013.ens.fr</a> 
+</p><p>
+Authors will have a four-day period to read and respond to the reviews of their
+papers before the PC meeting. Details of the response process will be announced
+by email a few days beforehand.
+</p><p>
+Authors of accepted submissions are expected to <a
+href="http://www.acm.org/publications/copyright_form/">transfer the copyright
+to the ACM</a> and may sign a release for video of their presentation.
+Authors are encouraged to publish auxiliary material with their paper; they
+retain copyright of auxiliary material.
+</p-->
+
+<!--
+
+<h2>Author response period</h2>
+<p style="padding-top: 10px; padding-botton:15px;">
+Authors will have four days to read and respond to the reviews
+of their papers before the PC meeting. Details of the response process
+will be announced by e-mail a few days beforehand.
+</p>
+</td>
+</tr>
+-->
+
+<!--
+<h2>Visa support letters</h2>
+
+<p>Requests for visa support letters for purposes of attending or presenting at POPL 2011 are handled by ACM.
+ For more information, go <a href="visa.html">here</a>. The same page also contains archived information for authors, and about student travel awards.
+  </p>
+-->
+
+<h2><a id="location">Location</a></h2>
+
+<!--div style="float:left;margin-right:5px">
+<iframe width="425" height="350" src="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Hotel+Parco+Dei+Principi,+Rome,+Italy&amp;aq=0&amp;oq=parco+dei+p&amp;sll=49.440066,7.749126&amp;sspn=0.408534,0.617981&amp;ie=UTF8&amp;hq=Hotel+Parco+Dei+Principi,+Rome,+Italy&amp;t=m&amp;ll=41.917607,12.490082&amp;spn=0.089414,0.145912&amp;z=12&amp;iwloc=A&amp;output=embed"></iframe><br /><small><a href="http://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Hotel+Parco+Dei+Principi,+Rome,+Italy&amp;aq=0&amp;oq=parco+dei+p&amp;sll=49.440066,7.749126&amp;sspn=0.408534,0.617981&amp;ie=UTF8&amp;hq=Hotel+Parco+Dei+Principi,+Rome,+Italy&amp;t=m&amp;ll=41.917607,12.490082&amp;spn=0.089414,0.145912&amp;z=12&amp;iwloc=A" style="color:#0000FF;text-align:left">View Larger Map</a></small>
+</div-->
+
+<p>
+POPL'13 will be held at the <a href="http://parcodeiprincipi.com/">Parco dei
+Principi Hotel</a> in Rome, Italy.
+For information about getting to Rome, accommodation, restaurants, etc., please
+visit the <a href="http://popl13.di.univr.it/">local arrangements pages</a>.
+</p>
+
+<h2><a id="events">Workshops and co-located events</a></h2>
+
+<table><tr>
+<td class="cal">Sun<br/>20 Jan</td>
+<td class="cal">Mon<br />21 Jan</td>
+<td class="cal">Tue<br />22 Jan</td>
+<td class="cal">Wed<br />23 Jan</td>
+<td class="cal">Thu<br />24 Jan</td>
+<td class="cal">Fri<br />25 Jan</td>
+<td class="cal">Sat<br />26 Jan</td></tr>
+<tr><td colspan="3" style="text-align:center;background:#ff3333">VMCAI</td>
+<td colspan="3" rowspan="6" style="text-align:center;background:#3386cc"><b>POPL</b></td>
+<td style="text-align:center;background:#aaaaaa">PPREW</td></tr>
+<tr><td>&nbsp;</td><td colspan="2" style="text-align:center;background:#ffcc33">PADL</td>
+<td style="text-align:center;background:#806090">OBT</td></tr>
+<tr><td>&nbsp;</td><td colspan="2" style="text-align:center;background:#33cc33">PEPM</td></tr>
+<tr><td>&nbsp;</td><td style="text-align:center;background:#cc6633">ID</td>
+<td style="text-align:center;background:#aaaa00">BEAT</td></tr>
+<tr><td colspan="2" style="text-align:center;background:#cccccc">SVARM</td><td style="text-align:center;background:#66ccff">DDFP</td></tr>
+<tr><td>&nbsp;</td><td style="text-align:center;background:#F0D0F5">cYak</a></td><td style="text-align:center;background:#ff6666">PLPV</td></tr>
+<tr><td>&nbsp;</td><td style="background:#3386cc">Tutorials</a></td><td style="text-align:center;background:#cc00cc">PLMW</td></tr>
+</table>
+
+
+<ul>
+<li><a href="http://vmcai13.di.univr.it">VMCAI: Verification, Model Checking, and Abstract Interpretation</a> (20-22 January)</li>
+<li><a href="http://richmodels.epfl.ch/rome13">SVARM: Workshop on Synthesis, Verification, and Analysis of Rich Models - Meeting of COST Action IC0109 Rich Model Toolkit</a> (20 - 21 January)</li>
+<li><a href="http://wrigstad.com/popl13/tutorialfest.html">TutorialFest: POPL tutorials</a> (21January)</li>
+<li><a href="http://www.it.uu.se/conf/padl2013/">PADL: 15th International Symposium on Practical Aspects of Declarative Languages</a> (21-22 January)</li>
+<li><a href="http://www.program-transformation.org/PEPM13">PEPM: Partial Evaluation and Program Manipulation</a> (21-22 January)</li>
+<li><a href="https://sites.google.com/site/idworkshop2013/">ID: Interference and Dependence</a> (21 January)</li>
+<li><a href="http://www.resourcereasoning.com/popl13yak/">cYak: Concurrency Yak at POPL</a> (21 January)</li>
+<li><a href="http://beat13.cs.aau.dk/">BEAT: Workshop on Behaviours and Types</a> (22 January)</li>
+<li><a href="http://research.microsoft.com/en-us/events/ddfp2013/">DDFP: Workshop on Data Driven Functional Programming</a> (22 January)</li>
+<li><a href="http://plpv.tcs.ifi.lmu.de">PLPV: Programming Languages meets Program Verification</a> (22 January)</li>
+<li><a href="http://www.doc.ic.ac.uk/~gds/PLMW/">PLMW: Programming Language Mentoring Workshop</a> (22 January)</li>
+<li><a href="http://www.pprew.org/">PPREW: 2nd Program Protection and Reverse Engineering Workshop</a> (26 January)</li>
+<li><a href="http://goto.ucsd.edu/~rjhala/OBT2013/">OBT: Off The Beaten Track: Underrepresented Problems for Programming Language Researchers</a> (26 January)</li>
+</ul>
+
+
+<h2>Student Attendees</h2>
+
+<p>Students with accepted papers or students who are participating in the student
+session are encouraged to apply for a <a
+href="http://www.sigplan.org/PAC/Main">SIGPLAN PAC grant</a> that will help
+covering travel expenses. </p>
+
+<h2 id="organisers">Organisers</h2>
+
+<div class="indent">
+<table class="tt"><tbody>
+<tr><td class="desc"><b>General Chair:</b></td>
+<td class="photo"><img alt="" src="roberto.jpg" height="89" /></td><td>
+<a href="http://profs.sci.univr.it/~giaco/">Roberto Giacobazzi</a>
+<br />Universit&agrave; di Verona, Dipartimento di Informatica
+<br />Strada Le Grazie 15, 37134 Verona, Italy
+<br /><img width="250" src="email-giacobazzi.jpg" alt="[email Roberto Giacobazzi]" />
+</td></tr>
+
+<tr><td class="desc"><b>Workshop Co-Chairs:</b></td>
+<td class="photo"><img alt="" src="might.jpg" height="89" /></td><td>
+<a href="http://matt.might.net/">Matthew Might</a><br />
+University of Utah, USA
+</td></tr>
+<tr><td>&nbsp;</td>
+<td class="photo"><img alt="" src="vanhorn.jpg" height="89" /></td><td>
+<a href="http://www.ccs.neu.edu/home/dvanhorn/">David Van Horn</a><br />
+Northeastern University, USA</td></tr>
+
+<tr><td class="desc"><b>Treasurer:</b></td>
+<td class="photo"><img alt="" src="chang.jpg" height="89" /></td>
+<td><a href="http://www.cs.colorado.edu/~bec/">Bor-Yuh Evan Chang</a><br />University of Colorado, USA</td></tr>
+
+<tr><td class="desc"><b>Publicity Chair:</b></td>
+<td class="photo"><img alt="" src="viktor.jpg" height="89" /></td>
+<td><a href="http://www.mpi-sws.org/~viktor/">Viktor Vafeiadis</a><br />MPI-SWS, Germany</td></tr>
+
+<tr><td class="desc"><b>Student Activities Chair:</b></td>
+<td class="photo"><img alt="" src="wrigstad.jpg" height="89" /></td>
+<td><a href="http://wrigstad.com/">Tobias Wrigstad</a><br />Uppsala University, Sweden</td></tr>
+
+<tr><td class="desc"><b>Program Chair:</b></td>
+<td class="photo"><img alt="" src="radhia.png" height="89" /></td><td>
+<a href="http://www.di.ens.fr/~rcousot/">Radhia Cousot</a>
+<br />&Eacute;cole normale sup&eacute;rieure
+<br />45 rue d'Ulm, 75230 Paris cedex 05, France
+<br /><img width="150" src="email-popl2013.jpg" alt="[email popl2013]" />
+</td></tr>
+
+<tr><td colspan="3"><b>Program Committee:</b></td>
+</tr></tbody></table>
+
+<table style="border-spacing:4px;padding-left:1cm"><tbody>
+<tr><td><a href="http://research.microsoft.com/en-us/people/jjb/">Josh Berdine</a></td><td>Microsoft Research, UK</td></tr>
+<tr><td><a href="http://research.microsoft.com/en-us/people/sburckha/">Sebastian Burckhardt</a></td><td>Microsoft Research, USA</td></tr>
+<tr><td><a href="http://www.cs.utexas.edu/~wcook/">William R. Cook</a></td><td>University of Texas, Austin, USA    </td></tr>
+<tr><td><a href="http://www.di.ens.fr/~rcousot/">Radhia Cousot</a> <b>(chair)</b></td><td>CNRS &amp; &Eacute;NS &amp; INRIA, France</td></tr>
+<tr><td><a href="http://www.cse.chalmers.se/~nad/">Nils Anders Danielsson</a>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Chalmers &amp; Gothenburg U., Sweden</td></tr>
+<tr><td><a href="http://www.cs.wm.edu/~idillig/">I&#351;&#305;l Dillig</a></td><td>College of William &amp; Mary, USA</td></tr>
+<tr><td><a href="http://research.microsoft.com/en-us/people/maf/">Manuel F&auml;hndrich</a></td><td>Microsoft Research, USA   </td></tr>
+<tr><td><a href="http://staff.ustc.edu.cn/~xyfeng/">Xinyu Feng</a></td><td>U. of Sci. and Tech. of China, China</td></tr>
+<tr><td><a href="http://research.microsoft.com/en-us/um/people/adg/">Andrew D. Gordon</a></td><td>MSR &amp; Univ. of Edinburgh, UK </td></tr>
+<tr><td><a href="http://www.software.imdea.org/people/manuel.hermenegildo/index.html">Manuel Hermenegildo</a></td><td>IMDEA Software, Spain </td></tr>
+<tr><td><a href="http://cs.nyu.edu/~ejk/">Eric Koskinen</a></td><td>New York University, USA   </td></tr>
+<tr><td><a href="http://gallium.inria.fr/~xleroy/">Xavier Leroy</a></td><td>INRIA, France </td></tr>
+<tr><td><a href="http://research.microsoft.com/en-us/people/logozzo/">Francesco Logozzo</a></td><td>Microsoft Research, USA</td></tr>
+<tr><td><a href="http://www.software.imdea.org/people/laurent.mauborgne/index.html">Laurent Mauborgne</a></td><td>IMDEA Software, Spain </td></tr>
+<tr><td><a href="http://www.cs.le.ac.uk/people/amurawski/">Andrzej Murawski</a></td><td>University of Leicester, UK </td></tr>
+<tr><td><a href="http://www.cs.ucl.ac.uk/staff/p.ohearn/">Peter O'Hearn</a></td><td>University College London, UK </td></tr>
+<tr><td><a href="http://www.cis.upenn.edu/~bcpierce/">Benjamin C. Pierce</a></td><td>University of Pennsylvania, USA</td></tr>
+<tr><td><a href="http://research.microsoft.com/en-us/people/sriram/">Sriram Rajamani</a></td><td>Microsoft Research, India</td></tr>
+<tr><td><a href="http://www.math.unipd.it/~franz/">Francesco Ranzato</a></td><td>Universit&agrave; di Padova, Italy </td></tr>
+<tr><td><a href="http://www.mpi-sws.org/~rossberg/">Andreas Rossberg</a></td><td>Google, Germany </td></tr>
+<tr><td><a href="http://www.cse.chalmers.se/~andrei/">Andrei Sabelfeld</a></td><td>Chalmers &amp; Gothenburg U., Sweden</td></tr>
+<tr><td><a href="http://www.cl.cam.ac.uk/~pes20/">Peter Sewell</a></td><td>University of Cambridge, UK </td></tr>
+<tr><td><a href="http://www.cs.umass.edu/~yannis/">Yannis Smaragdakis</a></td><td>U. Athens, Greece &amp; U. Mass., USA</td></tr>
+<tr><td><a href="http://www.srl.inf.ethz.ch/people.php">Martin Vechev</a></td><td>ETH Zurich, Switzerland  </td></tr>
+<tr><td><a href="http://www.cs.princeton.edu/~dpw/">David Walker</a></td><td>Princeton University, USA</td></tr>
+<tr><td><a href="http://wrigstad.com/">Tobias Wrigstad</a></td><td>Uppsala University, Sweden </td></tr>
+<tr><td><a href="http://ropas.snu.ac.kr/~kwang/">Kwangkeun Yi</a></td><td>Seoul National University, Korea</td></tr>
+</tbody></table>
+
+<div style="padding:5px 5px 5px 5px">
+<b>External Review Committee:</b> &nbsp; 
+<a id="extid"
+    href="javascript:toggle('extcomm', 'extid');"><i>[Show external review committee]</i></a>
+</div>
+
+<div id="extcomm" style="display:none">
+<table class="tt"><tbody>
+<tr>
+<td><a href="http://theory.stanford.edu/~aiken/">Alex Aiken</a>,  Stanford University, USA
+<br /><a href="http://people.cs.uchicago.edu/~blume/">Matthias Blume</a>,  Google, USA 
+<br /><a href="http://software.imdea.org/people/gilles.barthe/">Gilles Barthe</a>,  IMDEA Software, Spain  
+<br /><a href="http://www.itu.dk/~birkedal/">Lars Birkedal</a>,  IT U. of Copenhagen, Denmark
+<br /><a href="http://www.hpl.hp.com/personal/Hans_Boehm/">Hans-J. Boehm</a>,  HP Labs, USA 
+<br /><a href="http://www.cs.umd.edu/~avik/">Avik Chaudhuri</a>,  Adobe Systems, USA    
+<br /><a href="http://www.cs.rice.edu/~sc40/">Swarat Chaudhuri</a>,  Rice University, USA  
+<br /><a href="http://www.mpi-sws.org/~dreyer/">Derek Dreyer</a>,  MPI-SWS, Germany    
+<br /><a href="http://www.liafa.jussieu.fr/~mje/">Michael Emmi</a>,  Univ. Paris Diderot, France
+<br /><a href="http://www.di.ens.fr/~feret/">J&eacute;r&ocirc;me Feret</a>,  INRIA, France 
+<br /><a href="http://research.microsoft.com/en-us/um/people/fournet/">C&eacute;dric Fournet</a>,  Microsoft Research, UK 
+<br /><a href="http://cs.anu.edu.au/~Daniel.Frampton/">Daniel Frampton</a>,  Australian National U., Australia
+<br /><a href="http://www.dcs.gla.ac.uk/~simon/">Simon Gay</a>,  University of Glasgow, UK
+<br /><a href="http://www.di.unipi.it/~ghelli/">Giorgio Ghelli</a>,  Universit&agrave; di Pisa, Italy
+<br /><a href="http://www.cs.nyu.edu/goldberg/">Benjamin Goldberg</a>,  New York University, USA
+<br /><a href="http://cs.nyu.edu/rgrimm/">Robert Grimm</a>,  New York University, USA
+<br /><a href="http://www-cs-students.stanford.edu/~vgupta/">Vineet Gupta</a>,  Google, USA 
+<br /><a href="http://research.microsoft.com/en-us/people/chrishaw/">Chris Hawblitzel</a>,  Microsoft Research, USA
+<br /><a href="http://www.cl.cam.ac.uk/~jmh93/">Jonathan Hayman</a>,  INRIA, France  
+<br /><a href="http://www.cs.umd.edu/~mwh/">Michael  Hicks</a>,  University of Maryland, USA   
+<br /><a href="http://www2.tcs.ifi.lmu.de/~mhofmann/">Martin Hofmann</a>,  Ludwig-Maximilians U., Germany 
+<br /><a href="http://goto.ucsd.edu/~rjhala/">Ranjit Jhala</a>,  University of California, San Diego, USA  
+<br /><a href="http://research.microsoft.com/en-us/um/people/leino/">K. Rustan M. Leino</a>,  Microsoft Research, USA 
+<br /><a href="http://cseweb.ucsd.edu/~lerner/">Sorin Lerner</a>,  University of California, San Diego, USA  
+<br /><a href="http://www.di.unipi.it/~levifran/">Francesca Levi</a>,  Universit&agrave; di Pisa, Italy 
+<br /><a href="http://www.andrew.cmu.edu/user/yhm/">Yitzhak Mandelbaum</a>,  SEI-CMU 
+<br /><a href="http://www.lisyc.univ-brest.fr/pages_perso/dmasse/">Damien Mass&eacute;</a>,  U. de Bretagne Occidentale, France  
+<br /><a href="http://profs.sci.univr.it/~mastroen/">Isabella Mastroeni</a>,  Universit&agrave; di Verona, Italy  
+<br /><a href="http://www.research.ibm.com/people/m/michael/">Maged M. Michael</a>,  IBM Research, USA 
+<br /><a href="http://cs.au.dk/~jmi/">Jan Midtgaard</a>, Aarhus University, Denmark
+</td><td>
+<a href="http://www.cs.ucla.edu/~todd/">Todd Millstein</a>,  Univ. of California, Los Angeles, USA   
+<br /><a href="http://www.eecs.harvard.edu/~greg/">Greg Morrisett</a>,  Harvard University, USA 
+<br /><a href="http://research.microsoft.com/en-us/um/people/leonardo/">Leonardo de Moura</a>,  Microsoft Research, USA  
+<br /><a href="http://www.cs.cornell.edu/andru/">Andrew C. Myers</a>,  Cornell University, USA 
+<br /><a href="http://www.cs.berkeley.edu/~necula/">George Necula</a>,  Univ. of California, Berkeley, USA  
+<br /><a href="http://www.research.ibm.com/trl/people/onodera/index_e.htm">Tamiya Onodera</a>,  IBM Research, Japan 
+<br /><a href="http://www.cs.ucla.edu/~palsberg/">Jens Palsberg</a>,  Univ. of California, Los Angeles, USA 
+<br /><a href="http://www.cs.mcgill.ca/~prakash/">Prakash Panangaden</a>,  McGill University, Canada   
+<br /><a href="http://www.cs.technion.ac.il/~erez/">Erez Petrank</a>,  Technion, Israel 
+<br /><a href="http://swt.informatik.uni-freiburg.de/staff/podelski">Andreas Podelski</a>,  University of Freiburg, Germany 
+<br /><a href="http://gallium.inria.fr/~fpottier/">Fran&ccedil;ois Pottier</a>, INRIA, France 
+<br /><a href="http://www.iasi.cnr.it/~proietti/">Maurizio Proietti</a>,  CNR, Italy  
+<br /><a href="http://clip.dia.fi.upm.es/~german/">German Puebla</a>,  Univ. Politecnica de Madrid, Spain 
+<br /><a href="http://people.csail.mit.edu/rinard/">Martin C. Rinard</a>,  MIT, USA  
+<br /><a href="http://www.di.ens.fr/~rival/">Xavier Rival</a>,  INRIA, France   
+<br /><a href="http://plrg.kaist.ac.kr/ryu">Sukyoung Ryu</a>,  KAIST, Korea  
+<br /><a href="http://www.sci.unich.it/~scozzari/">Francesca Scozzari</a>,  Univ. di Chieti-Pescara, Italy 
+<br /><a href="http://ecee.colorado.edu/~siek/">Jeremy G. Siek</a>,  Univ. of Colorado, Boulder, USA 
+<br /><a href="http://people.csail.mit.edu/asolar/">Armando Solar-Lezama</a>,  MIT, USA
+<br /><a href="http://www.cs.cmu.edu/afs/cs/user/stichnot/public/www/resume.html">James Stichnoth</a>,  Intel, USA 
+<br /><a href="http://www.kb.ecei.tohoku.ac.jp/~sumii/">Eijiro Sumii</a>,  Tohoku University, Japan    
+<br /><a href="http://www.agusa.i.is.nagoya-u.ac.jp/person/terauchi/">Tachio Terauchi</a>,  Nagoya University, Japan 
+<br /><a href="http://www.csl.sri.com/people/tiwari/">Ashish Tiwari</a>,  SRI International, USA
+<br /><a href="http://www.mpi-sws.org/~viktor/">Viktor Vafeiadis</a>,  MPI-SWS, Germany 
+<br /><a href="http://www.ccs.neu.edu/home/dvanhorn/">David Van Horn</a>,  Northeastern University, USA
+<br /><a href="http://ti.arc.nasa.gov/profile/arnaud/">Arnaud Venet</a>,  NASA Ames Research Center, USA 
+<br /><a href="http://www.iai.uni-bonn.de/~jv/">Janis Voigtl&auml;nder</a>,  University of Bonn, Germany 
+<br /><a href="http://www.ccs.neu.edu/home/wand/">Mitchell Wand</a>,  Northeastern University, USA    
+<br /><a href="http://www.cs.technion.ac.il/~yahave/">Eran Yahav</a>,  Technion, Israel 
+<br /><a href=" http://moscova.inria.fr/~zappa">Francesco Zappa Nardelli</a>, INRIA, France
+</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<h2 id="sponsors">Sponsors</h2>
+
+<!--
+<a href="http://research.google.com/"><img width=200 src="googlelogo.jpg"></a>
+<a href="http://www.research.ibm.com/"><img width=300 src="ibm-research-logo.jpg"></a>
+<a href="http://www.intel.com/"><img width=100 src="intel-logo.jpg"></a>
+<a href="http://research.microsoft.com/"><img width=250 src="microsoft.png"></a>
+<a href="http://www.oracle.com/"><img width=250 src="Oracle_logo.gif"></a>
+<a href="http://www.nec-labs.com/"><img width=130 src="nec-blue.gif"></a>
+<a href="http://www.nsf.gov/"><img width=130 align=middle src="nsf-logo.gif"></a>
+-->
+
+<table style="width:100%"><tr><td style="width:60px">Gold:</td><td class="logos">
+<a href="http://www.ens.fr/"><img height="110" style="vertical-align:middle" src="logos/ens.gif" alt="Ecole Normale Superieure" /></a> &nbsp;
+<a href="http://www.facebook.com/"><img width="180" style="vertical-align:middle" src="logos/facebook.jpg" alt="Facebook" /></a> &nbsp;
+<a href="http://www.inria.fr/en"><img width="140" style="vertical-align:middle" src="logos/inria.png" alt="INRIA" /></a> &nbsp;
+<a href="http://research.microsoft.com/"><img width="180" style="vertical-align:middle" src="logos/microsoft.png" alt="Microsoft Research" /></a> &nbsp;
+<a href="http://www.univr.it/"><img height="110" style="vertical-align:middle" src="logos/verona.png" alt="University of Verona" /></a>
+</td></tr></table>
+<hr />
+<table style="width:100%"><tr><td style="width:60px">Silver:</td><td class="logos">
+<a href="http://www.cea.fr/english_portal"><img height="55" style="vertical-align:middle" src="logos/cea.jpg" alt="CEA" /></a> &nbsp;
+<a href="http://www.eads.com/eads/int/en/our-innovation/innovation-works.html"><img height="50" style="vertical-align:middle" src="logos/eads.jpg" alt="EADS" /></a> &nbsp;
+<a href="http://research.google.com/"><img height="50" style="vertical-align:middle" src="logos/google.png" alt="Google" /></a> &nbsp;
+<a href="http://www.research.ibm.com/"><img width="200" style="vertical-align:middle" src="logos/ibm.jpg" alt="IBM Research" /></a>
+<a href="http://www.intel.com/"><img height="60" style="vertical-align:middle" src="logos/intel.jpg" alt="Intel" /></a>
+<a href="http://www.mozilla.org/"><img width="200" style="vertical-align:middle" src="logos/mozilla.png" alt="Mozilla" /></a> &nbsp;
+<a href="http://www.oracle.com/"><img width="200" style="vertical-align:middle" src="logos/oracle.gif" alt="Oracle" /></a>
+<a href="http://www.selex-si.com/index.php?lang=en"><img width="170" style="vertical-align:middle" src="logos/selex.jpg" alt="Selex" /></a>
+</td></tr></table>
+</td></tr></table>
+<hr />
+<table style="width:100%"><tr><td style="width:60px">Bronze:</td><td class="logos">
+<a href="http://www.consorzio-cini.it/"><img width="110" style="vertical-align:middle" src="logos/cini.gif" alt="CINI" /></a> &nbsp;
+<a href="http://www.digitalassetprotectionassociation.org/"><img width="110" style="vertical-align:middle" src="logos/dapa.png" alt="DAPA" /></a> &nbsp;
+<a href="http://www.juliasoft.com/"><img width="110" style="vertical-align:middle" src="logos/julia.jpg" alt="Julia Soft" /></a> &nbsp;
+<a href="http://www.monoidics.com/"><img width="110" style="vertical-align:middle" src="logos/monoidics.jpg" alt="Monoidics" /></a> &nbsp;
+<a href="http://www.nec-labs.com/"><img width="110" style="vertical-align:middle" src="logos/nec.gif" alt="NEC" /></a> &nbsp;
+</td></tr></table>
+
+
+<!--div id="bottom">
+<a href="http://validator.w3.org/check?uri=referer"><img
+   style="border:0;width:88px;height:31px;float:right"
+   src="http://www.w3.org/Icons/valid-xhtml10"
+   alt="Valid XHTML 1.0 Strict" /></a>
+<a href="http://jigsaw.w3.org/css-validator/check/referer?profile=css3"><img
+   style="border:0;width:88px;height:31px;float:right"
+   src="http://jigsaw.w3.org/css-validator/images/vcss"
+   alt="Valid CSS!"/>
+</a>
+</div-->
+
+</div>
+
+<div id="menu2">
+
+Conference hotel:<br />
+<a href="http://parcodeiprincipi.com/">Parco dei Principi</a> 
+
+<iframe width="230" height="300" src="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Hotel+Parco+Dei+Principi,+Rome,+Italy&amp;aq=0&amp;oq=parco+dei+p&amp;sll=49.440066,7.749126&amp;sspn=0.408534,0.617981&amp;ie=UTF8&amp;hq=Hotel+Parco+Dei+Principi,+Rome,+Italy&amp;t=m&amp;ll=41.917607,12.490082&amp;spn=0.089414,0.145912&amp;z=12&amp;iwloc=A&amp;output=embed"></iframe><br /><small><a href="http://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Hotel+Parco+Dei+Principi,+Rome,+Italy&amp;aq=0&amp;oq=parco+dei+p&amp;sll=49.440066,7.749126&amp;sspn=0.408534,0.617981&amp;ie=UTF8&amp;hq=Hotel+Parco+Dei+Principi,+Rome,+Italy&amp;t=m&amp;ll=41.917607,12.490082&amp;spn=0.089414,0.145912&amp;z=12&amp;iwloc=A" style="color:#0000FF;text-align:left">View Larger Map</a></small>
+
+<hr />
+
+<a href="../2014/"><b>...POPL 2014 webpage...</b></a>
+
+<hr />
+
+<script type="text/javascript" src="http://widgets.twimg.com/j/2/widget.js">
+</script><script type="text/javascript">
+new TWTR.Widget({
+  version: 2,
+  type: 'profile',
+  rpp: 4,
+  interval: 30000,
+  width: 230,
+  height: 400,
+  theme: {
+    shell: {
+      background: '#afdcec' ,
+      color: '#000000'
+    },
+    tweets: {
+      background: '#ffffff',
+      color: '#000000',
+      links: '#0033bb'
+    }
+  },
+  features: {
+    scrollbar: false,
+    loop: false,
+    live: false,
+    hashtags: true,
+    timestamp: true,
+    avatars: false,
+    behavior: 'all'
+  }
+}).render().setUser('POPL2013').start();
+</script>
+
+</div>
+</div>
+
+<div id="footer">
+<hr />
+The POPL 2013 logo was designed by Andrea Masini, Universit&agrave; di Verona.
+</div>
+
+
+</body>
+</html>

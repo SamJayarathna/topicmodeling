@@ -1,0 +1,155 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-gb" lang="en-gb" >
+
+<script type="text/javascript"><!--//--><![CDATA[//><!--
+
+sfHover = function() {
+   var sfEls = document.getElementById("mainlevelmainnav").getElementsByTagName("LI");
+   for (var i=0; i<sfEls.length; i++) {
+      sfEls[i].onmouseover=function() {
+         this.className+=" sfhover";
+      }
+      sfEls[i].onmouseout=function() {
+         this.className=this.className.replace(new RegExp(" sfhover\\b"), "");
+      }
+   }
+}
+if (window.attachEvent) window.attachEvent("onload", sfHover);
+
+//--><!]]></script>
+
+<head>
+  <base href="http://www.sci.utah.edu/socg2010/" />
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="robots" content="index, follow" />
+  <meta name="keywords" content="scientific visualization, scientific computing, ray tracing, ray-tracing RT, image analysis, computational field problems, inverse problems, forward problems, adaptive methods, isosurface extraction, vector field, tensor field, volume rendering, parallel rendering, glyphs, immersive environments, haptics, image processing,  problem solving environments PSE PSEs, common component architecture CCA,  collaborative environments, medical imaging, biological imaging, seismic imaging, combustion, geoscience, SCIRun, BioPSE, Teem, VisTrails, ITK, computational science, computational engineering, fusion, Uintah, computational fluid dynamics CFD" />
+  <meta name="title" content="SoCG" />
+  <meta name="author" content="Nathan Galli" />
+  <meta name="description" content="The SCI Institute develops new methods for scientific computing, visualization and simulation as well as software for biomedical applications and a wide range of scientific research." />
+  <meta name="generator" content="" />
+  <title>SoCG</title>
+  <link href="/templates/socg2010/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+  <link rel="stylesheet" href="/plugins/system/2j_tabs/2j_tabs.css" type="text/css" />
+  <link rel="stylesheet" href="/plugins/system/jcemediabox/css/jcemediabox.css?version=114" type="text/css" />
+  <link rel="stylesheet" href="/plugins/system/jcemediabox/themes/standard/css/style.css?version=114" type="text/css" />
+  <script type="text/javascript" src="/plugins/system/2j_tabs/jq_last.js"></script>
+  <script type="text/javascript" src="/plugins/system/2j_tabs/2j.ui.base.js"></script>
+  <script type="text/javascript" src="/plugins/system/2j_tabs/2j.ui.tabs.js"></script>
+  <script type="text/javascript" src="/media/system/js/mootools.js"></script>
+  <script type="text/javascript" src="/media/system/js/caption.js"></script>
+  <script type="text/javascript" src="/plugins/system/jcemediabox/js/jcemediabox.js?version=114"></script>
+  <script type="text/javascript" src="/plugins/content/avreloaded/silverlight.js"></script>
+  <script type="text/javascript" src="/plugins/content/avreloaded/wmvplayer.js"></script>
+  <script type="text/javascript" src="/plugins/content/avreloaded/swfobject.js"></script>
+  <script type="text/javascript" src="/plugins/content/avreloaded/avreloaded.js"></script>
+  <script type="text/javascript">
+JCEMediaObject.init('/', {flash:"10,0,22,87",windowmedia:"5,1,52,701",quicktime:"6,0,2,0",realmedia:"7,0,0,0",shockwave:"8,5,1,0"});JCEMediaBox.init({popup:{width:"",height:"",legacy:1,lightbox:1,shadowbox:1,resize:1,icons:0,overlay:1,overlayopacity:0.8,overlaycolor:"#000000",fadespeed:500,scalespeed:500,hideobjects:0,scrolling:"fixed",close:2,labels:{'close':'Close','next':'Next','previous':'Previous','cancel':'Cancel','numbers':'{$current} of {$total}'}},tooltip:{className:"tooltip",opacity:0.8,speed:150,position:"br",offsets:{x: 16, y: 16}},base:"/",imgpath:"plugins/system/jcemediabox/img",theme:"standard",themecustom:"",themepath:"plugins/system/jcemediabox/themes"});
+  </script>
+
+<link rel="stylesheet" href="/templates/system/css/system.css" type="text/css" />
+<link rel="stylesheet" href="/templates/system/css/general.css" type="text/css" />
+<link rel="stylesheet" href="/templates/socg2010/css/template.css" type="text/css" />
+
+
+</head>
+<body>
+<div id="wrap">
+
+  <!-- HEADER -->
+  <div id="header">
+    <ul class="menu" id="top_button"><li class="item71"><a href="https://www.sci.utah.edu/login.html"><span>Login</span></a></li><li class="item72"><a href="/administrator/" target="_blank"><span>Admin</span></a></li></ul><!-- LOGIN BUTTONS & SEARCH BOX -->
+  </div>
+
+  <!-- HORIZONTAL MENU AND SPLASH HEADER -->
+  <div id="tabarea">
+    <img alt="socg2010_splash" src="/images/splash/socg/socg2010_splash.jpg" width="980" height="163" />
+  </div>
+  <!-- BREADCRUMBS -->
+  <div id="breadcrumbs">
+      <b></b>
+  </div>
+
+  <!----- BODY ----->
+  <!--  LEFT SIDEBAR -->
+    <div id="left_sidebar">
+    <div class="inside">
+      		<div class="moduletable_menu">
+					<ul class="menu"><li id="current" class="active item73"><a href="/socg2010.html"><span>Home</span></a></li><li class="item120"><a href="/socg2010agenda.html"><span>Program</span></a></li><li class="item118"><a href="/socg2010registration.html"><span>Registration &amp; Housing</span></a></li><li class="item119"><a href="/socg2010travel.html"><span>Travel</span></a></li><li class="item84"><a href="/socg2010callpapers.html"><span>Call for Papers</span></a></li><li class="item114"><a href="/socg2010papers.html"><span>Accepted Papers</span></a></li><li class="item86"><a href="/socg2010callvideo.html"><span>Call for Video &amp; Multimedia</span></a></li><li class="item85"><a href="/socg2010committees.html"><span>Committees</span></a></li></ul>		</div>
+			<div class="moduletablenoline">
+					<p><strong>Registration for <a target="_blank" href="http://www.madalgo.au.dk/html_sider/2_5_Events/Massive2010/Call_For_Papers_2010.html">Massive Data Workshop</a> now open! Use same room block as SoCG.<br /></strong></p>
+<p><strong>IMPORTANT DATES</strong></p>
+<ul>
+<!--
+<li><span style="font-size: 10pt;" mce_style="font-size: 10pt;"><strong>Nov  23, 2009</strong>:   Paper titles and (short) abstracts due</span></li>
+<li><span style="font-size: 10pt;" mce_style="font-size: 10pt;"><strong>Dec 02, 2009</strong>:  Full submissions due  (23:59, Honolulu time)</span></li>
+<li><span style="font-size: 10pt;" mce_style="font-size: 10pt;"><strong>Feb 15, 2010</strong>: Notification of acceptance/rejection of papers</span></li>
+<li><span style="font-size: 10pt;" mce_style="font-size: 10pt;"><strong>Feb 19, 2010</strong>:  Video and multimedia submissions due</span></li>
+-->
+<li><span style="font-size: 10pt;"><strong>Mar 01, 2010</strong>:  Notification of acceptance or rejection of video/multimedia submissions</span></li>
+<li><span style="font-size: 10pt;"><strong>Mar 15, 2010</strong>: Camera-ready papers and video/multimedia abstracts due</span></li>
+<li><span style="font-size: 10pt;"><strong>Apr 20, 2010</strong>:  Final versions of video/multimedia presentations due</span></li>
+<li><span style="font-size: 10pt;"><strong>Jun 13-16, 2010</strong>: Symposium at Snowbird, Utah</span></li>
+<li><span style="font-size: 10pt;"><strong>Jun 17, 2010</strong>: Companion Event: Second Workshop on Massive Data Algorithmics<br /></span></li>
+</ul>
+<hr />
+<br /><strong>THANKS</strong><br />The conference is organized in coorperation with ACM SIGACT and SIGGRAPH<br /><br /><img src="/images/splash/socg/acm-sigact.png" /><br /><img src="/images/splash/socg/siggraph.png" /><br />		</div>
+	
+      <p id="syndicate"></p>
+    </div>
+  </div>
+  
+  <!--  CONTENT AREA -->
+  <div id="content80">
+    <div class="inside">
+      
+      
+<table class="contentpaneopen">
+
+
+
+<tr>
+<td valign="top">
+<p style="text-align: center;"><span style="font-size: 18pt;"><span style="color: #778899;">26th Annual Symposium on </span></span><span style="font-size: 18pt;"><span style="color: #778899;">Computational Geometry </span></span><span style="font-size: 18pt;"><span style="color: #778899;">June 13th-16th, 2010 at <a href="http://www.snowbird.com">Snowbird</a>, Utah.</span></span><br /><br /><span style="font-size: 14pt;"><span style="color: #778899;">This year’s Local Arrangements Chairs are</span></span><span style="font-size: 14pt;"><span style="color: #778899;"> Valerio Pascucci and Suresh Venkatasubramanian. <br />The Program Committee Chair is David Kirkpatrick.<br /></span></span></p>
+<p style="text-align: left;">The Twenty-sixth Annual Symposium on Computational Geometry will be held at Snowbird, Utah. We invite submissions of high-quality papers, videos, and multimedia presentations describing original research addressing computational problems in a geometric setting, in particular their algorithmic solutions, implementation issues, applications, and mathematical foundations.</p>
+<div style="text-align: left;"></div>
+<p style="text-align: left;">The topics of the Symposium reflect the rich diversity of research interests in computational geometry. They are intended to highlight both the depth and scope of computational geometry, and to invite fruitful interactions with other disciplines. Topics of interest include, but are not limited to:</p>
+<div style="text-align: left;">
+<ul>
+<li>design, analysis, and implementation of geometric algorithms and data structures; lower bounds on the computational complexity of geometric problems;</li>
+<li>mathematical, numerical, and algebraic issues arising in the formulation, analysis, implementation, and experimental evaluation of geometric algorithms and heuristics; discrete and combinatorial geometry; computational topology;</li>
+<li>novel algorithmic applications of geometry in computer graphics, geometric modeling, computer-aided design and manufacturing, scientific computing, geographic information systems, database systems, robotics, computational biology, machine learning, sensor networks, medical imaging, combinatorial optimization, statistical analysis, discrete differential geometry, theoretical computer science, graph drawing, pure mathematics, and other fields.</li>
+</ul>
+</div>
+<div style="text-align: center;"><span style="font-size: 16pt; color: #778899;">Companion Event: June 17th, 2010<br /><a href="http://www.madalgo.au.dk/html_sider/2_5_Events/Massive2010/Call_For_Papers_2010.html">Second Workshop on Massive Data Algorithmics</a></span><br /><strong>Registration Now Open! Use same room block as SoCG.</strong></div>
+<p> </p></td>
+</tr>
+
+</table>
+<span class="article_separator">&nbsp;</span>
+
+    </div>
+  </div>
+
+  <!--  RIGHT SIDEBAR -->
+  
+  <!--  FOOTER -->
+    <div id="footer">
+    <div class="inside">
+      <p class="footertext">Scientific Computing and Imaging Institute<br>
+	72 S Central Campus Drive, Room 3750<br>
+	Salt Lake City, UT 84112<br>
+	Phone: 801-585-1867<br>
+	Fax: 801-585-6513</p>
+    </div>
+  </div>
+  
+  
+</div>
+<!--end of wrap-->
+<script language="JavaScript" type="text/javascript" src="http://www.sci.utah.edu/SDCinit.js"></script>
+<script language="JavaScript" type="text/javascript" src="http://www.sci.utah.edu/SDC.js"></script>
+<NOSCRIPT>
+<IMG ALT="" BORDER="0" NAME="DCSIMG" WIDTH="1" HEIGHT="1" SRC="http://sdc.utah.edu/dcsxibwgw00000kvdf0jmqh77_1r6p/njs.gif?dcsuri=/nojavascript&amp;WT.js=No&amp;WT.tv=8.0.2">
+</NOSCRIPT>
+</body>
+</html>

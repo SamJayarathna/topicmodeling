@@ -1,0 +1,1445 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <title>POPL 2012: 39th ACM SIGACT-SIGPLAN Symposium on Principles of Programming Languages</title>
+  <style type="text/css">
+    body { margin: 15px; padding: 15px; background-color: #feffff;}
+    a.plain { text-decoration: none; }
+    a.icfplogo { float: right; }
+    a.acmlogo { float: left; }
+
+ 
+table {
+ table-layout: fixed;
+ width: 100%;
+}
+
+
+li {
+  line-height: 30px;  
+   
+}
+
+
+
+A:link {text-decoration: none; color: #0033BB}
+A:visited {text-decoration: none; color: #0033BB;}
+A:active {text-decoration: none; color: #0033BB;}
+A:hover {text-decoration: underline; color: #0033BB;}
+
+h2 {
+	font-family: Arial, Helvetica, sans-serif;
+        border-style: solid;
+        border-width: thin;
+	font-size: 16pt;
+	color: #15317e;
+	padding-top: 8px;
+	padding-bottom: 8px;
+background-color: #afdcec;
+text-align: center;
+}
+h1 {
+text-align: left;
+color:  #15317e;
+font-family: Arial,Helvetica,sans-serif;
+}
+
+    h3 { margin-bottom: 0em; font-family: Arial, Helvetica; font-size: 20pt; margin-top:0.8cm; 
+}
+
+    h4 { margin-bottom: 0em; }
+    p {line-height: 1.3;} 	
+    p.toppar { text-indent: 25px; margin-bottom: 0; margin-top: 0; line-height: 1.4; text-align: justify; }
+    body { font-family: "Helvetica", sans-serif; }
+    p.person { margin-left: 2em; margin-top: 0em; }
+    table.dates { margin-top: 0em; }
+    div.indent { margin-left: +2em; }
+  </style>
+<script language="javascript"> 
+function toggle(showHideDiv,switchTextDiv) {
+	var ele = document.getElementById(showHideDiv);
+	var text = document.getElementById(switchTextDiv);
+	if(ele.style.display == "block") {
+    		ele.style.display = "none";
+		text.innerHTML = "<i>[Show]</i>";
+  	}
+	else {
+		ele.style.display = "block";
+		text.innerHTML = "<i>[Hide]</i>";
+	}
+}
+</script>
+</head>
+<body>
+
+      
+<table border="0" cellpadding="20" cellspacing="20">
+
+  <tbody>
+
+    <tr>
+
+      <td style="font-family: Arial, Helvetica, sans-serif;
+        border-style: solid;
+        border-width: thin;
+	font-size: 12pt;
+	color: #15317e;
+	padding-top: 8px;
+	padding-bottom: 8px;
+background-color: #afdcec;"
+        width="12%" valign="top">
+      <div align="left">
+      <p><b><a href="http://www.cse.psu.edu/popl/12">Home</a> 
+      </b></p>
+<!--
+	<p><b><font face="Arial"><a 
+       href="http://popl12.cs.umd.edu">Paper submission URL</a></font></b></p>
+-->
+<!--	
+ <p><b><font face="Arial"><a
+      href="visa.html">Student travel awards</a></font></b></p>
+-->
+
+      <p><b><font face="Arial">
+<a href="https://docs.google.com/spreadsheet/pub?key=0Av2DFkf0lGU8dFAyaFNvZEppQkY3Z3pqREExRHA4R1E&single=true&gid=11&output=html">POPL  schedule</a></font></b></p>
+
+	 <p><b><font face="Arial">
+<a href="https://docs.google.com/spreadsheet/pub?hl=en_US&key=0AoEIaC_fw2i1dEdidlZITmhwSDVZcldRTFdWUDZfcmc&hl=en_US&gid=0">Master schedule showing all colocated events</a></font></b></p>
+
+	<p><b><font face="Arial"><a href="SheratonFloorPlan.gif">Hotel floor plan</a> </font></b></p>
+      
+
+	
+<!--	
+ <p><b><font face="Arial"><a
+      href="local.html">Local information</a></font></b></p>
+-->	
+
+		<p><b><font face="Arial"><a href="cfp.html">Call For papers</a></font></b></p>
+
+<!--	
+      <p><b><font face="Arial"><a 
+href="http://matt.might.net/events/popl/2012/call-for-events/">Call for  
+Workshops and Co-located Events</a></font></b></p>
+-->
+	
+
+
+
+
+      <p><b><font face="Arial"><a href="#Conference%20Organizers"> Conference Organizers</a></font></b></p>
+
+	<!--
+     <p><b><font face="Arial"><a href="#AffiliatedEvents">Affiliated Events</a></font></b></p>
+
+      <p><b><font face="Arial"><a href="#Sponsors">Sponsors</a></font></b></p>
+-->
+
+ <p><b><font face="Arial"><a
+      href="http://popl.mpi-sws.org/2013/">POPL 2013</a></font></b></p>
+	
+      <p><b><font face="Arial"><a
+      href="http://www.sigplan.org/awards.htm">SIGPLAN Awards</a></font></b></p>
+
+      </div>
+
+      <b><font face="Arial"> </font></b></td>
+
+<td>      
+<table width="50%">
+<tbody>
+<tr>
+<td>
+
+  <table >
+<tr>
+<td rowspan="2">
+<img src="POPL.png">
+</td>
+<td>
+    <h1>
+POPL 2012: 39th ACM SIGPLAN-SIGACT Symposium on Principles of Programming Languages
+    </h1>
+    </td>
+</tr>
+<tr>
+<td>
+  <h3>
+Philadelphia, USA <br>
+  January 25-27, 2012
+</h3>
+</td>
+  </tr>
+</table>
+
+   
+  </td>
+  </tr>
+  <tr>
+<td>
+  <h2>Important
+information</h2>
+<div class="indent">
+
+  <table style="height: 100px;" class="dates" border="0"
+ cellpadding="0" cellspacing="5">
+  <tbody>
+<!--
+    <tr>
+      <td><font face="Arial" style="text-decoration:line-through;"><b>Hotel registration deadline</b></font> </td>
+     <td><font face="Arial" style="text-decoration:line-through;"><b>December 24, 2011</b> </font></td>
+    </tr>
+
+    
+  <tr>
+      <td><font face="Arial"><b>Talk proposal deadline, <a href="http://wrigstad.com/popl12/">lightning talk session</a></b></font></td>
+     <td><font face="Arial"><img src="new.gif"><b>10:00 GMT, January 17, 2011 (Tuesday)</b> </font></td>
+    </tr>
+    -->
+<tr>
+      <td><font face="Arial"><b>Online registration deadline</b></font> </td>
+     <td><font face="Arial"><b>January 18, 2012</b> </font></td>
+    </tr>
+    <tr>
+      <td valign="top"><font face="Arial"><b>Conference</b></font> </td>
+     <td><font face="Arial"> <b>January 25-27, 
+2012</b></font></td>
+    </tr>
+<tr>
+      <td valign="top"><font face="Arial"><b>Colocated events</b></font> </td>
+     <td><font face="Arial"> <b>January 22-29, 
+2012</b></font></td>
+    </tr>
+    
+    
+<tr>
+      <td><font face="Arial"><b>Registration URL</b></font> </td>
+     <td><font face="Arial"> <a href="https://regmaster3.com/2012conf/POPL12/register.php">https://regmaster3.com/2012conf/POPL12/register.php</a>
+        </font>
+     </td>
+    </tr> 
+
+   <!-- 
+    <tr>
+      <td><font face="Arial"><b>Useful links</b></font> </td>
+     <td><font face="Arial">(1) The 
+<a href="https://docs.google.com/spreadsheet/pub?key=0Av2DFkf0lGU8dFAyaFNvZEppQkY3Z3pqREExRHA4R1E&single=true&gid=11&output=html">POPL program</a>; (2) <a href="https://docs.google.com/spreadsheet/pub?hl=en_US&key=0AoEIaC_fw2i1dEdidlZITmhwSDVZcldRTFdWUDZfcmc&hl=en_US&gid=0">Master schedule showing all colocated events</a>; (3) <a href="SheratonFloorPlan.gif">Floor plan</a> for the conference hotel
+        </font>
+     </td>
+    </tr>
+   -->
+    
+  </tbody>
+</table>
+
+<p>
+<img src="new.gif"> Check out the <a 
+href="http://dl.acm.org/citation.cfm?id=2103621">
+ACM Digital library page for POPL 2012
+</a>! Among other things, the page has links to videos of talks at POPL 
+'12.
+</p>
+<!--
+<p>
+<img src="new.gif"> <a href="http://goo.gl/3Thih">Vote</a> for the best student lightning talk by noon, January 27.
+</p>
+-->
+
+<!--
+<p>
+    <img src="new.gif"><b>*** The conference hotel (Sheraton Society Hill) is currently full or nearly full on some peak conference nights.  If you're unable to book at the Sheraton, we've secured a block of rooms at the Hyatt Penns Landing, which is a very short walk from the conference hotel, at the rate of $149/night.  You can book there via <a href="https://resweb.passkey.com/go/acm2012">this link</a> or by calling (888) 421-1442 and quoting the group code "acm2012".
+</b></p>
+-->
+
+</div>
+<br>
+
+
+</td>
+</tr>
+
+<tr>
+  <td>  
+<!---------------------------------------------------------------------------->
+<h2>Scope</h2>
+<p style="padding-top: 10px; padding-botton:15px;">
+The annual Symposium on Principles of Programming Languages is a forum
+for the discussion of all aspects of programming languages and
+systems, with emphasis on how principles underpin practice. Both
+theoretical and experimental papers are welcome, on topics ranging
+from formal frameworks to experience reports.  Papers discussing new
+ideas and areas are most welcome, as are high-quality expositions or
+elucidations of existing concepts that are likely to yield new
+insights ("pearls").
+    </p>
+ 
+<p>
+<!-- Search Box Begin -->
+<form action="OdysciSearchPage.html" id="search_form_odysci" method="get" style="padding: 5px;">
+ <input type="text" placeholder="Odysci Search" name="qodysci" style="color: black;display: block;height: 20px;clear: both; float: left; width: 100%"; />
+ <a href="http://www.odysci.com" target="_blank" style="display: block; float: left; border: 0px; margin: 0px; width: 73px; height: 20px; overflow: hidden; clear: left;" > <img src="http://www.odysci.com/odysci_logo_h20_w73.png" width="73" height="20" /> </a>
+ <input type="submit" value="Find a POPL paper!" style="float: right;" />
+</form>
+<!-- Search Box End -->
+    </p>
+</td>
+</tr>
+
+
+<tr>
+<td>
+<h2>Program</h2>
+<p>
+This year, POPL accepted 44 papers out of 205 submitted. For dates and times for presentations, check out the 
+<a href="https://docs.google.com/spreadsheet/pub?key=0Av2DFkf0lGU8dFAyaFNvZEppQkY3Z3pqREExRHA4R1E&single=true&gid=11&output=html">conference program</a>.
+A <a href="https://docs.google.com/spreadsheet/pub?hl=en_US&key=0AoEIaC_fw2i1dEdidlZITmhwSDVZcldRTFdWUDZfcmc&hl=en_US&gid=0">master schedule</a> for all events colocated with POPL is also available.
+
+
+  
+<!-- A <a href="accepted-papers.html">list of accepted papers</a> is available separately.-->
+</p>
+  
+<p>
+Our <a href="highlights.html">invited talks</a> this year are:    
+<ul>
+
+<li> Sir Charles Antony Richard Hoare, FRS, FREng, FBCS, Microsoft Research
+<ul>
+<li><i>ACM SIGPLAN Programming Languages Achievement Award Interview</i></ul>
+ 
+<li> J Strother Moore,
+University of Texas at Austin
+ <ul>
+  <li><i>Meta-Level Features in an Industrial-Strength Theorem Prover</i> </li></ul>
+
+  
+<li> Jennifer Rexford, Princeton University<ul>
+<li> <i>Programming Languages for Programmable Networks</i></li>
+  </ul>
+
+</ul>
+More information on invited talks is available <a href="highlights.html">here</a>.
+  </p>
+
+<p>
+If you have a Windows phone, you can use this <a href="http://research.microsoft.com/en-us/projects/confapp/popl2012.aspx">app</a> as an 
+electronic guide to the conference program. 
+</p>
+
+</td>
+</tr>
+<tr>
+  <td>
+
+    <h2>POPL TutorialFest! </h2>
+<p>
+POPL 2012 will have a TutorialFest event with seven "distilled" 90
+minute tutorials. This event is on January 28, immediately
+following the main POPL conference. The TutorialFest requires
+separate registration and registrants of TutorialFest may attend
+any of the tutorials offered throughout the day.
+</p>
+    <p>
+More information about TutorialFest and the tutorials is available
+<a href="tutorial.html">here</a>. A schedule of talks and rooms is available
+    <a href="https://docs.google.com/spreadsheet/pub?hl=en_US&key=0AoEIaC_fw2i1dEdidlZITmhwSDVZcldRTFdWUDZfcmc&hl=en_US&gid=6">here</a>.
+</p>    
+</td>
+</tr>
+
+
+
+
+
+
+
+
+<tr><td>
+<h2>Travel awards and visa letters</h2>
+
+  <p>
+A limited number of grants are available through the 
+<a href="http://sigplan.org/PAC.htm">SIGPLAN Professional Activities Committee</a> (PAC) to support students going to POPL. You must be an <a href="http://www.acm.org/membership/panel?pageIndex=2">ACM member</a> to apply.
+</p>
+  <p>
+Students that are interested in attending <b>both</b> POPL and the <a href="http://www.cis.upenn.edu/~sweirich/plmw12/">PLMW Workshop</a> should first seek funds
+via PLMW and then contact PAC if the PLMW grant is not awarded.
+PLMW grants are explained on the <a href="http://www.cis.upenn.edu/~sweirich/plmw12/">PLMW website</a>.
+</p>  
+
+
+<p>Requests for visa support letters for purposes of attending or presenting at POPL 2012 are handled by ACM.
+ For more information, go <a href="visa.html">here</a>. 
+<!-- The same page also contains archived information for authors, and 
+about student travel awards-->
+  </p>
+</td></tr>
+
+<tr><td>
+<h2>
+Registration
+  </h2>
+<p>To register for POPL, visit the URL
+<a href="https://regmaster3.com/2012conf/POPL12/register.php">https://regmaster3.com/2012conf/POPL12/register.php</a>. The early registration deadline is December 24, 2011.</p>
+
+  <p>The registration fees of POPL and associated events are as follows:</p>
+		<table>
+		  <tr bgcolor="#dddddd">
+		    <td valign=center>&nbsp;</td>
+		    <th colspan="4"> Price on or before<br />
+		      December 24, 2011</th>
+		    <th colspan="4">Price after December 24, 2011<br />
+		      and On-site</th>
+	      </tr>
+		  <tr>
+		    <td align=center><strong>Notice:</strong><br />
+            <em>All prices are in U.S. dollars</em></td>
+		    <th>ACM &amp; <br />
+		      SIG</th>
+		    <th>ACM | SIG</th>
+		    <th>Non-<br />
+		      member</th>
+		    <th>Student</th>
+		    <th>ACM &amp;<br />
+		      SIG</th>
+		    <th>ACM | SIG</th>
+		    <th>Non-<br />
+		      member</th>
+		    <th>Student</th>
+	      </tr>
+		  <tr bgcolor="#dddddd">
+		    <td><a href="http://www.cse.psu.edu/popl/12/" target="_blank">POPL </a></td>
+		    <td align="center" bgcolor="#CCCCFF">$530</td>
+		    <td align="center" bgcolor="#CCCCFF">$570</td>
+		    <td align="center" bgcolor="#CCCCFF">$610</td>
+		    <td align="center" bgcolor="#CCCCFF">$265</td>
+		    <td align="center" bgcolor="#AAAADD">$650</td>
+		    <td align="center" bgcolor="#AAAADD">$690</td>
+		    <td align="center" bgcolor="#AAAADD">$730</td>
+		    <td align="center" bgcolor="#AAAADD">$325</td>
+	      </tr>
+		  <tr bgcolor="#dddddd">
+		    <td><a href="tutorial.html" target="_blank">POPL TutorialFest!</a></td>
+		    <td align="center" bgcolor="#CCCCFF">$90</td>
+		    <td align="center" bgcolor="#CCCCFF">$90</td>
+		    <td align="center" bgcolor="#CCCCFF">$120</td>
+		    <td align="center" bgcolor="#CCCCFF">$60</td>
+		    <td align="center" bgcolor="#AAAADD">$120</td>
+		    <td align="center" bgcolor="#AAAADD">$120</td>
+		    <td align="center" bgcolor="#AAAADD">$150</td>
+		    <td align="center" bgcolor="#AAAADD">$80</td>
+	      </tr>
+		  <tr bgcolor="#dddddd">
+		    <td><a href="http://research.microsoft.com/en-us/um/people/crusso/padl12/" target="_blank">PADL </a></td>
+		    <td align="center" bgcolor="#CCCCFF">$250</td>
+		    <td align="center" bgcolor="#CCCCFF">$250</td>
+		    <td align="center" bgcolor="#CCCCFF">$275</td>
+		    <td align="center" bgcolor="#CCCCFF">$150</td>
+		    <td align="center" bgcolor="#AAAADD">$300</td>
+		    <td align="center" bgcolor="#AAAADD">$300</td>
+		    <td align="center" bgcolor="#AAAADD">$325</td>
+		    <td align="center" bgcolor="#AAAADD">$200</td>
+	      </tr>
+		  <tr bgcolor="#dddddd">
+		    <td><a href="http://lara.epfl.ch/vmcai2012/" target="_blank">VMCAI</a></td>
+		    <td align="center" bgcolor="#CCCCFF">$440</td>
+		    <td align="center" bgcolor="#CCCCFF">$440</td>
+		    <td align="center" bgcolor="#CCCCFF">$440</td>
+		    <td align="center" bgcolor="#CCCCFF">$340</td>
+		    <td align="center" bgcolor="#AAAADD">$500</td>
+		    <td align="center" bgcolor="#AAAADD">$500</td>
+		    <td align="center" bgcolor="#AAAADD">$500</td>
+		    <td align="center" bgcolor="#AAAADD">$400</td>
+	      </tr>
+		  <tr bgcolor="#dddddd">
+		    <td><a href="https://sites.google.com/site/vstte2012/" target="_blank">VSTTE</a></td>
+		    <td align="center" bgcolor="#CCCCFF">$260</td>
+		    <td align="center" bgcolor="#CCCCFF">$260</td>
+		    <td align="center" bgcolor="#CCCCFF">$260</td>
+		    <td align="center" bgcolor="#CCCCFF">$50</td>
+		    <td align="center" bgcolor="#AAAADD">$310</td>
+		    <td align="center" bgcolor="#AAAADD">$310</td>
+		    <td align="center" bgcolor="#AAAADD">$310</td>
+		    <td align="center" bgcolor="#AAAADD">$100</td>
+	      </tr>
+		  <tr bgcolor="#dddddd">
+		    <td><a href="http://www.mpi-sws.org/~umut/damp2012/" target="_blank">DAMP</a></td>
+		    <td align="center" bgcolor="#CCCCFF">$40</td>
+		    <td align="center" bgcolor="#CCCCFF">$40</td>
+		    <td align="center" bgcolor="#CCCCFF">$60</td>
+		    <td align="center" bgcolor="#CCCCFF">$30</td>
+		    <td align="center" bgcolor="#AAAADD">$80</td>
+		    <td align="center" bgcolor="#AAAADD">$80</td>
+		    <td align="center" bgcolor="#AAAADD">$100</td>
+		    <td align="center" bgcolor="#AAAADD">$60</td>
+	      </tr>
+		  <tr bgcolor="#dddddd">
+		    <td><a href="http://sites.google.com/site/ladameeting/" target="_blank">LADA</a></td>
+		    <td align="center" bgcolor="#CCCCFF">$240</td>
+		    <td align="center" bgcolor="#CCCCFF">$240</td>
+		    <td align="center" bgcolor="#CCCCFF">$270</td>
+		    <td align="center" bgcolor="#CCCCFF">$170</td>
+		    <td align="center" bgcolor="#AAAADD">$290</td>
+		    <td align="center" bgcolor="#AAAADD">$290</td>
+		    <td align="center" bgcolor="#AAAADD">$320</td>
+		    <td align="center" bgcolor="#AAAADD">$220</td>
+	      </tr>
+		  <tr bgcolor="#dddddd">
+		    <td><a href="http://www.cs.princeton.edu/~dpw/obt/" target="_blank">OBT</a></td>
+		    <td align="center" bgcolor="#CCCCFF">$70</td>
+		    <td align="center" bgcolor="#CCCCFF">$70</td>
+		    <td align="center" bgcolor="#CCCCFF">$80</td>
+		    <td align="center" bgcolor="#CCCCFF">$70</td>
+		    <td align="center" bgcolor="#AAAADD">$85</td>
+		    <td align="center" bgcolor="#AAAADD">$85</td>
+		    <td align="center" bgcolor="#AAAADD">$95</td>
+		    <td align="center" bgcolor="#AAAADD">$85</td>
+	      </tr>
+		  <tr bgcolor="#dddddd">
+		    <td><a href="http://www.program-transformation.org/PEPM12" target="_blank">PEPM</a></td>
+		    <td align="center" bgcolor="#CCCCFF">$140</td>
+		    <td align="center" bgcolor="#CCCCFF">$140</td>
+		    <td align="center" bgcolor="#CCCCFF">$160</td>
+		    <td align="center" bgcolor="#CCCCFF">$130</td>
+		    <td align="center" bgcolor="#AAAADD">$170</td>
+		    <td align="center" bgcolor="#AAAADD">$170</td>
+		    <td align="center" bgcolor="#AAAADD">$190</td>
+		    <td align="center" bgcolor="#AAAADD">$160</td>
+	      </tr>
+		  <tr bgcolor="#dddddd">
+		    <td><a href="http://research.microsoft.com/en-us/um/people/nswamy/plpv12/" target="_blank">PLPV</a></td>
+		    <td align="center" bgcolor="#CCCCFF">$66</td>
+		    <td align="center" bgcolor="#CCCCFF">$66</td>
+		    <td align="center" bgcolor="#CCCCFF">$75</td>
+		    <td align="center" bgcolor="#CCCCFF">$66</td>
+		    <td align="center" bgcolor="#AAAADD">$80</td>
+		    <td align="center" bgcolor="#AAAADD">$80</td>
+		    <td align="center" bgcolor="#AAAADD">$90</td>
+		    <td align="center" bgcolor="#AAAADD">$80</td>
+	      </tr>
+ </tr>
+		  <tr bgcolor="#dddddd">
+		    <td><a href="http://www.cis.upenn.edu/~sweirich/plmw12/" target="_blank">PLMW</a></td>
+		    <td align="center" bgcolor="#CCCCFF">$160</td>
+		    <td align="center" bgcolor="#CCCCFF">$160</td>
+		    <td align="center" bgcolor="#CCCCFF">$185</td>
+		    <td align="center" bgcolor="#CCCCFF">$160</td>
+		    <td align="center" bgcolor="#AAAADD">$190</td>
+		    <td align="center" bgcolor="#AAAADD">$190</td>
+		    <td align="center" bgcolor="#AAAADD">$220</td>
+		    <td align="center" bgcolor="#AAAADD">$190</td>
+	      </tr>
+ <tr bgcolor="#dddddd">
+		    <td><a href="http://www.cis.upenn.edu/~bcpierce/tldi12/" target="_blank">TLDI</a></td>
+		    <td align="center" bgcolor="#CCCCFF">$140</td>
+		    <td align="center" bgcolor="#CCCCFF">$140</td>
+		    <td align="center" bgcolor="#CCCCFF">$160</td>
+		    <td align="center" bgcolor="#CCCCFF">$100</td>
+		    <td align="center" bgcolor="#AAAADD">$170</td>
+		    <td align="center" bgcolor="#AAAADD">$170</td>
+		    <td align="center" bgcolor="#AAAADD">$195</td>
+		    <td align="center" bgcolor="#AAAADD">$170</td>
+	      </tr>
+  
+    </table>
+</td></tr>
+
+
+
+<tr>
+  <td>
+<h2>Conference hotel</h2>
+
+   
+<p>
+The conference will be held at the Sheraton Society Hill Hotel in Philadelphia's historic district. To make reservations at the special conference rate of $139/night, go to 
+<a href="http://www.starwoodmeeting.com/Book/POPL2012">http://www.starwoodmeeting.com/Book/POPL2012</a>.
+Alternately, call the hotel directly at +1-215-238-6000 and mention the group ACM/POPL 2012. 
+
+</p>
+<p>
+We realize that you may want to consider other hotels. Before you decide, please read <a href="staying-at-hotel.html">why you should try to stay at the conference hotel</a>. 
+</p>
+<p>
+To be eligible for the special conference rate, bookings must be made by <b>December 24, 2011</b>. However, as 
+the conference rate applies only to a limited number of rooms,  
+attendees are encouraged to make their hotel reservations at the earliest opportunity.  
+</p>
+<!--
+<p>
+<i>[Note: Users of the Chrome browser may encounter problems accessing the 
+hotel registration site. If this happens, please try again 
+with a different browser.]
+</i>
+</p>-->
+     <p>
+  If the conference hotel (Sheraton Society Hill) is unavailable for your preferred nights, we've also secured a block of rooms at two other hotels:
+<ul>
+  <li><p>
+    Hyatt Penns Landing, which is a very short walk from the conference hotel, at the rate of $149/night.   You can book there via <a href="https://resweb.passkey.com/go/acm2012">this link</a> or by calling (888) 421-1442 and quoting the group code "acm2012".</p>
+</li>
+<li>
+<p>
+ Holiday Inn, Historic District, which is only a bit farther. The rate here is $139/night. You can reserve a room via <a href="http://www.holidayinn.com/hotels/us/en/philadelphia/phlim/hoteldetail?groupCode=PPL">this link</a> or by calling (877) 834-3613 and using the group code "PPL".
+</p>
+</li>
+</ul>
+Reservations at both hotels are refundable and include free in-room internet.  Lower nonrefundable rates may be also be available. </p>
+
+<p>Here is a <a href="SheratonFloorPlan.gif">floor plan</a> for the floor where the conference will be held.</p>
+
+
+<p>        If you'd like help identifying a roommate for a shared hotel room, please contact Tobias Wrigstad (tobias.wrigstad@it.uu.se), mentioning the nights you'd like to stay and any other pertinent constraints.  He will contact you if he finds a suitable match.
+You can also use the 
+<a href="http://www.myeventcompass.com/popl2012/">MyEventCompass app</a> to connect with others interested in POPL 2012. For example, the app can be used to find room-mates at hotels, find other attendees to share rides from airports, or build discussion groups. 
+</p>
+
+  </td>
+</tr>
+
+<tr>
+  <td>
+    <h2>Conference banquet</h2>
+<p>
+The POPL banquet will be held in the adjacent <a href="http://maps.google.com/maps/ms?ie=UTF8&hl=en&msa=0&ll=39.957649,-75.162792&spn=0.005806,0.010257&z=16&msid=113679749873770023596.00045445b679d0450c366" >Landmark and Hamilton buildings</a> of the <a href="http://http//www.pafa.org">Pennsylvania Academy of Fine Arts</a> (PAFA).  PAFA was founded in 1805 by painter and scientist Charles Willson Peale, sculptor William Rush, and other artists and business leaders.  It is the oldest art museum and school in the U.S.  The Landmark building opened in 1876 and has been designated a National Historic Landmark; the Hamilton Building, originally built as an automobile showroom in 1916, was renovated to house new PAFA galleries in 2002.  The Landmark building galleries highlight PAFA's permanent collection; the Harmilton building galleries display rotating exhibitions.  Details on current exhibits may be found <a href="http://www.pafa.org/Museum/Exhibitions/Currently-On-View/102/">here</a>.
+</p>
+    <p>
+Hors d'oeuvres (with an open bar*) will be served from 19:00 to 20:00; dinner will be served at 20:00.  The same menu of food and drinks will be offered in both buildings.  However, the capacity of the Landmark building is limited, so if you have a particular interest in visiting the Landmark building galleries, we encourage you to arrive early, have a look around, then head across the street to the Hamilton building for the balance of the evening.  We will direct visitors to the Hamilton building once the Landmark building reaches capacity.
+</p>
+    <p>
+Buses will run continuously from the Sheraton Society Hill lobby entrance to PAFA between 18:30 and 19:30.  Buses will depart as soon as they are full (NB: depending on traffic, there may be some gaps between buses).  Buses will return from PAFA to the Sheraton starting at 21:00, and run continuously until 22:00.  If you prefer to go on your own, PAFA can be reached on <a href="http://maps.google.com/maps?saddr=Sheraton-Society+Hill+Hotel,+1+Dock+Street,+Philadelphia,+PA+19106-3996+(sheraton+society+hill+hotel)&daddr=Pennsylvania+Academy+of+the+Fine+Arts,+118+N+Broad+St,+Philadelphia,+Pennsylvania+19102&hl=en&ll=39.95107,-75.15351&spn=0.022338,0.040426&sll=39.951025,-75.15256&sspn=0.022338,0.040426&geocode=FX-IYQIdP2aF-yFkccRLbzi_Nw%3BFX6rYQIdmRiF-yEc_MedzVqsxg&oq=pennsylvania&vpsrc=6&t=v&dirflg=w&mra=ltm&z=15" >foot</a> from the Sheraton in about 30 minutes, or via <a href="http://maps.google.com/maps?saddr=Sheraton-Society+Hill+Hotel,+1+Dock+Street,+Philadelphia,+PA+19106-3996+(sheraton+society+hill+hotel)&daddr=Pennsylvania+Academy+of+the+Fine+Arts,+118+N+Broad+St,+Philadelphia,+Pennsylvania+19102&hl=en&sll=39.956092,-75.165814&sspn=0.005584,0.010107&geocode=FX-IYQIdP2aF-yFkccRLbzi_Nw%3BFX6rYQIdmRiF-yEc_MedzVqsxg&oq=pennsylvania&vpsrc=0&t=v&dirflg=r&ttype=arr&date=01%2F26%2F12&time=7:00pm&noexp=0&noal=0&sort=def&mra=ls&z=15&start=0">transit</a> and foot in about 20 minutes.
+    </p>
+
+    <p>
+* Each POPL registrant will receive a ticket good for one alcoholic beverage.  Additional beverages may be purchased.  The minimum drinking age in the U.S. is 21; you may be asked to show proof of age.
+  </p>
+</td>
+</tr>
+
+<tr>
+<td>
+<h2>Local information</h2>
+<p>
+ Philadelphia, also known as the City of Brotherly Love, is where the U.S. was born. The historic downtown of the city is...
+  <ul>
+<li> <p>...23 minutes away from the Philadelphia International Airport (PHL). You can <a href="http://www.phl.org/ground_transportation.html">travel downtown</a> from PHL by rail, taxi, and shuttle. Note that the train from the airport won't take you to the neighborhood of the hotel but to the 30th street station; you'll then have to take
+a taxi, bus, or Metro. Here's
+a <a href="http://maps.google.com/maps?saddr=30th+Street+Station,+Philadelphia,+PA&daddr=39.954085,-75.17724+to:Sheraton+Society+Hill+Hotel,+Dock+Street,+Philadelphia,+PA&hl=en&sll=39.910975,-75.195665&sspn=0.071629,0.153637&geocode=FVWwYQIdCc-E-ylHwsNfScbGiTFjza4sdeEgCA%3BFaWmYQId6OKE-ykDG_MvNsbGiTFlaqzGv_hU-w%3BFX-IYQIdP2aF-yFkccRLbzi_Nw&oq=30th+street+&vpsrc=0&mra=ls&t=m&z=14&via=1">map</a> showing how to go from the 30th street train station to the hotel, but all things considered, the most convenient way to get to the hotel is probably to take a taxi. </p>
+    
+    <li> ...about an hour by train from the Newark International Airport (EWR).
+    <li> ...accessible by <a href="http://www.amtrak.com">train</a> and <a href="http://www.megabus.com">bus</a> from New York, Boston, Washington DC, and Baltimore.
+    </ul>
+Note that PHL and EWR are both large international airports, and most major European and Asian cities have direct flights to one of the two.
+</p>
+    
+    <p>
+For more information about cultural attractions, check out the <a href="http://www.visitphilly.com">official visitor site</a> or the local alternative weeklies (<a href="http://www.citypaper.net">here</a> and <a href="http://www.philadelphiaweekly.com">here</a>). A tour of the historic district, especially the <a href="http://www.nps.gov/inde/index.htm">Independence Hall</a>, is highly recommended. The Philadelphia Art Museum is not only one of the largest art museums in the US, it is also home to the iconic <a href="http://www.visitphilly.com/museums-attractions/philadelphia/the-rocky-statue-and-the-rocky-steps/">Rocky steps</a> (we recommend that you dedicate the run up and down the stairs to your POPL paper).
+Those with quirkier tastes should consider visiting the <a href="http://www.collphyphil.org/site/mutter_museum.html">Mutter Museum</a> or take a <a href="http://muralarts.org/tour">mural tour</a>.
+    </p>
+
+<table>
+  <tr>
+    <td>
+
+      
+    <p>
+    Philadelphia has one of the best restaurant scenes in America, and here is a <a href="http://maps.google.com/maps/ms?msid=210716869695613891858.0004b5cd072a359bf0046&msa=0&ll=39.9513,-75.153437&spn=0.02293,0.023561">map listing some of the restaurants</a> in the neighborhood around the hotel. However, your trip to Philadelphia will not be complete unless you have had a <a href="http://en.wikipedia.org/wiki/Cheesesteak">cheesesteak</a>.</p>    
+
+      <p>
+Temperatures in late January hover around freezing. We recommend packing a winter coat. </p>
+      </td>
+     
+<td width="20%">
+<link rel="stylesheet" type="text/css" media="screen" href="http://img.weather.weatherbug.com/Style/stickers/v2/Stickers_125x125.css" /> 
+<div class="wXbody">
+	<div class="wXguts">
+   		<iframe id="WeatherBugSticker_125x125_v2" src="http://weather.weatherbug.com/desktop-weather/web-widgets/getSticker.html?ZipCode=19019&ZCode=z5545&Size=125x125&StationID=PHLDP&units=0&Version=2&lang_id=en-us" width="123" height="70" frameborder="0" scrolling="no" allowtransparency="yes"></iframe> 
+
+		<div class="wXlinks">
+			<span class="link"><a href="http://weather.weatherbug.com/weather-forecast.html" target="_blank" onclick="Javascript:this.href='http://weather.weatherbug.com/PA/Philadelphia-weather/local-forecast/7-day-forecast.html?zcode=z5545&units=0'">Forecast</a></span>
+			<span class="link"><a href="http://weather.weatherbug.com/doppler-radar.html" target="_blank" onclick="Javascript:this.href='http://weather.weatherbug.com/PA/Philadelphia-weather/local-radar/doppler-radar.html?zcode=z5545&units=0'">Radar</a></span>
+			<span class="link"><a href="http://weather.weatherbug.com/weather-cams.html" target="_blank" onclick="Javascript:this.href='http://weather.weatherbug.com/PA/Philadelphia-weather/weather-cams/local-cams.html?zcode=z5545&units=0'">Cameras</a></span>
+		</div>
+		<div class="wXlogo">
+			<a href="http://weather.weatherbug.com/default.html" target="_blank" onclick="Javascript:this.href='http://weather.weatherbug.com/PA/Philadelphia-weather.html?zcode=z5545&units=0'"><img src="http://img.weather.weatherbug.com/images/stickers/v2/125x125/wxbug-logo.jpg" border="0" alt="WeatherBug"/></a>
+		</div>
+	</div>
+</div>    
+</td>
+</tr>
+</table>
+
+  
+  </td>
+  </tr>
+
+
+
+
+<tr><td>
+<h2>Workshops and co-located events</h2>
+
+
+  <p>
+A <a href="https://docs.google.com/spreadsheet/pub?hl=en_US&key=0AoEIaC_fw2i1dEdidlZITmhwSDVZcldRTFdWUDZfcmc&hl=en_US&gid=0">master schedule showing all events</a> colocated with POPL is available 
+<a href="https://docs.google.com/spreadsheet/pub?hl=en_US&key=0AoEIaC_fw2i1dEdidlZITmhwSDVZcldRTFdWUDZfcmc&hl=en_US&gid=0">here</a>.
+  </p>
+<table cellpadding="0" border="1" width="85%">
+
+<tbody>
+<tr>
+<!-- 
+<td width="100" style="padding: 2pt;">
+<p align="center" style="text-align: center;" class="MsoNormal"><b><span style="font-size: 12pt;">Jan 21 (Sat)</span></b></p>
+</td>
+-->
+
+<td width="60" style="padding: 2pt;">
+<p align="center" style="text-align: center;" class="MsoNormal"><b><span style="font-size: 12pt;">Jan 22 (Sun)</span></b></p>
+</td>
+<td width="70" style="padding: 2pt;">
+<p align="center" style="text-align: center;" class="MsoNormal"><b><span style="font-size: 12pt;">Jan 23 (Mon)</span></b></p>
+</td>
+<td width="70" style="padding: 2pt;">
+<p align="center" style="text-align: center;" class="MsoNormal"><b><span style="font-size: 12pt;">Jan 24 (Tue)</span></b></p>
+</td>
+<td width="70" style="padding: 2pt;">
+<p align="center" style="text-align: center;" class="MsoNormal"><b><span style="font-size: 12pt;">Jan 25 (Wed)</span></b></p>
+</td>
+<td width="70" style="padding: 2pt;">
+<p align="center" style="text-align: center;" class="MsoNormal"><b><span style="font-size: 12pt;">Jan 26 (Thurs)</span></b></p>
+</td>
+<td width="70" style="padding: 2pt;">
+<p align="center" style="text-align: center;" class="MsoNormal"><b><span style="font-size: 12pt;">Jan 27 (Fri)</span></b></p>
+</td>
+
+<!--
+<td width="88" style="width: 45.95pt; padding: 2pt;">
+<p align="center" style="text-align: center;" class="MsoNormal"><b><span style="font-size: 11pt;">Jan 26 (Thurs)</span></b></p>
+</td>
+<td width="108" style="padding: 2pt;">
+<p align="center" style="text-align: center;" class="MsoNormal"><b><span style="font-size: 11pt;">Jan 27 (Fri)</span></b></p>
+</td>
+-->
+
+<td width="108"style="padding: 2pt;">
+<p align="center" style="text-align: center;" class="MsoNormal"><b><span style="font-size: 11pt;">Jan 28 (Sat)</span></b></p>
+</td>
+
+<td width="108" style="padding: 2pt;">
+<p align="center" style="text-align: center;" class="MsoNormal"><b><span style="font-size: 11pt;">Jan 29 (Sun)</span></b></p>
+</td>
+</tr>
+
+<tr>
+<td  style="background: none repeat scroll 0% 0% rgb(246, 227, 206); padding: 3pt;" colspan="3">
+<p align="center" style="text-align: center;" class="MsoNormal"><span style="font-size: 11pt;">
+Conference on Verification, Model Checking, and Abstract Interpretation (<a href="http://lara.epfl.ch/vmcai2012/">VMCAI 2012</a>) 
+</span></p>
+</td>
+<td width="278" valign="top" style="width: 208.45pt; padding: 7.5pt;" rowspan="2" colspan="3">
+<p class="MsoNormal"><span style="font-size: 11pt;"></span></p>
+</td>
+
+<td width="108" valign="top" style="width: 81.35pt; background: none repeat scroll 0% 0% rgb(236, 248, 224); padding: 2pt;">
+<p align="center" style="text-align: center;" class="MsoNormal"><span style="font-size: 11pt;">
+Types in Language Design and Implementation 
+(<a href="http://www.cis.upenn.edu/~bcpierce/tldi12/">TLDI 2012</a>)</span></p>
+</td>
+<td>
+
+  </td>
+
+</tr>
+<tr>
+<td width="100" style="width: 90.35pt; padding: 3pt;" rowspan="3">
+
+</td>
+<td width="181" style="width: 135.7pt; background: none repeat scroll 0% 0% rgb(236, 248, 224); padding: 2pt;" colspan="2">
+<p align="center" style="text-align: center;" class="MsoNormal"><span style="font-size: 11pt;">
+Languages for Distributed Algorithms (<a href="http://sites.google.com/site/ladameeting/">LADA 
+2012</a>)</span></p>
+</td>
+
+<td colspan="2" width="108" valign="top" style="width: 81.35pt; background: none repeat scroll 0% 0% rgb(229, 223, 236); padding: 7.5pt;">
+<p align="center" style="text-align: center;" class="MsoNormal"><span style="font-size: 11pt;">
+Verified Software: Theories, Tools and Experiments (<a href="https://sites.google.com/site/vstte2012/">VSTTE 2012</a>) </span></p>
+</td>
+
+  
+</tr>
+<tr>
+
+
+
+
+<td width="181" style="width: 135.7pt; background: none repeat scroll 0% 0% rgb(242, 219, 219); padding: 4pt;" colspan="2">
+<p align="center" style="text-align: center;" class="MsoNormal"><span style="font-size: 11pt;">
+Workshop on Partial Evaluation and Program Manipulation (<a 
+href="http://www.program-transformation.org/PEPM12">PEPM 2012</a>)
+</span></p>
+</td>
+<td width="278" colspan="3" style="width: 208.45pt; background: none repeat scroll 0% 0% rgb(246, 227, 206); padding: 2pt;">
+<p style="text-align: center;" class="MsoNormal"><span style="font-size: 24pt;"><b>POPL!</b></span></p>
+
+</td>
+
+<td width="108" style="width: 81.35pt; background: none repeat scroll 0% 0% rgb(246, 227, 206); padding: 2pt;">
+
+<p style="text-align: center;" class="MsoNormal"><span style="font-size: 14pt;">
+ <b><a href="tutorial.html">POPL TutorialFest!</a></b></span></p>
+  
+</td>
+
+
+<td rowspan="3">
+  </td>
+</tr>
+<tr>
+
+
+  <td width="181" style="width: 135.85pt; background: none repeat scroll 0% 0% rgb(136, 248, 224); padding: 2pt;" colspan="2">
+<p align="center" style="text-align: center;" class="MsoNormal"><span style="font-size: 11pt;">
+Symposium on Practical Aspects of Declarative Languages (<a href="http://research.microsoft.com/en-us/um/people/crusso/padl12/">PADL 2012</a>)</span></p>
+</td>
+<td style="background:rgb(236, 248, 224);">
+<p align="center" style="text-align: center;" class="MsoNormal"><span style="font-size: 11pt;">
+NSF BoF meeting
+  </span>
+  </p>
+</td>
+
+<td width="278" style="width: 208.45pt; background: none repeat scroll 0% 0%; padding: 2pt;">
+
+</td>
+<td style="background:rgb(240,186,254);">
+  <p align="center" style="text-align: center;" class="MsoNormal"><span style="font-size: 11pt;">
+SIGPLAN EC Meeting</span>
+  </p>
+  </td>
+
+<td width="138" valign="top" style="width: 100.35pt; background: none repeat scroll 0% 0% rgb(242, 219, 219); padding: 2pt;">
+<p align="center" style="text-align: center;" class="MsoNormal"><span style="font-size: 11pt;">
+Off the Beaten Track:  
+Underrepresented Problems for Programming Language Researchers (<a href="http://www.cs.princeton.edu/~dpw/obt/">
+OBT 
+2012</a>) 
+</span></p>
+</td>
+
+
+
+</tr>
+<tr>
+<td width="181" style="width: 135.85pt; padding: 7.5pt;" colspan="2" rowspan="2">
+<p class="MsoNormal"><span style="font-size: 11pt;"></span></p>
+</td>
+<td style="width: 200pt; padding:4pt;  background: rgb(229,223,236);">
+<p align="center" style="text-align: center;" class="MsoNormal"><span style="font-size: 11pt;">
+Programming Languages meets Program Verification (<a 
+href="http://research.microsoft.com/en-us/um/people/nswamy/plpv12/">PLPV 2012</a>) </span></p>
+  
+</td>
+<td colspan="3" rowspan="2">
+</td>
+
+  
+<td width="108" valign="top" style="width: 81.35pt; background: none repeat scroll 0% 0% rgb(136, 248, 224); padding: 7.5pt;">
+<p align="center" style="text-align: center;" class="MsoNormal"><span style="font-size: 11pt;">
+Declarative Aspects of Multicore Programming (<a 
+href="http://www.mpi-sws.org/~umut/damp2012/">DAMP 2012</a>)</span></p>
+</td>
+
+</tr>
+
+<tr>
+<td width="108" valign="top" style="width: 81.35pt; background: none repeat scroll 0% 0% rgb(236, 248, 224); padding: 7.5pt;">
+<p align="center" style="text-align: center;" class="MsoNormal"><span style="font-size: 11pt;">
+Programming Languages Mentoring Workshop (<a href = "http://www.cis.upenn.edu/~sweirich/plmw12/">PLMW 2012</a>)</span></p>
+</td>
+
+<td colspan="2" style="background:rgb(200,248,224);">
+ <p align="center" style="text-align: center;" class="MsoNormal"><span style="font-size: 11pt;">
+PC meeting for PLDI 2012</span></p>
+  </td>
+
+  </tr>
+</tbody>
+</table>
+
+<table>
+<tbody>
+<tr>
+  <td>
+<h2><a name="Conference Organizers">Organizers</a></h2>
+<table style="border-collapse: collapse;" border="0"
+ bordercolor="#111111" cellpadding="0" cellspacing="0">
+  <tbody>
+    <tr>
+      <td valign="top" width="200"><font face="Arial"><b>General Chair:</b></font></td>
+      <td>
+<img width="100" style="float: left; padding: 15px 15px 15px 15px;" src="jfield.jpg">
+	<font face="Arial">
+<p>	John Field<br>
+Google<br>
+	76 Ninth Avenue,<br>
+	New York, NY 10011, USA.<br>	
+      <span style="font-family: Courier New;">jfield@google.com</span> </font></p>
+
+	</td>
+    </tr>
+    <tr>
+      <td valign="top">
+      <p style="margin-top: 0pt; margin-bottom: 0pt;">&nbsp;</p>
+      <p style="margin-top: 0pt; margin-bottom: 0pt;"><b><font
+ face="Arial">Program Chair:</font></b></p>
+      <b> </b></td>
+      <td>
+	<img width="100" style="float: left; padding: 15px 15px 15px 15px;" src="mhicks.jpg">
+      <p style="margin-top: 0pt; margin-bottom: 0pt;"><font face="Arial"><br>
+      <a href="http://www.cs.umd.edu/~mwh/">Michael Hicks</a><br>
+Department of Computer Science<br>
+University of Maryland, 
+College Park, MD 20866, USA<br>
+      <span style="font-family: Courier New;"> mwh@cs.umd.edu</span><br>
+      </font></p>
+      
+	</td>
+    </tr>
+    <tr>
+      <td valign="top" width="300">
+      <p style="margin-top: 0pt; margin-bottom: 0pt;">&nbsp;</p>
+      <p style="margin-top: 0pt; margin-bottom: 0pt;"><font face="Arial"><b>Program
+Committee: <br>
+      </b></font></p>
+      <p style="margin-top: 0pt; margin-bottom: 0pt;"><font face="Arial"><b><br>
+      </b></font></p>
+      </td>
+      <td>&nbsp;
+	<br><a id="pcdisp" href="javascript:toggle('pctog','pcdisp');"> <i>[Show program committee]</i></a>
+<div id="pctog" style="display: none">
+      <table style="border-width: 0px; width: 100%;" border="1"
+ cellspacing="5">
+        <tbody>
+          <tr>
+            <td style="border-style: none; border-width: medium;"> <a
+ href="http://www.cs.rice.edu/~swarat">Swarat Chaudhuri</a></td>
+            <td style="border-style: none; border-width: medium;">Rice University, USA</td>
+          </tr>
+          <tr>
+            <td style="border-style: none; border-width: medium;"> <a
+ href="http://adam.chlipala.net/">Adam Chlipala</a></td>
+            <td style="border-style: none; border-width: medium;">MIT, USA</td>
+          </tr>
+          <tr>
+            <td style="border-style: none; border-width: medium;"> <a
+ href="http://www.cs.bham.ac.uk/~drg">Dan R. Ghica</a></td>
+            <td style="border-style: none; border-width: medium;">University of Birmingham, UK</td>
+          </tr>
+          <tr>
+            <td style="border-style: none; border-width: medium;"> <a
+ href="http://www.nec-labs.com/~agupta/">Aarti Gupta</a></td>
+            <td style="border-style: none; border-width: medium;">NEC Labs America, USA</td>
+          </tr>
+          <tr>
+            <td style="border-style: none; border-width: medium;"> <a
+ href="http://research.microsoft.com/en-us/people/chrishaw/">Chris Hawblitzel</a></td>
+            <td style="border-style: none; border-width: medium;">Microsoft Research, Redmond, USA</td>
+          </tr>
+          <tr>
+            <td style="border-style: none; border-width: medium;"> <a
+ href="http://www.cs.purdue.edu/homes/suresh">Suresh Jagannathan</a></td>
+            <td style="border-style: none; border-width: medium;">Purdue University, USA</td>
+          </tr>
+          <tr>
+            <td style="border-style: none; border-width: medium;"> <a
+ href="http://cseweb.ucsd.edu/~rjhala">Ranjit Jhala</a></td>
+            <td style="border-style: none; border-width: medium;">University of California, San Diego, USA</td>
+          </tr>
+          <tr>
+            <td style="border-style: none; border-width: medium;"> <a
+ href="http://cseweb.ucsd.edu/~lerner/">Sorin Lerner</a></td>
+            <td style="border-style: none; border-width: medium;">University of California, San Diego, USA</td>
+          </tr>
+          <tr>
+            <td style="border-style: none; border-width: medium;"> <a
+ href="http://plg.uwaterloo.ca/~olhotak/">Ondrej Lhotak</a></td>
+            <td style="border-style: none; border-width: medium;">University of Waterloo, Canada</td>
+          </tr>
+          <tr>
+            <td style="border-style: none; border-width: medium;"> <a
+ href="http://www.cs.uiuc.edu/~madhu/">P. Madhusudan</a></td>
+            <td style="border-style: none; border-width: medium;">University of Illinois at Urbana-Champaign, USA</td>
+          </tr>
+          <tr>
+            <td style="border-style: none; border-width: medium;"> <a
+ href="http://www.mpi-sws.org/~rupak">Rupak Majumdar</a></td>
+            <td style="border-style: none; border-width: medium;">MPI-SWS, Germany</td>
+          </tr>
+          <tr>
+            <td style="border-style: none; border-width: medium;"> <a
+ href="http://matt.might.net/">Matthew Might</a></td>
+            <td style="border-style: none; border-width: medium;">University of Utah, USA</td>
+          </tr>
+          <tr>
+            <td style="border-style: none; border-width: medium;"> <a
+ href="http://www.cs.ucla.edu/~todd">Todd Millstein</a></td>
+            <td style="border-style: none; border-width: medium;">University of California, Los Angeles, USA</td>
+          </tr>
+          <tr>
+            <td style="border-style: none; border-width: medium;"> <a
+ href="www.eecs.harvard.edu/~greg">Greg Morrisett</a></td>
+            <td style="border-style: none; border-width: medium;">Harvard University, USA</td>
+          </tr>
+          <tr>
+            <td style="border-style: none; border-width: medium;"> <a
+ href="http://www.cs.cornell.edu/andru">Andrew Myers</a></td>
+            <td style="border-style: none; border-width: medium;">Cornell University, USA</td>
+          </tr>
+          <tr>
+            <td style="border-style: none; border-width: medium;"> <a
+ href="http://research.microsoft.com/people/mattpark/">Matthew Parkinson</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td style="border-style: none; border-width: medium;">Microsoft Research, Cambridge, UK</td>
+          </tr>
+          <tr>
+            <td style="border-style: none; border-width: medium;"> <a
+ href="http://distrinet.cs.kuleuven.be/people/showMember.do?memberID=u0018905">Frank Piessens</a></td>
+            <td style="border-style: none; border-width: medium;">K.U. Leuven, Belgium</td>
+          </tr>
+          <tr>
+            <td style="border-style: none; border-width: medium;"> <a
+ href="http://www.cl.cam.ac.uk/users/amp12/">Andrew Pitts</a></td>
+            <td style="border-style: none; border-width: medium;">University of Cambridge, UK</td>
+          </tr>
+          <tr>
+            <td style="border-style: none; border-width: medium;"> <a
+ href="http://swt.informatik.uni-freiburg.de/podelski">Andreas Podelski</a></td>
+            <td style="border-style: none; border-width: medium;">University of Freiburg, Germany</td>
+          </tr>
+          <tr>
+            <td style="border-style: none; border-width: medium;"> <a
+ href="http://gallium.inria.fr/~fpottier/">Fran&#231;ois Pottier</a></td>
+            <td style="border-style: none; border-width: medium;">INRIA, France</td>
+          </tr>
+ <tr>
+            <td style="border-style: none; border-width: medium;"> <a
+ href="http://www.cs.tufts.edu/~nr/">Norman Ramsey</a></td>
+            <td style="border-style: none; border-width: medium;">Tufts University, USA</td>
+          </tr>
+	  <tr>
+            <td style="border-style: none; border-width: medium;"> <a
+ href="http://www.agusa.i.is.nagoya-u.ac.jp/person/terauchi/">Tachio Terauchi</a></td>
+            <td style="border-style: none; border-width: medium;">Nagoya University, Japan</td>
+          </tr>
+<tr>
+            <td style="border-style: none; border-width: medium;"> <a
+ href="http://domino.research.ibm.com/comm/research_people.nsf/pages/mvaziri.index.html">Mandana Vaziri</a></td>
+            <td style="border-style: none; border-width: medium;">IBM Research, USA</td>
+          </tr>
+	  <tr>
+            <td style="border-style: none; border-width: medium;"> <a
+ href="http://research.microsoft.com/people/dimitris">Dimitrios 
+Vytiniotis</a></td>
+            <td style="border-style: none; border-width: medium;">Microsoft Research, Cambridge, UK</td>
+          </tr>
+	  <tr>
+            <td style="border-style: none; border-width: medium;"> <a
+ href="http://www.doc.ic.ac.uk/~yoshida/">Nobuko Yoshida</a></td>
+            <td style="border-style: none; border-width: medium;">Imperial College, London, UK</td>
+          </tr>
+ <tr>
+            <td style="border-style: none; border-width: medium;"> <a
+ href="http://moscova.inria.fr/~zappa">Francesco Zappa Nardelli</a></td>
+            <td style="border-style: none; border-width: medium;">INRIA, France</td>
+          </tr>
+	  
+	  
+        </tbody>
+      </table>
+
+      </div>
+      </td>
+    </tr>
+
+<tr>
+ <td valign="top">
+      <p style="margin-top: 0pt; margin-bottom: 0pt;">&nbsp;</p>
+      <p style="margin-top: 0pt; margin-bottom: 0pt;"><b><font
+ face="Arial">Workshops Chair:</font></b></p>
+      <b> </b></td>
+      <td>
+      <p style="margin-top: 0pt; margin-bottom: 0pt;">&nbsp;</p>
+      <p style="margin-top: 0pt; margin-bottom: 0pt;"><font face="Arial">
+      <a href="http://matt.might.net/">Matthew Might</a><br>
+ University of Utah
+      </font></p>
+      </td>
+    </tr>
+
+
+<tr>
+ <td valign="top">
+      <p style="margin-top: 0pt; margin-bottom: 0pt;">&nbsp;</p>
+      <p style="margin-top: 0pt; margin-bottom: 0pt;"><b><font
+ face="Arial">Treasurer:</font></b></p>
+      <b> </b></td>
+      <td>
+      <p style="margin-top: 0pt; margin-bottom: 0pt;">&nbsp;</p>
+      <p style="margin-top: 0pt; margin-bottom: 0pt;"><font face="Arial">
+      <a href="http://www.cs.colorado.edu/~bec/">Bor-Yuh Evan Chang</a><br>
+University of Colorado, Boulder
+      </font></p>
+      </td>
+    </tr>    
+
+    <tr>
+    <td valign="top">
+      <p style="margin-top: 0pt; margin-bottom: 0pt;">&nbsp;</p>
+      <p style="margin-top: 0pt; margin-bottom: 0pt;"><b><font
+ face="Arial">Publicity Chair:</font></b></p>
+      <b> </b></td>
+      <td>
+      <p style="margin-top: 0pt; margin-bottom: 0pt;">&nbsp;</p>
+      <p style="margin-top: 0pt; margin-bottom: 0pt;"><font face="Arial">
+      <a href="http://www.cs.rice.edu/~swarat">Swarat Chaudhuri</a><br>
+Rice University
+      </font></p>
+      </td>
+    </tr>    
+
+    <tr>
+    <td valign="top">
+      <p style="margin-top: 0pt; margin-bottom: 0pt;">&nbsp;</p>
+      <p style="margin-top: 0pt; margin-bottom: 0pt;"><b><font
+ face="Arial">Student Activities Chair:</font></b></p>
+      <b> </b></td>
+      <td>
+      <p style="margin-top: 0pt; margin-bottom: 0pt;">&nbsp;</p>
+      <p style="margin-top: 0pt; margin-bottom: 0pt;"><font face="Arial">
+      <a href="http://wrigstad.com/">Tobias 
+Wrigstad</a><br>
+Uppsala University
+      </font></p>
+      </td>
+    </tr>    
+
+
+
+
+ <tr> 
+   <td valign="top">
+      <p style="margin-top: 0pt; margin-bottom: 0pt;">&nbsp;</p>
+      <p style="margin-top: 0pt; margin-bottom: 0pt;"><b><font
+ face="Arial">External review committee:</font></b></p>
+      <b> </b></td>
+      <td>
+      <p style="margin-top: 0pt; margin-bottom: 0pt;">&nbsp;</p> 
+<!-- 
+	<p>
+    Following the practice of PLDI and some other SIGPLAN conferences,
+external expert reviews at POPL 2012 will largely be handled by a separate external
+review committee.  
+</p>-->
+<br>
+<a id="thdisp" href="javascript:toggle('thtog','thdisp');"> <i>[Show external review committee]</i></a>
+<div id="thtog" style="display: none">
+<table cellspacing="5">
+<tr>
+<td> Umut Acar, MPI-SWS </td>
+<td> Rajeev Alur, Penn </td>
+</tr>
+<tr>
+<td> Josh Berdine, MSR Cambridge </td>
+<td> Emery Berger, UMass </td>
+</tr>
+<tr>
+<td> Hans Boehm, HP Labs  </td>
+<td> Ahmed Bouajjani, University of Paris 7</td>
+</tr>
+<tr>
+<td> David Brumley, CMU </td>
+<td> Bor-Yuh Evan Chang, Colorado </td>
+</tr>
+<tr>
+<td> James Cheney, Edinburgh  </td>
+<td> Koen Claessen, Chalmers </td>
+</tr>
+<tr>
+<td> William Cook, UT Austin </td>
+<td> Derek Dreyer, MPI-SWS </td>
+</tr>
+<tr>
+<td> John Field, Google </td>
+<td> Robby Findler, Northwestern  </td>
+</tr>
+<tr>
+<td> Cormac Flanagan, UCSC </td>
+<td> Jeff Foster, Maryland  </td>
+</tr>
+<tr>
+<td> Nate Foster, Cornell </td>
+<td> Patrice Godefroid, MSR Redmond </td>
+</tr>
+<tr>
+<td> Andy Gordon, MSR Cambridge </td>
+<td> Dan Grossman, Washington  </td>
+</tr>
+<tr>
+<td> Rajiv Gupta, UC Riverside  </td>
+<td> Kohei Honda, Queen Mary </td>
+</tr>
+<tr>
+<td> Joxan Jaffar, Singapore </td>
+<td> Somesh Jha, Wisconsin </td>
+</tr>
+<tr>
+<td> Patty Johann, Strathclyde  </td>
+<td> Neel Krishnaswami, MSR Cambridge </td>
+</tr>
+<tr>
+<td> Viktor Kuncak, EPFL  </td>
+<td> Paul Levy, Birmingham </td>
+</tr>
+<tr>
+<td> Yitzhak Mandelbaum, AT&amp;T </td>
+<td> Roman Manevich, UT Austin </td>
+</tr>
+<tr>
+<td> Ken McMillan, MSR </td>
+<td> Mayur Naik, Intel </td>
+</tr>
+<tr>
+<td> Aditya Nori, MSR Bangalore </td>
+<td> Luke Ong, Oxford </td>
+</tr>
+<tr>
+<td> Erez Petrank, Technion </td>
+<td> Simon Peyton Jones, MSR Cambridge </td>
+</tr>
+<tr>
+<td> Brigitte Pientka, McGill </td>
+<td> Mark Ryan, Birmingham </td>
+</tr>
+<tr>
+<td> Andrey Rybalchenko, T.U. Munich </td>
+<td> Vijay Saraswat, IBM T.J. Watson </td>
+</tr>
+<tr>
+<td> Helmut Seidl, T.U. Munich</td>
+<td> Peter Sewell, Cambridge  </td>
+</tr>
+<tr>
+<td> Chung-chieh Shan, Rutgers </td>
+<td> Zhong Shao, Yale  </td>
+</tr>
+<tr>
+<td> Satnam Singh, MSR Cambridge </td>
+<td> Yannis Smaragdakis, UMass </td>
+</tr>
+<tr>
+<td> Manu Sridharan, IBM T.J. Watson </td>
+<td> Sam Staton, Cambridge </td>
+</tr>
+<tr>
+<td> Zhendong Su, UC Davis </td>
+<td> Nikhil Swamy, MSR Redmond </td>
+</tr>
+<tr>
+<td> Ashish Tiwari, SRI </td>
+<td> Stavros Tripakis, VERIMAG </td>
+</tr>
+<tr>
+<td> Jean-Baptiste Tristan, Harvard </td>
+<td> Martin Vechev, IBM T.J. Watson </td>
+</tr>
+<tr>
+<td> David Walker, Princeton </td>
+<td> Stephanie Weirich, UPenn  </td>
+</tr>
+<tr>
+<td> Adam Welc, Adobe </td>
+<td> Kwangkeun Yi, Seoul </td>
+</tr>
+<tr>
+<td> Steve Zdancewic, UPenn  </td>
+<td> Noam Zeilberger, University of Paris 7 </td>
+</tr>
+</table>
+</div>
+	
+      </td>
+    </tr>
+    
+</tbody>
+</table>
+<br>
+<h2>Sponsors</h2>
+
+<table class="dates" border="0">
+<tbody>
+<tr>
+<td colspan="4">
+  <center>
+      <a href="http://research.microsoft.com/"><img width=180  
+src="microsoft.png"></a>
+  </center>
+</td>
+</tr>
+<tr>
+  <td colspan="4">
+    <hr>
+    </td>
+    </tr>
+  <tr>
+<td colspan="4">
+  <center>
+  <a href="http://www.arm.com/"><img width=150
+src="ARM_Corp_RGB.jpg"></a>
+  </center>
+</td>
+</tr>
+<tr>
+  <td colspan="4">
+    <hr>
+    </td>
+    </tr>
+<tr>
+<td colspan="4">
+  <center>
+<a href="http://www.cra-w.org/"><img width=100 align=middle 
+src="CRA-W-logo.gif"></a>
+  </center>
+</td>
+</tr>
+
+
+<tr>
+  <td colspan="4">
+    <hr>
+    </td>
+    </tr>
+
+
+<tr>   
+<td>
+  <a href="http://www.intel.com/"><img width=130 align=middle
+src="intel-logo.jpg"></a>
+</td>
+
+<td>
+  <a href="http://www.janestreet.com/"><img width=170 align=middle
+src="janestreet.jpg"></a>
+</td>
+
+<td>
+<a href="http://www.mozilla.org/"><img width=200 align=middle 
+src="mozilla-logo.bmp"></a>
+</td>
+
+<td>
+<a href="http://www.oracle.com/"><img width=220 align=middle 
+src="Oracle_logo.gif"></a>
+</td>
+</tr>
+<tr>
+  <td colspan="4">
+    <hr>
+    </td>
+    </tr>
+<tr>
+<td colspan="4">
+  <center>
+<a href="http://www.nsf.gov/"><img width=100 align=middle 
+src="nsf-logo.gif"></a>
+  </center>
+</td>
+</tr>
+
+
+<tr>
+  <td colspan="4">
+    <hr>
+    </td>
+    </tr>
+<tr>
+<td colspan=2>
+<center>
+  <a href="http://research.google.com/"><img width=150
+src="googlelogo.jpg"></a>
+  </center>
+</td>
+
+<td colspan=2>
+  <center>
+  <a href="http://www.research.ibm.com/"><img width=250
+src="ibm-research-logo.jpg"></a>
+  </center>
+</td>
+</tr>
+<tr>
+  <td colspan="4">
+    <hr>
+    </td>
+    </tr>
+<tr>
+<td colspan="4">
+  <center>
+<a href="http://www.nec-labs.com/"><img width=140 align=middle 
+src="nec-blue.gif"></a>
+  </center>
+</td>
+</tr>
+<tr>
+  <td colspan="4">
+    <hr>
+    </td>
+    </tr>
+<tr>
+<td colspan="4">
+  <center>
+<a href="http://www.amgen.com/"><img width=140 align=middle 
+src="amgen-logo.jpg"></a>
+  </center>
+</td>
+</tr>
+
+
+</tbody>
+</table>
+
+
+
+
+
+</td>
+</tr>
+
+
+
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+
+<br>
+<br>
+<div style="margin-left: 40px;"><br>
+</div>
+<!-- Start of StatCounter Code -->
+<!--
+<script type="text/javascript">
+var sc_project=4293201; 
+var sc_invisible=1; 
+var sc_partition=54; 
+var sc_click_stat=1; 
+var sc_security="981bc000"; 
+</script>
+
+<script type="text/javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><div class="statcounter"><a title="hits counter" href="http://www.statcounter.com/free_hit_counter.html" target="_blank"><img class="statcounter" src="http://c.statcounter.com/4293201/0/981bc000/1/" alt="hits counter" ></a></div></noscript>
+-->
+<!-- End of StatCounter Code -->
+</table>
+</body>
+</html>

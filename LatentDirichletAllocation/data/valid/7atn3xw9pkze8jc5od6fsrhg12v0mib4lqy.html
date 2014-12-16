@@ -1,0 +1,597 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- Design of web page and recycling memory logo
+     (C) copyright Richard Jones, 2000.
+     All rights reserved.
+-->
+
+<HTML>
+<HEAD>
+<!-- <LINK REL=STYLESHEET HREF="house.css" TYPE="text/css"> -->
+<TITLE>ISMM 2000</TITLE>
+</HEAD>
+
+
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+	/***********************************************************
+	*                                                          *
+	*  PERMISSION NOTICE:                                      *
+	*                                                          *
+	*  Javascript/PHP code used with permission of the PHP     *
+	*  Development Team.                                       *
+	*  Copyright 1998.  All rights reserved.                   *
+	*                                                          *
+	*  For more information on the PHP Development Team and    *
+	*  the PHP project, please see <http://www.php.net>.       *
+	*                                                          *
+	***********************************************************/
+
+
+var loaded = 0;
+var lastbutton='top';
+
+// -->
+</SCRIPT>
+
+
+<SCRIPT LANGUAGE="JavaScript1.1">
+<!--
+function LoadImgs () {
+	if (document.images) {
+
+		b_prog0 = new Image();
+		b_prog0.src = "prog.gif";
+		b_prog1 = new Image();
+		b_prog1.src = "prog-rev.gif";
+
+		b_cfp0 = new Image();
+		b_cfp0.src = "cfp.gif";
+		b_cfp1 = new Image();
+		b_cfp1.src = "cfp-rev.gif";
+
+		b_comm0 = new Image();
+		b_comm0.src = "committee.gif";
+		b_comm1 = new Image();
+		b_comm1.src = "committee-rev.gif";
+
+		b_links0 = new Image();
+		b_links0.src = "links.gif";
+		b_links1 = new Image();
+		b_links1.src = "links-rev.gif";
+
+		b_registration0 = new Image();
+		b_registration0.src = "registration.gif";
+		b_registration1 = new Image();
+		b_registration1.src = "registration-rev.gif";
+
+		loaded = 1;
+	}
+}
+
+function change(Name,No) {
+	if (document.images && (loaded == 1) && (document[Name])) {
+		document[Name].src = eval("b_" + Name + No + ".src");
+	}
+	if (No == 1) {
+		lastbutton = Name;
+	}
+}
+
+
+function hide() {
+	if (document.images && (loaded == 1)) {
+		change(lastbutton,0);
+	}
+}
+
+// -->
+</SCRIPT>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000" BACKGROUND="GCbackground-blue.gif"
+      OnLoad="LoadImgs();">
+
+<TABLE WIDTH="100%">
+  <TR>
+    <TD VALIGN="TOP">
+      <IMG SRC="/images/point.gif" WIDTH="90" HEIGHT="10" ALT=""><BR>
+      <IMG SRC="ISMM2000-logo.gif" WIDTH=200 ALT="ISMM 2000">
+    </TD>
+    <TD VALIGN="TOP">
+      <P><BR>
+<CENTER>
+  <H1> <FONT COLOR="#000066">The 2000 International Symposium on<BR>
+    Memory Management</FONT></H1>
+<H2>
+Regal Minneapolis Hotel<BR>
+Minneapolis, Minnesota, USA<BR>
+15-16 October, 2000</H2>
+</CENTER>
+
+<CENTER>
+<TABLE>
+<TR>
+
+<TD><A HREF="http://www.acm.org/sigplan/oopsla/"><IMG SRC="OOPSLA2000logo.gif" ALT="" BORDER=0 HEIGHT=95 ALIGN=CENTER></A></TD>
+
+<TD>
+<CENTER><B>Sponsored by<BR><A HREF="http://www.acm.org/sigplan/">ACM SIGPLAN</A></B>
+<BR><B>Co-located with<BR><A HREF="http://www.acm.org/sigplan/oopsla/">OOPSLA&nbsp;2000</A></B></CENTER>
+</TD>
+
+<TD><A HREF="http://www.acm.org/sigplan/"><IMG SRC="acmlogo.gif" ALT="" BORDER=0 HEIGHT=95 WIDTH=96 ALIGN=CENTER></A></TD>
+
+</TR>
+</TABLE>
+</CENTER>
+
+    </TD>
+  </TR>
+</TABLE>
+
+
+<TABLE WIDTH="100%">
+  <TR>
+    <TD VALIGN="TOP">
+      <IMG SRC="/images/point.gif" WIDTH="90" HEIGHT="1" ALT=""><P>
+
+      <A HREF="#registration" onMouseover="change('registration',1);"
+		       onMouseout="hide();">
+      <IMG SRC="registration.gif" ALT="Registration" BORDER=0 NAME="registration"></A>
+      <P>
+
+      <A HREF="#programme" onMouseover="change('prog',1);"
+		     onMouseout="hide();">
+      <IMG SRC="prog.gif" ALT="Programme" BORDER=0 NAME="prog"></A>
+      <P>
+
+      <A HREF="#committee"  onMouseover="change('comm',1);"
+			    onMouseout="hide();">
+      <IMG SRC="committee.gif" ALT="Conference Committee" BORDER=0 NAME="comm"></A>
+      <P>
+
+      <A HREF="#links" onMouseover="change('links',1);"
+		       onMouseout="hide();">
+      <IMG SRC="links.gif" ALT="Related web pages" BORDER=0 NAME="links"></A>
+      <P>
+    </TD>
+    <TD VALIGN="TOP">
+      <P><BR>
+      <hr width="100%">
+<H2><FONT COLOR="#000066">Call for Participation and Advance Programme</FONT></H2>
+<P>
+The International Symposium on Memory Management is a forum for research in 
+memory management, in all its diversity. Areas of interest include but are not 
+limited to: garbage collection, dynamic storage allocation, storage management 
+implementation techniques and their interactions with languages and operating 
+systems, and empirical studies of programs' memory allocation and referencing 
+behavior.
+<P>
+ISMM&nbsp;2000 continues
+the tradition of the successful conference series established with the
+International Workshops on Memory Management held in 1992 (St. Malo, France)
+and 1995 (Kinross, Scotland), and the inaugural ISMM in 1998 (Vancouver,
+Canada). Proceedings of the IWMM conferences are available from
+Springer-Verlag (Lecture Notes in Computer Science no. 637 and no. 986), while
+the
+<A HREF="http://www.acm.org/pubs/contents/proceedings/series/ismm/">ISMM'98
+proceedings</A> were published by the <A HREF="http://www.acm.org/">ACM</A>.
+The 2000 Symposium Proceedings are also published by the
+<A HREF="http://www.acm.org/">ACM</A>. 
+
+<H2>
+  <HR WIDTH="100%">
+  <A NAME="registration"><FONT COLOR="#000066">Registration</FONT></A>
+</H2>
+<P>
+Please register online via 
+<A HREF="https://www.cmsusa.com/ismm/">https://www.cmsusa.com/ismm/</A>.
+Registration includes lunches,
+entry to the OOPSLA tutorial/workshop reception and the conference dinner on
+Sunday, and entry to the OOPSLA welcome reception on Monday. Information on
+accomodation arrangements, and the conference location at the Regal
+Minneapolis Hotel, is available via the 
+<A HREF="http://oopsla.acm.org">OOPSLA web-site</A>.
+
+<H2><HR WIDTH="100%">
+  <A NAME="programme"><FONT COLOR="#000066">Programme</FONT></A></H2>
+
+<center>
+<table 0 CELLPADDING=3 >
+  <tr>
+    <td ALIGN=CENTER COLSPAN="2" BGCOLOR="#99CCFF"><B>Sunday October 15th</B></td>      
+    <td ALIGN=CENTER COLSPAN="2" BGCOLOR="#99CCFF"><B>Monday October 16th</B></td>
+  </tr>
+
+    <tr BGCOLOR="#FFCC99"> 
+      <TD><font size=-1>8:15-9:00</font></TD>
+      <TD VALIGN=TOP>Coffee &amp; Registration*</TD>
+      <TD><font size=-1>8:15-9:00</font></TD>
+      <TD VALIGN=TOP>Coffee</TD>
+  </tr>
+
+  <tr>
+    <td><font size=-1>9:00-9:15</font></td>
+    <td>Welcome &amp; Introduction</td>
+    <td VALIGN=TOP ROWSPAN="2"><font size=-1>9:00-10:20</font></td>
+      <td VALIGN=TOP ROWSPAN="2"><A HREF="#SessionIII">Session 
+        III: <i>HardwareSupport</i></A></td>
+  </tr>
+
+  <tr>
+    <td><font size=-1>9:15-10:20</font></td>
+      <td VALIGN=TOP><A HREF="#InvitedSpeaker">Invited Speaker:</A> 
+        Jon L. White,<i> CommerceOne, Inc.</i></td>
+  </tr>
+
+    <tr BGCOLOR="#FFCC99"> 
+      <TD><font size=-1>10:20-10:50</font></TD>
+      <TD> 
+        <DIV ALIGN="CENTER">
+          <font size=-1>Break</font> 
+        </DIV>
+      </TD>
+      <TD><font size=-1>10:20-10:50</font></TD>
+      <TD > 
+        <DIV ALIGN="CENTER">
+          <font size=-1>Break</font> 
+        </DIV>
+      </TD>
+  </tr>
+
+  <tr >
+    <td><font size=-1>10:50-12:30</font></td>
+      <td><A HREF="#SessionI">Session I: <i>Accuracy &amp; Locality</i></A></td>
+    <td><font size=-1>10:50-12:30</font></td>
+      <td ><A HREF="#SessionIV">Session IV: <i>Profiling &amp; Object Lifetimes</i></A></td>
+  </tr>
+
+    <tr BGCOLOR="#FFCC99"> 
+      <TD><font size=-1>12:30-14:00</font></TD>
+      <TD> 
+        <DIV ALIGN="CENTER">
+          <font size=-1>Lunch</font> 
+        </DIV>
+      </TD>
+      <TD><font size=-1>12:30-14:00</font></TD>
+      <TD> 
+        <DIV ALIGN="CENTER">
+          <font size=-1>Lunch</font> 
+        </DIV>
+      </TD>
+  </tr>
+
+  <tr>
+    <td><font size=-1>14:00-15:00</font></td>
+      <td ><A HREF="#ProposalDiscussion">Proposal &amp; Discussion: <i>Trace Formats</i></A></td>
+    <td><font size=-1>14:00-15:00</font></td>
+    <td>Informal Presentations</td>
+  </tr>
+
+    <tr BGCOLOR="#FFCC99"> 
+      <TD><font size=-1>15:00-15:30</font></TD>
+      <TD> 
+        <DIV ALIGN="CENTER">
+          <font size=-1>Break</font> 
+        </DIV>
+      </TD>
+      <TD><font size=-1>15:00-15:30</font></TD>
+      <TD> 
+        <DIV ALIGN="CENTER">
+          <font size=-1>Break</font> 
+        </DIV>
+      </TD>
+  </tr>
+
+  <tr>
+    <td><font size=-1>15:30-17:00</font></td>
+      <td><A HREF="#SessionII">Session II: <i>Implementation</i></A></td>
+    <td><font size=-1>15:30-17:00</font></td>
+      <td><A HREF="#SessionV">Session V: <i>Concurrent &amp; Distributed</i></A></td>
+  </tr>
+  
+  <tr BGCOLOR="#FFCC99"> 
+      <TD><font size=-1>17:30-18:30</font></TD>
+      <TD>
+        <DIV ALIGN="CENTER">
+          <FONT SIZE="-1">OOPSLA tutorial/workshop reception </FONT> 
+        </DIV>
+      </TD>
+      <TD ROWSPAN=2 VALIGN="top"><font size=-1>17:30-19:30</font></TD>
+      <TD ROWSPAN=2 VALIGN="top">
+        <DIV ALIGN="CENTER">
+          <FONT SIZE="-1">OOPSLA welcome reception</FONT> 
+        </DIV>
+      </TD>
+  </tr>
+
+    <tr BGCOLOR="#FFCC99"> 
+      <TD><font size=-1>18:30-20:30</font></TD>
+      <TD>
+        <DIV ALIGN="CENTER">
+          <FONT SIZE="-1">Conference dinner </FONT>
+</DIV>
+      </TD>
+
+</table>
+</center>
+<P>
+*Registration will also be available from 7am to 5pm on Sunday, and 7am to
+2pm on Monday.
+<P>&nbsp; 
+<DL>
+  <DD>&nbsp; </DD>
+</DL>
+<P>&nbsp; 
+<DL> 
+  <DT><B><FONT COLOR="#000066"><A NAME="InvitedSpeaker">Invited Speaker: <I>Jon 
+    L. White, </I>CommerceOne, Inc </A></FONT></B></DT>
+  <DD> Sunday 15th October, 9:15-10:20</DD>
+  <DD> 
+    <P> <B>Conquering the Hurdles, Challenging the Horizons A Historical Perspective 
+      on Memory Management</B> 
+    <P>We will travel through a retrospective overview of some of the great "hurdles" 
+      in the area of Memory Management, from the discovery of "Garbage Collection", 
+      through the realization of the potential harmfulness of GC, to the expanded 
+      horizons which are driven by paradigm shifts in application programs. In 
+      the process, we will review some of the very early approaches to memory 
+      management to appreciate just how far we have come, and just how much the 
+      great leaps of this science have been driven by the appearance of cheaper 
+      and faster hardware. We will also re-visit some "war stories" of the past 
+      where a paradigm shift was forced because of unforseen consequences in what 
+      was otherwise perceived to be a "Very Good Idea(tm)". Examples will include 
+      the speaker's own pioneering experiences in shifting from pure "collection" 
+      techniques to BIBOP storage strategies, compile-time change-of-representation 
+      for a one to two orders of magnitude speedup in numerical programs written 
+      in Lisp, to the discovery of the "Pig-in-a-Python" syndrome. Speculative, 
+      overview-like conjectures will be made about the current horizons of the 
+      field, especially with respect to large databases and the Java programming 
+      language. 
+    <P><B>A Brief Biography of Jon L. White</B> 
+    <P>JonL received a B.S. degree in Mathematics from Carnegie-Mellon University, 
+      and an M.A. in Applied Mathematics from Harvard University. He subsequently 
+      joined Marvin Minsky's team at the M.I.T Artifical Intelligence Laboratory, 
+      where he began the development of high-quality Lisp systems and compilers. 
+      The PDP10 MacLisp efforts subsequently supported not only the A.I. lab, 
+      but the MACSYMA Symbolic Algegra group, and ultimately many other university 
+      and commercial research labs. JonL also spent one calendar year away from 
+      MIT at IBM's Watson Research Center in Yorktown Heights, NY, contributing 
+      to the development of Lisp/370. 
+    <P>At the birth of the commercial A.I. revolution, JonL joined a group at 
+      Xerox's Palo Alto Research Center tasked with product development of Interlisp 
+      on the special-purpose, microded Xerox D-series machines. A few years later, 
+      in January 1985, he joined the "startup" company Lucid, Inc. whose goal 
+      was to make high-quality Common Lisp systems available on all the prevalent 
+      "stock" hardware machines. As the commercial A.I. market - and consequently 
+      the commercial Common Lisp market - went into decline in the early 1990's, 
+      JonL joined the Lisp group at Harlequin. In all of these commercial Lisp 
+      developments, JonL contributed substantially not only to the compiler development, 
+      but also to both "GC" and higher-level memory management. 
+    <P>After a brief 8 months at NASA/Ames Research Center working with the Automated 
+      Software Engineering group there, JonL joined yet another startup - a spin-off 
+      from Stanford University - which was quickly bought out by his present employer 
+      CommerceOne. He is currently working on a product called iMerge, written 
+      in Lisp and a result of many years of A.I. research at Stanford which is 
+      directed at the database needs of today's Business-to-Business commercial 
+      environment. 
+  </DD>
+  <BR>
+  <P> 
+  <dt> <b><FONT COLOR="#000066"><A NAME="SessionI">Session I: <i>Accuracy &amp; Locality</i></A></FONT></b></dt>
+  <dd> Sunday 15th October, 10:50-12:30</dd>
+  <dd> Chair: Greg Morrisett</dd>
+  <dl> 
+    <dt> 10:50-11:20</dt>
+    <dd> <i>On the Type Accuracy of Garbage Collection</i>, Martin Hirzel and 
+      Amer Diwan</dd>
+    <dt> 11:20-11:40</dt>
+    <dd> <i>On the Effectiveness of GC in Java</i>, Ran Shaham, Elliot Kolodner 
+      and Mooly Sagiv</dd>
+    <dt> 11:40-12:00</dt>
+    <dd> <i>Thread-Specific Heaps for Multi-Threaded Programs</i>, Bjarne Steensgaard</dd>
+    <dt> 12:00-12:30</dt>
+    <dd> <i>A Region-Based Memory Manager for Prolog</i>, Henning Makholm</dd>
+    <DT>&nbsp;</DT>
+  </dl>
+  <dt> <b><FONT COLOR="#000066"><A NAME="ProposalDiscussion">Proposal 
+    &amp; Discussion: Trace Formats</A></FONT></b></dt>
+  <dd> Sunday 15th October, 14:00-15:00</dd>
+  <dd> <i>Designing a Trace Format for Heap Allocation Events</i>, Trishul Chilimbi, 
+    Richard Jones and Benjamin Zorn</dd>
+  <DT>&nbsp;</DT>
+  <dt> <b><FONT COLOR="#000066"><A NAME="SessionII">Session II: <i>Implementation</i></A></FONT></b></dt>
+  <dd> Sunday 15th October, 15:30-17:00</dd>
+  <dl> 
+    <dt> 15:30-16:00</dt>
+    <dd> <i>Compact Garbage Collection Tables</i>, David Tarditi</dd>
+    <dt> 16:00-16:20</dt>
+    <dd> <i>Reducing Garbage Collector Cache Misses</i>, Hans-J. Boehm</dd>
+    <dt> 16:20-16:40</dt>
+    <dd> <i>Memory Allocation with Lazy Fits</i>, Yoo C. Chung and Soo-Mook Moon</dd>
+    <dt> 16:40-17:00</dt>
+    <dd> <i>Conservative Garbage Collection for General Memory Allocators</i>, 
+      Gustavo Rodriguez-Rivera, Mike Spertus and Charles Fiterman</dd>
+    <DT>&nbsp;</DT>
+  </dl>
+  <dt> <b><FONT COLOR="#000066"><A NAME="SessionIII">Session III: <i>Hardware Support</i></A></FONT></b></dt>
+  <dd> Monday 16th October, 09:00-10:20</dd>
+  <dl> 
+    <dt> 09:00-09:30</dt>
+    <dd> <i>Concurrent Garbage Collection Using Hardware-Assisted Profiling</i>, 
+      Timoth H. Heil and James E. Smith</dd>
+    <dt> 09:30-09:50</dt>
+    <dd> <i>Concurrent Garbage Collection Using Program Slices on Multithreaded 
+      Processors</i>, Manoj Plakal and Charles N. Fischer</dd>
+    <dt> 09:50-10:20</dt>
+    <dd> <i>Cycles to Recycle: Garbage Collection on the IA-64</i>, Richard L. 
+      Hudson, J. Eliot B. Moss, Sreenivas Subramoney and Weldon Washburn</dd>
+    <DT>&nbsp;</DT>
+  </dl>
+  <dt> <b><FONT COLOR="#000066"><A NAME="SessionIV">Session IV: <i>Profiling &amp; Object Lifetimes</i></A></FONT></b></dt>
+  <dd> Monday 16th October, 10:50-12:30</dd>
+  <dd> Chair: Trishul Chilimbi</dd>
+  <dl> 
+    <dt> 10:50-11:20</dt>
+    <dd> <i>The Case for Profile-Directed Selection of Garbage Collectors</i>, 
+      Robert Fitzgerald and David Tarditi</dd>
+    <dt> 11:20-11:40</dt>
+    <dd> <i>Efficient Object Sampling via Weak References</i>, Ole Agesen and 
+      Alex Garthwaite</dd>
+    <dt> 11:40-12:10</dt>
+    <dd> <i>Dynamic Adaptive Pre-Tenuring</i>, Timothy L. Harris</dd>
+    <dt> 12:10-12:30</dt>
+    <dd> <i>On Models for Object Lifetimes</i>, Darko Stefanovic, Kathryn S. McKinley 
+      and J. Eliot B. Moss</dd>
+    <DT>&nbsp;</DT>
+  </dl>
+  <dt> <b><FONT COLOR="#000066"><A NAME="SessionV">Session V: <i>Concurrent &amp; Distributed</i></A></FONT></b></dt>
+  <dd> Monday 16th October, 15:30-17:00</dd>
+  <dl> 
+    <dt> 15:30-16:00</dt>
+    <dd> <i>A Generational Mostly-Concurrent Garbage Collector</i>, Tony Printezis 
+      and David Detlefs</dd>
+    <dt> 16:00-16:30</dt>
+    <dd> <i>Implementing an On-the-Fly Garbage Collector for Java</i>, Tamar Domani, 
+      Elliot K. Kolodner, Ethan Lewis and Eliot E. Salant</dd>
+    <dt> 16:30-17:00</dt>
+    <dd> <i>Diffusion Tree Restructuring for Indirect Reference Counting</i>, 
+      Peter Dickman</dd>
+  </dl>
+</dl>
+
+<H2><HR WIDTH="100%">
+  <A NAME="committee"><FONT COLOR="#000066">Conference Committee</FONT></A></H2>
+
+<TABLE WIDTH="100%" >
+<TR BGCOLOR="#99ccff">
+<TD><B>General Chair</B></TD>
+
+<TD><B>Programme Chair</B></TD>
+</TR>
+
+<TR>
+<TD><A HREF="mailto:chambers@cs.washington.edu">Craig Chambers</A>
+<BR>Department of Computer Science and Engineering
+<BR>University of Washington
+<BR>Box 352350
+<BR>Seattle, WA 98195-2350 USA
+<BR>+1 (206) 685-2094; fax: +1 (206) 543-2969
+<BR>chambers@cs.washington.edu&nbsp;
+<BR>&nbsp;</TD>
+
+<TD><A HREF="mailto:hosking@cs.purdue.edu">Tony Hosking</A>
+<BR>Department of Computer Sciences
+<BR>Purdue University
+<BR>1398 Computer Science Building
+<BR>West Lafayette, IN 47907-1398 USA
+<BR>+1 (765) 494-6001; fax: +1 (765) 494-0739
+<BR>hosking@cs.purdue.edu&nbsp;
+<BR>&nbsp;</TD>
+</TR>
+
+<TR BGCOLOR="#99ccff">
+<TD><B><A HREF="scrules.html">Steering Committee</A></B></TD>
+
+<TD><B>Programme Committee</B></TD>
+</TR>
+
+<TR>
+<TD>Hans Boehm
+<BR><I>Hewlett-Packard</I></TD>
+
+<TD>Trishul Chilimbi
+<BR><I>Microsoft Research, USA</I></TD>
+</TR>
+
+<TR>
+    <TD>Richard Jones <BR>
+      <I>University of Kent at Canterbury, UK</I></TD>
+
+    <TD>Bart Demoen <BR>
+      <I>Katholieke Universiteit Leuven, Belgium</I></TD>
+</TR>
+
+<TR>
+    <TD>J. Eliot B. Moss <BR>
+      <I>University of Massachusetts at Amherst, USA</I></TD>
+
+    <TD><I></I>David Detlefs <BR>
+      <I>Sun Microsystems Laboratories, USA</I></TD>
+</TR>
+
+<TR>
+    <TD>Simon Peyton Jones <BR>
+      <I>Microsoft Research, UK</I></TD>
+
+<TD>Eric Jul
+<BR><I>University of Copenhagen, Denmark</I></TD>
+</TR>
+
+<TR>
+    <TD><I></I>Ben Zorn <BR>
+      <I>Microsoft Research, USA</I></TD>
+
+<TD>Greg Morrisett
+<BR><I>Cornell University, USA</I></TD>
+</TR>
+
+<TR>
+<TD></TD>
+
+<TD>Scott Nettles
+<BR><I>University of Texas at Austin, USA</I></TD>
+</TR>
+
+<TR>
+<TD></TD>
+
+<TD>Marc Shapiro
+<BR><I>Microsoft Research, UK</I></TD>
+</TR>
+</TABLE>
+
+<H2>
+  <HR WIDTH="100%">
+  <A NAME="links"><FONT COLOR="#000066">Related Web Pages</FONT></A>
+</H2>
+
+<H3>Previous ISMM and IWMM proceedings</H3>
+<P>
+<UL>
+<LI><A HREF="http://www.acm.org/pubs/contents/proceedings/series/ismm/"> ISMM'98</A>
+<LI><A HREF="http://www.informatik.uni-trier.de/~ley/db/conf/iwmm/iwmm95.html">IWMM'95</A>
+<LI><A HREF="http://www.informatik.uni-trier.de/~ley/db/conf/iwmm/iwmm92.html">IWMM'92</A>
+</UL>
+
+<H3>Other resources</H3>
+<UL>
+<LI><A HREF="http://www.ukc.ac.uk/computer_science/Html/Jones/gc.html">Richard
+Jones's GC page</A> (contains extensive GC bibliography and links to related resources)
+<LI>Wilson et al.'s <A HREF="http://www.cs.utexas.edu/users/oops/">OOPS
+Group Home Page</A> (contains extensive surveys on garbage collection and
+memory allocators)
+<LI>David Chase et al.'s <A HREF="http://www.iecc.com/gclist/GC-faq.html">GC
+FAQ</A>
+<LI>Harlequin's <A HREF="http://www.harlequin.com/mm/reference/">Memory
+Management Reference</A> page
+<LI>Collected papers from the (unrefereed) OOPSLA workshops on garbage collection and memory management, from
+<A HREF="ftp://ftp.cs.utexas.edu/pub/garbage/GC90/">1990</A>,
+<A HREF="ftp://ftp.cs.utexas.edu/pub/garbage/GC91/">1991</A>,
+<A HREF="ftp://ftp.cs.utexas.edu/pub/garbage/GC93">1993</A> and
+<A HREF="http://www.dcs.gla.ac.uk/~huw/oopsla97/gc/papers.html">1997</A>.
+</UL>
+
+<CENTER>
+<P>
+<HR WIDTH="100%"><TT><FONT SIZE=-1>Permission to use ACM and
+OOPSLA logos provided by <A HREF="http://info.acm.org/">Association for
+Computing Machinery</A>.</FONT></TT>
+<BR><TT><FONT SIZE=-1>Copyright 2000. All Rights Reserved</FONT></TT></CENTER>
+
+<P><TT><FONT SIZE=-1>Maintained by 
+<A HREF="mailto:R.E.Jones@ukc.ac.uk">Richard Jones</A></FONT></TT>
+    </TD>
+  </TR>
+</TABLE>
+
+</BODY>
+</HTML>

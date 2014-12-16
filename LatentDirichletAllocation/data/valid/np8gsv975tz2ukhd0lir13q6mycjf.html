@@ -1,0 +1,586 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt" xml:lang="pt">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Patterns, Hillside Group, Design Patterns, Gang of Four, Big Ball of Mud, Design Pattern Conferences, Pattern Conferences" />
+<meta name="description" content="Pattern Languages of Programs (PLoP) events are opportunities for pattern authors to have their pattern languages critically reviewed by fellow authors. PLoP conferences focus on writing groups to better improve patterns through group exposure. Each conference offers advanced topics for the more adept pattern writers. Participants have the opportunity to refine and extend their patterns with help from knowledgeable and sympathetic patterns enthusiasts." />
+<title>PLoP 2011 - 18th Conference on Pattern Languages of Programs</title>
+
+<link rel="stylesheet" type="text/css" href="styles/base.css" />
+<style type="text/css"> 
+h1 a {
+	font-size: 20px; 
+	font: bold;
+
+	background-color: #00a651;
+	background-image: url(styles/img/plop-r.png);
+}
+
+html>body h1 a {
+	font-size: 20px; 
+	font: bold;
+
+	background-color: #00a651;
+	background-image: url(styles/img/plop-r.png);
+}
+
+h2#header {
+color: #00a651;
+}
+
+h3.deadline {
+background: #00a651;
+}
+
+#menu a {
+background: #00a651;
+}
+
+#menu a:hover {
+background: black;
+}
+
+#menu a.on {
+background: black;
+}
+
+#menu a.off {
+background: white;
+}
+
+/*--------dates--------*/
+#dates {
+background: #00a651;
+color: black;
+}
+
+#container #dates h2 {
+
+}
+
+#dates dl {
+margin: 15px 0 0 0;
+}
+
+#dates dt {
+font-weight: bold;
+border-bottom: 1px solid #fff;
+display: inline;
+}
+
+#dates dd {
+padding: 3px 0 0 3px;
+border-left: 3px solid #fff;
+margin: 0 0 10px 0;
+}
+
+
+#dates dt.gone {
+color: #bbb;
+border-color: #bbb;
+}
+
+#dates dd.gone {
+color: #bbb;
+border-color: #bbb;
+}
+
+#container h2 {
+color: #00a651;
+border-bottom: 1px solid #bbb;
+}
+
+}
+
+#container h3 {
+color: #00a651;
+}
+
+#container h4 {
+color: #00a651;
+}
+
+#container a:link,
+p.footer a:link {
+border-bottom: 1px solid #00a651;
+color: black;
+}
+
+#container a[href]:hover,
+p.footer a:hover {
+background: #00a651;
+}
+
+#container a:visited,
+p.footer a:visited {
+border-bottom: 1px solid #00a651;
+color: black;
+}
+
+p.footer {
+color: #00a651;
+}
+
+#plop2008-dates {
+ height: 120px; 
+ width: 760px; 
+ margin: 5px; 
+ border: 1px solid #00a651;
+}
+
+#plop2008-schedule {
+ height: 280px; 
+ width: 760px; 
+ margin: 20px; 
+ border: 1px solid #00a651;
+}
+
+#schedule-overview {
+ margin: 25px; 
+}
+
+#fees, 
+#schedule
+{
+ width: 50%; 
+ margin: 5px; 	
+ border: 1px solid #00a651;
+}
+	
+#fees thead tr,
+#schedule thead tr
+{
+ width: 60%; 
+ margin: 5px; 	
+ border: 0px solid #00a651;
+ background: #00a651;
+ font-weight: bold;
+ color: white;
+}
+
+#fees td, 
+#schedule td
+{
+ padding: 2px 2px 2px 2px;
+ margin: 0px 0px 0px 0px; 	
+ border: 0px solid #00a651;
+}
+
+#cyberchair,
+{
+	background: red;
+	border-bottom: 10px solid #00a651;
+	color: red;
+}	
+
+#fees .even {
+background-color: #ccc;
+}
+
+div.day {
+ border: 1px solid #00a651;
+}
+
+.day {
+background-color: #ccc;
+}
+
+#container .day h4 {
+color: #bbb;
+border-bottom: 1px solid #bbb;
+}
+
+a.button img {
+border-bottom: 0px solid #00a651;
+background: white;
+}
+
+a.button[href]:hover img, a.button:hover img
+{
+background: white;
+}
+
+/*--------registrationForm--------*/
+table.registrationForm
+{
+ width: 70%; 
+ margin: 5px; 	
+ border: 1px solid #00a651;
+}
+
+tr.registrationForm
+{
+ width: 80%; 
+ margin: 5px; 	
+ border: 0px solid #00a651;
+ background: #00a651;
+ font-weight: bold;
+ color: white;
+}
+
+td.registrationForm 
+{
+ padding: 2px 2px 2px 2px;
+ margin: 0px 0px 0px 0px; 	
+ border: 0px solid #00a651;
+}
+
+tr.even 
+{
+background-color: #ccc;
+}
+
+input.registrationForm 
+{
+border: 1px;
+border-style: solid;
+background-color: #ffffff;
+border-color: #949494;
+}
+
+select.registrationForm {
+	background-color: white;
+	font-size: 10px; 
+	font: bold;
+	color: black;
+	padding: 2px;
+	border: solid 1px #666666;
+}
+
+input.buttons { 
+ font-size: 12px;
+ font-weight: bold;
+ background-color: #00a651; 
+ color: #FFFFFF; 
+ border: 1px solid #000000;
+ padding: 2px;
+ margin-right: 5px; 
+}
+
+textarea.registrationForm { 
+ font-size: 10px; 
+ font: bold;
+ color: black;
+ padding: 2px;
+ background-color: white;
+ border: 1px solid #666666; 
+ scrollbar-base-color: #00a651; 
+ scrollbar-arrow-color: #ffffff;
+ scrollbar-DarkShadow-Color: blue; 
+}
+
+font.required { 
+ font-size: 10px; 
+ color: #000000;
+ font-weight: bold;
+}
+ 
+font.returned { 
+ font-size: 10px; 
+ color: #000000;
+ font-weight: normal;
+ margin-left: 2px;
+ margin-bottom: 6px
+}
+ 
+font.normal { 
+ font-size: 10px; 
+ color: #000000;
+ font-weight: normal;
+}
+ 
+font.normalitalic { 
+ font-size: 10px; 
+ color: #000000;
+ font-style: italic;
+}
+
+
+#agenda 
+{
+ width: 95%; 
+ margin: 20px; 	
+ border: 1px solid #00a651;
+}
+
+#agenda thead tr
+{
+ margin: 10px;
+ padding: 10px; 	
+ border: 1px 0px 1px 0px solid #00a651;
+ vertical-align: top;
+ font-weight: bold;
+ font-size: larger;
+}
+
+#agenda tr
+{
+ margin: 10px;
+ padding: 10px; 	
+ border: 1px 0px 1px 0px solid #00a651;
+ vertical-align: top;
+}
+
+#agenda td 
+{
+ padding: 2px 2px 2px 2px;
+ margin: 0px 0px 0px 0px; 	
+ border: 0px solid #00a651;
+}
+
+#papers
+{
+ width: 95%; 
+ margin: 20px; 	
+ border: 1px solid #00a651;
+}
+
+#papers thead tr
+{
+ margin: 10px;
+ padding: 10px; 	
+ border: 1px 0px 1px 0px solid #00a651;
+ vertical-align: top;
+ font-weight: bold;
+ font-size: 15px;
+ background: #00a651;
+ color: white;
+}
+
+#papers tr
+{
+ margin: 10px;
+ padding: 10px; 	
+ border: 1px 0px 1px 0px solid #00a651;
+ vertical-align: top;
+}
+
+#papers tbody tr.even
+{
+ font-size: 13px;
+ margin: 10px;
+ padding: 10px; 	
+ border: 1px 0px 1px 0px solid #00a651;
+ vertical-align: top;
+}
+
+#papers td 
+{
+ padding: 5px 5px 5px 5px;
+ margin: 0px 0px 0px 0px; 	
+ border: 0px solid #00a651;
+}
+
+#papers img {
+	border: 0px solid #00a651;
+}</style>
+
+<script src="scripts/utils.js" type="text/javascript"></script>
+  
+</head><body>
+<div id="page">
+
+<div id="header">
+<h2>Pattern Languages of Programs Conference 2011 <strong>        October 21 - 23, 2011</strong><div id="colorChooser"><table><tr><td><a href="javascript:setStyle(0)" title="Change colors"><img style="background-color: #00a651" src="styles/img/color.png"/></a></td><td><a href="javascript:setStyle(1)" title="Change colors"><img style="background-color: #a71c21" src="styles/img/color.png"/></a></td><td><a href="javascript:setStyle(2)" title="Change colors"><img style="background-color: #024889" src="styles/img/color.png"/></a></td></tr></table></div>
+</h2>
+
+<h3 class="deadline">PLoP'2011 will be co-located with <a href="http://splashcon.org/" target="new">SPLASH 2011</a>, Portland, OR, USA</h3>
+</div>
+
+<div id="content">
+<h1><a href="index.php" alt="PLoP 2011"></a></h1>
+<img border="0" src="img/1.jpg" height="86px" /><img class="mosaic" border="1" src="img/2.jpg" height="86px" /><img class="mosaic" border="1" src="img/3.jpg" height="86px" /><img class="mosaic" border="1" src="img/4.jpg" height="86px" />
+
+<p>&nbsp;</p>
+
+<table><tr><td>
+<ul id="menu">
+<li><a href="index.php?nav=plop11"class="on">PLoP11</a></li><li><a href="index.php?nav=submissions">Submissions</a></li><li><a href="index.php?nav=program">Program</a></li><li><a href="index.php?nav=activities">Activities</a></li><li><a href="index.php?nav=bootCamp">BootCamp</a></li><li><a href="index.php?nav=committees">Committees</a></li><li><a href="index.php?nav=location">Location</a></li></ul>
+</td><td>
+</td></tr></table>
+
+
+    
+<div id="container">
+
+<div id="dates">
+<h2>Important Dates</h2>
+<dl>
+
+
+<dt class="gone"><strike>May 23rd</strike> May 31st</dt>
+<dd class="gone">Papers due</dd>
+
+<dt class="gone">Jun 10th</dt>
+<dd class="gone">Shepherding starts</dd>
+
+<dt class="gone">Aug 7th</dt>
+<dd class="gone">Shepherding Recommendations Due</dd>
+
+<dt class="gone">Aug 15th</dt>
+<dd class="gone">Notification of Acceptance</dd>
+
+<dt class="gone">Sep 23rd</dt>
+<dd class="gone">Early Registration ends</dd>
+
+<dt class="gone">Sep 26th</dt>
+<dd class="gone">Conference Draft Due</dd>
+
+<dt class="gone">October 20</dt>
+<dd class="gone"><a style="font-color:white;" href="http://www.hillside.net/plop/2011/index.php?nav=bootCamp">BootCamp</a></dd>
+
+<dt class="gone">October 21-23</dt>
+<dd class="gone">PLoP</dd>
+
+<dt class="gone">October 22-27</dt>
+<dd class="gone">Splash 2011 days</dd>
+
+
+</dl>
+</div>
+
+
+<h2 class="plop">18th CONFERENCE ON PATTERN LANGUAGES OF PROGRAMS</h2>
+
+<p>
+<img border="0" src="thumbs/mosaic-4.jpg" height="120" />
+<img border="0" src="thumbs/mosaic-8.jpg" height="120" />
+<img border="0" src="thumbs/mosaic-11.jpg" height="120" />
+<img border="0" src="thumbs/mosaic-10.jpg" height="120" />
+
+</p>
+
+<h3>Submissions Deadline: <strike>May 23rd</strike> May 31st</h3>
+<ul>
+<li>Submissions are Closed</li>
+<!--<li><a href="http://www.hillside.net/plop/2011/submission/shepherd.cgi">Become a Shepherd</a></li>-->
+<li><a href="upload.php">Upload Final Version</a></li>
+</ul>
+
+<h3>Registration</h3>
+<p>Please use the <a href="http://www.splashcon.org">SPLASH 2011 registration form</a> to register for PLoP!<br>
+Early registration ends September 15th</p>
+<p>PLoP 2011 is co-hosted with SPLASH.<br>
+<i>You can use the SPLASH registration form</a> to register for both conferences or for PLoP 2011 only.</i></p>
+
+<h2> </h2>
+
+<p>Pattern Languages of Programs (PLoP&trade;) conference is a premier event for pattern authors and pattern enthusiasts 
+to gather, discuss and learn more about patterns and software development.</p>
+
+<p>The purpose of PLoP is to promote development of pattern languages, primarily about aspects of software: 
+design and programming, testing, software architecture, user interface design, domain modelling, and software processes.
+Patterns and pattern languages for domains outside software are also welcome</p> 
+
+<p>The conference <a href="index.php?nav=program">program</a> offers pattern authors an 
+unique opportunity to have their pattern languages reviewed by fellow authors, which 
+occurs mainly in the form 
+of <a href="index.php?nav=activities#writersworkshops">Writers&#39; Workshops</a>.</p> 
+
+<p>Authors and non-authors will find in the different 
+<a href="index.php?nav=activities">PLoP activities</a> 
+(<a href="index.php?nav=activities#writersworkshops">Writers&#39; Workshops</a>,
+<a href="index.php?nav=activities#focusgroups">Focus Groups</a>,  
+<a href="index.php?nav=activities#bofs">BoF sessions</a>, 
+<a href="index.php?nav=bootCamp">BootCamp</a>,
+<a href="index.php?nav=activities#games">Games</a>) 
+many opportunities to learn more about patterns and pattern writing.
+
+<p>As a whole, the conference provides a friendly and effective environment to give and get feedback, to share expertise, 
+and to allow the participants to improve their patterns and make them more useful and more publishable. </p>
+
+<p>PLoP's are unique conferences based on a strong community, 
+  <b><a href="http://users.rcn.com/jcoplien/Patterns/WritersWorkshop/">a community of trust</a></b>. </p>
+
+<p><strong>Join the community! &nbsp; Come to PLoP!</strong></p>
+<h2>Call For Submissions</h2>
+<p>
+	The purpose of PLoP is to promote development of pattern languages
+	on all aspects of software, including design and programming,
+	software architecture, user interface design, domain modeling, 
+	software processes, project management, and more.
+</p>
+<p>
+	Paper submissions may include short papers, containing one or more
+	patterns, longer pattern languages or sequences, or work-in-progress
+	papers willing to get an in-depth shepherding by an experienced
+	pattern author at the conference.
+</p>
+
+<p>
+In addition, you can submit proposals for free-format discussion groups or workshops aimed at
+	bringing together people interested in a hot topic related to
+	patterns or proven practices, for a period of about two hours. Proposals addressing interdisciplinary topics and topics from other domains than 
+software development are especially encouraged. Non-conventional formats are welcome.
+</p>
+<p>
+	Any other suggestions or proposals for activities are welcome and
+	encouraged. Please <a href="mailto:plopchairs2010@hillside.net?subject=PLoP">contact the chairs</a>
+	with your ideas.
+</p>
+
+<p> PLoP11 is sponsored by the Hillside Group.
+
+
+<p>PLoP11 submissions are <b>peer reviewed</b> and <b>digitally archived</b> at <a href="http://www.acm.org/dl">ACM</a>.
+Papers discussed at writer's workshop at this conference qualify for
+submission to the journal <a href="http://hillside.net/tplop/">"TPLoP - Transactions on Pattern Languages of
+Programming"</a> published by <a href="http://www.springer.com/">Springer</a>. See  
+<a href="http://www.springer.com/home/computer/lncs?SGWID=5-164-2-470309-0">Springer's pages on TPLoP</a> for
+details of this journal.</p>
+</p>. 
+
+
+
+
+<h2>Important Dates</h2>
+
+<ul>
+
+   
+   
+   
+<li><strike>May 23rd</strike> May 31st: <a href="index.php?nav=submissions">Papers Due</a></li>
+<li>June 10th: <a href="index.php?nav=submissions#shepherding">Shepherding starts</a></li>
+ 
+<li>Aug 15th: Notification of Acceptance</li>
+<li>Sep 15th: Early Registration ends</li>
+<li>Sep 26th: Conference Versions Due</li>
+<li>October 20th: Bootcamp</li>
+<li>October 21-23: PLoP conference days, co-located with Splash 2011</li>
+</ul>
+
+
+
+
+
+
+<h2>More information</h2>
+ 
+<p>For more information, please <a href="mailto:plopchairs2011@hillside.net?subject=PLoP">contact the organizers</a>: Lise Hvatum.</p> 
+
+<p>
+At the <a href="http://hillside.net/">Hillside Group web site</a> you can learn more about <a href="http://hillside.net/patterns/about/">patterns</a>, <a href="http://hillside.net/patterns/writing/writingpatterns.htm">writing patterns</a>, <a href="http://hillside.net/plop/">PLoP conferences</a>, and <a href="http://www.hillside.net/index.php/past-plop-conferences">previous PLoP's</a>.
+</p>
+
+<p>
+Co-sponsored by the<br>
+<a href="http://hillside.net"><img src="images/hillsidelogo.png"></a>   <a href="http://acm.org"><img src="images/acm-logo-200.jpg"></a>
+</p>
+
+</div>
+</div>
+
+
+<p class="footer">PLoP&reg; is a registered trademark of <a href="http://hillside.net">Hillside 
+Group</a>. Keep up on the latest information: sign to <a href="mailto:plop-announce-subscribe@hillside.net">plop-announce-subscribe@hillside.net</a>.</p>
+
+</p>
+
+</div>
+
+</body>
+
+</html>

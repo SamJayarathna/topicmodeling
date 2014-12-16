@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<title>HSCC 2014</title>
+
+	<meta charset="utf-8">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<link rel="stylesheet" href="css/foundation.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="css/responsive.css" type="text/css" media="screen" />
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+	<!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery.isotope.min.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
+
+<!-- include jQuery Library -->
+<script type="text/javascript" src="js/jquery.js"></script>
+<!-- efforless script below -->
+<script type="text/javascript">
+	jQuery(document).ready(function(){
+		var pxShow = 80;//height on which the button will show
+		var fadeInTime = 1000;//how slow/fast you want the button to show
+		var fadeOutTime = 1000;//how slow/fast you want the button to hide
+		var scrollSpeed = 1000;//how slow/fast you want the button to scroll to top. can be a value, 'slow', 'normal' or 'fast'
+		jQuery(window).scroll(function(){
+			if(jQuery(window).scrollTop() >= pxShow){
+				jQuery("#backtotop").fadeIn(fadeInTime);
+			}else{
+				jQuery("#backtotop").fadeOut(fadeOutTime);
+			}
+		});
+		 
+		jQuery('#backtotop a').click(function(){
+			jQuery('html, body').animate({scrollTop:0}, scrollSpeed); 
+			return false; 
+		}); 
+	});
+</script>
+</head>
+<body>
+	
+	<div class="static-background">
+		<img alt="" src="upload/bg-static.jpg">
+	</div>
+	<!-- Container -->
+	<div class="container">
+		<div class="row">
+			<!-- Header -->
+			<header class="three column">
+				<div class="inner-header">
+					<div id="logo">
+						<div>
+							<a href="index.html">HSCC 2014</a>
+						</div>
+					</div>
+					<section class="menu">
+						<nav>
+							<ul>
+                            	<!--<li> &nbsp; General Information</li> -->
+								<!--<li class="active"><a href="index.html">home</a></li> -->
+								<li><a href="committees.html">Committees</a></li>
+                                <li><a href="program.html">Program/Proceedings</a></li>
+							  <li><a href="submissions.html">Call for Submissions</a></li>
+                              <li><a href="dates.html">Important Dates</a></li>
+							  <li><a href="camera-ready.html">Camera-Ready Instructions</a></li>
+                              <li><a href="https://www.cpsweek2014.org" target="_blank">CPS Week 2014</a></li>
+                              <li><a href="https://www.cpsweek2014.org/cpsweek2014/venue.html" target="_blank">Venue &amp; Local Info</a></li>
+                              <li><a href="https://www.cpsweek2014.org/cpsweek2014/reg.html" target="_blank">Registration</a></li>
+                              <li><a href="https://www.cpsweek2014.org/cpsweek2014/travel.html" target="_blank">Travel/Visa</a></li>
+                              <li><a href="http://www.cpsweek.org/cpsweek2014/travel.html" target="_blank">Student Travel Support</a></li>
+						  </ul>
+                            <form>
+								<select name="URL" onChange="window.location.href=this.form.URL.options[this.form.URL.selectedIndex].value">
+    						    <option value="" selected="selected" style="padding-top:20px"> ~ Menu ~ </option>
+                                <option value="index.html">Home</option> 
+								<option value="committees.html">Committees</option> 
+								<option value="submissions.html">Call for Submissions</option> 
+                                <option value="dates.html">Important Dates</option> 
+                                <option value="camera-ready.html">Camera-Ready Instructions</option> 
+                                <option value="papers.html">Accepted Papers</option> 
+                                <option value="program.html">Program</option> 
+                                <option value="https://www.cpsweek2014.org">CPS Week 2014</option> 
+                                <option value="https://www.cpsweek2014.org/cpsweek2014/venue.html">Venue &amp; Local Info</option> 
+                                <option value="https://www.cpsweek2014.org/cpsweek2014/reg.html">Registration</option> 
+                                <option value="https://www.cpsweek2014.org/cpsweek2014/travel.html">Travel/Visa</option>                                  
+                              </select> 
+                              <noscript><input type="submit" value="Submit"></noscript>
+							</form>
+                            
+                            
+					  </nav>
+					</section>
+					<section class="header-end"> 
+						
+					</section>
+                    
+				</div>
+			</header>
+			<!-- End Header -->
+
+			<!-- Content -->
+			<div id="content" class="nine column">
+
+				<div class="head-title">
+					<h1>Home</h1>
+					<div class="head-description">
+						<p>Welcome!</p>
+					</div>
+				</div>
+
+				<div class="page-container">
+					<article class="headings">
+						<h1>17th International Conference on Hybrid Systems: Computation and Control (HSCC 2014)</h1>
+                        <h3>April 15-17, 2014, Berlin, Germany</h3>
+						<p>Welcome to the home page of the 17th International Conference on Hybrid Systems:
+Computation and Control (HSCC 2014).  HSCC 2014 will be held as part of the seventh <a href="https://www.cpsweek2014.org" target="_blank">Cyber Physical Systems (CPS) Week</a>, alongside the Real-Time and Embedded Technology and Applications Symposium (RTAS), the International Conference on Information Processing in Sensor Networks (IPSN), and the International Conference on Cyber-Physical Systems (ICCPS).</p>
+
+                        <h4>Conference Scope</h4>
+<p>Hybrid Systems: Computation and Control (HSCC) focuses on research that involves a blend of concepts, tools, and techniques from computer science, control theory, and applied mathematics for analysis and control of dynamical systems that exhibit combined continuous and discrete (hybrid) dynamics. By drawing on strategies from both computation and control, this field offers techniques applicable to both man-made, cyber-physical systems (ranging from mixed signal circuits and small robots to global infrastructure networks) and natural systems (ranging from biochemical networks to physiological models). HSCC has long been a leading, single-track conference for such rigorous, interdisciplinary approaches to dynamical systems with an emphasis on computational aspects. Researchers from academia and industry are invited to submit manuscripts on their latest research in this area.</p>
+  
+  <p>Topics of interest include, but are not limited to:</p>
+  <ul>
+    <li>Design, synthesis, analysis, verification, and control of hybrid systems</li>
+      <li>Computability and complexity</li>
+      <li>Programming languages, specification formalisms, and software tools</li>
+      <li>Real-time computing and resource-aware control for embedded systems</li>
+      <li>Applications in areas such as automotive, communication and wireless networks, avionics, transportation networks, energy systems, mobile robotic networks, environmental monitoring, medical devices, manufacturing, analog and mixed-signal electronics, systems biology, and other sciences</li>
+  </ul>
+
+
+<!--<p>Download Call for Papers PDF here.</p> -->
+
+
+					</article>
+					
+				</div>
+
+				<footer class="row">
+                    
+
+					<div class="eight column twitter-widget">
+						<div class="back-title">
+							<h2>Sponsors</h2>   
+					  </div>
+						<div class="flicker-images">
+                        	<div>
+							<a href="http://www.ieeecss.org/" target="_blank"><img src="images/logos/css.gif"></a>
+                            <br>
+                            <br>
+                            Technical Sponsor:<br>
+IEEE Control Systems Society </div>	
+                            <div>
+							<a href="http://www.acm.org" target="_blank"><img src="images/logos/ACM.jpg"></a>
+                            <br>
+                            Association for <br>
+                            Computing Machinery</div>	
+                          <div>
+							<a href="http://www.globaldenso.com/en/" target="_blank"><br>
+							<br>
+							<img src="images/logos/DENSO.jpg" width="200" height="64"></a>
+                            <br>
+                            DENSO Corporation<br>
+                            <br>
+                            </div>
+                            
+                            
+                        
+                            
+                            <div style="width:300px !important"><br>
+                            <a href="http://www.mathworks.com/discovery/cyber-physical-systems.html" target="_blank"><img src="images/logos/MathWorks_CPS_spotlight.png" width="300"></a>
+                            <br>
+                            MathWorks
+                            </div>		
+                            <div style="width:300px !important"><a href="http://www.avacs.org/home/?L=4" target="_blank"><img src="images/logos/AVACS.jpg"></a><BR>
+                        Automatic Verification and Analysis of Complex Systems (AVACS)</div>	
+                          		                                                       
+					  </div>
+					</div>					
+
+					<div class="four column contact-info">
+						<div class="back-title">
+							<h2>Contact info</h2>
+						</div>						
+                        <p><img alt="" src="images/mail.png"><span><a href="mailto:hscc14-inquiries@informatik.uni-oldenburg.de">email HSCC14 Secretariat</a></span></p>
+					</div> 
+                    
+
+
+	  <article class="end-footer twelve column">
+						<p>© Copyright 2013 HSCC</p>
+                        <!--<p class="right"><img alt="" src="images/mail.png"><span><a href="mailto:hscc14-inquiries@informatik.uni-oldenburg.de">email us</a></span></p> -->
+				  </article>
+
+				</footer>
+
+			</div>
+			<!-- End content -->
+		</div>
+	</div>
+	<!-- End Container -->
+
+<div id="backtotop">
+   <a href="#">
+   <img src="images/arrow-up.png" border="0" alt="TOP">
+   </a>
+</div>
+
+</body>
+</html>

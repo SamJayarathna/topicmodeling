@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+
+	<!-- Basic Page Needs
+  ================================================== -->
+	<meta charset="ISO-8859-1">
+	<title>Web3D 2013 Conference</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<!-- Mobile Specific Metas
+  ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- CSS
+  ================================================== -->
+	<link rel="stylesheet" href="stylesheets/base.css">
+	<link rel="stylesheet" href="stylesheets/skeleton.css">
+	<link rel="stylesheet" href="stylesheets/layout.css">
+
+	<!-- Favicons
+	================================================== -->
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+
+</head>
+<body>
+<style type="text/css">
+/* important this div will be in layout css */
+#canvasContainer{
+
+ z-index: 5px;
+ //height: 172px;
+ padding-top: 20pt;
+}</style>
+
+
+	<!-- Primary Page Layout
+	================================================== -->
+
+	<!-- Delete everything in this .container and get started on your own site! -->
+	
+	<div class="container">
+	
+		<!-- HEADER -->
+		<div class="five columns">
+			<div id="uflogos">
+				<img src="images/vicom_ik4_logos.jpg" usemap="#sponsorship">
+				<map name="sponsorship">
+				  <area shape="rect" coords="4,13,150,40" href="http://www.vicomtech.es/ingles/html/" alt="Vicomtech Logo" title="hosting by Vicomtech" target="_blank">
+				  <area shape="rect" coords="2,44,152,60" href="http://www.ik4.es/en/default.asp?" alt="IK4 Research Alliance Logo" title="IK4 Research Alliance" target="_blank">
+				</map> 
+			</div>
+		</div>
+		<div class="six columns">
+			<a href="index.html">
+			<div id="logoTop">
+				<!--h1>Web3D 2013</h1-->
+				
+				<!--3d rotating cube-->
+				<div id="canvasContainer">
+					<x3d id='canvas' showStat='false' showLog='false' x='0px' y='0px' width='80px' height='65px' altImg="images/logoTop.png">
+						<scene>
+							<Background DEF='bgnd'  transparency='0' skyColor='0.898039 0.898039 0.898039' ></Background>
+
+							<viewpoint position='0 3.5 4.0' orientation='1 0 0 -0.7'></viewpoint> 
+							<transform id="logo" DEF="logo" translation="0 -1 0">
+								<inline url='w.x3d'></inline>
+								<TimeSensor id="Direct01-TIMER" cycleInterval="3" loop="true"></TimeSensor> 
+								<OrientationInterpolator id="rotateCube" key='0 0.125 0.25 0.375 0.5 0.625 0.75 0.875 1' keyValue='0 1 0 0 0 1 0 0.7 0 1 0 1.57 0 1 0 2.35 0 1 0 3.14 0 1 0 3.926 0 1 0 4.71238 0 1 0 5.4977 0 1 0 6.28'></OrientationInterpolator>
+								<ROUTE fromNode="Direct01-TIMER" fromField="fraction_changed" toNode="rotateCube" toField="set_fraction"></ROUTE> 
+								<ROUTE fromNode="rotateCube" fromField="value_changed" toNode="logo" toField="rotation"></ROUTE> 
+							</transform>
+						</scene>
+					</x3d>
+				</div>
+			</div>
+			</a>
+		</div>
+		<div class="five columns">
+			<div id="local">
+				<h5>18th International Conference on 3D Web Technology, 20-22 June 2013 <br /> San Sebastian, Spain</h5>
+			</div>
+			<div id="uflogos_left">
+				<img src="images/uf_logos.jpg" usemap="#organization">
+				<map name="organization">
+				  <area shape="rect" coords="6,10,140,45" href="http://www.siggraph.org/" alt="ACM Siggraph Logo" title="Sponsored by ACM SIGGRAPH" target="_blank">
+				  <area shape="rect" coords="10,60,140,90" href="http://www.web3d.org/realtime-3d/" alt="Web-3D Consortium Logo" title="In cooperation with Web3D Consortium" target="_blank">
+				  <area shape="rect" coords="14,105,140,135" href="http://www.eg.org/" alt="Euro Graphics Logo" title="In cooperation with Eurographics" target="_blank">
+				</map>	
+			</div>
+		</div>
+		
+		<!-- MAIN MENU -->
+		<div class="sixteen columns">
+			<div id="menu">
+			<hr />
+				<ul>
+					<li><a href="submission.html">Submission</a></li>
+					<li><a href="committee.html">Committee</a></li>
+					<li><a href="importantDates.html">Important Dates</a></li>
+					<li><a href="program.html">Program</a></li>
+					<li><a href="sponsors.html">Sponsors</a></li>
+					<li><a href="invitedSpeakers.html">Speakers</a></li>
+					<li><a href="registration.html">Registration</a></li>
+					<li><a href="venue.html">Hotel & Travel</a></li>
+				</ul>
+			<hr />
+			</div>
+		</div>
+
+				<div class="sixteen columns social">
+			<a href="https://twitter.com/web3d2013" class="twitter-follow-button" data-show-count="false" data-lang="en">Follow @Web3D2013</a>
+			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="http://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+		</div>
+		
+		<!-- NICE LA IMAGE & Floating NEWS -->
+		<div class="sixteen columns">
+			<div id="niceImage">
+				<div class="offset-by-nine">
+					<div id="news">
+						<h3>Latest News</h3>
+						<ul>
+						<li> <a href="program.html"><mark>New: Open Meetings to be held at Palacio Miramar</mark> </a></li>
+						<li> <a href="registration.html#1day">New: 1-Day Industrial Registration Open </a></li>
+						<li> <a href="invitedSpeakers.html">Speaker: Alain Chesnais  </a></li>
+						</ul>
+					</div>
+				</div>
+				<h2>A major event for researchers, developers, entrepreneurs, experimenters, artists and content creators, focused on new 3D Web and Multimedia technologies.</h2>
+			</div>
+		</div>
+		
+		<!-- MORE INFO -->
+		<div class="one-third column">
+			<div id="infoWhere">
+				<h3>When/Where</h3>
+				<p>The 18th edition of ACM International Web3D Conference will take place in San Sebastian, Spain, in June 20-22, 2013.</p>
+				<p>
+				For more Information, please refeer to <a href="venue.html">"Venue"</a> section.
+				</p>
+				<a href="images/venue_03.jpg"><img src="images/venue_03.jpg" width="266px" height="190px" class="img-align-right"></a>
+				
+				<p>	</p>
+			</div>
+		</div>
+		
+		<div class="one-third column">
+			<div id="infoPart">
+				<h3>Participate</h3>
+				<p>Share and explore methods of using, enhancing and creating new 3D Web and Multimedia technologies such WebGL and HTML5 (which is a hot topic in Computer Graphics), Flash/ Stage 3D, X3D, COLLADA, and the MPEG family.</p>
+				<p>The conference highlights capabilities and trends in interactive 3D graphics across a wide range of applications and supports research from mobile devices up to high-end immersive environments.</p>
+				<p>To know more, please read the <a href="submission.html">Call for Participation</a> and follow the <a href="submission.html#submission">Submission</a> instructions.</p>
+			</div>
+		</div>
+		
+		<div class="one-third column">
+			<div id="infoAbout">
+				<h3>About Us</h3>
+				<p>The Web3D Consortium is a member-funded industry consortium committed to the creation and deployment of open, royalty-free standards that enable the communication of real-time 3D across applications, networks, and XML web services.</p>
+				<p>The Consortium works closely with the ISO, MPEG and W3C standardization bodies to maximize market opportunities for its membership.</p>
+				<p>Visit us at <a href="http://www.web3d.org">web3d.org</a></p>
+			</div>
+		</div>
+		
+		<div id="footer"><!-- LOGOS -->
+			<div class="sixteen columns">
+				<hr />
+				<div id="logos">
+					<a href="http://www.siggraph.org/" target="_blank">
+						<span>Sponsored by:</span>
+						<image title="Sponsored by ACM SIGGRAPH" src="images/logo_siggraph.png" width="160px" height="85px" alt="ACM Siggraph logo" /></a>
+					<a href="http://www.web3d.org/realtime-3d/" target="_blank">
+						<span>In cooperation with:</span>
+						<image title="In cooperation with Web3D Consortium" src="images/logo_web3D.png" width="160px" height="85px" alt="Web-3D Consortium logo" /></a>
+					<a href="http://www.eg.org/" target="_blank">
+						<span>In cooperation with:</span>
+						<image title="In cooperation with Eurographics" src="images/logo_euroGraphics.png" width="160px" height="85px" alt="Euro Graphics logo" /></a>
+
+					<a><span>Hosted by:</span>
+						<img src="images/vicom_ik4_logos2.jpg" usemap="#sponsorship"></a>
+					
+				</div>
+			</div>
+			
+			<!-- BOTTOM MENU -->
+			
+			<div class="sixteen columns">
+				<div id="menu">
+					<hr />
+					<ul>
+						<li><a href="about.html">About</a></li>
+						<!--li><a href="committee.html">Committee</a></li-->
+						<li><a href="previousConferences.html">Previous Conferences</a></li>
+						<li><a href="contactUs.html">Contact Us</a></li>
+					</ul>
+					<hr />
+				</div>
+			</div>
+
+		</div>
+	</div><!-- container -->
+
+
+
+	<!-- JS
+	================================================== -->
+	<!--script src="http://code.jquery.com/jquery-1.6.4.min.js"></script-->
+	<script src="javascripts/tabs.js"></script>		
+	
+	<!--for 3d rotating cube:-->
+	<script type='text/javascript' src='x3dom.js'></script>
+	<script type='text/javascript' src='jquery-1.7.1.js'></script>
+	<script type="text/javascript">$("#canvasContainer").hide();x3dom.runtime.ready = function() {    $("#canvasContainer").show();};</script>
+
+<!-- End Document
+================================================== -->
+</body>
+</html>

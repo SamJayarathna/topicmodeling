@@ -1,0 +1,553 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>SIGGRAPH 2004</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="s2004styles.css" rel="stylesheet" type="text/css">
+<!-- Prevent caching in netscape. 
+     Very important cause netscape tends to mangle cached code -->
+<meta http-equiv="expires" content="0">
+<meta http-equiv="Pragma" content="no-cache">
+<script language="JavaScript" type="text/javascript">
+<!--
+// moock fpi [f.lash p.layer i.nspector]
+// version: 1.3.5
+// written by colin moock
+// code maintained at: http://www.moock.org/webdesign/flash/detection/moockfpi/
+// terms of use posted at: http://www.moock.org/terms/
+
+
+
+// #############################################
+// These are the user defined globals.
+// Modify the following variables to customize the inspection behaviour.
+
+var requiredVersion = 4;   // Version the user needs to view site (max 6, min 2)
+var useRedirect = false;    // 
+
+
+
+// *************
+// Everything below this point is internal until after the BODY tag.
+// Do not modify! Proceed to the BODY tag for further instructions.
+// *************
+
+// System globals
+var flash2Installed = false;    // boolean. true if flash 2 is installed
+var flash3Installed = false;    // boolean. true if flash 3 is installed
+var flash4Installed = false;    // boolean. true if flash 4 is installed
+var flash5Installed = false;    // boolean. true if flash 5 is installed
+var flash6Installed = false;    // boolean. true if flash 6 is installed
+var maxVersion = 6;             // highest version we can actually detect
+var actualVersion = 0;          // version the user really has
+var hasRightVersion = false;    // boolean. true if it's safe to embed the flash movie in the page
+var jsVersion = 1.0;            // the version of javascript supported
+
+// -->
+</script>
+<script language="JavaScript1.1" type="text/javascript">
+<!--
+
+// Check the browser...we're looking for ie/win
+var isIE = (navigator.appVersion.indexOf("MSIE") != -1) ? true : false;    // true if we're on ie
+var isWin = (navigator.appVersion.indexOf("Windows") != -1) ? true : false; // true if we're on windows
+
+// This is a js1.1 code block, so make note that js1.1 is supported.
+jsVersion = 1.1;
+
+// Write vbscript detection on ie win. IE on Windows doesn't support regular
+// JavaScript plugins array detection.
+if(isIE && isWin){
+  document.write('<SCR' + 'IPT LANGUAGE=VBScript\> \n');
+  document.write('on error resume next \n');
+  document.write('flash2Installed = (IsObject(CreateObject("ShockwaveFlash.ShockwaveFlash.2"))) \n');
+  document.write('flash3Installed = (IsObject(CreateObject("ShockwaveFlash.ShockwaveFlash.3"))) \n');
+  document.write('flash4Installed = (IsObject(CreateObject("ShockwaveFlash.ShockwaveFlash.4"))) \n');
+  document.write('flash5Installed = (IsObject(CreateObject("ShockwaveFlash.ShockwaveFlash.5"))) \n');  
+  document.write('flash6Installed = (IsObject(CreateObject("ShockwaveFlash.ShockwaveFlash.6"))) \n');  
+  document.write('</SCR' + 'IPT\> \n'); // break up end tag so it doesn't end our script
+}
+// -->
+</script>
+<script language="JavaScript" type="text/javascript">
+<!--
+
+// Next comes the standard javascript detection that uses the 
+
+
+// navigator.plugins array. We pack the detector into a function so it loads
+// before we run it.
+
+function detectFlash() {  
+  // If navigator.plugins exists...
+  if (navigator.plugins) {
+    // ...then check for flash 2 or flash 3+.
+    if (navigator.plugins["Shockwave Flash 2.0"]
+        || navigator.plugins["Shockwave Flash"]) {
+
+      // Some version of Flash was found. Time to figure out which.
+      
+      // Set convenient references to flash 2 and the plugin description.
+      var isVersion2 = navigator.plugins["Shockwave Flash 2.0"] ? " 2.0" : "";
+      var flashDescription = navigator.plugins["Shockwave Flash" + isVersion2].description;
+
+      // DEBUGGING: uncomment next line to see the actual description.
+      // alert("Flash plugin description: " + flashDescription);
+      
+      // A flash plugin-description looks like this: Shockwave Flash 4.0 r5
+      // We can get the major version by grabbing the character before the period
+      // note that we don't bother with minor version detection. 
+      // Do that in your movie with $version or getVersion().
+      var flashVersion = parseInt(flashDescription.charAt(flashDescription.indexOf(".") - 1));
+     
+      // We found the version, now set appropriate version flags. Make sure
+      // to use >= on the highest version so we don't prevent future version
+      // users from entering the site.
+      flash2Installed = flashVersion == 2;    
+      flash3Installed = flashVersion == 3;
+      flash4Installed = flashVersion == 4;
+      flash5Installed = flashVersion == 5;
+      flash6Installed = flashVersion >= 6;
+    }
+  }
+  
+  // Loop through all versions we're checking, and
+  // set actualVersion to highest detected version.
+  for (var i = 2; i <= maxVersion; i++) {  
+    if (eval("flash" + i + "Installed") == true) actualVersion = i;
+  }
+  
+  // If we're on webtv, the version supported is 2 (pre-summer2000, 
+  // or 3, post-summer2000). Note that we don't bother sniffing varieties
+  // of webtv. You could if you were sadistic...
+  if(navigator.userAgent.indexOf("WebTV") != -1) actualVersion = 3;  
+  
+  // DEBUGGING: uncomment next line to display flash version
+  // alert("version detected: " + actualVersion);
+
+
+  // We're finished getting the version on all browsers that support detection.
+  // Time to take the appropriate action.
+
+  // If the user has a new enough version...
+  if (actualVersion >= requiredVersion) {
+    // ...then we'll redirect them to the flash page, unless we've
+    // been told not to redirect.
+    if (useRedirect) {
+      // Need javascript1.1 to do location.replace
+      if(jsVersion > 1.0) {
+        // It's safe to use replace(). Good...we won't break the back button.
+        window.location.replace(flashPage);  
+      } else {
+        // JavaScript version is too old, so use .location to load
+        // the flash page.
+        window.location = flashPage;
+      }
+    }
+    
+    // If we got here, we didn't redirect. So we make a note that we should
+    // write out the object/embed tags later.
+    hasRightVersion = true;                
+  } else {  
+    // The user doesn't have a new enough version.
+    // If the redirection option is on, load the appropriate alternate page.
+    if (useRedirect) {
+      // Do the same .replace() call only if js1.1+ is available.
+      if(jsVersion > 1.0) {
+        window.location.replace((actualVersion >= 2) ? upgradePage : noFlashPage);
+      } else {
+        window.location = (actualVersion >= 2) ? upgradePage : noFlashPage;
+      }
+    }
+  }
+}
+
+
+detectFlash();  // call our detector now that it's safely loaded.  
+  
+// -->
+</script>
+<script language="JavaScript">
+<!--
+
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_showHideLayers() { //v6.0
+  var i,p,v,obj,args=MM_showHideLayers.arguments;
+  for (i=0; i<(args.length-2); i+=3) if ((obj=MM_findObj(args[i]))!=null) { v=args[i+2];
+    if (obj.style) { obj=obj.style; v=(v=='show')?'visible':(v=='hide')?'hidden':v; }
+    obj.visibility=v; }
+}
+//-->
+</script>
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//-->
+</script>
+</head>
+
+<body link="#9933CC" vlink="#AE99C3" alink="#999900" leftmargin="6" topmargin="0" marginwidth="6" marginheight="0">
+<div id="Layer1" style="position:absolute; left:543px; top:311px; width:136px; height:93px; z-index:1"><a href="http://siggraph.blogspot.com/" target="_blank"><img src="images/bbs/s04blog.gif" width="136" height="93" border="0" alt="SIGGRAPH 2004 Blog"></a></div>
+<TABLE width="673" border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td><a href="http://www.siggraph.org/s2004/" onMouseOver="MM_swapImage('conf','','images/nav/conf_off.gif','exhib','','images/nav/exhib_off.gif','call','','images/nav/call_off.gif','pres','','images/nav/presenters_off.gif','med','','images/nav/media_off.gif','reg','','images/nav/reg_off.gif',1);MM_showHideLayers('confNav','','hide','exhibNav','','hide','callNav','','hide','presentersNav','','hide','mediaNav','','hide')"><img src="images/04banner.jpg" alt="SIGGRAPH 2004 - The 31st international conference on computer graphics and interactive techniques" width="673" height="85" border="0"></a></td>
+  </tr>
+  <tr>
+    <td><!-- mainNav Begins -->
+      			    <TABLE width="673" border="0" cellspacing="0" cellpadding="0">		<tr bgcolor="#999999">			<td><a href="/s2004/conference/index.php?pageID=conference" onMouseOver="MM_swapImage('conf','','/s2004/images/nav/conf_O.gif','exhib','','/s2004/images/nav/exhib_off.gif',1);MM_showHideLayers('confNav','','show','exhibNav','','hide','callNav','','hide')"><img src="/s2004/images/nav/conf_off.gif" alt="Conferenece" name="conf" width="89" height="23" border="0" id="conf"></a></td>			<td><a href="/s2004/exhibition/index.php?pageID=exhibition" onMouseOver="MM_swapImage('conf','','/s2004/images/nav/conf_off.gif','exhib','','/s2004/images/nav/exhib_O.gif','call','','/s2004/images/nav/call_off.gif',1);MM_showHideLayers('confNav','','hide','exhibNav','','show','callNav','','hide')"><img src="/s2004/images/nav/exhib_off.gif" alt="Exhibition" name="exhib" width="72" height="23" border="0" id="exhib"></a></td>			<td><a href="/s2004/cfp/index.php?pageID=cfp" onMouseOver="MM_swapImage('exhib','','/s2004/images/nav/exhib_off.gif','call','','/s2004/images/nav/call_O.gif','pres','','/s2004/images/nav/presenters_off.gif',1);MM_showHideLayers('confNav','','hide','exhibNav','','hide','callNav','','show','presentersNav','','hide')"><img src="/s2004/images/nav/call_off.gif" alt="Call For Participation" name="call" width="151" height="23" border="0" id="call"></a></td>			<td><a href="/s2004/presenters/index.php?pageID=presenters" onMouseOut="MM_swapImage('pres','','/s2004/images/nav/presenters_off.gif',1)" onMouseOver="MM_swapImage('call','','/s2004/images/nav/call_off.gif','pres','','/s2004/images/nav/presenters_O.gif','med','','/s2004/images/nav/media_off.gif',1);MM_showHideLayers('exhibNav','','hide','callNav','','hide','mediaNav','','hide')"><img src="/s2004/images/nav/presenters_off.gif" alt="Presenters" name="pres" width="80" height="23" border="0" id="pres"></a></td>						<!-- PRESENTERS WITH FLYOUT MENU -->			<!-- uncomment the line below and delete second line above this comment --><!-- 			<td><a href="/s2004/presenters/index.php?pageID=presenters" onMouseOver="MM_swapImage('call','','/s2004/images/nav/call_off.gif','pres','','/s2004/images/nav/presenters_O.gif','med','','/s2004/images/nav/media_off.gif',1);MM_showHideLayers('confNav','','hide','exhibNav','','hide','callNav','','hide','presentersNav','','show','mediaNav','','hide')"><img src="/s2004/images/nav/presenters_off.gif" alt="Presenters" name="pres" width="80" height="23" border="0" id="pres"></a></td> -->			<td><a href="/s2004/media/index.php?pageID=media" onMouseOver="MM_swapImage('pres','','/s2004/images/nav/presenters_off.gif','med','','/s2004/images/nav/media_O.gif','reg','','/s2004/images/nav/reg_off.gif',1);MM_showHideLayers('confNav','','hide','exhibNav','','hide','callNav','','hide','presentersNav','','hide','mediaNav','','show')"><img src="/s2004/images/nav/media_off.gif" alt="Media" name="med" width="49" height="23" border="0" id="med"></a></td>			<td><a href="/s2004/registration/index.php?pageID=registration" onMouseOver="MM_swapImage('med','','/s2004/images/nav/media_off.gif','reg','','/s2004/images/nav/reg_O.gif',1);MM_showHideLayers('presentersNav','','hide','mediaNav','','hide')" onMouseOut="MM_swapImage('reg','','/s2004/images/nav/reg_off.gif',1)"><img src="/s2004/images/nav/reg_off.gif" alt="Registration" name="reg" width="88" height="23" border="0" id="reg"></a></td>			<td><a href="#" onMouseOver="MM_swapImage('reg','','/s2004/images/nav/reg_off.gif',1)"><img src="/s2004/images/nav/cap.gif" alt="spacer" width="7" height="23" border="0"></a></td>		  <td width="137"><script language="JavaScript" type="text/javascript"><!--if (!useRedirect) {			if(hasRightVersion) {		   		var oeTags = ''		+ '<OBJECT CLASSID="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"'		+ 'WIDTH="137" HEIGHT="23"'		+ 'CODEBASE="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab">'		+ '<PARAM NAME="MOVIE" VALUE="http://www.siggraph.org/s2004/flash/srch.swf">'		+ '<PARAM NAME="PLAY" VALUE="true">'		+ '<PARAM NAME="LOOP" VALUE="false">'		+ '<PARAM NAME="QUALITY" VALUE="high">'		+ '<PARAM NAME="MENU" VALUE="false">'		+ '<EMBED SRC="http://www.siggraph.org/s2004/flash/srch.swf"'		+ 'WIDTH="137" HEIGHT="23"'		+ 'PLAY="true"'		+ 'LOOP="false"'		+ 'QUALITY="high"'		+ 'MENU="false"'		+ 'TYPE="application/x-shockwave-flash"'		+ 'PLUGINSPAGE="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash">'		+ '</EMBED>'		+ '</OBJECT>';		document.write(oeTags); 		} else {			var alternateContent = '<A href="http://www.siggraph.org/cgi-bin/s2004/ice-search"><IMG src="http://www.siggraph.org/s2004/images/nav/searchplaceholder.gif" border="0"></A>';		document.write(alternateContent);		}}// --></script></td>		</tr>		</TABLE>	<!-- mainNav Ends -->
+	</td>
+  </tr>
+  <tr> 
+    <td><img src="images/purpledot.gif" alt="line" width="673" height="2" border="0"></td>
+  </tr>
+  <!-- breadcrumb ends -->
+  <tr> 
+    <td><table width="673" border="0" cellspacing="0" cellpadding="0">
+        <tr align="left" valign="top"> 
+          <td width="536">
+		  <table border="0" cellpadding="0" cellspacing="0" width="536">
+<!-- Billboards -->
+  <tr>
+   <td><table border="0" cellpadding="0" cellspacing="0" width="536">
+	  <tr>
+	   <td><a href="http://www.siggraph.org/s2004/conference/index.php?pageID=conference"><img src="images/left_blbd.jpg" width="266" height="201" border="0" alt="Conference: 8-12 August, 2004"></a></td>
+	   <td><img src="http://www.siggraph.org/s2004/images/rt_blbd.jpg" alt="" width="270" height="201" border="0"></td>
+	  </tr>
+	</table></td>
+  </tr>
+  <tr>
+   <td><table border="0" cellpadding="0" cellspacing="0" width="536">
+	  <tr>
+	   <td><table border="0" cellpadding="0" cellspacing="0" width="536">
+         <!-- Billboards-->
+         <tr>
+           <td><a href="http://www.socialtext.net/siggraph-2004/" target="_blank"><img src="images/bbs/s04wiki.gif" width="134" height="93" border="0" alt="SIGGRAPH 2004 Wiki"></a></td>
+           <td><a href="http://www.siggraph.org/s2004/media/releases/release16.php?pageID=media"><img src="images/bbs/totals.gif" width="235" height="93" border="0" alt="Total Attendees: 27,825, Total Exhibitors: 229"></a></td>
+           <td><img src="images/bbs/blank.gif" width="167" height="93" border="0" alt=""></td>
+         </tr>
+       </table></td>
+	   </tr>
+	</table></td>
+  </tr>
+  <tr>
+   <td><img name="bb_span" src="images/bb_span.gif" width="536" height="7" border="0" alt=""></td>
+  </tr>
+</table>
+	<!-- End Billboards -->	  
+		  
+		  </td>
+          <td background="images/frontDecor.jpg"><img src="images/sp.gif" width="137" height="1" alt=""> 
+            <!-- rightNav begins -->
+            <CENTER><TABLE width="93%" border="0" cellspacing="2" cellpadding="0">
+		  <tr align="left" valign="top">
+			<td width="13"><img src="/s2004/images/sp.gif" width="13" height="1" alt=""></td>
+			<td><font size="1"><a href="/s2004/registration/index.php?pageID=registration" class="smallFrontSideText">registration</a><br>
+			<a href="/s2004/travhouse/index.php" class="smallFrontSideText">travel & housing</a><br>
+			<a href="/s2004/la/index.php" class="smallFrontSideText">Los Angeles</a><br>
+			<a href="/s2004/conference/schedule.php?pageID=conference" class="smallFrontSideText">conference schedule</a><br>
+			<a href="/s2004/donors/index.php" class="smallFrontSideText">acknowledgements</a><br><br>
+			<a href="/s2004/referrals/index.php" class="smallFrontSideText">referrals</a><br>
+			<a href="http://www.siggraph.org/cgi-bin/s2004/email/compose?default=webmaster" class="smallFrontSideText">comments</a><br>
+			<a href="/s2004/updates/index.php" class="smallFrontSideText">updates</a><br>
+			<a href="/s2004/maillist/mail_form.php" class="smallFrontSideText">mailing list</a><br>			<br>
+			<a href="/s2004/formsfiles/formsfiles.php" class="smallFrontSideText">forms & files</a><br>
+			<a href="/s2004/committee/committee.php" class="smallFrontSideText">committee</a><br>
+			<a href="/s2004/credits/credits.php" class="smallFrontSideText">image credits</a></FONT></td>
+		   </tr>
+		   </TABLE></center>
+            <!-- rightNav ends -->
+          </td>
+        </tr>
+        <tr> 
+          <td colspan="2"><img src="images/sponsorLogo.gif" width="673" height="55" border="0" usemap="#Map2"></td>
+        </tr>
+      </table></td>
+  </tr>
+  <!-- footerNav ends -->
+</TABLE>
+
+<!-- layers/secondary flyout menus -->
+<!-- CONFERENCE ******************************************************* -->
+<div id="confNav" style="position:absolute; width:210px; z-index:1; left: 6px; top: 108px; background-color: #666666; layer-background-color: #666666; border: 1px none #000000; visibility: hidden;">
+  <table width="200" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td colspan="3"><img src="/s2004/images/sp.gif" width="200" height="5" alt=""></td>
+    </tr>
+    <tr align="left" valign="top">
+      <td width="10"><a href="#" onMouseOut="MM_swapImage('conf','','/s2004/images/nav/conf_off.gif','call','','/s2004/images/nav/call_off.gif',1);MM_showHideLayers('confNav','','hide','callNav','','hide')"><img src="/s2004/images/sp.gif" alt="" width="10" height="350" border="0"></a></td>
+      <td><table width="180" border="0" cellspacing="3" cellpadding="0">
+        <tr>
+          <td><font size="1"><a href="/s2004/conference/art/index.php?pageID=conference" class="nu">&gt; ART GALLERY</a></FONT></td>
+        </tr>
+		<tr>
+          <td><font size="1"><a href="/s2004/conference/services.php?pageID=conference" class="nu">&gt; ATTENDEE SERVICES</a></FONT></td>
+        </tr>
+        <tr>
+          <td><font size="1"><a href="/s2004/conference/birds/index.php?pageID=conference" class="nu">&gt; BIRDS OF A FEATHER</a></FONT></td>
+        </tr>
+        <tr>
+          <td><font size="1"><a href="/s2004/conference/colocated/index.php?pageID=conference" class="nu">&gt; CO-LOCATED EVENTS</a></FONT></td>
+        </tr>
+        <tr>
+          <td><font size="1"><a href="/s2004/conference/caf/index.php?pageID=conference" class="nu">&gt; COMPUTER ANIMATION FESTIVAL</a></FONT></td>
+        </tr>
+		 <tr>
+          <td><font size="1"><a href="/s2004/conference/content/index.php?pageID=conference" class="nu">&gt; CONTENT SELECTION</a></FONT></td>
+        </tr>
+		<tr>
+          <td><font size="1"><a href="/s2004/conference/courses/index.php?pageID=conference" class="nu">&gt; COURSES</a></FONT></td>
+        </tr>
+		<tr>
+          <td><font size="1"><a href="/s2004/conference/edu/index.php?pageID=conference" class="nu">&gt; EDUCATORS PROGRAM</a></FONT></td>
+        </tr>
+		<tr>
+          <td><font size="1"><a href="/s2004/conference/etech/index.php?pageID=conference" class="nu">&gt; EMERGING TECHNOLOGIES</a></FONT></td>
+        </tr>
+		<tr>
+          <td><font size="1"><a href="/s2004/conference/exhibitor/index.php?pageID=conference" class="nu">&gt; EXHIBITOR TECH TALKS</a></FONT></td>
+        </tr>
+		<tr>
+          <td><font size="1"><a href="/s2004/conference/involved/index.php?pageID=conference" class="nu">&gt; GET INVOLVED</a></FONT></td>
+        </tr>
+		<tr>
+          <td><font size="1"><a href="/s2004/conference/gnet/index.php?pageID=conference" class="nu">&gt; GRAPHICSNET</a></FONT></td>
+        </tr>
+		<tr>
+          <td><font size="1"><a href="/s2004/conference/studio/index.php?pageID=conference" class="nu">&gt; GUERILLA STUDIO</a></FONT></td>
+        </tr>
+		<tr>
+          <td><font size="1"><a href="/s2004/conference/international/index.php?pageID=conference" class="nu">&gt; INTERNATIONAL RESOURCES</a></FONT></td>
+        </tr>
+		<tr>
+          <td><font size="1"><a href="/s2004/conference/jobfair/index.php?pageID=conference" class="nu">&gt; JOB FAIR</a></FONT></td>
+        </tr>
+		<tr>
+          <td><font size="1"><a href="/s2004/conference/keynote/index.php?pageID=conference" class="nu">&gt; KEYNOTE ADDRESS/AWARDS</a></FONT></td>
+        </tr>
+		<tr>
+          <td><font size="1"><a href="/s2004/conference/panels/index.php?pageID=conference" class="nu">&gt; PANELS</a></FONT></td>
+        </tr>
+		<tr>
+          <td><font size="1"><a href="/s2004/conference/papers/index.php?pageID=conference" class="nu">&gt; PAPERS</a></FONT></td>
+        </tr>
+		<tr>
+          <td><font size="1"><a href="/s2004/conference/pathfinders/index.php?pageID=conference" class="nu">&gt; PATHFINDERS</a></FONT></td>
+        </tr>
+		<tr>
+          <td><font size="1"><a href="/s2004/conference/posters/index.php?pageID=conference" class="nu">&gt; POSTERS</a></FONT></td>
+        </tr>
+		<tr>
+          <td><font size="1"><a href="/s2004/conference/reception/index.php?pageID=conference" class="nu">&gt; RECEPTION</a></FONT></td>
+        </tr>
+		<tr>
+          <td><font size="1"><a href="/s2004/conference/recognition/index.php?pageID=conference" class="nu">&gt; RECOGNITION FORUM</a></FONT></td>
+        </tr>
+		<tr>
+          <td><font size="1"><a href="/s2004/conference/sketches/index.php?pageID=conference" class="nu">&gt; SKETCHES</a></FONT></td>
+        </tr>
+		<tr>
+          <td><font size="1"><a href="/s2004/conference/special/index.php?pageID=conference" class="nu">&gt; SPECIAL SESSIONS</a></FONT></td>
+        </tr>
+		<tr>
+          <td><font size="1"><a href="/s2004/conference/web/index.php?pageID=conference" class="nu">&gt; WEB GRAPHICS</a></FONT></td>
+        </tr>
+        <tr>
+          <td><a href="#" onMouseOut="MM_swapImage('conf','','/s2004/images/nav/conf_off.gif','call','','/s2004/images/nav/call_off.gif',1);MM_showHideLayers('confNav','','hide','callNav','','hide')"><img src="/s2004/images/sp.gif" alt="" width="180" height="20" border="0"></a></td>
+        </tr>
+      </table></td>
+      <td width="10"><a href="#" onMouseOut="MM_swapImage('conf','','/s2004/images/nav/conf_off.gif','call','','/s2004/images/nav/call_off.gif',1);MM_showHideLayers('confNav','','hide','callNav','','hide')"><img src="/s2004/images/sp.gif" alt="" width="10" height="350" border="0"></a></td>
+    </tr>
+  </table>
+</div>
+
+<!-- EXHIBITION ******************************************************* -->
+<div id="exhibNav" style="position:absolute; width:210px; height:350px; z-index:1; left: 95px; top: 108px; background-color: #666666; layer-background-color: #666666; border: 1px none #000000; visibility: hidden;">
+  <table width="200" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td colspan="3"><img src="/s2004/images/sp.gif" width="200" height="5" alt=""></td>
+    </tr>
+    <tr align="left" valign="top">
+      <td width="10"><a href="#" onMouseOut="MM_swapImage('conf','','/s2004/images/nav/conf_off.gif','exhib','','/s2004/images/nav/exhib_off.gif','call','','/s2004/images/nav/call_off.gif',1);MM_showHideLayers('confNav','','hide','exhibNav','','hide','callNav','','hide')"><img src="/s2004/images/sp.gif" alt="" width="10" height="300" border="0"></a></td>
+      <td><table width="180" border="0" cellspacing="3" cellpadding="0">
+        <tr>
+          <td><font size="1"><a href="/s2004/exhibition/invite/index.php?pageID=exhibition" class="nu">&gt; INVITATION TO EXHIBIT</a></FONT></td>
+        </tr>
+		<tr>
+          <td><font size="1"><a href="/s2004/exhibition/academic.php" class="nu">&gt; ACADEMIC EXHIBITS</a></FONT></td>
+        </tr>
+        <tr>
+          <td><font size="1"><a href="http://www.siggraph.org/cgi-bin/cgi/idESearch.html" class="nu" target="_blank">&gt; SIGGRAPH 2004 EXHIBITORS</a></FONT></td>
+        </tr>
+        <tr>
+          <td><font size="1"><a href="http://www.siggraph.org/cgi-bin/cgi/idindex.html" class="nu" target="_blank">&gt; ACM SIGGRAPH INDUSTRY &nbsp;&nbsp;&nbsp;DIRECTORY</a></FONT></td>
+        </tr>
+        <tr>
+          <td><a href="#" onMouseOut="MM_swapImage('conf','','/s2004/images/nav/conf_off.gif','exhib','','/s2004/images/nav/exhib_off.gif','call','','/s2004/images/nav/call_off.gif',1);MM_showHideLayers('confNav','','hide','exhibNav','','hide','callNav','','hide')"><img src="/s2004/images/sp.gif" alt="" width="180" height="20" border="0"></a></td>
+        </tr>
+      </table></td>
+      <td width="10"><a href="#" onMouseOut="MM_swapImage('conf','','/s2004/images/nav/conf_off.gif','exhib','','/s2004/images/nav/exhib_off.gif','call','','/s2004/images/nav/call_off.gif',1);MM_showHideLayers('confNav','','hide','exhibNav','','hide','callNav','','hide')"><img src="/s2004/images/sp.gif" alt="" width="10" height="300" border="0"></a></td>
+    </tr>
+  </table>
+</div>
+
+<!-- CALL FOR PARTICIPATION ******************************************** -->
+<div id="callNav" style="position:absolute; width:210px; height:350px; z-index:1; left: 167px; top: 108px; background-color: #666666; layer-background-color: #666666; border: 1px none #000000; visibility: hidden;">
+  <table width="200" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td colspan="3"><img src="/s2004/images/sp.gif" width="200" height="5" alt=""></td>
+    </tr>
+    <tr align="left" valign="top">
+      <td width="10"><a href="#" onMouseOut="MM_swapImage('call','','/s2004/images/nav/call_off.gif',1);MM_showHideLayers('callNav','','hide')"><img src="/s2004/images/sp.gif" alt="" width="10" height="300" border="0"></a></td>
+      <td><table width="180" border="0" cellspacing="3" cellpadding="0">
+        <tr>
+          <td><font size="1"><a href="/s2004/cfp/art/index.php?pageID=cfp" class="nu">&gt; ART GALLERY</a></FONT></td>
+        </tr>
+        <tr>
+          <td><font size="1"><a href="/s2004/cfp/awards/index.php?pageID=cfp" class="nu">&gt; AWARDS</a></FONT></td>
+        </tr>
+        <tr>
+          <td><font size="1"><a href="/s2004/cfp/caf/index.php?pageID=cfp" class="nu">&gt; COMPUTER ANIMATION &nbsp;&nbsp;&nbsp;FESTIVAL</a></FONT></td>
+        </tr>
+        <tr>
+          <td><font size="1"><a href="/s2004/cfp/courses/index.php?pageID=cfp" class="nu">&gt; COURSES</a></FONT></td>
+        </tr>
+        <tr>
+          <td><font size="1"><a href="/s2004/cfp/edu/index.php?pageID=cfp" class="nu">&gt; EDUCATORS PROGRAM</a></FONT></td>
+        </tr>
+        <tr>
+          <td><font size="1"><a href="/s2004/cfp/etech/index.php?pageID=cfp" class="nu">&gt; EMERGING TECHNOLOGIES</a></FONT></td>
+        </tr>
+        <tr>
+          <td><font size="1"><a href="/s2004/cfp/gnet/index.php?pageID=cfp" class="nu">&gt; GRAPHICSNET</a></FONT></td>
+        </tr>
+        <tr>
+          <td><font size="1"><a href="/s2004/cfp/international/index.php?pageID=cfp" class="nu">&gt; INTERNATIONAL RESOURCES</a></FONT></td>
+        </tr>
+        <tr>
+          <td><font size="1"><a href="/s2004/cfp/panels/index.php?pageID=cfp" class="nu">&gt; PANELS</a></FONT></td>
+        </tr>
+        <tr>
+          <td><font size="1"><a href="/s2004/cfp/papers/index.php?pageID=cfp" class="nu">&gt; PAPERS</a></FONT></td>
+        </tr>
+        <tr>
+          <td><font size="1"><a href="/s2004/cfp/posters/index.php?pageID=cfp" class="nu">&gt; POSTERS</a></FONT></td>
+        </tr>
+        <tr>
+          <td><font size="1"><a href="/s2004/cfp/sketches/index.php?pageID=cfp" class="nu">&gt; SKETCHES</a></FONT></td>
+        </tr>
+        <tr>
+          <td><font size="1"><a href="/s2004/cfp/special/index.php?pageID=cfp" class="nu">&gt; SPECIAL SESSIONS</a></FONT></td>
+        </tr>
+        <tr>
+          <td><font size="1"><a href="/s2004/cfp/students/index.php?pageID=cfp" class="nu">&gt; STUDENT OPPORTUNITIES</a></FONT></td>
+        </tr>
+        <tr>
+          <td><font size="1"><a href="/s2004/cfp/web/index.php?pageID=cfp" class="nu">&gt; WEB GRAPHICS</a></FONT></td>
+        </tr>
+        <tr>
+          <td><a href="#" onMouseOut="MM_swapImage('call','','/s2004/images/nav/call_off.gif',1);MM_showHideLayers('callNav','','hide')"><img src="/s2004/images/sp.gif" alt="" width="180" height="20" border="0"></a></td>
+        </tr>
+      </table></td>
+      <td width="10"><a href="#" onMouseOut="MM_swapImage('call','','/s2004/images/nav/call_off.gif',1);MM_showHideLayers('callNav','','hide')"><img src="/s2004/images/sp.gif" alt="" width="10" height="300" border="0"></a></td>
+    </tr>
+  </table>
+</div>
+
+<!-- PRESENTERS ************************************************************ -->
+<div id="presentersNav" style="position:absolute; width:210px; height:350px; z-index:1; left: 318px; top: 108px; background-color: #666666; layer-background-color: #666666; border: 1px none #000000; visibility: hidden;">
+  <table width="200" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td colspan="3"><img src="/s2004/images/sp.gif" width="200" height="5" alt=""></td>
+    </tr>
+    <tr align="left" valign="top">
+      <td width="10"><a href="#" onMouseOut="MM_swapImage('call','','/s2004/images/nav/call_off.gif','pres','','/s2004/images/nav/presenters_off.gif',1);MM_showHideLayers('confNav','','hide','exhibNav','','hide','callNav','','hide','presentersNav','','hide')"><img src="/s2004/images/sp.gif" alt="" width="10" height="300" border="0"></a></td>
+      <td><table width="180" border="0" cellspacing="3" cellpadding="0">
+        <tr>
+          <td><font size="1"><a href="#" class="nu">&gt; NOTHING</a></FONT></td>
+        </tr>
+        <tr>
+          <td><font size="1"><a href="#" class="nu">&gt; FOR</a></FONT></td>
+        </tr>
+        <tr>
+          <td><font size="1"><a href="#" class="nu">&gt; NOW</a></FONT></td>
+        </tr>
+        <tr>
+          <td><a href="#" onMouseOut="MM_swapImage('call','','/s2004/images/nav/call_off.gif','pres','','/s2004/images/nav/presenters_off.gif',1);MM_showHideLayers('confNav','','hide','exhibNav','','hide','callNav','','hide','presentersNav','','hide')"><img src="/s2004/images/sp.gif" alt="" width="180" height="20" border="0"></a></td>
+        </tr>
+      </table></td>
+      <td width="10"><a href="#" onMouseOut="MM_swapImage('call','','/s2004/images/nav/call_off.gif','pres','','/s2004/images/nav/presenters_off.gif',1);MM_showHideLayers('confNav','','hide','exhibNav','','hide','callNav','','hide','presentersNav','','hide')"><img src="/s2004/images/sp.gif" alt="" name="Image1" width="10" height="300" border="0" id="Image1"></a></td>
+    </tr>
+  </table>
+</div>
+
+<!-- MEDIA **************************************************************** -->
+<div id="mediaNav" style="position:absolute; width:210px; height:350px; z-index:1; left: 398px; top: 108px; background-color: #666666; layer-background-color: #666666; border: 1px none #000000; visibility: hidden;">
+  <table width="200" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td colspan="3"><img src="/s2004/images/sp.gif" width="200" height="5" alt=""></td>
+    </tr>
+    <tr align="left" valign="top">
+      <td width="10"><a href="#" onMouseOut="MM_swapImage('call','','/s2004/images/nav/call_off.gif','pres','','/s2004/images/nav/presenters_off.gif','med','','/s2004/images/nav/media_off.gif',1);MM_showHideLayers('confNav','','hide','exhibNav','','hide','callNav','','hide','presentersNav','','hide','mediaNav','','hide')"><img src="/s2004/images/sp.gif" alt="" width="10" height="300" border="0"></a></td>
+      <td><table width="180" border="0" cellspacing="3" cellpadding="0">
+        <tr>
+          <td><font size="1"><a href="/s2004/media/maillist.php?pageID=media" class="nu">&gt; ADD ME TO YOUR MAILING LIST</a></FONT></td>
+        </tr>
+        <tr>
+          <td><font size="1"><a href="/s2004/media/releases/index.php?pageID=media" class="nu">&gt; NEWS RELEASES</a></FONT></td>
+        </tr>
+                <tr>
+          <td><font size="1"><a href="/s2004/media/factsheets/index.php?pageID=media" class="nu">&gt; FACT SHEETS</a></FONT></td>
+        </tr>
+		<tr>
+          <td><font size="1"><a href="/s2004/media/registration.php?pageID=media" class="nu">&gt; MEDIA REGISTRATION</a></FONT></td>
+        </tr>
+
+		<tr>
+          <td><font size="1"><a href="http://www.virtualpressoffice.com/media/show/display.jsp?showId=1065565630237" class="nu">&gt; NEWSWIRE SERVICES</a></FONT></td>
+        </tr>
+
+        <tr>
+          <td><a href="#" onMouseOut="MM_swapImage('call','','/s2004/images/nav/call_off.gif','pres','','/s2004/images/nav/presenters_off.gif','med','','/s2004/images/nav/media_off.gif',1);MM_showHideLayers('confNav','','hide','exhibNav','','hide','callNav','','hide','presentersNav','','hide','mediaNav','','hide')"><img src="/s2004/images/sp.gif" alt="" width="180" height="20" border="0"></a></td>
+        </tr>
+      </table></td>
+      <td width="10"><a href="#" onMouseOut="MM_swapImage('call','','/s2004/images/nav/call_off.gif','pres','','/s2004/images/nav/presenters_off.gif','med','','/s2004/images/nav/media_off.gif',1);MM_showHideLayers('confNav','','hide','exhibNav','','hide','callNav','','hide','presentersNav','','hide','mediaNav','','hide')"><img src="/s2004/images/sp.gif" alt="" name="Image1" width="10" height="300" border="0" id="Image1"></a></td>
+    </tr>
+  </table>
+</div>
+<!-- non-flash flavred serach url -->
+<map name="searchMap">
+  <area shape="rect" coords="7,5,119,21" href="http://www.siggraph.org/s2004/search/index.html">
+</map>
+
+<map name="Map2">
+<area shape="rect" coords="381,8,530,50" href="http://www.siggraph.org" target="_blank" alt="SPONSORED BY ACM SIGGRAPH">
+<area shape="rect" coords="326,9,376,49" href="http://www.acm.org" target="_blank" alt="Sponsored by ACM">
+</map>
+<map name="Map">
+  <area shape="rect" coords="85,0,262,87" href="http://www.siggraph.org/s2004/formsfiles/S2004_AP.pdf" alt="2004 Advance Program PDF">
+  <area shape="rect" coords="3,88,225,196" href="http://www.siggraph.org/s2004/exhibition/index.php?pageID=exhibition" alt="2004 Exhibition!">
+</map>
+</body>
+</html>

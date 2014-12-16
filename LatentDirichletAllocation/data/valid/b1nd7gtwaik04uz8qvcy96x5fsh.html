@@ -1,0 +1,713 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+
+<head>
+
+  <title>International Workshop on Multilingual OCR</title>
+
+  <link rel="stylesheet" type="text/css" href="http://www.cubs.buffalo.edu/style.css">
+  <link rel="stylesheet" type="text/css" href="xpmenuv2_2/sddm.css">
+
+  
+
+<style type="text/css">
+
+
+
+#dropmenudiv{
+
+position:absolute;
+
+border:1px solid black;
+
+border-bottom-width: 0;
+
+font:normal 12px Verdana;
+
+line-height:18px;
+
+z-index:100;
+
+}
+
+
+
+#dropmenudiv a{
+
+width: 100%;
+
+display: block;
+
+text-indent: 3px;
+
+border-bottom: 1px solid black;
+
+padding: 1px 0;
+
+text-decoration: none;
+
+font-weight: bold;
+
+}
+
+
+
+#dropmenudiv a:hover{ /*hover background color*/
+
+background-color: lightyellow;
+
+}
+
+
+
+</style>
+
+
+
+<script language="JavaScript" type="text/javascript">
+
+function addressmunge(dataarray, code) {
+
+	var emailID = dataarray[code[0]] + '@' + dataarray[code[1]] + '.' + dataarray[code[2]];
+
+	var emailText = '<a href="mailto:' + emailID + '">' + emailID + '</a>';
+
+	document.write(emailText);
+
+}
+
+</script>
+
+
+
+<script language="JavaScript" type="text/javascript">
+
+function addressmunge_lame(name, org, ext) {
+
+	var emailID = name + '@' + org + '.' + ext;
+
+	var emailText = '<a href="mailto:' + emailID + '">' + emailID + '</a>';
+
+	document.write(emailText);
+
+}
+
+</script>
+
+
+
+<script language="JavaScript" type="text/javascript">
+
+function getFile(filename)	{
+
+	oxmlhttp = null;
+
+    try	{
+
+		oxmlhttp = new XMLHttpRequest();
+
+        oxmlhttp.overrideMimeType("text/xml");
+
+    }
+
+    catch(e)	{ 
+
+		try
+
+          { oxmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+
+          }
+
+        catch(e)
+
+          { return null;
+
+          }
+
+      }
+
+    if(!oxmlhttp) return null;
+
+    try
+
+      { //oxmlhttp.onreadystatechange=state_Change;
+
+	  	oxmlhttp.open("GET",filename,false);
+
+        oxmlhttp.send(null);
+
+      }
+
+    catch(e)
+
+      { return null;
+
+      }
+
+    return oxmlhttp.responseText;
+
+};
+
+
+
+window.moreless = 0;
+
+
+
+function MoreLessClick()	{
+
+	if(window.moreless == 0)	{
+
+		$text = getFile("extendedbio.htm");
+
+		document.getElementById("extendedBio").innerHTML = $text;
+
+		window.moreless = 1;
+
+	}
+
+	else	{
+
+		$text = getFile("venu_bio.htm");
+
+		document.getElementById("extendedBio").innerHTML = $text;
+
+		window.moreless = 0;
+
+	}
+
+}
+
+</script>
+
+
+
+<script type="text/javascript">
+
+
+
+/***********************************************
+
+* AnyLink Drop Down Menu- © Dynamic Drive (www.dynamicdrive.com)
+
+* This notice MUST stay intact for legal use
+
+* Visit http://www.dynamicdrive.com/ for full source code
+
+***********************************************/
+
+
+
+//Contents for menu 1
+
+//Contents for menu 4, and so on
+
+var menu4=new Array()
+menu4[0]='<A HREF="travel.php">Travel</A>'
+menu4[1]='<A HREF="venue.php">Venue</A>'
+
+
+
+
+
+var menuwidth='165px' //default menu width
+
+var menubgcolor='white'  //menu bgcolor
+
+var disappeardelay=250  //menu disappear speed onMouseout (in miliseconds)
+
+var hidemenu_onclick="yes" //hide menu when user clicks within menu?
+
+ 
+
+/////No further editting needed
+
+ 
+
+var ie4=document.all
+
+var ns6=document.getElementById&&!document.all
+
+
+
+if (ie4||ns6)
+
+document.write('<div id="dropmenudiv" style="visibility:hidden;width:'+menuwidth+';background-color:'+menubgcolor+'" onMouseover="clearhidemenu()" onMouseout="dynamichide(event)"></div>')
+
+
+
+function getposOffset(what, offsettype){
+
+var totaloffset=(offsettype=="left")? what.offsetLeft : what.offsetTop;
+
+var parentEl=what.offsetParent;
+
+while (parentEl!=null){
+
+totaloffset=(offsettype=="left")? totaloffset+parentEl.offsetLeft : totaloffset+parentEl.offsetTop;
+
+parentEl=parentEl.offsetParent;
+
+}
+
+return totaloffset;
+
+}
+
+
+
+
+
+function showhide(obj, e, visible, hidden, menuwidth){
+
+if (ie4||ns6)
+
+dropmenuobj.style.left=dropmenuobj.style.top="-500px"
+
+if (menuwidth!=""){
+
+dropmenuobj.widthobj=dropmenuobj.style
+
+dropmenuobj.widthobj.width=menuwidth
+
+}
+
+if (e.type=="click" && obj.visibility==hidden || e.type=="mouseover")
+
+obj.visibility=visible
+
+else if (e.type=="click")
+
+obj.visibility=hidden
+
+}
+
+
+
+function iecompattest(){
+
+return (document.compatMode && document.compatMode!="BackCompat")? document.documentElement : document.body
+
+}
+
+
+
+function clearbrowseredge(obj, whichedge){
+
+var edgeoffset=0
+
+if (whichedge=="rightedge"){
+
+var windowedge=ie4 && !window.opera? iecompattest().scrollLeft+iecompattest().clientWidth-15 : window.pageXOffset+window.innerWidth-15
+
+dropmenuobj.contentmeasure=dropmenuobj.offsetWidth
+
+if (windowedge-dropmenuobj.x < dropmenuobj.contentmeasure)
+
+edgeoffset=dropmenuobj.contentmeasure-obj.offsetWidth
+
+}
+
+else{
+
+var topedge=ie4 && !window.opera? iecompattest().scrollTop : window.pageYOffset
+
+var windowedge=ie4 && !window.opera? iecompattest().scrollTop+iecompattest().clientHeight-15 : window.pageYOffset+window.innerHeight-18
+
+dropmenuobj.contentmeasure=dropmenuobj.offsetHeight
+
+if (windowedge-dropmenuobj.y < dropmenuobj.contentmeasure){ //move up?
+
+edgeoffset=dropmenuobj.contentmeasure+obj.offsetHeight
+
+if ((dropmenuobj.y-topedge)<dropmenuobj.contentmeasure) //up no good either?
+
+edgeoffset=dropmenuobj.y+obj.offsetHeight-topedge
+
+}
+
+}
+
+return edgeoffset
+
+}
+
+
+
+function populatemenu(what){
+
+if (ie4||ns6)
+
+dropmenuobj.innerHTML=what.join("")
+
+}
+
+
+
+
+
+function dropdownmenu(obj, e, menucontents, menuwidth){
+
+if (window.event) event.cancelBubble=true
+
+else if (e.stopPropagation) e.stopPropagation()
+
+clearhidemenu()
+
+dropmenuobj=document.getElementById? document.getElementById("dropmenudiv") : dropmenudiv
+
+populatemenu(menucontents)
+
+
+
+if (ie4||ns6){
+
+showhide(dropmenuobj.style, e, "visible", "hidden", menuwidth)
+
+
+
+dropmenuobj.x=getposOffset(obj, "left")
+
+dropmenuobj.y=getposOffset(obj, "top")
+
+dropmenuobj.style.left=dropmenuobj.x-clearbrowseredge(obj, "rightedge")+"px"
+
+dropmenuobj.style.top=dropmenuobj.y-clearbrowseredge(obj, "bottomedge")+obj.offsetHeight+"px"
+
+}
+
+
+
+return clickreturnvalue()
+
+}
+
+
+
+function clickreturnvalue(){
+
+if (ie4||ns6) return false
+
+else return true
+
+}
+
+
+
+function contains_ns6(a, b) {
+
+while (b.parentNode)
+
+if ((b = b.parentNode) == a)
+
+return true;
+
+return false;
+
+}
+
+
+
+function dynamichide(e){
+
+if (ie4&&!dropmenuobj.contains(e.toElement))
+
+delayhidemenu()
+
+else if (ns6&&e.currentTarget!= e.relatedTarget&& !contains_ns6(e.currentTarget, e.relatedTarget))
+
+delayhidemenu()
+
+}
+
+
+
+function hidemenu(e){
+
+if (typeof dropmenuobj!="undefined"){
+
+if (ie4||ns6)
+
+dropmenuobj.style.visibility="hidden"
+
+}
+
+}
+
+
+
+function delayhidemenu(){
+
+if (ie4||ns6)
+
+delayhide=setTimeout("hidemenu()",disappeardelay)
+
+}
+
+
+
+function clearhidemenu(){
+
+if (typeof delayhide!="undefined")
+
+clearTimeout(delayhide)
+
+}
+
+
+
+if (hidemenu_onclick=="yes")
+
+document.onclick=hidemenu
+
+
+
+</script>
+
+</head>
+
+<body background="http://www.cubs.buffalo.edu/images/main_bg.gif">
+
+<!--shell table-->
+
+<table align="center" bgcolor="#003366" border="0" cellpadding="0" cellspacing="0" frame="box" width="762">
+
+  <tbody>
+
+    <tr>
+
+      <td> <table align="center" bgcolor="White" border="0" cellpadding="0" cellspacing="0" width="760">
+
+<tr>
+
+    <td bgcolor="003366" height="71"><a href="../index.php"><img src="../images/logo.gif" width="530" height="71" border="0" alt=""></a><!-- <img src="images/c_logo_white_2.gif" width="192" height="71" border="0" alt=""> --></td>
+
+</tr>
+
+<tr>
+
+     
+
+  <td bgcolor="#ff9933" height="19"> <a class="nav" href="index.php">Home</a> 
+    &nbsp;<span class="nav">|</span> <a class="nav" href="committees.php">Committees</a> 
+    &nbsp;<span class="nav">|</span> <a class="nav" href="program.php">Program</a> 
+    &nbsp;<span class="nav">|</span> <a class="nav" href="submit.php">Submission</a> 
+    &nbsp;<span class="nav">|</span> <a class="nav" href="">Resources</a> 
+    &nbsp;<span class="nav">|</span> <a class="nav" href="">Sponsors</a> 
+  </td>
+
+</tr>
+
+<tr>
+
+    <td bgcolor="ffcc80" height="3">
+
+	</td>
+
+</tr>
+
+ 
+
+	<tbody>
+
+    	<tr> <td align="center"> <table border="0" cellpadding="0" cellspacing="0" width="100%">
+
+  			 <tbody> 
+
+		       <tr> <td valign="middle" width="560"> <h1>&nbsp;</h1> </td>      
+
+	   				<td align="right" valign="top" width="200">&nbsp; </td>
+
+      			</tr>
+
+			 </tbody>
+
+         </table>
+
+       </td>
+
+     </tr>
+
+     <tr> 
+
+         <td>
+
+                <!--main content-->
+
+                <table border="0" cellpadding="0" cellspacing="0" width="100%">
+
+              <tbody>
+
+                <tr>
+
+                      <td colspan="3" bgcolor="#FFFFFF" height="1"></td>
+
+                </tr>
+
+                <tr>
+
+                      <td bgcolor="#FFFFFF" valign="top" width="1"><br> </td>
+
+                      <td valign="top"><h3 align="center">4<sup>th</sup> International Workshop on Multilingual OCR</h3>
+<h3 align="center"><img src="logo1_light.jpg"></h3>
+<h5 align="center">A satellite workshop to be held in conjunction with</h5>
+<h3 align="center">ICDAR 2013</h3>
+<h5 align="center">12th International Conference on Document Analysis and Recognition</h5> 
+<h5 align="center">Omni Shoreham Hotel, Washington, DC</h5> 
+<h5 align="center">Saturday, August 24, 2013</h5> 
+
+<!--
+<p> <b>*NEW* <A HREF="http://www.cubs.buffalo.edu/MOCR2009/program.php">Workshop Program</A> is now online. *NEW*</b></p>
+
+<p>
+  Instructions for submission of camera-ready copies of accepted papers can be found on the 
+  <A HREF=submit.php">Submissions page.</p></A>
+<p>Registration for the workshop will be handled by the <a href="http://www.cvc.uab.es/icdar2009/registration.html">ICDAR 
+  2009 registration system.</a></p>
+
+<p align="justify"><b> Visa Assistance and Letters: </b>Individuals requiring an official letter of invitation in order to attend the Workshop may send e-mail to the ICDAR2009 Secretariat (<a href="mailto:icdar2009@ultramarevents.com">icdar2009@ultramarevents.com</a>).  This procedure is designed to assist participants who need to obtain a visa or permission to attend the conference, but does not cover registration fees or other expenses. The invitation does not imply provision of financial or other support. If you don't receive a confirmation of your request within a week, re-send your inquiry immediately. More information can be found at the <a href="http://www.cvc.uab.es/icdar2009/travel.html">Travel Information section</a> of the ICDAR 2009 web site. </p>
+-->
+<br>
+<hr align="center" width="50%">
+
+<p style="color: #990000" align="justify">
+The workshop program has been <a href="program.php">announced</a>.
+</p>
+
+<hr align="center" width="50%">
+<p align="justify">
+The workshop will provide a forum for highlighting current research on multilingual document analysis systems with particular emphasis on OCR. The predecessors to this workshop were held in conjunction with ICDAR1999 in Bangalore, India and ICDAR2009 in Barcelona, Spain.  A joint Workshop on Multilingual OCR and Analytics for Noisy Unstructured Text Data was held in conjunction with ICDAR2011 in Beijing, China. The scope of 'Multilingual OCR' is defined to include systems that are capable of reading more than one language in the same document, as well as one-language-per-document systems that can be easily retargeted to new languages. The proposed workshop will provide a forum for technical discussions on three important themes: i) recent progress in the field and promising new techniques , ii) attempts to identify and address 'hard' open research problems, and iii) performance evaluation of multilingual OCR systems. 
+</p>
+
+<hr align="center" width="50%">
+<p align="justify">
+The topics that will be addressed by this Workshop are:
+<ul>
+<li>Proven Methodologies for OCR: Efficacy of existing methodologies for Latin script to other scripts (HMMs, Neural networks etc.) 
+<li>Mixed languages: Techniques applicable/retargetable to multiple languages/scripts; documents containing multiple languages/scripts, 
+<li>Newer languages/ Scripts: Techniques for dealing with problems of  scripts for which OCR technology has not matured 
+<li>Document Analysis: Language and script identification, machine print vs handwriting, layout analysis, reading order
+<li>Special domains: Scene text and video text, mathematical formulas; tables; abbreviations; annotations 
+<li>Degraded and historical documents 
+<li>Domain knowledge: Colloquialism, dialect, language models
+<li>Evaluation Methodologies: metrics, standards, ground truth; benchmark datasets 
+</ul>
+<p>&nbsp;</p>
+ </td>
+
+                      <td bgcolor="#FFFFFF" valign="top" width="1"><br> </td>
+
+				<td width="220" valign="top" align="center">
+
+<table>
+    <tr> 
+      <td><strong><br>
+        <font color="#FF8000">Important Dates</font></strong> <br> <br>
+        <strong>&raquo; </strong><strong>Paper Submission</strong><br>
+        &nbsp;&nbsp;&nbsp;&nbsp;June 9, 2013<br>
+        <strong>&raquo; </strong><strong>Decision Notification<br>
+        </strong>&nbsp;&nbsp;&nbsp;&nbsp;July 13, 2013<br>
+        <strong>&raquo; </strong></a><strong>Final Papers<br>
+        </strong>&nbsp;&nbsp;&nbsp;&nbsp;July 20, 2013 <br> <br>
+<!--
+        <strong>&raquo; </strong><a href="submit.php"><strong></strong></a><strong></strong><strong>Workshop<br>
+        </strong>&nbsp;&nbsp;&nbsp;&nbsp;Jul 25 (Sat), 2009<br> <hr> </td>
+-->
+    </tr>
+    <tr>
+      <td> <B><font color="#FF8000">General Co-Chairs</font></B><br> <br>
+        Venu Govindaraju <br>
+        University at Buffalo, SUNY<br>  <br>
+        Prem Natarajan<br>
+        BBN Technologies, MA<br><br>
+        Santanu Chaudhury<br>
+        IIT, Delhi, India<br><br>
+        Daniel Lopresti<br>
+        Lehigh University, PA<br><br>
+        <strong><font color="#FF8000">Technical Program and<br>Publications Chairs</font></strong> 
+        <br>
+        <br>
+        Srirangaraj Setlur<br>
+        University at Buffalo, SUNY<br>
+        <br>
+        Huaigu Cao<br>
+        BBN Technologies, MA<br>
+        <br>
+<!--
+        <strong><font color="#FF8000">Program Committee</font></strong> <br> <br>
+        Henry Baird, <strong>USA</strong><br>
+        Abdel Belaid, <strong>France</strong><br>
+        Chakravarthy Bhagvati, <strong>India </strong><br>
+        Thomas Breuel, <strong>Germany</strong><br>
+        Horst Bunke, <strong>Switzerland</strong><br>
+        Huaigu Cao, <strong>USA</strong><br>
+        Bidyut Baran Chaudhuri, <strong>India</strong><br> 
+		Mohamed Cheriet, <strong>Canada</strong><br>
+        David Doermann, <strong>USA</strong><br>
+        Michel Gilloux, <strong>France</strong><br>
+        C.V. Jawahar, <strong>India</strong><br>
+        Fumitaka Kimura, <strong>Japan </strong><br>
+        Gyeonghwan Kim, <strong>S. Korea </strong><br>
+        Louisa Lam, <strong>Canada</strong><br>
+        Sriganesh Madhvanath, <strong>India</strong><br>
+        Jaehwa Park, <strong>S. Korea</strong><br> Rohit Prasad, <strong>USA</strong><br>
+        Sitaram Ramachandrula, <strong>India</strong><br>
+        A.G. Ramakrishnan, <strong>India</strong><br>
+        Zhixin Shi, <strong>USA</strong><br>
+        Sargur Srihari, <strong>USA</strong><br>
+-->
+        <hr>
+      </td>
+    </tr>
+    <tr>
+      <td><strong><font color="#FF8000">Contact</font></strong><br> <br>
+        Center for Unified Biometrics<br>
+        113 Davis Hall <br>
+        University at Buffalo <br>
+        Amherst, NY 14260-2500<br>
+        Ph: +1-716-645-6164 <br>
+        Fax: +1-716-645-6176 <br> <br> 
+	    <script language="JavaScript" type="text/javascript">addressmunge(['buffalo','setlur','edu'],[1,0,2])</script> 
+        <noscript>
+        Enable javascript on your browser to see this email address</noscript>
+        <br>
+        <br>
+      </td>
+    </tr>
+  </table>
+
+</td>
+</tr>
+
+              </tbody>
+
+            </table>
+
+<!--/main content--> </td>
+
+          </tr>
+
+<tr>
+    
+  <td bgcolor="003366" height="23" align="right" valign="middle"><a href="http://www.icdar2013.org" class="footer">ICDAR 
+    2013 Home</a><span class="footer"> | </span><a href="http://www.cubs.buffalo.edu" class="footer">CUBS 
+    Home</a></td>
+</tr>
+
+        </tbody>
+
+      </table>
+
+<!--/shell table--> </td>
+
+    </tr>
+
+  </tbody>
+
+</table>
+
+</body>
+
+</html>
+

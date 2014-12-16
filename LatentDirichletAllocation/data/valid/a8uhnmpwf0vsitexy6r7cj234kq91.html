@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>HotMobile 2014</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+	<link rel="stylesheet" href="css/common-02.css" />
+	<link rel="stylesheet" href="css/screen-04.css" />
+	<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+	<script src="js/screen.js"></script>		
+	<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+	<!-- Add fancyBox -->
+	<link rel="stylesheet" href="fancybox/jquery.fancybox.css?v=2.0.6" type="text/css" media="screen" />
+	<script type="text/javascript" src="fancybox/jquery.fancybox.pack.js?v=2.0.6"></script>
+	
+</head>
+<body>
+<div data-role="page" id="home">
+	<div data-role="content"  >
+<script type="text/javascript">
+
+$(document).ready(function(){
+	(function ($, F) {
+	    
+	    // Opening animation - fly from the top
+	    F.transitions.dropIn = function() {
+	        var endPos = F._getPosition(true);
+
+	        endPos.top = (parseInt(endPos.top, 10) - 200) + 'px';
+	        endPos.opacity = 0;
+	        
+	        F.wrap.css(endPos).show().animate({
+	            top: '+=200px',
+	            opacity: 1
+	        }, {
+	            duration: F.current.openSpeed,
+	            complete: F._afterZoomIn
+	        });
+	    };
+
+	    // Closing animation - fly to the top
+	    F.transitions.dropOut = function() {
+	        F.wrap.removeClass('fancybox-opened').animate({
+	            top: '-=200px',
+	            opacity: 0
+	        }, {
+	            duration: F.current.closeSpeed,
+	            complete: F._afterZoomOut
+	        });
+	    };
+	    
+	    // Next gallery item - fly from left side to the center
+	    F.transitions.slideIn = function() {
+	        var endPos = F._getPosition(true);
+
+	        endPos.left = (parseInt(endPos.left, 10) - 200) + 'px';
+	        endPos.opacity = 0;
+	        
+	        F.wrap.css(endPos).show().animate({
+	            left: '+=200px',
+	            opacity: 1
+	        }, {
+	            duration: F.current.nextSpeed,
+	            complete: F._afterZoomIn
+	        });
+	    };
+	    
+	    // Current gallery item - fly from center to the right
+	    F.transitions.slideOut = function() {
+	        F.wrap.removeClass('fancybox-opened').animate({
+	            left: '+=200px',
+	            opacity: 0
+	        }, {
+	            duration: F.current.prevSpeed,
+	            complete: function () {
+	                $(this).trigger('onReset').remove();
+	            }
+	        });
+	    };
+
+	}(jQuery, jQuery.fancybox));
+		
+		$('#banner a').fancybox({
+	        openMethod : 'dropIn',
+	        openSpeed : 350,
+
+	        closeMethod : 'dropOut',
+	        closeSpeed : 250,
+	        
+	        nextMethod : 'slideIn',
+	        nextSpeed : 250,
+	        
+	        prevMethod : 'slideOut',
+	        prevSpeed : 250,
+			
+			beforeLoad: function() {
+				var el, id = $(this.element).data('title-id');
+	
+	            if (id) {
+	                el = $('#' + id);
+	            
+	                if (el.length) {
+	                    this.title = el.html();
+	                }
+	            }
+			},
+			helpers : {
+		        title: {
+		            type: 'inside'
+		        }
+		    }
+				
+		});
+	  
+	})
+</script>
+		<div id="banner" >
+			<div class="photo-pannel clearfix">
+				<div class="logo">
+					<img src="images/hires/hotmobile-logo.png" style="width:230px; margin-top:30px"/>
+					<div style="font-size: 1em;">26-27 February, 2014</div>
+					<p style="font-size:.9em; margin:20px 10px 0px 10px">The 15th International Workshop on Mobile Computing Systems and Applications</p>
+				</div>
+				<div class="sqr">
+					<a data-title-id="t1"
+					 class="fancybox" rel="g1" data-ajax="false" href="images/hires/8561326250_1bb49eb3a0_o.jpg">
+ 					<img class="photo"  src="images/hires/banner-tl.png" /> 
+					<img class="bnr-icon " src="images/icons/white/06-magnify.png" />
+					</a>
+					<div id="t1" class="hidden">Photo by <a rel="external" href="http://www.flickr.com/photos/23024164@N06/8561326250/in/photolist-e3x32h-ez5xMT">Damian Gadal</a>. Available under the Creative Commons license.</div>
+				</div>
+				<div class="hrz">
+					<a data-title-id="t2"
+					 class="fancybox" rel="g1" data-ajax="false" href="images/hires/8561326250_1bb49eb3a0_o.jpg">
+					<img class="photo"  src="images/hires/banner-tm.png" /> 
+					<img class="bnr-icon" src="images/icons/white/06-magnify.png" />
+					</a>
+					<div id="t2" class="hidden">Photo by <a rel="external" href="http://www.flickr.com/photos/23024164@N06/8561326250/in/photolist-e3x32h-ez5xMT">Damian Gadal</a>. Available under the Creative Commons license.</div>
+				</div>
+				<div class="sqr">
+					<a data-title-id="t3"
+					 class="fancybox" rel="g1" data-ajax="false" href="images/hires/8561326250_1bb49eb3a0_o.jpg">
+					<img class="photo"  src="images/hires/banner-tr.png" /> 
+					<img class="bnr-icon" src="images/icons/white/06-magnify.png" /></a>
+					<div id="t3" class="hidden">Photo by <a rel="external" href="http://www.flickr.com/photos/23024164@N06/8561326250/in/photolist-e3x32h-ez5xMT">Damian Gadal</a>. Available under the Creative Commons license.</div>
+				</div>
+				<div class="sqr">
+					<a data-title-id="t4"
+					 class="fancybox" rel="g1" data-ajax="false" href="images/hires/8561326250_1bb49eb3a0_o.jpg">
+					<img class="photo"  src="images/hires/banner-bl.png" /> 
+					<img class="bnr-icon" src="images/icons/white/06-magnify.png" /></a>
+					<div id="t4" class="hidden">Photo by <a rel="external" href="http://www.flickr.com/photos/23024164@N06/8561326250/in/photolist-e3x32h-ez5xMT">Damian Gadal</a>. Available under the Creative Commons license.</div>
+				</div>
+				<div class="sqr">
+					<a data-title-id="t5"
+					 class="fancybox" rel="g1" data-ajax="false" href="images/hires/8561326250_1bb49eb3a0_o.jpg">
+					<img class="photo"  src="images/hires/banner-bm.png" /> 
+					<img class="bnr-icon" src="images/icons/white/06-magnify.png" /></a>
+					<div id="t5" class="hidden">Photo by <a rel="external" href="http://www.flickr.com/photos/23024164@N06/8561326250/in/photolist-e3x32h-ez5xMT">Damian Gadal</a>. Available under the Creative Commons license.</div>
+				</div>
+				<div class="hrz">
+					<a data-title-id="t6"
+					 class="fancybox" rel="g1" data-ajax="false" href="images/hires/8561326250_1bb49eb3a0_o.jpg">
+					<img class="photo"  src="images/hires/banner-br.png" /> 
+					<img class="bnr-icon" src="images/icons/white/06-magnify.png" /></a>
+					<div id="t6" class="hidden">Photo by <a rel="external" href="http://www.flickr.com/photos/23024164@N06/8561326250/in/photolist-e3x32h-ez5xMT">Damian Gadal</a>. Available under the Creative Commons license.</div>
+				</div>
+			</div>
+		</div><!-- /banner -->
+		<div class="top-navbar" data-role="controlgroup" data-type="horizontal" data-mini="true" style="margin:0px 0px">
+			<a class='nv-line-a ui-btn-active ui-state-persist' data-role="button" data-theme="b" href="index.php?id=home">Home</a>
+			<a class='nv-line-a ' data-role="button" data-theme="b" href="index.php?id=org">Organizers</a>
+			<a class='nv-line-a ' data-role="button" data-theme="b" href="index.php?id=calls">Calls</a>
+			<a class='nv-line-a nv-line-end  ' data-role="button" data-theme="b" href="index.php?id=program">Program</a>
+			<div class="nv-line-cut"></div>
+<!-- 			<a class='nv-line-b ' data-role="button" data-theme="b" href="index.php?id=cfdemo">Posters &amp; Demos</a>-->
+ 			<a class='nv-line-b nv-line-start '' data-role="button" data-theme="b" href="index.php?id=demo">Posters &amp; Demos</a>
+			<a class='nv-line-b ' data-role="button" data-theme="b" href="index.php?id=travel">Travel</a>
+			<a class='nv-line-b  ' data-role="button" data-theme="b" href="index.php?id=reg">Registration</a>
+		</div><!-- /top-navbar -->
+
+		<div class="main-content clearfix" style="position:relative">
+<div class="two-column">
+	<div class="col-b">
+		<ul class="date-list" data-role="listview" data-inset="true"
+			data-dividertheme="d">
+			<li data-role="list-divider"><strong>Important dates</strong></li>
+			<li><del>
+					<strong>Paper submission:</strong> October 11th, 2013 &ndash;
+					17:00pm PDT
+				</del></li>
+			<li><del>
+					<strong><span>Extended</span> Paper submission:</strong> October
+					18th, 2013 &ndash; 17:00pm PDT
+				</del></li>
+
+			<li><del>
+					<strong>Acceptance Notification:</strong> December 16th, 2013
+				</del></li>
+			<li><del>
+				<strong>Poster &amp; Demo submission:</strong> January 14th, 2014
+				&ndash; 23:59pm EST
+				</del></li>
+			<li><del><strong>Revised papers due:</strong> January 20th, 2014</del></li>
+			<li><del><strong>Hotel reservation deadline:</strong> February 6th, 2014</del></li>
+			<li><del><strong>Early registration:</strong> February 8th, 2014</del></li>
+			<li><strong>Workshop:</strong> 26-27 February 2014</strong>
+			</ul>
+	</div>
+	<div class="col-a text welcome">
+		<h2>Welcome to ACM HotMobile 2014</h2>
+
+		<ul data-role="listview" data-inset="true" data-dividertheme="e">
+			<li data-role="list-divider"
+				style="padding-top: 0px; padding-bottom: 0px;">
+				<h3>Registration</h3>
+			</li>
+			<li data-theme="e"><a href="?id=reg">
+					<p style="padding-top: 0.5em; white-space: normal">Online registration
+					is now open. Please, check the registration page for more details.</p>
+			</a></li>
+		</ul>
+
+		<p>The Fifteenth Workshop on Mobile Computing Systems and Applications
+			(ACM HotMobile 2014) continues the series of highly selective,
+			interactive workshops focused on mobile applications, systems, and
+			environments, as well as their underlying state-of-the-art
+			technologies. HotMobile's small workshop format makes it ideal for
+			processing and discussing new directions or controversial approaches.</p>
+		<p>We solicit submissions of position papers that focus primarily on
+			applications and systems and that propose new directions of research,
+			advocate non-traditional approaches to old (or new) ideas, or
+			generate controversy and discussion.</p>
+
+
+		<ul data-role="listview" data-inset="true">
+			<li><a href="?id=policy">
+					<p style="padding-top: 1em; font-weight:bold">ACM HotMobile Policies</p>
+			</a></li>
+		</ul>
+	</div>
+	<div class="col-b">
+<style>
+.news-list .more {
+	display: none;
+}
+
+.news-list li.show {
+	display: block;
+}
+</style>
+
+<script>
+function onClickMore() {
+	$('.more').toggleClass('show');
+	if ($('.more').hasClass('show')) {
+		$('.btnMore a').text('Less news...');
+		$('.btnMore').children('div.ui-btn-inner').children('span.ui-icon').removeClass('ui-icon-arrow-d').addClass('ui-icon-arrow-u');
+		
+	}
+	else {
+		$('.btnMore a').text('More news...');
+		$('.btnMore').children('div.ui-btn-inner').children('span.ui-icon').removeClass('ui-icon-arrow-u').addClass('ui-icon-arrow-d');
+	}
+}
+</script>
+
+<ul class="news-list" data-role="listview"
+	 data-inset="true"  data-dividertheme="d">
+	<li data-role="list-divider"><strong>News</strong></li>
+	<li><a href="index.php?id=program" style="font-weight: bold">22 Mar 2014
+			&mdash; Session notes from HotMobile 2014</a></li>
+	<li><a href="index.php?id=program">21 Jan 2014
+			&mdash; The program is available online</a></li>
+	<li class="more"><a href="index.php?id=demo">21 Jan 2014
+			&mdash; Poster &amp; demo papers are available online</a></li>
+			<li><a href="index.php?id=reg">16 Jan 2014
+			&mdash; Online registration is open</a></li>
+	<li class="more"><a href="index.php?id=travel">9 Jan 2014
+			&mdash; Book your hotel room online</a></li>
+	<li class="more"><a href="index.php?id=travel">27 Dec 2013
+			&mdash; Student Travel Grant applications</a></li>
+	<li class="more"><a href="index.php?id=cfdemo">11 Dec 2013 &mdash; Call for Posters
+			&amp; Demos</a></li>
+	<li class="more"><a href="index.php?id=cfp">5 Oct 2013 &mdash;
+			Submission deadline extended</a></li>
+	<li class="more"><a href="index.php?id=cfp">15 Sep 2013 &mdash; Paper
+			submission server is open</a></li>
+	<li class="more">5 Jul 2013 &mdash; Website is launched</li>
+
+	<li class="btnMore" data-icon="arrow-d" data-theme="b"><a
+		onclick="onClickMore()">More news...</a></li>
+</ul>
+				</div>
+</div>
+		</div><!-- /main-content -->
+		<div class="screen-logos">
+			<h3>Sponsored by</h3>
+			<div class="clearfix" style="width:620px; margin-left:auto; margin-right:auto">
+							<div style="float:left;"><a href="http://www.acm.org/"><img src="images/cache/acmlogo_h_50.png" /></a></div>
+				<div style="float:left;margin-left:20px"><a href="http://www.sigmobile.org/"><img src="images/cache/sigmobile_h_50.png" /></a></div>
+				<div style="float:left;margin-left:20px"><a href="http://www.microsoft.com/"><img src="images/cache/msr_h_50.png" /></a></div>
+				<div style="float:left;margin-left:20px"><a href="http://www.intel.com/"><img src="images/cache/Intel-Logo-h-50.png" /></a></div>
+				<div style="float:left;margin-left:20px"><a href="http://www.google.com/"><img src="images/cache/google_h_50.png" /></a></div>
+			</div>
+			
+		</div>
+	</div><!-- /content -->
+</div><!-- /page -->
+</body>
+</html>

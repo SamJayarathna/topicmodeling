@@ -1,0 +1,763 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+
+<head>
+  <meta name="description" 
+	content="VEE 2014: 10th ACM SIGOPS/SIGPLAN International Conference on Virtual Execution Environments. Salt Lake City, UT, March 1-2, 2014. Co-located with ASPLOS 2014">
+  <meta name="author" content="Dan Tsafrir">
+  <meta name="keywords" 
+        content="VEE'14,VEE 2014,virtualization,homepage,research,papers,publications">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta content="en-us" http-equiv="Content-Language">
+  <title>VEE 2014: 10th ACM SIGOPS/SIGPLAN international conference
+    on Virtual Execution Environments (VEE'14)</title>
+  <link rel="stylesheet" href="vee.css">
+  <link rel="shortcut icon" href="pics/vee14-favicon.ico">
+</head>
+
+<body>
+
+<!-- http://www.sigplan.org/vee.htm -->
+
+<map name="banner"> 
+
+ <!-- ============================= -->
+ <!-- ==== VEE area in banner ===== -->
+ <!-- ============================= -->
+  <area shape="poly" coords="322,59,322,45,384,41,383,24,69,27,68,2,3,2,2,61"
+	href="http://vee2014.org/" 
+	alt="VEE 2014 | 10th ACM SIGPLAN/SIGOPS International Conference on Virtual Execution Environments"
+	title="VEE 2014 | 10th ACM SIGPLAN/SIGOPS International Conference on Virtual Execution Environments">
+
+  <!-- ================================ -->
+  <!-- ==== ASPLOS area in banner ===== -->
+ <!-- ================================= -->
+  <area shape="rect" coords="340,46,555,65" 
+	href="http://www.cs.utah.edu/asplos14/"
+	alt="ASPLOS 2014 | 19th ACM International Conference on Architectural Support for Programming Languages and Operating Systems"
+	title="ASPLOS 2014 | 19th ACM International Conference on Architectural Support for Programming Languages and Operating Systems">
+
+  <!-- ============================= -->
+  <!-- ==== ACM area in banner ===== -->
+  <!-- ============================= -->
+  <area shape="poly" coords="587,34,622,68,653,33,621,0" 
+	href="http://www.acm.org/" alt="ACM" title="ACM">
+  <area shape="rect" coords="111,7,142,21"
+	href="http://www.acm.org/" alt="ACM" title="ACM">
+
+  <!-- ================================= -->
+  <!-- ==== SIGPLAN area in banner ===== -->
+  <!-- ================================= -->
+  <area shape="rect" coords="148,7,205,21"
+	href="http://www.sigplan.org/vee.htm" alt="SIGPLAN"
+	title="SIGPLAN">
+
+  <!-- ================================ -->
+  <!-- ==== SIGOPS area in banner ===== -->
+  <!-- ================================ -->
+  <area shape="rect" coords="210,7,265,21"
+	href="http://www.sigops.org/conf-sponsored.html" 
+	alt="SIGOPS" title="SIGOPS">
+
+</map>
+
+
+<!-- ==========================================- -->
+<!-- ================= table includes everything -->
+<!-- =========================================== -->
+<table class="body"
+   border="0" cellpadding="0" cellspacing="0" width="600" align="center">
+
+	
+<!-- ========================================== -->
+<!-- ================= banner ================== -->
+<!-- =========================================== -->
+<tr>
+  <td colspan="3"><img alt="VEE'14 banner"
+		       src="pics/vee14-banner.png"
+		       usemap="#banner"></td>
+</tr>
+
+
+<!-- =========================================== -->
+<!-- ================= all the rest in on table line... ============ -->
+<!-- =========================================== -->
+<tr><td colspan="2">&nbsp;</td></tr> <!-- line space -->
+<tr>  <!-- ... -->
+
+
+<!-- =========================================== -->
+<!-- ================= menu ==================== -->
+<!-- =========================================== -->
+<td class="menu">
+<p>
+                                        <a href="#cfp">CFP</a><br>
+                                <a href="#submission">submission</a><br>
+                                      <a href="#dates">dates</a><br>
+                                       <a href="#news">news</a><br>
+                               <a href="#organization">organization</a><br>
+          <a href="https://www.regonline.com/asplos14">registration</a><br>
+       <a href="http://www.cs.utah.edu/asplos14/hotel">hotel</a><br>
+                                     <a href="#grants">travel&nbsp;grants</a><br>
+                                <a href="program.html">program</a><br>
+                                   <a href="#sponsors">sponsors</a><br>
+              <a href="http://www.sigplan.org/vee.htm">archive</a><br>
+
+
+</p>
+</td>
+
+
+<!-- =========================================== -->
+<!-- ================= separate menu from text = -->
+<!-- =========================================== -->
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+
+
+<!-- =========================================== -->
+<!-- ================= text... ================= -->
+<!-- =========================================== -->
+<td>
+
+
+<!-- =========================================== -->
+<!-- ================= CFP ===================== -->
+<!-- =========================================== -->
+<!--
+<a name="cfp" class="subHead">Call For Papers</a>
+<hr>
+-->
+
+
+<p>
+<a name="cfp"></a> 
+Virtualization has a central role in modern systems. It constitutes a
+key aspect in a wide range of environments, from small mobile
+computing devices to large-scale data centers and computational
+clouds. Virtualization techniques encompass the underlying hardware,
+the operating system, and the runtime system. While the approaches at
+different layers can differ dramatically, they tend to have
+similarities, and they must often tackle related challenges.
+</p>
+
+
+<p>
+The 10th ACM 
+<a href="http://www.sigplan.org/vee.htm">SIGPLAN</a>/<a 
+href="http://www.sigops.org/conf-sponsored.html">SIGOPS</a> 
+International Conference on Virtual Execution Environments
+(<a href="http://vee2014.org">VEE'14</a>)
+brings together researchers and practitioners from different computer
+systems domains to interact and share ideas in order to advance the
+state of the art of virtualization and broaden its applicability.
+We invite authors to submit original papers related to virtualization
+across all layers of the software stack down to the microarchitectural
+level. Topics of interest include (but are not limited to):
+</p>
+
+
+<!--
+
+<p>
+<a name="cfp"></a> 
+Virtualization has a central role in modern systems, constituting a
+key aspect of system development, operation, and management in a wide
+range of environments, from mobile computing devices to large-scale
+data centers. Virtualization techniques are applied at many
+interfaces, from hardware, to system calls of the operating system, to
+high-level language runtimes, to cloud management stacks. While these
+approaches differ dramatically in implementation, they target similar
+benefits and often must tackle similar or related challenges.
+</p>
+
+<p>
+<a href="http://vee2014.org">VEE'14</a>, the 10th ACM 
+<a href="http://www.sigplan.org/vee.htm">SIGPLAN</a>/<a 
+href="http://www.sigops.org/conf-sponsored.html">SIGOPS</a> 
+International Conference on Virtual Execution Environments, brings
+together researchers across the many applications of virtualization in
+today's systems. We invite authors to submit original papers related
+to virtualization across all layers of the software stack down to the
+microarchitectural level.
+Topics of interest include (but are not limited to):
+</p>
+
+-->
+
+<ul>
+  <li>virtualization support for programs and programmers;</li>
+  <li>architecture support for virtualization;</li>
+  <li>operating system support for virtualization;</li>
+  <li>compiler and programming language support for virtualization;</li>
+  <li>runtime system support for virtualization;</li>
+  <li>virtual I/O, storage, and networking;</li>
+  <li>memory management;</li>
+  <li>management technologies for virtual environments;</li>
+  <li>performance analysis and debugging for virtual environments; and</li>
+  <li>virtualization technologies applied to specific problem domains
+    such as cloud, HPC, realtime, power management, and security.</li>
+</ul>
+
+
+<p>
+As usual (since 2008), <a href="http://vee2014.org">VEE 2014</a> is
+co-located with <a href="http://www.cs.utah.edu/asplos14/">ASPLOS
+2014</a>, which will take place in Salt Lake City,
+UT. <a href="http://vee2014.org">VEE'14</a> will be held concurrently
+with the <a href="http://www.cs.utah.edu/asplos14/">ASPLOS'14</a>
+workshops, during March&nbsp;1-2, 2014. Registration
+for <a href="http://vee2014.org">VEE'14</a> is available as an option
+within the <a href="http://www.cs.utah.edu/asplos14/">ASPLOS'14</a>
+online registration system. Hotel arrangements can likewise be made
+according to the directions on
+the <a href="http://www.cs.utah.edu/asplos14/">ASPLOS'14</a>
+page. <a href="http://vee2014.org">VEE'14</a> attendees are permitted
+to attend all <a href="http://www.cs.utah.edu/asplos14/">ASPLOS'14</a>
+workshops.
+</p>
+
+
+<!-- =========================================== -->
+<!-- ================= submission ============== -->
+<!-- =========================================== -->
+<p></p>
+<a name="submission" class="subHead">Submission</a>
+<hr>
+
+<p>
+Please submit your paper
+through <a href="https://hotcrp-vee2014.cs.technion.ac.il/hotcrp/">this
+link</a> after reading the following submission instructions.
+</p>
+
+<p>
+Submissions must attack an interesting problem and clearly articulate
+their contribution relative to previous work. Submissions must be in
+ACM SIGPLAN proceedings format, 10-point type, and they may not exceed
+12 pages, all inclusive. Word and LaTeX templates for this format are
+available at <a href="http://www.sigplan.org/authorInformation.htm">
+http://www.sigplan.org/authorInformation.htm</a> (but please note that
+10-point is not the default). Pages must be numbered, and submissions
+must be in PDF, legible when printed black and white on US Letter and
+A4 paper. All fonts
+<a href="http://www.sheridanprinting.com/typedept/ACM-distilling-settings.htm">
+must be embedded</a> in the submitted PDF. 
+</p>
+
+<p>
+Reviewing will be double blind. So submissions must be
+anonymous. Author names, affiliations, acknowledgments, and any other
+hints of identity must not be included in the submission. You should
+not anonymize your bibliographic references; instead, cite your work
+in the third person so that your submission is self-contained. Make a
+good-faith effort to conceal any authorship connection between prior
+work and yours.
+</p>
+
+<p>
+Submissions must describe unpublished work that is not currently
+submitted for publication elsewhere as discussed at
+<a href="http://www.sigplan.org/Resources/Policies/Republication">
+http://www.sigplan.org/Resources/Policies/Republication</a>. Authors
+of accepted papers will be required to sign an ACM copyright release.
+The proceedings will be published by ACM.
+</p>
+
+<p>
+Make sure that your paper satisfies all the above requirements for
+content and format before submission; if you have a question about any
+of these issues, please 
+<a href="mailto:vee14chairs@cs.technion.ac.il">send email</a> to the
+program chairs,
+<a href="http://www.cs.technion.ac.il/~erez/">Erez Petrank</a> and
+<a href="http://www.cs.technion.ac.il/~dan/">Dan Tsafrir</a>.
+</p>
+
+
+
+<!-- =========================================== -->
+<!-- ================= dates =================== -->
+<!-- =========================================== -->
+<a name="dates" class="subHead">Important Dates</a>
+<hr>
+
+<table class="keyval">
+
+  <tr>
+    <td>Full paper deadline</td>
+    <td>Thu, Nov 14, 2013 (11:59pm, PST)</td>
+  </tr>
+
+  <tr>
+    <td>Author rebuttal period</td>
+    <td>Fri-Sat, Jan 17-18, 2014</td>
+  </tr>
+  <tr>
+    <td>Acceptance notification</td>
+    <td>Wed, Jan 22, 2014</td>
+  </tr>
+
+  <tr>
+    <td>Camera ready deadline</td>
+    <td>Wed, Feb 5, 2014 (11:59pm, PST)</td>
+  </tr>
+
+ <tr>
+    <td>Conference</td>
+    <td>Sat-Sun, Mar 1-2, 2014</td>
+  </tr>
+
+</table>
+
+
+<!-- =========================================== -->
+<!-- ================= travel grants =========== -->
+<!-- =========================================== -->
+<p></p>
+<a name="grants" class="subHead">Student Travel Grants</a>
+<hr>
+
+<p>
+Partial travel grants are available from both SIGPLAN and SIGOPS for
+students who are co-authors of a VEE'14 paper. Student can apply for a
+travel grant via two channels:
+
+<ul>
+
+  <li>To apply for a SIGOPS grant, please
+    email <a href="mailto:hirzel@us.ibm.com" target="_blank">Martin
+    Hirzel</a> with the following information:
+    (1) your name, university, and advisor;
+    (2) the title of your VEE'14 paper; and
+    (3) your detailed travel budget, including cost sharing information.
+    Also, please ask your advisor to send an endorsement letter to
+    Martin Hirzel that confirms your budget.
+    <br><br>
+  </li>
+
+  <li>
+    To apply for a SIGPLAN grant, please use the 
+    <a href="http://www.sigplan.org/PAC/Main" target="_blank">SIGPLAN
+    PAC web page</a>.
+  </li>
+
+</ul>
+
+The application deadline is Monday, 3 February, 2014.
+
+
+
+
+<!-- =========================================== -->
+<!-- ================= news ==================== -->
+<!-- =========================================== -->
+<p></p>
+<a name="news" class="subHead">News</a>
+<hr>
+
+<table class="keyval">
+
+  <tr>
+    <td>18 Mar 2014</td>
+    <td>Presentations available via 
+        <a href="program.html">program</a> page</td> 
+  </tr>
+
+
+  <tr>
+    <td>1 Mar 2014</td>
+    <td>Best paper awarded to 
+      <a href="http://dx.doi.org/10.1145/2576195.2576209">Deoptimization
+      for dynamic language JITs on typed, stack-based virtual
+      machines</a></td>  
+  </tr>
+
+  <tr>
+    <td>6 Feb 2014</td>
+    <td><a href="program.html">Program</a> publicized</td> 
+  </tr>
+
+  <tr>
+    <td>25 Jan 2014</td>
+    <td>Student travel grants information added</td> 
+  </tr>
+  <tr>
+    <td>31 Oct 2013</td>
+    <td>Accepting submissions
+      through <a href="https://hotcrp-vee2014.cs.technion.ac.il/hotcrp/">this
+      link</a></td> 
+  </tr>
+
+  <tr>
+    <td>21 Aug 2013</td>
+    <td>PC publicized</td>
+  </tr>
+
+  <tr>
+    <td>1 Aug 2013</td>
+    <td>Schedule publicized</td>
+  </tr>
+
+  <tr>
+    <td>13 Jul 2013</td>
+    <td>Website online</td>
+  </tr>
+</table>
+
+<!-- =========================================== -->
+<!-- ================= organization ============ -->
+<!-- =========================================== -->
+<p></p>
+<a name="organization" class="subHead">Organization</a>
+<hr>
+
+<table class="keyval">
+
+  <!-- ========================== -->
+  <tr>
+    <td>General chair</td>
+    <td class="member"><a 
+        href="http://researcher.ibm.com/person/us-hirzel">Martin Hirzel</a> 
+        <i>(IBM Research)</i></td>
+  </tr>
+
+  <tr><td>&nbsp;</td></tr>
+
+  <!-- ========================== -->
+  <tr>
+    <td>Program co-chairs</td>
+    <td class="member"><a 
+        href="http://www.cs.technion.ac.il/~erez">Erez Petrank</a> 
+        <i>(Technion)</i></td>
+  </tr>
+
+  <tr>
+    <td></td>
+    <td class="member"><a 
+        href="http://www.cs.technion.ac.il/~dan">Dan Tsafrir</a>
+        <i>(Technion)</i></td>
+  </tr>
+
+  <tr><td>&nbsp;</td></tr>
+
+  <!-- ========================== -->
+  <tr>
+    <td>Program committee</td>
+    <td class="member"><a
+        href="http://pages.cs.wisc.edu/~remzi">Remzi Arpaci-Dusseau</a>
+        <i>(UW Madison)</i></td>
+  </tr>
+
+  <tr>
+    <td></td>
+    <td class="member"><a
+        href="http://researcher.ibm.com/researcher/view.php?person=us-bacon">David F. Bacon</a>
+        <i>(IBM Research)</i></td>
+  </tr>
+
+  <tr>
+    <td></td>
+    <td class="member"><a
+        href="http://www.mulix.org">Muli Ben-Yehuda</a>
+        <i>(Technion & Stratoscale)</i></td>
+  </tr>
+
+  <tr>
+    <td></td>
+    <td class="member"><a
+        href="http://www.dilmamds.com">Dilma Da Silva</a>
+        <i>(Qualcomm Research)</i></td>
+  </tr>
+
+  <tr>
+    <td></td>
+    <td class="member"><a
+        href="http://www.cs.toronto.edu/~demke">Angela Demke Brown</a>
+        <i>(U of Toronto)</i></td>
+  </tr>
+
+  <tr>
+    <td></td>
+    <td class="member"><a
+        href="https://blogs.oracle.com/dave/">David Dice</a>
+        <i>(Oracle)</i></td>
+  </tr>
+
+  <tr>
+    <td></td>
+    <td class="member"><a
+        href="http://www.cs.rice.edu/~gulati">Ajay Gulati</a>
+        <i>(VMware)</i></td>
+  </tr>
+
+  <tr>
+    <td></td>
+    <td class="member"><a
+        href="http://www.cs.tufts.edu/~sguyer">Sam Guyer</a>
+        <i>(Tufts U)</i></td>
+  </tr>
+
+  <tr>
+    <td></td>
+    <td class="member"><a
+        href="http://www.cs.purdue.edu/~hosking">Antony Hosking</a>
+        <i>(Purdue U)</i></td>
+  </tr>
+
+  <tr>
+    <td></td>
+    <td class="member"><a
+        href="http://research.microsoft.com/en-us/people/galenh">Galen Hunt</a>
+        <i>(Microsoft)</i></td>
+  </tr>
+
+  <tr>
+    <td></td>
+    <td class="member"><a
+        href="http://g.oswego.edu">Doug Lea</a>
+        <i>(SUNY at Oswego)</i></td>
+  </tr>
+
+  <tr>
+    <td></td>
+    <td class="member"><a
+        href="http://pagesperso-systeme.lip6.fr/Gilles.Muller">Gilles Muller</a>
+        <i>(INRIA)</i></td>
+  </tr>
+
+  <tr>
+    <td></td>
+    <td class="member"><a
+        href="http://research.microsoft.com/en-us/people/toddm">Todd Mytkowicz</a>
+        <i>(MSR)</i></td>
+  </tr>
+
+  <tr>
+    <td></td>
+    <td class="member"><a
+        href="http://nebelwelt.net">Mathias Payer</a>
+        <i>(UC Berkeley)</i></td>
+  </tr>
+
+  <tr>
+    <td></td>
+    <td class="member"><a
+        href="http://www.cs.sunysb.edu/~porter">Donald Porter</a>
+        <i>(Stony Brook U)</i></td>
+  </tr>
+
+  <tr>
+    <td></td>
+    <td class="member"><a
+        href="http://www.cc.gatech.edu/~schwan">Karsten Schwan</a>
+        <i>(Georgia Tech)</i></td>
+  </tr>
+
+  <tr>
+    <td></td>
+    <td class="member"><a
+        href="http://www.cs.brandeis.edu/~liuba">Liuba Shrira</a>
+        <i>(Brandeis U)</i></td>
+  </tr>
+
+  <tr>
+    <td></td>
+    <td class="member"><a
+        href="http://steensgaard.org/bjarne/">Bjarne Steensgaard</a>
+        <i>(Microsoft)</i></td>
+  </tr>
+
+
+
+  <tr><td>&nbsp;</td></tr>
+
+  <!-- ========================== -->
+  <tr>
+    <td>Steering committee chair</td>
+    <td class="member"><a 
+        href="http://www.dilmamds.com/">Dilma Da Silva</a>
+        <i>(Qualcomm Research)</i></td>
+  </tr>
+
+  <tr><td>&nbsp;</td></tr>
+
+  <!-- ========================== -->
+  <tr>
+    <td>Steering committee</td>
+    <td class="member"><a 
+        href="http://users.cecs.anu.edu.au/~steveb/">Steve Blackburn</a>
+        <i>(Australian National U)</i></td>
+  </tr>
+
+  <tr>
+    <td></td>
+    <td class="member"><a 
+        href="http://www.linkedin.com/pub/marc-fiuczynski/2/160/221">Marc
+	Fiuczynski</a>
+        <i>(Akamai)</i></td>
+  </tr>
+
+  <tr>
+    <td></td>
+    <td class="member"><a 
+        href="http://www.cl.cam.ac.uk/~smh22/">Steven Hand</a>
+        <i>(U of Cambridge)</i></td>
+  </tr>
+
+  <tr>
+    <td></td>
+    <td class="member"><a 
+        href="http://www.cse.unsw.edu.au/~gernot/">Gernot Heiser</a> 
+        <i>(NICTA and UNSW)</i></td>
+  </tr>
+
+  <tr>
+    <td></td>
+    <td class="member"><a 
+        href="http://g.oswego.edu/">Doug Lea</a> 
+        <i>(SUNY at Oswego)</i></td>
+  </tr>
+
+  <tr>
+    <td></td>
+    <td class="member"><a 
+        href="http://www.linkedin.com/in/9muir">Steve Muir</a> 
+        <i>(Comcast)</i></td>
+  </tr>
+
+  <tr>
+    <td></td>
+    <td class="member"><a 
+        href="http://web.eecs.umich.edu/~bnoble">Brian Noble</a> 
+        <i>(U of Michigan)</i></td>
+  </tr>
+
+  <tr>
+    <td></td>
+    <td class="member"><a 
+        href="http://www.cs.technion.ac.il/~erez">Erez Petrank</a> 
+        <i>(Technion)</i></td>
+  </tr>
+
+  <tr>
+    <td></td>
+    <td class="member"><a 
+        href="http://www.cs.ubc.ca/~andy/">Andrew Warfield</a> 
+        <i>(UBC)</i></td>
+  </tr>
+
+</table>
+
+
+<!-- =========================================== -->
+<!-- ================= sponsors ================ -->
+<!-- =========================================== -->
+<p></p>
+<a name="sponsors" class="subHead">Sponsors</a>
+<hr>
+
+<center>
+
+<a href="http://www.sigops.org/"><img src="pics/sigops.png" alt="SIGOPS"></a>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<a href="http://www.sigplan.org/"><img src="pics/sigplan.png" alt="SIGPLAN"></a>
+
+</center>
+
+
+<!-- =========================================== -->
+<!-- ================= in-cooperation ========== -->
+<!-- =========================================== -->
+<p></p>
+<a name="cooperation" class="subHead">In-Cooperation</a>
+<hr>
+
+<center>
+
+<a href="http://www.usenix.org/"><img src="pics/usenix.png" alt="USENIX"></a>
+
+</center>
+
+
+<p></p>
+<!-- =========================================== -->
+<!-- ================= supporters ============== -->
+<!-- =========================================== -->
+<a name="supporters" class="subHead">Industry Supporters</a>
+<hr>
+
+<table class="industry"
+   border="0" align="center">
+<tr>
+
+   <td>
+     <a href="http://labs.vmware.com/academic/conferences/"><img 
+        width="170" src="pics/supporter-vmware.png" alt="vmware"></a>
+   </td>
+
+   <td>
+     <a href="http://newsroom.fb.com/"><img 
+        width="170" src="pics/supporter-facebook.jpg" alt="facebook"></a>
+   </td>
+
+</tr>
+
+<tr>
+
+   <td>
+     <a href="http://www.ibm.com//"><img 
+        width="170" src="pics/supporter-ibm-research.jpg" alt="ibm"></a>
+   </td>
+
+   <td> 
+     <a href="http://research.microsoft.com"><img 
+        width="170" src="pics/supporter-msr-frame.jpg" alt="msr"></a>
+   </td>
+
+</tr>
+</table>
+
+
+
+<!-- =========================================== -->
+<!-- ================= footer ================== -->
+<!-- =========================================== -->
+<hr>
+<br><br>
+<div class="footer">
+
+<!-- ================= validator links ========= -->
+<a href="http://validator.w3.org/check?uri=referer">
+     <img src="http://www.w3.org/Icons/valid-html40-blue" 
+	  alt="Valid HTML 4.0 Transitional" height="31" 
+	  width="88"></a> 
+<a href="http://jigsaw.w3.org/css-validator/check/referer">
+     <img style="border:0;width:88px;height:31px"
+          src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+          alt="Valid CSS!">
+    </a>
+
+<!-- ================= contact ========= -->
+<br>
+<br>
+Please contact <a href="http://www.cs.technion.ac.il/~dan/">Dan
+Tsafrir</a> with any questions about this site.
+Last update: 6 Feb, 2014.
+
+</div>
+
+
+<!-- =========================================== -->
+<!-- ================= Epilogue ================ -->
+<!-- =========================================== -->
+</td>
+</tr>
+</table>
+</body>
+</html>
+
+<!--  LocalWords:  Hirzel TBD Deoptimization
+ -->

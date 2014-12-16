@@ -1,0 +1,496 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html lang=en>
+<head>
+
+<!-- -----------------------------------------------------------------
+*
+* Created: 03/26/2001
+
+* Property of: Diamond Bullet Design, Inc.
+* http://www.diamondbullet.com
+*
+* (C) Copyright 2001. Diamond Bullet Design, Inc. All Rights Reserved
+*
+----------------------------------------------------------------- -->
+<META Name="description" Content="The annual CHI conference is the leading international forum for the exchange of ideas and information about computer-human interaction (CHI), also known as human-computer interaction (HCI).">
+<META Name="keywords" Content="CHI 2002, ACM, SIGCHI, conference, HCI, usability, user interface design, research">
+
+<title>changing the world, changing ourselves - CHI 2002</title>
+<style>
+BODY {
+  font-size: 11pt;
+  font-family:  arial,verdana,geneva;
+  color: #000000;
+  background: white url(graphics/home_strip.gif) repeat-x;
+}
+
+A:link {
+	font-family: arial,verdana,geneva;
+	font-size: 11pt;
+	font-weight: normal;
+	color: #db1205
+	}
+A:visited {
+	font-family: arial,verdana,geneva;
+	font-size: 11pt;
+	font-weight: normal;
+	color: #666666
+	}
+A:hover {
+	font-family: arial,verdana,geneva;
+	font-size: 11pt;
+	font-weight: normal;
+	color: #000000;
+	}
+
+A.nav:active { color: #db1205 }
+
+A.nav:link {
+	font-family: arial,verdana,geneva;
+	font-size: 11pt;
+	font-weight: normal;
+	color: #db1205
+	}
+A.nav:visited {
+	font-family: arial,verdana,geneva;
+	font-size: 11pt;
+	font-weight: normal;
+	color: #b736a0
+	}
+A.nav:hover {
+	font-family: arial,verdana,geneva;
+	font-size: 11pt;
+	font-weight: normal;
+	color: #000000;
+	}
+
+A.nav:active { color: #db1205 }
+
+A.special:link {
+	font-family: arial,verdana,geneva;
+	font-size: 12pt;
+	font-weight: bold;
+	color: #0000ff;
+	}
+A.special:visited {
+	font-family: arial,verdana,geneva;
+	font-size: 12pt;
+	font-weight: bold;
+	color: #b736a0;
+	}
+
+A.boxnav:link {
+	font-family: arial,verdana,geneva;
+	font-size: 10pt;
+	font-weight: normal;
+	color: #db1205;
+	}
+A.boxnav:visited {
+	font-family: arial,verdana,geneva;
+	font-size: 10pt;
+	font-weight: normal;
+	color: #b736a0;
+	}
+A.boxnav:hover {
+	font-family: arial,verdana,geneva;
+	font-size: 10pt;
+	font-weight: normal;
+	color: #000000;
+	}
+
+A.boxnav:active { color: #db1205 }
+
+A.subnav:link {
+	font-family: arial,verdana,geneva;
+	font-size: 10pt;
+	color: #db1205;
+	text-decoration: underline;
+	}
+
+A.subnav:visited {
+	font-family: arial,verdana,geneva;
+	font-size: 10pt;
+	color: #b736a0;
+	text-decoration: underline;
+	}
+
+A.subnav:hover {
+	font-family: arial,verdana,geneva;
+	font-size: 10pt;
+	color: #000000;
+	text-decoration: underline;
+	}
+
+A.subnav:active {color: #db1205 }
+
+A.breadcrumb:link {
+	font-family: arial,verdana,geneva;
+	font-size: 10pt;
+	font-weight: normal;
+	text-decoration: underline;
+	}
+
+
+A.breadcrumb:visited {
+	font-family: arial,verdana,geneva;
+	font-size: 10pt;
+	font-weight: normal;
+	color: #b736a0;
+	text-decoration: underline;
+	}
+
+A.breadcrumb:hover {
+	font-family: arial,verdana,geneva;
+	font-size: 10pt;
+	font-weight: normal;
+	color: #000000;
+	text-decoration: underline;
+	}
+
+.bottom {
+	font-family: arial,verdana,geneva;
+	font-size: 10pt;
+}
+
+.bottom_bold {
+	font-family: arial,verdana,geneva;
+	font-size: 10pt;
+	font-weight: bold;
+}
+
+.pagebox {
+	font-family: arial,verdana,geneva;
+	font-size: 11pt;
+	font-weight: bold;
+	}
+
+.boxheader {
+	font-family: arial,verdana,geneva;
+	font-size: 11pt;
+	font-weight: bold;
+	color: #ffffff;
+	}
+.error {
+	font-family: arial,verdana,geneva;
+	font-size: 11pt;
+	font-weight: bold;
+	color: #ff0000;
+	}
+
+.new {
+    font-family: arial,verdana,geneva;
+	font-size: 12pt;
+	font-weight: bold;
+	color: #0000ff;
+	}
+
+
+
+H1 {
+	font-family: arial,verdana,geneva;
+	font-size: 14pt;
+	font-weight: bold;
+	}
+H2 {
+	font-family: arial,verdana,geneva;
+	font-size: 11pt;
+	font-weight: bold;
+	}
+
+P {
+  font-family: arial,verdana,geneva;
+  font-size: 11pt;
+  color: #000000;
+}
+
+TD {
+  font-family: arial,verdana,geneva;
+  font-size: 11pt;
+  color: #000000;
+}
+
+TD.top {
+	background: white url(graphics/chi-strip.gif) repeat-x;
+	}
+
+UL {
+	list-style: circle outside;
+	}
+</style>
+
+<!--
+[[script language=javascript]][[!~~
+function enRandnum(lowest,highest) {
+     retval = 0
+     while ((retval [[ lowest) || (retval ]] highest)) {
+          now = new Date()
+          retval = Math.abs(Math.sin(now.getTime()))
+          retval = parseInt(retval * (highest+1))
+     }
+     return retval;
+}
+
+
+function enSample (outOf) {
+
+	//1. INSERT LOCATION OF COPIED HOMEPAGE
+	loc = "http://www.acm.org/chi2002/indexcopy.html";
+
+	num = enRandnum(1,outOf);
+
+	//2. INSERT TEST START URL THAT POINTS TO COPIED HOMEPAGE
+	if(num == 1) { loc = 'http://rserver.en12.net/t10050_00594/aserver.en12.net' }
+
+	if (document.images)
+   	location.replace(loc);
+	else
+   	location.href = loc;
+}
+
+//3. INSERT SAMPLING ODD "1 OUT OF 2"
+enSample(1000000); //~~]]
+[[/script]]
+-->
+
+</head>
+
+<body bgcolor="#ffffff" topmargin=0 leftmargin=0 marginheight=0 marginwidth=0>
+<table border=0 cellspacing=0 cellpadding=0 width="100%">
+	<tr>
+		<td bgcolor="#db1205" colspan=6 align=center><img src="graphics/homepage/top-title.gif" alt="changing the world, changing ourselves" width="403" height="31" border="0"></td>
+	</tr>
+	<tr>
+		<td width="117" bgcolor="#ffde3d" valign=top nowrap><table border=0 cellspacing=0 cellpadding=4 width="117">
+			<tr>
+				<td height=3><table border=0 cellspacing=0 cellpadding=0 height=3><tr><td height=3></td></tr></table></td>
+			</tr>
+			<tr>
+				<td align=right><a href="new.html" title="Recent additions to this website and conference changes for CHI 2002">what's new</a></td>
+			</tr>
+			<tr>
+				<td align=right><a href="faq.html" title="Answers to common questions about CHI 2002">frequently asked questions</a></td>
+			</tr>
+			<tr>
+				<td align=right><a href="overview.html" title="An introduction to CHI 2002, as well as information about ACM and SIGCHI">conference<br>overview</a></td>
+			</tr>
+			<tr>
+				<td align=right><a href="submissions.html" title="Instructions and resources for conference submissions">submissions</a></td>
+			</tr>
+			<tr>
+				<td align=right><a href="schedule.html" title="CHI 2002 schedule of events">conference<br>schedule</a></td>
+			</tr>
+			<tr>
+				<td align=right><a href="registration.html" title="Registration Information including travel, hotel, housing, and fees information">registration</a></td>
+			</tr>
+			<tr>
+				<td align=right><a href="location.html" title="Where CHI 2002 will be held, with details about attractions and activities in Minneapolis">location</a></td>
+			</tr>
+			<tr>
+				<td align=right><a href="facilities.html" title="Information about facilities such as CHI Store and Services such as Child Care">conference facilities<br>&amp; services</a></td>
+			</tr>
+			<tr>
+				<td align=right><a href="press.html" title="News Room to assist the media including press releases, photos, and logos">press room</a></td>
+			</tr>
+			<tr>
+				<td align=right><a href="presenters.html" title="Author Kits and Room Assignment &amp; Technology for all presenters">for presenters</a></td>
+			</tr>
+			<tr>
+				<td align=right><a href="volunteering.html" title="Applications and information for reviewers, mentors, student volunteers, and CHIKids volunteers" title="Applications and information for reviewers, mentors, student volunteers, and CHIKids volunteers">volunteering</a></td>
+			</tr>
+			<tr>
+				<td align=right><a href="exhibitors.html" title="Information about exhibiting and recruiting at CHI 2002">exhibitors</a></td>
+			</tr>
+			<tr>
+				<td align=right><a href="sponsors.html" title="Conference sponsors and instructions for becoming a sponsor">sponsors</a></td>
+			</tr>
+			<tr>
+				<td align=right><a href="contact.html" title="Get in touch with the conference committee and sign up for announcements">contact</a></td>
+			</tr>
+		</table></td>
+		<td width=15><table border=0 cellspacing=0 cellpadding=0 width=15><tr><td width=15 nowrap></td></tr></table></td>
+		<td valign=top width="100%" align=center><table border=0 cellspacing=0 cellpadding=0 width="302">
+			<tr>
+				<td height=20 colspan=2><table border=0 cellspacing=0 cellpadding=0 height=20><tr><td height=20></td></tr></table></td>
+			</tr>
+			<tr>
+				<td align=center><img src="graphics/homepage/logo-anim.gif" width="211" height="233" border="0" alt=""></td>
+				<td align=center><img src="graphics/homepage/chi2002-logo.gif" alt="CHI 2002" width="91" height="233" border="0"></td>
+			</tr>
+			<tr>
+				<td colspan=2><img src="graphics/homepage/date-location-info.gif" alt="minneapolis, minnesota | april 20-25, 2002" width="302" height="65" border="0"></td>
+			</tr>
+			<tr>
+				<td colspan="2">&nbsp;</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+				
+				<h1>Conference Survey</h1>
+				
+				<p>Were you there?</p>
+
+				<p>Give us feedback! If you visited the CHI 2002 conference,
+				please fill in the <a href="http://inq30.chicago.sba.com/cgi/qweb.cgi?RDFF3Y">conference survey</a>. By returning the
+				survey you help make the CHI conferences even better,
+				and you have a chance to win dazzling prizes.</p>
+				
+				<h1>CHI 2003</h1>
+				<p><a href="http://www.chi2003.org">CHI 2003</a> will be held in Ft. Lauderdale, Florida.  See you there.</b>
+				
+				<p><b>Great Minds Gathered at CHI 2002
+				in Minneapolis, Minnesota USA from April 20-25.</b></p>
+				
+				<p>Software designers, usability engineers, user interface designers, information architects, human
+				factors engineers, web designers, HCI researchers and educators. CHI 2002 offered a world of opportunity
+				to:</p>
+				
+				<ul><li>
+				Meet face-to-face with industry gurus such as Jakob Neilsen, Donald Norman, Jared Spool, Ben
+				Shneiderman, Kevin Warwick, and more.
+
+				<li>Experience new paradigms of thought on the future of user interface.
+
+				<li>Take practical tutorials from leading experts and learn new skills you could apply immediately.
+
+				<li>Get psyched and get concrete information about the positive affect of good usability engineering on
+				your entire organization or simply on your web site.
+
+				<li>Meet with your peers to discuss technologies that would drive human-computer interface advancement in
+				the decades to come. Form business contacts, pursue collaborations, and develop new clients.
+
+				<li>Recruit outstanding employees, from graduating students to leaders in the HCI field.
+</ul>
+
+				<p>CHI 2002, where the leading edge of usability
+				engineering, web design, human factors, and user interface took center stage.</p>
+
+
+				</td>
+			</tr>
+			<!--<tr>
+				<td colspan="2">
+					<A href="javascript:void(0)" onClick="window.open('http://www.enviz.com.i8.en12.net/cbbgt/e5zbsghrcr2q','Questions','left=0,top=0,width=650,height=650,scrollbars=yes,resizable=yes');"><img src="graphics/arrow.gif" border="0" alt="Click to participate!" width="60" height="60" align="left"></a>Participate in our usability study!  Let us follow you as you navigate the CHI2002 site.  <p><A href="javascript:void(0)" onClick="window.open('http://www.enviz.com.i8.en12.net/cbbgt/e5zbsghrcr2q','Questions','left=0,top=0,width=650,height=650,scrollbars=yes,resizable=yes');" class="nav">Click here</a> to begin.</p>
+				</td></tr>-->
+		</table></td>
+		<td width=15><table border=0 cellspacing=0 cellpadding=0 width=15><tr><td width=15 nowrap></td></tr></table></td>
+		<td valign=top width="100%" align=right>
+		<table border=0 cellspacing=0 cellpadding=0 width="200">
+			<tr>
+				<td height=15><table border=0 cellspacing=0 cellpadding=0 height=15><tr><td height=15></td></tr></table></td>
+			</tr>
+			<tr>
+				<td><form method="get" action="http://siteLevel.whatUseek.com/query.go" TARGET="_self">
+					<input type=hidden name=crid value=11ae59a74b87fec8>
+					<input type=hidden name=slice_title value="This Site">
+					<table border=0 cellspacing=2 cellpadding=0>
+						<tr>
+							<td><input type="text" name="query" size=18></td>
+							<td><input type="image" name="B1" alt="Search" src="graphics/subpage/search-button.gif" border="0"></td>
+						</tr>
+					</table>
+					</form>
+				</td>
+			</tr>
+			<tr>
+				<td><table border=1 cellspacing=0 cellpadding=0 bordercolor="#db1205" width=300>
+					<tr>
+						<td bgcolor="#db1205"><p class=boxheader>&nbsp;quick links</p></td>
+					</tr>
+					<tr>
+						<td class=bottom bgcolor="#ffffff"><table border=0 cellspacing=2 cellpadding=0>
+							<tr>
+								<td>
+									<p class=bottom>
+									<a href="welcome.html" class=boxnav>welcome letter</a><br>
+									<a href="theme.html" class=boxnav>conference theme &amp; special areas</a><br>
+									<a href="tech-program.html" class=boxnav>technical program overview</a><br>
+									<a href="apTutorials.html" class=boxnav>tutorials program</a><br>
+									<a href="apWorkshops.html" class=boxnav>workshops program</a><br>
+									<a href="registration.html" class=boxnav>registration</a><br>
+									<a href="docs/ap.pdf" class=boxnav>advance program (PDF)</a><br>
+									<a href="hotels.html" class=boxnav>conference hotels</a><br>
+									<a href="docs/chi2002" class="boxnav">CHI 2002 Launch (Quicktime Video)</a></p>
+								</td>
+							</tr>
+						</table></td>
+					</tr>
+				</table></td>
+			</tr>
+			<tr>
+				<td height=5><table border=0 cellspacing=0 cellpadding=0 height=5><tr><td height=5></td></tr></table></td>
+			</tr>
+			<tr>
+				<td align=right><table border=1 cellspacing=0 cellpadding=0 bordercolor="#db1205" width=300>
+					<tr>
+						<td bgcolor="#db1205"><p class=boxheader>&nbsp;related websites</p></td>
+					</tr>
+					<tr>
+						<td class=bottom bgcolor="#ffffff">
+						<table border=0 cellspacing=2 cellpadding=0>
+							<tr>
+								<td>
+									<p class=bottom><a href="http://www.chiplace.org" class=boxnav>CHIplace interactive online forum</a><br>
+									<a href="http://www.acm.org" class=boxnav>ACM website</a><br>
+									<a href="http://www.sigchi.org" class=boxnav>ACM SIGCHI website</a></p>
+								</td>
+							</tr>
+						</table></td>
+					</tr>
+				</table></td>
+			</tr>
+			<tr>
+				<td height=15><table border=0 cellspacing=0 cellpadding=0 height=15><tr><td height=15></td></tr></table></td>
+			</tr>
+			<tr>
+				<td width=300>
+					<p>The CHI 2002 Conference on Human Factors in Computing Systems took place in Minneapolis, Minnesota, April 20-25, 2002. </p>
+
+					<p>The annual CHI conference is the leading international forum for the exchange of ideas and information about computer-human interaction (CHI), also known as human-computer interaction (HCI). </p>
+
+					
+				</td>
+			</tr>
+		</table></td>
+		<td width=20><table border=0 cellspacing=0 cellpadding=0 width=20><tr><td width=20 nowrap></td></tr></table></td>
+	</tr>
+	<tr>
+		<td valign=top><img src="graphics/subpage/menubar-bottom.gif" width="117" height="48" alt=""></td>
+		<td colspan=5><table border=0 cellspacing=2 cellpadding=2 width="100%">
+			<tr>
+				<td height=30><table border=0 cellspacing=0 cellpadding=0 height=30><tr><td height=30></td></tr></table></td>
+			</tr>
+			<tr>
+				<td><a href="#" target="_top" class=subnav>back to top</a></td>
+			</tr>
+			<tr>
+				<td height=1 bgcolor="#db1205"><table border=0 cellspacing=0 cellpadding=0 height=1><tr><td height=1></td></tr></table></td>
+			</tr>
+			<tr>
+				<td class=bottom>
+					<p class=bottom>&copy; 2001 Site Designed and Maintained by <a href="http://www.diamondbullet.com" class=subnav>Diamond Bullet Design</a>.</p>
+				</td>
+			</tr>
+			<tr>
+				<td><table border=0 cellspacing=2 cellpadding=2>
+					<tr>
+						<td class=bottom><table border=0 cellspacing=0 cellpadding=4>
+							<tr>
+								<td><table border=0 cellspacing=3 cellpadding=0>
+									<tr>
+										<td><a href="http://www.acm.org"><img src="graphics/acm.gif" width="33" height="36" border="0" alt="ACM"></a></td>
+										<td><a href="http://www.sigchi.org"><img src="graphics/sigchi.gif" width="38" height="36" border="0" alt="SIGCHI"></a></td>
+									</tr>
+								</table></td>
+								<td class=bottom><a href="sitemap.html" class=subnav>site&nbsp;map</a></td>
+								<td class=bottom><a href="privacy.html" class=subnav>privacy&nbsp;statement</a></td>
+							</tr>
+						</table></td>
+					</tr>
+				</table></td>
+			</tr>
+		</table></td>
+	</tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,530 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>SIGGRAPH 2005 | Homepage</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="index.css" type="text/css" />
+<link rel="SHORTCUT ICON" href="favicon.ico" />
+<script type="text/javascript" src="flash_detect5.js"></script>
+<script type="text/javascript">
+<!--
+
+
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_showHideLayers() { //v6.0
+  var i,p,v,obj,args=MM_showHideLayers.arguments;
+  for (i=0; i<(args.length-2); i+=3) if ((obj=MM_findObj(args[i]))!=null) { v=args[i+2];
+    if (obj.style) { obj=obj.style; v=(v=='show')?'visible':(v=='hide')?'hidden':v; }
+    obj.visibility=v; }
+}
+
+//-->
+</script>
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+
+rnd.today=new Date();
+rnd.seed=rnd.today.getTime();
+
+function rnd() {
+        rnd.seed = (rnd.seed*9301+49297) % 233280;
+        return rnd.seed/(233280.0);
+};
+
+function rand(number) {
+        return Math.ceil(rnd()*number);
+};
+
+var pics = new Array();
+var sorting = rand(3)
+
+for (count = 1 ; count < (9 - sorting) ; count++) {
+	pickPic = "images/chairs/chair" + rand(13) + ".gif";
+	var redo = 0;
+	for (searchOld = (count - 1); searchOld > 0; searchOld--) {
+		if (pickPic == pics[searchOld]) {
+			redo = 1;
+		}
+	}
+	if (redo == 1) {
+		count--;
+	} else {
+		pics[count] = pickPic;
+	}
+}
+
+for (count = (9 - sorting) ; count < 9 ; count++) {
+	pickPic = "images/chairs/pic" + rand(7) + ".jpg";
+	var redo = 0;
+	for (searchOld = (count - 1); searchOld > 0; searchOld--) {
+		if (pickPic == pics[searchOld]) {
+			redo = 1;
+		}
+	}
+	if (redo == 1) {
+		count--;
+	} else {
+		pics[count] = pickPic;
+	}
+}
+
+var pickedNumbers = new Array();
+
+for (count = 1 ; count < 9 ; count++) {
+	var pickNum = rand(8);
+	var redo = 0;
+	for (searchOld = (count - 1); searchOld > 0; searchOld--) {
+		if (pickNum == pickedNumbers[searchOld]) {
+			redo = 1;
+		}
+	}
+	if (redo == 1) {
+		count--;
+	} else {
+		pickedNumbers[count] = pickNum;
+	}
+}
+
+//-->
+</script>
+
+
+</head>
+
+<body>
+
+
+
+<table border="0" cellpadding="0" cellspacing="0" summary="" width="708">
+<!--********** TOP HEADER IMAGE********** -->
+			 <tr>
+			 		 <td width="680"><img src="images/S2005_main_head.gif" width="680" height="88"  border="0" alt="Siggraph 2005 logo" onmouseover="MM_swapImage('conf','','images/nav/conf_off.gif','exhib','','images/nav/exhib_off.gif','call','','images/nav/call_off.gif','pres','','images/nav/presenters_off.gif','med','','images/nav/media_off.gif','reg','','images/nav/reg_off.gif',1);MM_showHideLayers('confNav','','hide','exhibNav','','hide','callNav','','hide','presentersNav','','hide','mediaNav','','hide')" /></td>
+					 <td width="28" rowspan="4"><img src="images/spacer.gif" width="28" height="1" alt="" /></td>
+			</tr>
+			<tr>
+			<!--********** MAIN NAVIGATION********** -->
+					<td width="680">
+							<table width="680" border="0" cellspacing="0" cellpadding="0">
+									<tr>
+									     <td><a href="main.php?f=conference" onmouseover="MM_swapImage('conf','','images/nav/conf_O.gif','exhib','','images/nav/exhib_off.gif',1);MM_showHideLayers('confNav','','show','exhibNav','','hide','callNav','','hide')"><img src="images/nav/conf_off.gif" alt="Conference" name="conf" width="94" height="24" border="0" id="conf"></a></td>
+										 <td><a href="main.php?f=exhibition" onmouseover="MM_swapImage('conf','','images/nav/conf_off.gif','exhib','','images/nav/exhib_O.gif','call','','images/nav/call_off.gif',1);MM_showHideLayers('confNav','','hide','exhibNav','','show','callNav','','hide')"><img src="images/nav/exhib_off.gif" alt="Exhibition" name="exhib" width="74" height="24" border="0" id="exhib" /></a></td> 
+										 <td><a href="main.php?f=cfp" onmouseover="MM_swapImage('exhib','','images/nav/exhib_off.gif','call','','images/nav/call_O.gif','pres','','images/nav/presenters_off.gif',1);MM_showHideLayers('confNav','','hide','exhibNav','','hide','callNav','','show','presentersNav','','hide')"><img src="images/nav/call_off.gif" alt="Call For Participation" name="call" width="147" height="24" border="0" id="call" /></a></td>
+										 <td><a href="main.php?f=presenters" onmouseout="MM_swapImage('pres','','images/nav/presenters_off.gif',1)" onmouseover="MM_swapImage('call','','images/nav/call_off.gif','pres','','images/nav/presenters_O.gif','med','','images/nav/media_off.gif',1);MM_showHideLayers('exhibNav','','hide','callNav','','hide','mediaNav','','hide')"><img src="images/nav/presenters_off.gif" alt="Presenters" name="pres" width="84" height="24" border="0" id="pres" /></a></td>			
+							 			 <!-- <td><a href="main.php?f=presenters" onmouseover="MM_swapImage('call','','images/nav/call_off.gif','pres','','images/nav/presenters_O.gif','med','','images/nav/media_off.gif',1);MM_showHideLayers('confNav','','hide','exhibNav','','hide','callNav','','hide','presentersNav','','show','mediaNav','','hide')"><img src="images/nav/presenters_off.gif" alt="Presenters" name="pres" width="84" height="24" border="0" id="pres"></a></td> -->
+										 <td><a href="main.php?f=media" onmouseover="MM_swapImage('pres','','images/nav/presenters_off.gif','med','','images/nav/media_O.gif','reg','','images/nav/reg_off.gif',1);MM_showHideLayers('confNav','','hide','exhibNav','','hide','callNav','','hide','presentersNav','','hide','mediaNav','','show')"><img src="images/nav/media_off.gif" alt="Media" name="med" width="48" height="24" border="0" id="med" /></a></td>
+										 <td><a href="main.php?f=registration" onmouseover="MM_swapImage('med','','images/nav/media_off.gif','reg','','images/nav/reg_O.gif',1);MM_showHideLayers('presentersNav','','hide','mediaNav','','hide')" onmouseout="MM_swapImage('reg','','images/nav/reg_off.gif',1)"><img src="images/nav/reg_off.gif" alt="Registration" name="reg" width="92" height="24" border="0" id="reg" /></a></td>
+										 <td> 
+										 <object type="application/x-shockwave-flash" data="sigsearch.swf" width="141" height="24">
+											 <param name="movie" value="sigsearch.swf" />
+											 <a href="http://www.siggraph.org/cgi-bin/s2005/ice-search"><img src="images/nav/noflash_searchbutton.gif" width="141" height="24" alt="" border="0" /></a>
+										</object>
+									</td>
+							</tr>
+						</table>
+			    </td>
+  </tr>
+			<tr>
+					<td width="680" >
+					<!--********** RANDOM IMAGES ROW ********** -->
+					<table border="0" cellpadding="0" cellspacing="0" summary="" width="100%">
+									<tr>
+									<script>
+													for (recount = 1 ; recount < 9 ; recount++) {
+													document.write("<td><img src='" + pics[pickedNumbers[recount]] + "'></td>");
+													}
+									</script>
+									</tr>
+					  </table>
+							
+				  </td>
+			</tr>
+			<tr>
+					<td width="680"><img src="images/d/confdates.gif" width="680" height="31" alt="Conference dates" /></td>
+			</tr>
+			<tr>
+				<td colspan="2" width="708" >
+						<table border="0" cellpadding="0" cellspacing="0" summary="" width="100%">
+								<tr>
+									 <td width="15" rowspan="2"><img src="images/spacer.gif" width="15" height="1" alt="" />
+									</td>
+									<td width="693"colspan="2" >
+									<!--********** Left navigation ********** -->
+											 <table width="693" cellpadding="0" border="0" cellspacing="0">
+													<tr>
+									 				  <td width="137" id="sidebar" valign="top">
+
+																<div id="boxEM">
+																		 <a  href="main.php?f=cfp&p=forms">Submissions</a>
+																</div>
+																<br />
+											 					<a href="main.php?f=registration">Registration</a><br />
+											 					<a href="main.php?f=travelhouse">Travel &amp; Housing</a><br />
+																<a href="main.php?f=conference&p=schedule">Conference Schedule</a><br />
+											 					<a href="main.php?f=la">Los Angeles</a><br />
+											 					<a href="main.php?f=donors">Acknowledgements</a><br />
+											 					<p>	 
+											 					<a href="main.php?f=referrals">Referrals</a><br />
+											 					<a href="http://www.siggraph.org/cgi-bin/s2005/email/compose?default=webmaster">Comments</a><br />
+											 					<a href="main.php?f=updates">Updates</a><br />
+											 					<a href="main.php?f=maillist">Mailing List</a><br />
+											 					</p>
+					 						 					<a href="main.php?f=formsfiles">Forms &amp; Files</a><br />
+											 					<a href="main.php?f=committee">Committee</a><br />
+											 					<a href="main.php?f=credits">Image Credits</a><br />	
+																 <img src="images/spacer.gif" width="137" height="1" alt="" /> 
+			 										  </td>
+														<!--********** Billboard(s) ********** -->
+				 										<td width="556" valign="top">
+															<table border="0" cellpadding="0" cellspacing="0" width="556">
+  															<tr>
+  																 <td valign="top"><img src="images/d/25.gif" width="287" height="225" border="0" alt="2005" /></td>
+ 																	 <td><img src="images/d/r.gif" alt="Call For Participation" width="269" height="225" border="0" usemap="#Map" />
+ 																	   <map name="Map" id="Map">
+                                                                         <area shape="rect" coords="0,25,240,58" href="http://www.siggraph.org/s2005/main.php?f=media&p=releases&s=release17" />
+																		 <area shape="rect" coords="0,58,240,82" href="http://www.siggraph.org/s2005/main.php?f=media&p=releases&s=release17" />
+                                                                         <area shape="rect" coords="0,82,240,102" href="http://www.siggraph.org/soma/dvd-osa/dvd2005/index.html" target="_blank" />
+                                                                         <area shape="rect" coords="0,102,240,128" href="http://www.siggraph.org/reports/" />
+                                                                         <area shape="rect" coords="0,128,240,150" href="http://www.siggraph.org/s2005/main.php?f=conference&p=merchandise&s=index2" />
+                                                                       </map>														      </td>
+															  </tr>
+														  </table>		
+																																											
+													  </td>
+												 </tr>
+									  </table>
+								  </td>
+						  </tr>
+								<tr> 
+								<!--********** FOOTER ********** -->
+			      			<td colspan="2" id="footer"><img src="images/logos.gif" width="217" height="27" alt="Sponsored by ACM SIGGRAPH" border="0" usemap="#logosMap" /></td>
+				 				</tr>
+				   </table>
+			   </td>
+			</tr>
+</table>
+<!-- ANIMATION AND IMAGEMAPS ******************************************************* -->
+<map id="logosMap" name="logosMap">
+  <area shape="rect" coords="3,0,26,23" alt="acm.org" href="http://www.acm.org" target="_blank" />
+  <area shape="rect" coords="29,4,203,25"alt="siggraph.org" href="http://www.siggraph.org" target="_blank" />
+</map>
+
+<!-- CONFERENCE ******************************************************* -->
+<div id="confNav" style="position:absolute; width:210px; z-index:100 !important; left: 0px; top: 112px; background-color: #666666; layer-background-color: #666666; border: 1px none #000000; visibility: hidden;">
+  <table width="200" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td colspan="3"><img src="images/sp.gif" width="200" height="5" alt="" /></td>
+    </tr>
+    <tr align="left" valign="top">
+      <td width="10"><a href="#" onmouseout="MM_swapImage('conf','','images/nav/conf_off.gif','call','','images/nav/call_off.gif',1);MM_showHideLayers('confNav','','hide','callNav','','hide')"><img src="images/sp.gif" alt="" width="10" height="300" border="0" /></a></td>
+      <td><table width="180" border="0" cellspacing="3" cellpadding="1">
+         <tr>
+          <td class="nu">&gt;</td>
+          <td><a href="main.php?f=conference&amp;p=art" class="nu">ART GALLERY</a></td>
+        </tr>
+        <tr>
+          <td class="nu">&gt;</td>
+          <td><a href="main.php?f=conference&amp;p=birds" class="nu">BIRDS OF A FEATHER</a></td>
+        </tr>
+		<tr>
+          <td valign="top" class="nu">&gt;</td>
+          <td><a href="main.php?f=conference&amp;p=colocated" class="nu">CO-LOCATED EVENTS</a></td>
+        </tr>
+        <tr>
+          <td valign="top" class="nu">&gt;</td>
+          <td><a href="main.php?f=conference&amp;p=caf" class="nu">COMPUTER ANIMATION FESTIVAL</a></td>
+        </tr>
+        <tr>
+          <td class="nu">&gt;</td>
+          <td><a href="main.php?f=conference&amp;p=courses" class="nu">COURSES</a></td>
+        </tr>
+        <tr>
+          <td class="nu">&gt;</td>
+          <td><a href="main.php?f=conference&amp;p=edu" class="nu">EDUCATORS PROGRAM</a></td>
+        </tr>
+        <tr>
+          <td valign="top" class="nu">&gt;</td>
+          <td><a href="main.php?f=conference&amp;p=etech" class="nu">EMERGING TECHNOLOGIES</a></td>
+        </tr>
+        <tr>
+          <td class="nu">&gt;</td>
+          <td><a href="main.php?f=conference&amp;p=exhibitor" class="nu">EXHIBITOR TECH TALKS</a></td>
+        </tr>
+        <tr>
+          <td class="nu">&gt;</td>
+          <td><a href="main.php?f=conference&amp;p=involved" class="nu">GET INVOLVED</a></td>
+        </tr>
+        <tr>
+          <td class="nu">&gt;</td>
+          <td><a href="main.php?f=conference&amp;p=gnet" class="nu">GRAPHICSNET</a></td>
+        </tr>
+        <tr>
+          <td class="nu">&gt;</td>
+          <td><a href="main.php?f=conference&amp;p=studio" class="nu">GUERILLA STUDIO</a></td>
+        </tr>
+        <tr>
+          <td valign="top" class="nu">&gt;</td>
+          <td><a href="main.php?f=conference&amp;p=international" class="nu">INTERNATIONAL RESOURCES</a></td>
+        </tr>
+        <tr>
+          <td class="nu">&gt;</td>
+          <td><a href="http://www.artinstitutes.edu/siggraphjobfair/index.asp" class="nu" target="_blank">JOB FAIR</a></td>
+        </tr>
+        <tr>
+          <td valign="top" class="nu">&gt;</td>
+          <td><a href="main.php?f=conference&amp;p=keynote" class="nu">KEYNOTE ADDRESS/AWARDS</a></td>
+        </tr>
+        <tr>
+          <td class="nu">&gt;</td>
+          <td><a href="main.php?f=conference&amp;p=panels" class="nu">PANELS</a></td>
+        </tr>
+        <tr>
+          <td class="nu">&gt;</td>
+          <td><a href="main.php?f=conference&amp;p=papers" class="nu">PAPERS</a></td>
+        </tr>
+        <tr>
+          <td class="nu">&gt;</td>
+          <td><a href="main.php?f=conference&amp;p=path" class="nu">PATHFINDERS</a></td>
+        </tr>
+		<tr>
+          <td class="nu">&gt;</td>
+          <td><a href="main.php?f=conference&amp;p=posters" class="nu">POSTERS</a></td>
+        </tr>
+        <tr>
+          <td class="nu">&gt;</td>
+          <td><a href="main.php?f=conference&amp;p=reception" class="nu">RECEPTION</a></td>
+        </tr>
+        <tr>
+          <td class="nu">&gt;</td>
+          <td><a href="main.php?f=conference&amp;p=sketches" class="nu">SKETCHES</a></td>
+        </tr>
+        <tr>
+          <td class="nu">&gt;</td>
+          <td><a href="main.php?f=conference&amp;p=events" class="nu">SPECIAL EVENTS</a></td>
+        </tr>
+		<tr>
+          <td class="nu">&gt;</td>
+          <td><a href="main.php?f=conference&amp;p=special" class="nu">SPECIAL SESSIONS</a></td>
+        </tr>
+        <tr>
+          <td class="nu">&gt;</td>
+          <td><a href="main.php?f=conference&amp;p=web" class="nu">WEB PROGRAM</a></td>
+        </tr>
+        <tr>
+          <td colspan="2"><a href="#" onmouseout="MM_swapImage('conf','','images/nav/conf_off.gif','call','','images/nav/call_off.gif',1);MM_showHideLayers('confNav','','hide','callNav','','hide')"><img src="images/sp.gif" alt="" width="180" height="20" border="0" /></a></td>
+        </tr>
+      </table></td>
+      <td width="10"><a href="#" onmouseout="MM_swapImage('conf','','images/nav/conf_off.gif','call','','images/nav/call_off.gif',1);MM_showHideLayers('confNav','','hide','callNav','','hide')"><img src="images/sp.gif" alt="" width="10" height="300" border="0" /></a></td>
+    </tr>
+  </table>
+</div>
+
+<!-- EXHIBITION ******************************************************* -->
+<div id="exhibNav" style="position:absolute; width:210px; z-index:100 !important; left: 94px; top: 112px; background-color: #666666; layer-background-color: #666666; border: 1px none #000000; visibility: hidden;">
+  <table width="200" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td colspan="3"><img src="images/sp.gif" width="200" height="5" alt="" /></td>
+    </tr>
+    <tr align="left" valign="top">
+      <td width="10">
+			 <a href="#" onmouseout="MM_swapImage('conf','','images/nav/conf_off.gif','exhib','','images/nav/exhib_off.gif','call','','images/nav/call_off.gif',1);MM_showHideLayers('confNav','','hide','exhibNav','','hide','callNav','','hide')"><img src="images/sp.gif" alt="" width="10" height="100" border="0" /></a>
+	  </td>
+      <td>
+					<table width="180" border="0" cellspacing="3" cellpadding="1">
+        			<tr>
+							   <td class="nu">&gt;</td>
+          			 <td><a href="main.php?f=exhibition&amp;p=invite" class="nu">INVITATION TO EXHIBIT</a></td>
+             </tr>
+						 <tr>
+						     <td class="nu">&gt;</td>
+          			 <td><a href="main.php?f=exhibition&amp;p=academic" class="nu">ACADEMIC EXHIBITS</a></td>
+        		</tr>
+        		 <tr>
+						    <td valign="top" class="nu">&gt;</td>
+          			<td><a href="http://www.siggraph.org/cgi-bin/cgi/idESearch.html" class="nu" target="_blank">SIGGRAPH 2005 EXHIBITORS</a></td>
+            </tr>
+            <tr>
+				 			 <td valign="top" class="nu">&gt;</td>
+          		 <td><a href="http://www.siggraph.org/cgi-bin/cgi/idindex.html" class="nu" target="_blank">ACM SIGGRAPH INDUSTRY DIRECTORY</a></td>
+       		  </tr>
+       			 <tr>
+          	   <td colspan="2"><a href="#" onmouseout="MM_swapImage('conf','','images/nav/conf_off.gif','exhib','','images/nav/exhib_off.gif','call','','images/nav/call_off.gif',1);MM_showHideLayers('confNav','','hide','exhibNav','','hide','callNav','','hide')"><img src="images/sp.gif" alt="" width="180" height="1" border="0" /></a></td>
+            </tr>
+          </table>
+	  </td>
+      <td width="10"><a href="#" onmouseout="MM_swapImage('conf','','images/nav/conf_off.gif','exhib','','images/nav/exhib_off.gif','call','','images/nav/call_off.gif',1);MM_showHideLayers('confNav','','hide','exhibNav','','hide','callNav','','hide')"><img src="images/sp.gif" alt="" width="10" height="100" border="0" /></a></td>
+    </tr>
+  </table>
+</div>
+
+<!-- CALL FOR PARTICIPATION ******************************************** -->
+<div id="callNav" style="position:absolute; width:210px; z-index:100 !important; left: 168px; top: 112px; background-color: #666666; layer-background-color: #666666; border: 1px none #000000; visibility: hidden;">
+  <table width="200" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td colspan="3"><img src="images/sp.gif" width="200" height="5" alt="" /></td>
+    </tr>
+    <tr align="left" valign="top">
+      <td width="10"><a href="#" onmouseout="MM_swapImage('call','','images/nav/call_off.gif',1);MM_showHideLayers('callNav','','hide')"><img src="images/sp.gif" alt="" width="10" height="300" border="0" /></a></td>
+      <td><table width="180" border="0" cellspacing="3" cellpadding="1">
+        <tr>
+				  <td class="nu">&gt;</td>
+          <td><a href="main.php?f=cfp&amp;p=art" class="nu">ART GALLERY</a></td>
+        </tr>
+        <tr>
+				  <td class="nu">&gt;</td>
+          <td><a href="main.php?f=cfp&amp;p=awards" class="nu">AWARD NOMINATIONS</a></td>
+        </tr>
+        <tr>
+				  <td class="nu" valign="top">&gt;</td>
+			
+           			<td valign="top"><a href="main.php?f=cfp&amp;p=caf" class="nu">COMPUTER ANIMATION FESTIVAL</a></td>
+					
+        </tr>
+        <tr>
+				  <td class="nu">&gt;</td>
+          <td><a href="main.php?f=cfp&amp;p=courses" class="nu">COURSES</a></td>
+        </tr>
+        <tr>
+				  <td class="nu">&gt;</td>
+          <td><a href="main.php?f=cfp&amp;p=edu" class="nu">EDUCATORS PROGRAM</a></td>
+        </tr>
+        <tr>
+				  <td class="nu" valign="top">&gt;</td>
+          <td><a href="main.php?f=cfp&amp;p=etech" class="nu">EMERGING TECHNOLOGIES</a></td>
+        </tr>
+        <tr>
+				  <td class="nu">&gt;</td>
+          <td><a href="main.php?f=cfp&amp;p=gnet" class="nu">GRAPHICSNET</a></td>
+        </tr>
+				  <tr>
+				  <td class="nu">&gt;</td>
+          <td><a href="main.php?f=cfp&amp;p=studio" class="nu">GUERILLA STUDIO</a></td>
+        </tr>
+        <tr>
+				  <td class="nu" valign="top">&gt;</td>
+          <td><a href="main.php?f=cfp&amp;p=international" class="nu">INTERNATIONAL RESOURCES</a></td>
+        </tr>
+        <tr>
+				  <td class="nu" valign="top">&gt;</td>
+          <td><a href="main.php?f=cfp&amp;p=panels" class="nu">PANELS &amp; SPECIAL SESSIONS</a></td>
+        </tr>
+        <tr>
+				  <td class="nu">&gt;</td>
+          <td><a href="main.php?f=cfp&amp;p=papers" class="nu">PAPERS</a></td>
+        </tr>
+        <tr>
+				  <td class="nu">&gt;</td>
+          <td><a href="main.php?f=cfp&amp;p=posters" class="nu">POSTERS</a></td>
+        </tr>
+        <tr>
+				  <td class="nu">&gt;</td>
+          <td><a href="main.php?f=cfp&amp;p=sketches" class="nu">SKETCHES</a></td>
+        </tr>
+        <tr>
+				  <td class="nu">&gt;</td>
+          <td><a href="main.php?f=cfp&amp;p=students" class="nu">STUDENT OPPORTUNITIES</a></td>
+        </tr>
+        <tr>
+				  <td class="nu">&gt;</td>
+          <td><a href="main.php?f=cfp&amp;p=web" class="nu">WEB PROGRAM</a></td>
+        </tr>
+        <tr>
+          <td colspan="2"><a href="#" onmouseout="MM_swapImage('call','','images/nav/call_off.gif',1);MM_showHideLayers('callNav','','hide')"><img src="images/sp.gif" alt="" width="180" height="20" border="0" /></a></td>
+        </tr>
+      </table></td>
+      <td width="10"><a href="#" onmouseout="MM_swapImage('call','','images/nav/call_off.gif',1);MM_showHideLayers('callNav','','hide')"><img src="images/sp.gif" alt="" width="10" height="300" border="0" /></a></td>
+    </tr>
+  </table>
+</div>
+
+<!-- PRESENTERS ************************************************************ -->
+<div id="presentersNav" style="position:absolute; width:210px; z-index:100 !important; left: 318px; top: 112px; background-color: #666666; layer-background-color: #666666; border: 1px none #000000; visibility: hidden;">
+  <table width="200" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td colspan="3"><img src="images/sp.gif" width="200" height="5" alt="" /></td>
+    </tr>
+    <tr align="left" valign="top">
+      <td width="10"><a href="#" onmouseout="MM_swapImage('call','','images/nav/call_off.gif','pres','','images/nav/presenters_off.gif',1);MM_showHideLayers('confNav','','hide','exhibNav','','hide','callNav','','hide','presentersNav','','hide')"><img src="images/sp.gif" alt="" width="10" height="300" border="0" /></a></td>
+      <td><table width="180" border="0" cellspacing="3" cellpadding="0">
+        <tr>
+          <td><a href="#" class="nu">&gt; NOTHING</a></td>
+        </tr>
+        <tr>
+          <td><a href="#" class="nu">&gt; FOR</a></td>
+        </tr>
+        <tr>
+          <td><a href="#" class="nu">&gt; NOW</a></td>
+        </tr>
+        <tr>
+          <td><a href="#" onmouseout="MM_swapImage('call','','images/nav/call_off.gif','pres','','images/nav/presenters_off.gif',1);MM_showHideLayers('confNav','','hide','exhibNav','','hide','callNav','','hide','presentersNav','','hide')"><img src="images/sp.gif" alt="" width="180" height="20" border="0" /></a></td>
+        </tr>
+      </table></td>
+      <td width="10"><a href="#" onmouseout="MM_swapImage('call','','images/nav/call_off.gif','pres','','images/nav/presenters_off.gif',1);MM_showHideLayers('confNav','','hide','exhibNav','','hide','callNav','','hide','presentersNav','','hide')"><img src="images/sp.gif" alt=""  width="10" height="300" border="0" /></a></td>
+    </tr>
+  </table>
+</div>
+<!-- MEDIA **************************************************************** -->
+<div id="mediaNav" style="position:absolute; width:210px; z-index:100 !important; left: 399px; top: 112px; background-color: #666666; layer-background-color: #666666; border: 1px none #000000; visibility: hidden;">
+  <table width="200" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td colspan="3"><img src="images/sp.gif" width="200" height="5" alt="" /></td>
+    </tr>
+    <tr align="left" valign="top">
+      <td width="10" ><a href="#" onmouseout="MM_swapImage('call','','images/nav/call_off.gif','pres','','images/nav/presenters_off.gif','med','','images/nav/media_off.gif',1);MM_showHideLayers('confNav','','hide','exhibNav','','hide','callNav','','hide','presentersNav','','hide','mediaNav','','hide')"><img src="images/sp.gif" alt="" width="10" height="90" border="0" /></a></td>
+      <td><table width="180" border="0" cellspacing="3" cellpadding="0">
+         <tr>
+				  <td class="nu">&gt;</td>
+          <td><a href="main.php?f=media&amp;p=releases" class="nu">NEWS RELEASES</a></td>
+        </tr>
+					<tr>
+				  <td class="nu">&gt;</td>
+          <td><a href="main.php?f=media&p=factsheets" class="nu">FACT SHEETS</a></td>
+        </tr>
+		<tr>
+				  <td class="nu">&gt;</td>
+          <td><a href="main.php?f=media&amp;p=registration" class="nu">MEDIA REGISTRATION</a></td>
+        </tr>
+		
+				<tr>
+				  <td class="nu" valign="top">&gt;</td>
+          <td><a href="main.php?f=media&amp;p=maillist" class="nu">ADD ME TO YOUR MAILING LIST</a></td>
+        </tr>
+				<tr>
+				  <td class="nu" valign="top">&gt;</td>
+          <td><a href="main.php?f=committee" class="nu">SIGGRAPH 2005 COMMITTEE</a></td>
+        </tr>
+        <tr>
+          <td colspan="2"><a href="#" onmouseout="MM_swapImage('call','','images/nav/call_off.gif','pres','','images/nav/presenters_off.gif','med','','images/nav/media_off.gif',1);MM_showHideLayers('confNav','','hide','exhibNav','','hide','callNav','','hide','presentersNav','','hide','mediaNav','','hide')"><img src="images/sp.gif" alt="" width="180" height="1" border="0" /></a></td>
+        </tr>
+      </table>
+	  </td>
+      <td width="10"><a href="#" onmouseout="MM_swapImage('call','','images/nav/call_off.gif','pres','','images/nav/presenters_off.gif','med','','images/nav/media_off.gif',1);MM_showHideLayers('confNav','','hide','exhibNav','','hide','callNav','','hide','presentersNav','','hide','mediaNav','','hide')"><img src="images/sp.gif" alt=""width="10" height="90" border="0" /></a></td>
+    </tr>
+  </table>
+</div>
+</body>
+</html>

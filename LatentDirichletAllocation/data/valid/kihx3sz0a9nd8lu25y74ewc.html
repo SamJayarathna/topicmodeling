@@ -1,0 +1,552 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ECOOP 2014</title>
+    <base href="http://ecoop14.it.uu.se/">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="windows-1252">
+    <!-- IT -->
+    <link rel="SHORTCUT ICON" href="http://www.it.uu.se/favicon.ico">
+    <!-- Bootstrap -->
+    <link href="/fonts/Serif/cmun-serif.css" rel="stylesheet" media="screen">
+    <link href="http://ecoop14.it.uu.se/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="http://ecoop14.it.uu.se/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
+    <link href="http://ecoop14.it.uu.se/css/docs.css" rel="stylesheet" media="screen">
+    <link href="http://ecoop14.it.uu.se/css/ecoop.css" rel="stylesheet" media="screen">
+
+    <style type="text/css">
+      .cal {
+        text-align:center;
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+
+      table#programme {
+        border-spacing: 1px; border-collapse: separate; margin: 0
+        auto;
+      }
+      td.conf {
+        text-align:center;
+        padding-left:10px;
+        padding-right:10px;
+        border-radius:0.3em;
+        border:#FFF;
+        color: #FFF;
+        background: #CCC;
+      }
+      td.workshop {
+        text-align:center;
+        padding-left:10px;
+        padding-right:10px;
+        border-radius:0.3em;
+        border:#FFF;
+        color: #FFF;
+        background: #CCC;
+      }
+      td.summerschool {
+        text-align:center;
+        padding-left:10px;
+        padding-right:10px;
+        border-radius:0.3em;
+        border:#FFF;
+        color: #FFF;
+        background: #CCC;
+      }
+      table#programme a {
+        color: white;
+      }
+
+      td#ecoopss { 
+        text-align:center; 
+        padding-left:10px; 
+        padding-right:10px; 
+        border-radius:0.3em; 
+        border: #FFF; 
+        color: #FFF;  
+        background: #CCC;
+      }
+      span.speakername {
+        font-style: italic;
+      }
+      table.speaker {
+        margin:10px; border:none; padding-bottom: 20px;
+      }
+      td.speaker {
+        border:none; font-style:italic
+      }
+      table.speaker img {
+        width:10em; float: left; margin:10px;
+      }
+      table#ecoop-school-schedule {
+        border: none;
+      }
+      table#ecoop-school-schedule td {
+        vertical-align: top; font-size: small; border: none; border-top: 1px solid;
+      }
+    </style>
+
+
+<!-- Local Variables: -->
+<!-- mode: html -->
+<!-- ispell-local-dictionary: "british" -->
+<!-- End: -->
+  </head>
+  <body>
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="http://ecoop14.it.uu.se/js/bootstrap.min.js"></script>
+
+    <!-- Navbar CHANGE THIS TO LOAD A SHARED PAGE
+	 ================================================== -->
+<div class="navbar navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <div class="nav-collapse collapse top">
+        <ul id="ecoop_menu" class="nav">
+          <li><a href="index.php" title="Go to first page" class="brand">ECOOP 2014 <span style="font-weight: normal; color: #49f;"><i>28/7&ndash;1/8</i></span></a></li>
+          <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown">Calls <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="important-dates.php">Important dates</a></li> <!-- important_dates -->
+              <li><a href="calls/technical-papers.php">Conference Papers</a></li> <!-- conference_papers -->
+              <li><a href="calls/artifacts.php">Evaluated Artifacts</a></li> <!-- artifacts -->
+              <li><a href="calls/doctoral-symposium.php">Doctoral Symposium</a></li> <!-- doctoral_symposium -->
+              <li><a href="calls/workshops.php">Workshops</a></li> <!-- workshops -->
+            </ul>
+          </li>
+          <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown">Committees <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="pc.php">Programme Committee</a></li> <!-- programme_committee -->
+              <li><a href="oc.php">Organisation Committee</a></li>
+              <li><a href="aec.php">Artifact Evaluation Committee</a></li>
+              <li><a href="http://aito.org">Aito</a></li>
+              <li><a href="http://aito.org/Dahl-Nygaard/" role="button" data-toggle="modal">Dahl-Nygaard awards</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown">Venue and Location <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="uppsala.php">About Uppsala</a></li>
+              <li><a href="travel.php">Travel to Uppsala</a></li>
+              <li><a href="lodging.php">Lodging</a></li>
+              <li><a href="full_programme.php">Programme and Venue</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown">Students <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="programme/ecoop-school.php">ECOOP Summer School</a></li> <!-- summer_school -->
+              <li><a href="http://upmarc.se/events/SS2014">UPMARC Summer School 2014</a></li> <!-- summer_school -->
+            </ul>
+          </li>
+          <!-- <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown">Programme <b class="caret"></b></a> -->
+          <!--      <ul class="dropdown-menu"> -->
+          <!--        <li><a href="#TODO" role="button" data-toggle="modal">Conference Programme</a></li> --> <!-- conference_programme -->
+          <!--        <li><a href="#TODO" role="button" data-toggle="modal">Keynote Speakers</a></li> --> <!-- keynote_speakers -->
+          <!--        <li><a href="#TODO" role="button" data-toggle="modal">Validated Artifacts</a></li> --> <!-- validated_artifacts -->
+          <!--        <li><a href="#TODO" role="button" data-toggle="modal">Summer School</a></li> --> <!-- summer_school -->
+          <!--        <li><a href="#TODO" role="button" data-toggle="modal">Satellite Events</a></li> --> <!-- satellite_events -->
+          <!--        <li><a href="#TODO" role="button" data-toggle="modal">Social Events</a></li> --> <!-- social_events -->
+          <!--      </ul> -->
+          <!-- </li> -->
+          <!-- <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown">Registration <b class="caret"></b></a> -->
+          <!--      <ul class="dropdown-menu"> -->
+          <!--        <li><a href="#TODO" role="button" data-toggle="modal">Register now</a></li> --> <!-- register_now -->
+          <!--        <li><a href="#TODO" role="button" data-toggle="modal">General information</a></li> --> <!-- registration_information -->
+          <!--      </ul> -->
+          <!-- </li> -->
+          <!-- <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown">Sponsorship <b class="caret"></b></a> -->
+          <!--      <ul class="dropdown-menu"> -->
+          <!--        <li><a href="#TODO" role="button" data-toggle="modal">ECOOP 2014 Sponsors</a></li> --> <!-- sponsors -->
+          <!--        <li><a href="#TODO" role="button" data-toggle="modal">Call for Sponsors</a></li> --> <!-- call_for_sponsors -->
+          <!--      </ul> -->
+          <!-- </li> -->
+          <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown">Misc <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="http://en.wikipedia.org/wiki/Dalecarlian_horse" role="button" data-toggle="modal">Dalecarlian horses / Dalah&auml;star</a></li>
+              <li><a href="http://www.grannas.com/" role="button" data-toggle="modal">Buy one here!</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <!-- Subhead
+	 ================================================== -->
+    <header class="jumbotron subhead" id="overview">
+      <div class="container">
+        <h1><span class="head" style="font-variant: normal">ECOOP<span style="color: #f33;">&thinsp;/&thinsp;</span>ECOOP</span></h1>
+        <p class="lead">
+          <!-- <span class="head" style="font-weight: bold;">European Conference on Object-Oriented Programming</span> -->
+          <span class="lead" style="font-weight: bold;"><span class="r">E</span>uropean <span class="r">C</span>onference on <span class="r">O</span>bject-<span class="r">O</span>riented <span class="r">P</span>rogramming</span> 
+        </p>
+      </div>
+    </header>
+
+
+<!-- Local Variables: -->
+<!-- mode: html -->
+<!-- ispell-local-dictionary: "british" -->
+<!-- End: -->
+
+<!-- Local Variables: -->
+<!-- mode: html -->
+<!-- ispell-local-dictionary: "british" -->
+<!-- End: -->
+
+<div class="ribbon-wrapper-green"><div class="ribbon-green"><a href="registration.php">Conference
+      over!</a></div></div>
+<div class="container-fluid">
+  <div class="row-fluid">
+
+    <div class="span3">
+      <div id="ecoop_left" class="bs-docs-sidebar" style="font-size: small;">
+
+  <ul id="registrations" class="nav nav-list">
+    <li class="nav-header">Registration</li>
+    <li><a href="registration.php"><i class="icon-chevron-right"></i><strong>Registration</strong></a></li>
+    <li><a href="lodging.php"><i class="icon-chevron-right"></i><strong>Lodging</strong></a></li>
+    <li><a href="visa.php"><i class="icon-chevron-right"></i><strong>VISA information</strong></a></li>
+  </ul>
+
+  <ul id="ecoop_events" class="nav nav-list">
+    <li class="nav-header">Programme</li>
+    <li><a href="full_programme.php"><i class="icon-chevron-right"></i><strong>Full Programme and Venue</strong></a></li>
+    <li><a href="http://link.springer.com/book/10.1007/978-3-662-44202-9"
+    target="_blank"><i class="icon-chevron-right"></i><strong>Proceedings</strong></a></li>
+    <li><a href="programme/conference.php"><i class="icon-chevron-right"></i><strong>Technical Papers</strong></a></li>
+    <li><a href="programme/keynotes.php"><i class="icon-chevron-right"></i><strong>Keynotes</strong></a></li>
+    <li><a href="programme/workshops.php"><i class="icon-chevron-right"></i><strong>Workshops</strong></a></li>
+    <li><a href="http://upmarc.se/events/SS2014" target="_blank"><i class="icon-chevron-right"></i><strong>UPMARC Summer School</strong></a></li>
+    <li><a href="programme/ecoop-school.php"><i class="icon-chevron-right"></i><strong>ECOOP
+    Summer School <span style="color:#F00">(new: slides!)</span></strong></a></li>
+    <li><a href="programme/demos.php"><i class="icon-chevron-right"></i><strong>Demos and Tutorial</strong></a></li>
+    <li><a href="programme/social.php"><i class="icon-chevron-right"></i><strong>Social Programme</strong></a></li>
+    <li><a href="programme/sponsors.php"><i class="icon-chevron-right"></i><strong>Sponsors</strong></a></li>
+
+    <li class="nav-header">Location and Travel</li>
+    <li><a href="uppsala.php"><i class="icon-chevron-right"></i><strong>About Uppsala</strong></a></li>
+    <li><a href="travel.php"><i class="icon-chevron-right"></i><strong>Travel to Uppsala</strong></a></li>
+    <li><a href="lodging.php"><i class="icon-chevron-right"></i><strong>Lodging</strong></a></li>
+    <!-- <li><a href="http://www.uu.se/en/about-uu/history/buildings/university-main-building/" target="_blank"><i class="icon-chevron-right"></i><strong>Conference Venue</strong></a></li> -->
+
+    <li class="nav-header">Open Calls</li>
+    <li><a href="calls/sponsorship.php"><i class="icon-chevron-right"></i><strong>Sponsorship</strong></a></li>
+
+    <!--<li class="nav-header">Calls Opening Later</li> -->
+    <!-- <li><a href="calls/tutorials.php"><i class="icon-chevron-right"></i><strong>Tutorials</strong></a></li> -->
+
+    <li class="nav-header">Committees</li>
+    <li><a href="pc.php"><i class="icon-chevron-right"></i><strong>Programme Committee</strong></a></li>
+    <li><a href="oc.php"><i class="icon-chevron-right"></i><strong>Organising Committee</strong></a></li>
+    <li><a href="aec.php"><i class="icon-chevron-right"></i><strong>Artifact Evaluation Committee</strong></a></li>
+    <li><a href="http://aito.org"><i class="icon-chevron-right"></i><strong>AITO</strong></a></li>
+
+<!--
+    <li class="nav-header">Closed Calls</li>
+    <li><a href="calls/technical-papers.php"><i class="icon-chevron-right"></i><strong>Technical Papers</strong></a></li>
+    <li><a href="calls/artifacts.php"><i class="icon-chevron-right"></i><strong>Artifacts</strong></a></li>
+    <li><a href="calls/workshops.php"><i class="icon-chevron-right"></i><strong>Workshops</strong></a></li>
+    <li><a href="calls/doctoral-symposium.php"><i class="icon-chevron-right"></i><strong>Doctoral Symposium</strong></a></li>
+    <li><a href="calls/student-volunteers.php"><i class="icon-chevron-right"></i><strong>Student Volunteers</strong></a></li>
+    <li><a href="calls/posters.php"><i class="icon-chevron-right"></i><strong>Demonstrations 
+    and Posters</strong></a></li>
+ -->
+  </ul>
+
+</div>
+
+<!-- Local Variables: -->
+<!-- mode: html -->
+<!-- End: -->
+    </div>
+
+    <div id="ecoop_main" class="span7">
+      <!-- Actual content goes here
+           ================================================== -->
+
+      <h3>Roughly 69 reasons to attend ECOOP'14</h3>
+      <ul class="checked">
+	<li>
+          Four keynotes by 
+	  <a href="http://lucacardelli.name/">Luca Cardelli</a>, 
+	  <a href="http://www.cs.utexas.edu/~wcook/">William Cook</a>, 
+	  <a href="http://www.cs.colostate.edu/~france/">Robert France</a> and 
+	  <a href="http://www.tudorgirba.com/">Tudor G&icirc;rba</a>.
+	</li>
+	<li>
+          27 <a href="accepted-papers.php">accepted papers</a> organised in <a href="programme/conference.php">six sessions</a>.
+	</li>
+	<li>11 <a href="accepted-papers.php">accepted software artifacts</a> presented in a dedicated session.</li>
+	<li>
+          Banquet Speech
+          by <a href="programme/ecoop-school.php#Meijer">Erik Meijer <a href="programme/ExponentialsJava8.pdf">(slides)</a></a>.
+	</li>
+	<li>
+          13 <a href="programme/ecoop-school.php">summer school talks</a>
+	</li>
+	<li>
+          The <a href="http://upmarc.se/events/SS2014">UPMARC summer school</a>.
+	</li>
+	<li>
+          10 days of <a href="programme/workshops.php">affiliated workshops</a>.
+	</li>
+	<li>
+          The <a href="http://ecoop14.it.uu.se/calls/doctoral-symposium.php">PhD symposium</a> with a panel featuring Doug Lea, Nick Mitchell and Tomas Kalibera.
+	</li>
+	<li>
+          Countless networking opportunities: lunches and coffee breaks, reception and the banquet.
+	</li>
+	<li>Off-site <a href="programme/social.php">conference banquet</a> at the Spotify HQ&ndash;all students are allowed entrance for free!</li>
+	<li>Workshop Reception in
+	  <a href="https://en.wikipedia.org/wiki/Carl_Linnaeus" target="_blank">Linnaeus'</a> world-famous Botanical Gardens</li>
+	<li>
+          Swedish Summer.
+	</li>
+      </ul>
+
+      <h3>ECOOP'14, Workshops and Summer Schools</h3>
+      <div style="margin:auto">
+        <style type="text/css" scoped>
+          td#ftfjp     { text-align:center; padding-left:10px; padding-right:10px; border-radius:0.3em; border:#FFF; color: #FFF;  background: #175575; }
+          td#jstools   { text-align:center; padding-left:10px; padding-right:10px; border-radius:0.3em; border:#FFF; color: #FFF;  background: #DC322F; }
+          td#icooolps  { text-align:center; padding-left:10px; padding-right:10px; border-radius:0.3em; border:#FFF; color: #FFF;  background: #6C71C4; }
+          td#ple       { text-align:center; padding-left:10px; padding-right:10px; border-radius:0.3em; border:#FFF; color: #FFF;  background: #859900; }
+          td#scala     { text-align:center; padding-left:10px; padding-right:10px; border-radius:0.3em; border:#FFF; color: #FFF;  background: #B1004A; }
+          td#cop       { text-align:center; padding-left:10px; padding-right:10px; border-radius:0.3em; border:#FFF; color: #FFF;  background: #B58900; }
+          td#iwaco     { text-align:center; padding-left:10px; padding-right:10px; border-radius:0.3em; border:#FFF; color: #FFF;  background: #CB4B16; }
+          td#coompl    { text-align:center; padding-left:10px; padding-right:10px; border-radius:0.3em; border:#FFF; color: #FFF; }
+          td#plas      { text-align:center; padding-left:10px; padding-right:10px; border-radius:0.3em; border:#FFF; color: #FFF;  background: #2AA198; }
+          td#phd-symp  { text-align:center; padding-left:10px; padding-right:10px; border-radius:0.3em; border:#FFF; color: #FFF;  background: #00AA11; }
+          td#upmarcss  { text-align:center; padding-left:10px; padding-right:10px; border-radius:0.3em; border:#FFF; color: #FFF;  background: #860000; }
+          td#ecoopss   { text-align:center; padding-left:10px; padding-right:10px; border-radius:0.3em; border:#FFF; color: #FFF;  background: #437021; }
+          td#ecoop     { text-align:center; padding-left:10px; padding-right:10px; border-radius:0.3em; border:#FFF; color: #FFF;  background: #2C5010; }
+        </style>
+        <table id="programme">
+       <tr> <th class="cal">Mon</th> <th class="cal">Tue</th> <th class="cal">Wed</th> <th class="cal">Thu</th> <th class="cal">Fri</th> </tr>
+       <tr> <th class="cal">28 Jul</th> <th class="cal">29 Jul</th> <th class="cal">30 Jul</th> <th class="cal">31 Jul</th>   <th class="cal">1 Aug</th> </tr>
+       <tr> <td class="workshop" id="ftfjp"><a href="http://ecs.victoria.ac.nz/Events/FTfJP2014/" target="_blank">FTfJP</a></td> 
+            <td class="workshop" id="cop"><a href="http://prg.is.titech.ac.jp/events/cop14/" target="_blank">COP</a></td> 
+	    <td class="conf" colspan=3 rowspan=6 id="ecoop"><a href="http://ecoop14.it.uu.se/programme/conference.php">ECOOP</a></td> </tr>
+       <tr> <td class="workshop" id="jstools"><a href="http://www.csl.cs.uni-saarland.de/jstools/2014/" target="_blank">JSTools</a></td> 
+	    <td class="workshop" id="iwaco"><a href="http://www.ownership-types.org/iwaco14/" target="_blank">IWACO</a></td> </tr>
+       <tr> <td class="workshop" id="icooolps"><a href="http://soft-dev.org/events/icooolps14/" target="_blank">ICOOOLPS</a></td> 
+	    <td class="workshop" id="coompl"><a href="http://coompl.org/2014/ecoop/tmp/index.html" target="_blank"><span style="text-decoration:line-through;">COOMPL</span></a></td> </tr>
+            <tr> <td class="workshop" id="ple"><a href="http://www.cl.cam.ac.uk/research/cprg/ple14/" target="_blank">PLE</a></td> 
+	    <td class="workshop" id="plas"><a href="http://researcher.watson.ibm.com/researcher/view_project.php?id=5237" target="_blank">PLAS</a></td> </tr>
+       <tr> <td class="workshop" id="scala" colspan="2"><a href="http://lampwww.epfl.ch/~hmiller/scala2014/" target="_blank">Scala</a></td> </tr> 
+       <tr> <td class="workshop" id="phd-symp"><a href="http://ecoop14.it.uu.se/calls/doctoral-symposium.php">PhD Symp</a></td> <td class="workshop"></td> </tr>
+       
+       <tr> <td class="summerschool" id="upmarcss" colspan="2"><a target="_blank" href="http://upmarc.se/events/SS2014">UPMARC Summer School</a></td> 
+	    <td colspan=3 class="summerschool" id="ecoopss"><a href="http://ecoop14.it.uu.se/programme/ecoop-school.php" target="_blank">ECOOP Summer School</a></td> </tr>
+</table>
+      </div>
+      <!-- highlight the workshops -->
+      <h3>About ECOOP'14</h3>
+      <p>
+        The European Conference on Object-Oriented Programming
+        (ECOOP) is the premier international conference covering
+        all areas of object technology and related software
+        development technologies. ECOOP 2014 will take place from
+        the 28th of July to the 1st of August in the beautiful
+        city of Uppsala, Sweden. The 2014 edition will be the 28th
+        of the ECOOP conferences series and will embrace a broad
+        range of topics related to object-orientation, including:
+      </p>
+      <ul class="checked">
+        <li>Concurrent and parallel systems</li>
+        <li>Distributed and cloud computing, mobile systems</li>
+        <li>Service-oriented and Web Programming</li>
+        <li>Programming environments</li>
+        <li>Versioning, refactoring, software evolution</li>
+        <li>Language definition and design; domain-specific languages</li>
+        <li>Language implementation, execution environments, compiler construction</li>
+        <li>Memory management, garbage collection</li>
+        <li>Testing, debugging, profiling, and performance analysis</li>
+        <li>Metrics and empirical studies</li>
+        <li>Design methods and design patterns</li>
+        <li>Aspects, components, modularity, and reflection</li>
+        <li>Software modelling, meta-modelling</li>
+        <li>Frameworks, product lines, and software architectures</li>
+        <li>Theoretical foundations, program analysis, and type systems</li>
+        <li>Specification, verification, model checking, program synthesis</li>
+        <li>Object ownership</li>
+        <li>Security</li>
+        <li>Real-time systems</li>
+        <li>Databases and object persistence</li>
+        <li>Energy-aware software</li>
+      </ul>
+
+    </div>
+
+    <div class="col-with-pad span2">
+      <div style="margin:auto; text-align: center;">
+  <p>&nbsp;</p>
+  <p><i>Diamond Sponsors</i></p>
+  <p>
+    <a href="http://www.spotify.com"><img alt="Spotify" class="sponsor" src="img/spotify.jpg"></a>
+  </p>
+  <p><i>Gold Sponsors</i></p>
+  <p>
+    <a href="http://www.google.com"><img alt="Google" class="sponsor" src="img/google.png"></a>
+  </p>
+  <p>
+    <a href="http://www.oracle.com"><img alt="Oracle" class="sponsor" src="img/oracle.jpg"></a>
+  </p>
+  <p>&nbsp;</p>
+  <p><i>Silver Sponsors</i></p>
+
+  <a href="http://www.sisa.samsung.com"><img alt="Samsung" style="width:12em;" class="sponsor" src="img/samsung.png"></a>
+  <a href="http://www.typesafe.com"><img alt="Typesafe" style="width:12em;" class="sponsor" src="img/typesafe.png"></a>
+
+  <p>&nbsp;</p>
+  <p><i>Bronze Sponsors</i></p>
+  <a href="http://www.ibm.com"><img alt="IBM" style="width:9em;" class="sponsor" src="img/ibm.jpg"></a>
+
+  <a href="http://research.microsoft.com/"><img style="width:10em;" alt="Microsoft Research" class="sponsor" src="img/msr.png"></a>
+
+  <a href="http://www.springer.com//"><img style="width:10em;" alt="Springer" class="sponsor" src="img/springer.jpg"></a>
+
+  <p>&nbsp;</p>
+
+  <p>Organisers</p>
+  <p>
+    <a href="http://aito.org"><img alt="AITO" class="sponsor" src="img/aito-logo.png"></a>
+  </p>
+  <p>
+    <a href="http://www.uu.se"><img alt="UU" class="sponsor" src="img/uu-logo.png"></a>
+  </p>
+  <p>
+    <a href="http://www.kent.ac.uk/"><img alt="Kent" class="sponsor" src="img/kent-logo.jpg"></a>
+  </p>
+  <p>In Cooperation With</p>
+  <p>
+    <a href="http://acm.org"><img alt="ACM" class="sponsor" src="img/acm-in-coop.gif"></a>
+  </p>
+  <p>
+    <a href="http://www.sigplan.org/"><img alt="Sigplan" class="sponsor" src="img/sigplan.png"></a>
+  </p>
+  <p>
+    <a href="http://www.sigsoft.org/"><img alt="Sigsoft" class="sponsor" src="img/sigsoft.gif"></a>
+  </p>
+
+</div>
+
+<p>&nbsp;</p>
+<p>Social:</p>
+<!-- Place this code where you want the badge to render. -->
+<p><a href="https://plus.google.com/108677149683396424847?prsrc=3"
+      rel="publisher" target="_top" style="text-decoration:none;">
+    <img src="//ssl.gstatic.com/images/icons/gplus-32.png" alt="Google+" style="border:0;width:32px;height:32px;"/>
+</a></p>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1&appId=122396437782837";
+  fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
+
+<div class="fb-follow" data-href="http://www.facebook.com/ecoop2014" data-width="248" data-height="248" data-colorscheme="light" data-layout="button_count" data-show-faces="true"></div>
+
+<p><a href="https://twitter.com/ecoop2014" class="twitter-follow-button" data-show-count="false">Follow @ecoop2014</a></p>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+    </div>
+
+  </div>
+
+   
+
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+
+      <div class="navbar navbar-inverse navbar-bottom-fixed">
+        <div class="navbar-inner">
+          <div class="container">
+            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <div class="nav-collapse collapse bottom">
+              <ul class="nav">
+                <li class="">
+                  <a href="http://www.it.uu.se">Department of Information Technology</a>
+                </li>
+                <li class="">
+                  <a href="http://www.uu.se">Uppsala University</a>
+                </li>
+		<li>
+		  <a href="https://trello.com/board/ecoop-14-planning/51d42555c6d3419f0700027b">Planning</a>
+                </li>
+                <li>
+                  <a href="https://github.com/fxpl/ecoop14web/edit/master///index.php" target="_blank">Edit this page</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div id="modal_template" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+        <h3><span id="myModalLabel">Modal header</span></h3>
+      </div>
+      <div class="modal-body">
+        <p id="PLACEHOLDER">If you see this text, then either something is wrong with the web page.</p>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-primary" data-dismiss="modal" aria-hidden="true">Close</button>
+      </div>
+    </div>
+
+    <div id="TODO" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="TODO" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+    <h3><span>Oh no!</span></h3>
+  </div>
+  <div class="modal-body">
+    <p>You've entered onto a part of this page which is not yet completed.</p>
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-primary" data-dismiss="modal" aria-hidden="true">Close</button>
+  </div>
+</div>
+
+<div id="unpublished-call" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="TODO" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+    <h3><span>To be announced</span></h3>
+  </div>
+  <div class="modal-body">
+    <p>This call is not yet opened.</p>
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-primary" data-dismiss="modal" aria-hidden="true">Close</button>
+  </div>
+</div>
+
+<!-- Local Variables: -->
+<!-- mode: html -->
+<!-- End: -->
+
+  </body>
+</html>
+
+<!-- Local Variables: -->
+<!-- mode: html -->
+<!-- End: -->
+
+
+  <!-- Local Variables: -->
+  <!-- mode: html -->
+  <!-- End: -->

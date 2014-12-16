@@ -1,0 +1,299 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><!-- Design by Free CSS Templates http://www.freecsstemplates.org Released for free under a Creative Commons Attribution 2.5 License Title : StandardIssue Version : 1.0 Released : 20070723 Description: A two-column, fixed-width and lightweight template ideal for 1024x768 resolutions. Suitable for blogs and small websites. -->
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8" /><title>APCHI2012: The 10th Asia Pacific Conference on Computer Human Interaction</title>
+
+<meta name="keywords" content="APCHI, CHI, Asia Pasific, interaction" />
+<meta name="description" content="" />
+<link href="default.css" rel="stylesheet" type="text/css" />
+<link type="text/css" href="jquery-ui-1.8.17.custom.css" rel="Stylesheet" />	
+<script type="text/javascript" src="jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="jquery-ui-1.8.17.custom.min.js"></script>
+<script>
+	function countDown() {
+		var target = new Date("Aug 28,2012 12:00:00");
+		var today = new Date();
+		var diff = (540+(today.getTimezoneOffset()))*60*1000;
+		var day = Math.floor(((target-today)-diff)/(24*60*60*1000));
+		
+		if(day>1){
+			$("#deadlinetimer").text(day+' days until the conference.');
+		}else if(day==1){
+			$("#deadlinetimer").text(day+' day until the conference.');
+		}else if(day==0){
+			var h = Math.floor((((target-today)-diff)%(24*60*60*1000))/(60*60*1000))
+			var m = Math.floor((((target-today)-diff)%(24*60*60*1000))/(60*1000))%60
+			var s = Math.floor((((target-today)-diff)%(24*60*60*1000))/1000)%60%60
+			var t = ('0'+h).substr(('0'+h).length-2,2)+':'+
+									 ('0'+m).substr(('0'+m).length-2,2)+':'+
+									 ('0'+s).substr(('0'+s).length-2,2);
+			$("#deadlinetimer").text(t+' until the conference.');
+		}else{
+			$("#deadlinetimer").text('Successfully Closed');
+		}
+  		setTimeout('countDown()', 1000);
+  	}
+
+	$(function() {
+		countDown();
+		$('#tabs').tabs({
+			selected: -1
+		});
+		$('a','.active','ul','#tabs').css("color","#459e00");
+		$('#tabs').tabs({
+    		select: function(event, ui) {
+        	var url = $.data(ui.tab, 'load.tabs');
+        	if( url ) {
+           		location.href = url;
+            	return false;
+        	}
+        	return true;
+    		}
+		});
+	});
+</script>
+
+</head>
+
+<body><div align="center"><a href="http://www.xrea.com/" target="_blank"><img src="http://imgj.xrea.com/banner_top_1.gif" width="468" height="9" border="0"></a><br><iframe height="60" width="468" frameborder="0" marginheight="0" marginwidth="0" scrolling="no" allowtransparency="true" src="http://imgj.xrea.com/ad_iframe.html"><a href="http://img.xrea.com/ad_click.fcg" target="_blank"><img src="http://img.xrea.com/ad_img.fcg" border="0"></a></iframe></div>
+<!-- start header -->
+<div id="header">
+
+
+<div id="tabs">
+		<ul>
+		<li class="active"><a href="index.html">home</a></li>
+		<li><a href="#tabs-authors">authors</a></li>
+		<li><a href="#tabs-program">program</a></li>
+		<li><a href="#tabs-attending">attending</a></li>
+		<li><a href="./committee.html" style="background:none;">committee</a></li>
+		<li><a href="./archives.html" style="background:none;">archives</a></li>
+		<li><a href="./contact.html" style="background:none;">contact us</a></li>
+		</ul>	
+	<div id="tabs-blank" class="tabcontent"></div>
+	<div id="tabs-authors" class="tabcontent">
+		<ul>
+		<li><a href="./authors.html#paper"><span class="ui-icon ui-icon-carat-1-e" style="display:inline-block;position:relative;top:3px;"></span>Paper</a></li>
+		<li><a href="./authors.html#poster"><span class="ui-icon ui-icon-carat-1-e" style="display:inline-block;position:relative;top:3px;"></span>Poster</a></li>
+		<li><a href="./authors.html#dates"><span class="ui-icon ui-icon-carat-1-e" style="display:inline-block;position:relative;top:3px;"></span>Important Dates</a></li>
+		<li><a href="./authors.html#templates"><span class="ui-icon ui-icon-carat-1-e" style="display:inline-block;position:relative;top:3px;"></span>Templates and Submission</a></li>
+		</ul>
+	</div>
+	<div id="tabs-program" class="tabcontent">
+		<ul>
+		<li><a href="./program.html"><span class="ui-icon ui-icon-carat-1-e" style="display:inline-block;position:relative;top:3px;"></span>Program</a></li>
+		<li><a href="./catalog_poster/" target="_blank"><span class="ui-icon ui-icon-carat-1-e" style="display:inline-block;position:relative;top:3px;"></span>Poster Catalog</a></li>
+		<li><a href="./keynotes.html"><span class="ui-icon ui-icon-carat-1-e" style="display:inline-block;position:relative;top:3px;"></span>Keynotes</a></li>
+		<li><a href="./tutorials.html"><span class="ui-icon ui-icon-carat-1-e" style="display:inline-block;position:relative;top:3px;"></span>Tutorials</a></li>
+		<li><a href="./ws_panel.html"><span class="ui-icon ui-icon-carat-1-e" style="display:inline-block;position:relative;top:3px;"></span>Workshops/Panels</a></li>
+		</ul>
+	</div>
+	<div id="tabs-attending" class="tabcontent">
+		<ul>
+		<li><a href="./registration.html"><span class="ui-icon ui-icon-carat-1-e" style="display:inline-block;position:relative;top:3px;"></span>Registration</a></li>
+		<li><a href="./attending.html"><span class="ui-icon ui-icon-carat-1-e" style="display:inline-block;position:relative;top:3px;"></span>Venue &amp; Travel</a></li>
+		<li><a href="./accommodation.html"><span class="ui-icon ui-icon-carat-1-e" style="display:inline-block;position:relative;top:3px;"></span>Accommodation</a></li>
+		<li><a href="./matsue.html"><span class="ui-icon ui-icon-carat-1-e" style="display:inline-block;position:relative;top:3px;"></span>Sightseeing in Matsue</a></li>
+
+		</ul>
+	</div>
+</div>
+
+<div id="logo2">
+<a href="http://www.apchi2012.org/">
+<img style="width: 300px; height: 58px;z-index:2;float: left; position:absolute; top:130px;" alt="Go to APCHI2012 home" src="images/venuelogo.png" />
+<img style="width: 400px; height: 221px;z-index:2;float: right;" alt="Go to APCHI2012 home" src="images/apchilogo.png" />
+</a>
+</div>
+
+</div>
+
+<!-- end header -->
+<!-- start page -->
+<div id="page2">
+<!-- start content -->
+<div id="content">
+<div class="headline">
+	<h2>APCHI2012 successfully closed.</h2>
+	<p>The 10th Asia Pacific Conference on Computer Human Interaction was successfully closed on 31st August 2012. We look forward to meet you again at the next conference, <a href="http://www.apchi2013.org">APCHI2013 in Bangalore, India.</a></p>
+	<h2>Awards</h2>
+	<dl>
+	<dt>Best Paper</dt>
+	<dd style='margin-bottom:1em;margin-left: 0em;'><strong>Building Interactive Prototypes of Mobile User Interfaces with a Digital Pen</strong><ul style="list-style-type: none;"><li>Clemens Holzmann (University of Applied Sciences Upper Austria, Austria)</li><li>Manuela Vogler (University of Applied Sciences Upper Austria, Austria)</li></ul></dd>
+	<dt>Best Student Paper</dt>
+	<dd style='margin-bottom:1em;margin-left: 0em;'><strong>Effects of Trust on Group Buying Websites in China</strong><ul style="list-style-type: none;"><li>Na Chen (Institution of Human Factors & Ergonomics, China)</li><li>Pei-Luen Patrick Rau (Institute of Human Factors and Ergonomics, China)</li></ul></dd>
+	<dt>Best Poster/Demonstration</dt>
+	<dd style='margin-bottom:1em;margin-left: 0em;'><strong>Emoballoon</strong>
+		<ul style="list-style-type: none;">
+			<li>Kosuke Nakajima (Osaka University, Japan)</li>
+			<li>Yuichi Itoh (Osaka University, Japan)</li>
+			<li>Yusuke Hayashi (Osaka University, Japan)</li>
+			<li>Kazuaki Ikeda (Osaka University, Japan)</li>
+			<li>Kazuyuki Fujita (Osaka University, Japan)</li>
+			<li>Takao Onoye (Osaka University, Japan)</li>
+		</ul>
+	</dd>
+	<dd style='margin-bottom:1em;margin-left: 0em;'><strong>User-Defined Motion Gestures</strong>
+		<ul style="list-style-type: none;">
+			<li>Ryo Mizobata (Kochi University of Technology, Japan)</li>
+			<li>Huawei Tu (Kochi University of Technology, Japan)</li>
+			<li>Xiangshi Ren (Kochi University of Technology, Japan)</li>
+		</ul>
+	</dd>
+	<dd style='margin-bottom:1em;margin-left: 0em;'><strong>Control of Human Generating Force by Use of Acoustic Information<br />-Frequency-sweep Sounds for Gradually Increasing Force -</strong>
+		<ul style="list-style-type: none;">
+			<li>Taichi Sato (Tokyo Denki University, Japan)</li>
+			<li>Akira Goto (Tokyo Denki University, Japan)</li>
+		</ul>
+	</dd>
+	</dl>
+
+</div>
+<br />
+<div class="post">
+	<h1 class="title">Welcome to APCHI 2012</h1>
+	<div class="entry">
+	<h2>Reflect, Discover and Innovate</h2>
+	<p><span style="font-weight: bold;">The 10th Asia
+	Pacific Conference on Computer Human Interaction
+	(APCHI 2012)</span> will be held in Matsue, Japan, August 28-31,
+	2012. The
+	conference brings researchers together from academia and industry and
+	provides an excellent opportunity to exchange ideas and information on
+	human-computer interaction and related areas in computer and
+	communication technologies and human and social sciences.
+	</p>
+	<p>
+	All submitted papers will be subject to a double-blind review process.
+	Accepted papers will be published in conference proceedings. 
+	The authors of selected long talks will be invited to have their
+	papers published in a special issue of the International Journal of
+	Human-Computer Interaction (indexed by SCI) or a special issue of
+	the International Journal of Innovative Computing, Information and
+	Control (indexed by SCI) after further revision.
+ 	Authors of selected short talks will be invited to have their papers
+ 	published at a special issue of ICIC Express Letters (indexed by EI)
+	or a special issue of HCD-Net journal (ISSN: 1882-9635).
+ 	</p>
+	<p>
+	APCHI 2012 has the following three categories of conference awards:<br />
+	1) Best Paper Award<br />
+	2) Best Student Paper Award<br />
+	3) Best Poster/Demonstration Award<br />
+	The winner of the Award will receive a certificate.
+	</p>
+	</div>
+</div>
+<div class="post">
+<h2 class="title">Matsue, Shimane</h2>
+<div class="entry">
+<p> <img style="width: 560px; height: 373px;" alt="Matsue Castle" src="images/matsue_castle.jpg" />
+Matsue Castle</p>
+</div>
+</div>
+</div>
+<!-- end content -->
+
+<!-- start sidebar -->
+<div id="sidebar">
+<ul>
+
+	<li>
+		<h2 style="padding-top:0em;"><b>APCHI2012</b><br />
+		<span id="deadlinetimer" style="background-color:palegreen; color:black;"> </span>
+		</h2>
+	</li>
+
+	<li id="search">
+		<h2>Search</h2>
+		<form method="get" action="http://www.google.com/search">
+			<p>
+			<input name="q" size="25" maxlength="255" value="" type="text" />
+			<input value="Search" type="submit" /><br />
+			<input name="sitesearch" value="apchi2012.org" type="hidden" />
+			</p>
+		</form>
+	</li>
+	
+	<li>
+		<h2>Sponsors</h2>
+		<ul>
+		<li><a href="http://www.hcdnet.org/"><img src="images/hcdnetlogo.png" alt="hcdnet" /></a></li>
+		<li><a href="http://www.sigchi.org/"><img src="images/sigchilogo.png" alt="sigchi" /></a></li>
+		</ul>
+	</li>
+	
+	<li>
+		<h2>Supporters</h2>
+		<h3>Gold</h3>
+		<ul>
+		<li><img src="images/OECU_logo.png" /></li>
+		<li><img src="images/tateisi_logo.png" width="70" height="70" /></li>
+		<li><img src="images/ueyesdesign_logo.png" /></li>
+		</ul>
+		<h3>Silver</h3>
+		<ul>
+		<li><img src="images/montesystem_logo.png"  /></li>
+		</ul>
+	</li>
+	
+	<li>
+		<h2>Exhibitors</h2>
+		<ul>
+		<li><img src="images/4assist_logo.jpg" /></li>
+		<li><img src="images/namoto_logo.jpg" /></li>
+		<li><img src="images/ueyesdesign_logo.png" /></li>
+		</ul>
+	</li>
+	
+	<li>
+		<h2>Technical Support</h2>
+		<ul>
+		<li><img src="images/ricoh_logo.jpg" /></li>
+
+		</ul>
+	</li>
+</ul>
+</div>
+<!-- end sidebar -->
+
+<div style="clear: both;">&nbsp;</div>
+<!-- end page -->
+</div>
+<!-- start footer -->
+<div id="footer">
+<div class="wrap">
+<div id="fbox1" class="box2">
+<h2><b>APCHI2012</b> contact</h2>
+<p>apchi2012 [at] gmail [dot] com</p>
+</div>
+<div id="fbox2" class="box2">
+<h2><b>Matsue</b> information</h2>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Matsue,_Shimane">Wikipedia</a></li>
+<li><a href="http://wikitravel.org/en/Matsue">Wikitravel</a></li>
+<li><a href="http://www.flickr.com/search/?q=matsue&amp;f=hp">Flickr</a></li>
+<li><a href="http://www.city.matsue.shimane.jp/kankou/en/">Visitors
+guide</a></li>
+<li><a href="http://www.japan-guide.com/e/e5800.html">japan-guide.com</a></li>
+<li><a href="http://www.city.matsue.shimane.jp/">Official
+website (in Japanese)</a></li>
+</ul>
+</div>
+<div id="fbox3" class="box2">
+<h2><b>APCHI2012</b> Sponsors</h2>
+<ul>
+<li><a href="http://www.hcdnet.org/">HCD-Net</a></li>
+<li><a href="http://www.sigchi.org/">ACM SIGCHI</a></li>
+<li><a href="http://www.interaction-design.org/">interaction-design.org</a></li>
+<li><a href="http://www.tateisi-f.org/">Tateishi Science and Technology Foundation</a></li>
+</ul>
+</div>
+</div>
+<p id="legal">(c) 2012 APCHI2012. Design by <a href="http://www.nodethirtythree.com/">NodeThirtyThree</a>
+and <a href="http://www.freecsstemplates.org/">Free CSS
+Templates</a>.</p>
+</div>
+<!-- end footer -->
+</body></html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>NetGames 2013: The 12th Annual Workshop on Network and System Support for Games</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes;">
+    <meta name="google-site-verification" content="xX0-NUdqvfjBycAQ8A6l4Um9i_0NVqedep7fDAF_IHo" />
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+    <link rel="stylesheet" href="netgames2013.css" />
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+
+    <style>
+
+
+ 
+    </style>
+
+
+    <script src="menus.js"></script>
+
+    <script>
+       $('#article').load("news.html");
+       history.pushState("news.html", null, "index.html");
+    </script>
+  </head>
+
+  <body>
+    <!--
+    <img src="http://farm9.static.flickr.com/8427/7803589542_b99a62946f_c.jpg"
+    alt="The campus at sunrise, with downtown Denver in the background"
+    id="header-image">-->
+
+    <!-- create the main toolbar -->
+    <a name="mainarticle">
+      <nav>
+        <div class="menubar" id="shadow">
+          <ul>
+	    <li id="home"><a href="http://netgames2013.cs.du.edu/">Home</a></li>
+	    <li id="authors"><a onclick="showMenu('#authorsMenu')">Authors</a>
+	      <ul id="authorsMenu">
+		<li><a id="callForPapersMenu" onclick="processMenuItem(this)">Call for Papers</a></li>
+		<li><a id="importantDatesMenu" onclick="processMenuItem(this)" href="important-dates.html">Important Dates</a></li>
+		<li><a id="submissionMenu" onclick="processMenuItem(this)" href="submission.html">Submission</a></li>
+		<li><a id="cameraReadyVersionMenu" onclick="processMenuItem(this)" href="camera-ready.html">Camera Ready Version</a></li>
+	      </ul>
+	    </li>
+	    <li id="organizers"><a onclick="showMenu('#organizerMenu')">Organizers</a>
+	      <ul id="organizerMenu" >
+		<li><a id="technicalCommitteeMenu" onclick="processMenuItem(this)" href="technical-committee.html">Technical Committee</a></li>
+		<li><a id="organizingCommitteeMenu" onclick="processMenuItem(this)" href="organizing-committee.html">Organizing Committee</a></li>
+	      </ul>
+	    </li>
+	    <li id="program"><a onclick="showMenu('#programMenu')">Program</a>
+	      <ul id="programMenu">
+		<li><a id="acceptedPapersMenu" onclick="processMenuItem(this)" href="accepted.html">Accepted Papers</a></li>
+		<li><a id="overviewProgramMenu" onclick="processMenuItem(this)" href="program.html">Program Overview</a></li>
+		<li><a id="detailedProgramMenu" onclick="processMenuItem(this)" href="detailed.html">Detailed Program</a></li>
+		<li><a id="keynoteMenu" onclick="processMenuItem(this)" href="keynote.html">Keynote</a></li>
+	      </ul>
+	    </li>
+	    <li id="participants"><a onclick="showMenu('#participantsMenu')">Participants</a>
+	      <ul id="participantsMenu">
+		<li><a id="registrationMenu" onclick="processMenuItem(this)" href="registration.html">Registration</a></li>
+		<li><a id="venueMenu" onclick="processMenuItem(this)" href="venue.html">Venue</a></li>
+		<li><a id="gettingHereMenu" onclick="processMenuItem(this)" href="travel.html">Getting Here</a></li>
+	      </ul>
+	    </li>
+	    <li id="travel"><a id="gettingHereMenu" onclick="processMenuItem(this)" href="travel.html">Travel</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="title" id="title">
+	<h1>NetGames 2013</h1>
+	<h2>The 12th Annual Workshop on Network and Systems Support for Games<h2>
+	  <h3>Denver, Colorado, USA, December 9th-10th, 2013</h3>
+	  <h3>In cooperation with ACM SIGCOMM and ACM SIGMM<br/>Technically sponsored by the IEEE Communications Society</h3>
+	  <hr/>
+	  <!-- logos -->
+	  <a href="http://www.acm.org/"><img src="acm-incooperation-small.jpg" alt="ACM In Cooperation status logo image"/></a>
+	  <a href="http://www.sigcomm.org/"><img src="sigcomm-dropshadow-spaced-small.png" alt="SIGCOMM Logo image"/></a>
+	  <a href="http://www.sigmm.org/"><img src="sigmm_logo.png" alt="SIGMM Logo image"/></a>
+	  <a href="http://www.comsoc.org/"><img src="comsoc_logo.png" alt="IEEE Communications Society Logo image"/>
+	    <a href="http://www.ieee.org/"><img src="ieee_mb_blue-small.png" alt="IEEE Lgoo image"/></a>
+
+	    <hr/>
+      </div>
+      <div class="main">
+	<article id="article">
+
+	  <noscript>
+	    <h3>News</h3>
+	    <table>
+<tr><td><b>11-14-2013</b></td><td><a href="travel.html">Magnolia Hotel is offering a discounted rate for NetGames participants</a>, and can be found under the Venue or Travel menu item.</td></tr>
+<tr><td><b>10-22-2013</b></td><td>Instructions for submitting camera ready papers can be found under the Author menu item and <a href="camera-ready.html">here</a>.</b></td></tr>
+<tr><td><b>08-06-2013</b></td><td>Accepted papers will be archived in the ACM Digital Library and submitted to IEEE Xplore.</td></tr>
+<tr><td><b>06-01-2013</b></td><td><a href="https://edas.info/newPaper.php?c=14751">EDAS paper submission is now available.</a></td></tr>
+<tr><td><b>05-21-2013</b></td><td>Website for NetGames 2013 is up.</td></tr>
+	    </table>
+
+	    <hr/>
+	    <p>
+The 12th Annual Workshop on Network and Systems Support for Games (NetGames 2013) 
+will be held in Denver, CO, USA at the <a href="http://www.du.edu">University of
+Denver</a> on December 9th-10th, 2013. NetGames brings together 
+researchers and practitioners from academia and industry across the globe to present 
+their latest research on the challenges of today's networked games, and to further 
+understand the requirements and explore the possibilities of future generations of 
+networked games. NetGames will also have an industry keynote and panel discussions 
+with participants from both academia and industry. Submissions are solicited on all 
+aspects of networked games, including (but not limited to):
+	      <ul>
+<li>Scalability, cloud support, client-server, P2P, and mobile architectures
+<li>Efficient message distribution and network protocol design
+<li>Latency issues and lag compensation techniques
+<li>Network traffic and game modeling and measurements
+<li>System benchmarking, performance evaluation, and provisioning
+<li>Operating system enhancements, service platforms, and middleware
+<li>Massively Multiplayer Online Gaming (MMOG)
+<li>Multiplayer usability and user behavior studies
+<li>Personal communications and conferencing in games
+<li>Mobile games, resource-constrained systems, and context-based adaptation
+<li>Networks of sensors and actuators, networked haptics
+<li>Quality of service, quality of experience, and content adaptation
+<li>Dynamic and user-generated content authoring and management
+<li>Content creation: non-linear storytelling, object capturing, algorithmic creation
+<li>Security, authentication, accounting and digital rights management
+<li>Cheat detection and prevention
+<li>Social networking in multiplayer games
+	      </ul>
+    
+	      <hr/>
+	      <h3>Important Dates</h3>
+	      <table>
+                        <tr><td>Full/Short Paper Submission:</td><td class="right-justify"><del>August 30</del> September 9, 2013, 23:59 PDT (GMT -7:00)</td></tr>
+                        <tr><td>Demo Paper Submission:</td><td class="right-justify"><del>September 30</del> October 7, 2013, 23:59 PDT (GMT -7:00)</td></tr>
+                        <tr><td>Notification of Decisions:</td><td class="right-justify">October 21, 2013</td></tr>
+                        <tr><td>Registration/Final Paper Due:</td><td class="right-justify">November 4, 2013</td></tr>
+	      </table>
+
+	  </noscript>
+
+	</article>
+	<hr/>
+	<h4>Contacts:</h4>
+	<p class="indent"><a href="mailto:chrisg@cs.du.edu">Chris GauthierDickey</a> (Workshop Chair)</p>
+
+      </div>
+      <hr/>
+      <div class="footer">
+	<h4>Sponsored and organized by:</h4>
+	<a href="http://www.secs.du.edu/"><img src="RSECS.png"/ alt="Daniel Felix Ritchie School of Engineering and Computer Science logo image"></a>
+      </div>
+  </body>
+</html>

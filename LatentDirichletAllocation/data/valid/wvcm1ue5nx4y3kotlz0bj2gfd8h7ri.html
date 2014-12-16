@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ICVGIP 2012</title>
+        
+<meta charset="utf-8" />
+
+<link rel="stylesheet" type="text/css" href="http://www.cse.iitb.ac.in/graphics/icvgip2012/styles/elegant-press.css" />
+<link rel="stylesheet" type="text/css" href="http://www.cse.iitb.ac.in/graphics/icvgip2012/menu/menu.css" media="screen" />
+
+<script type="text/javascript" src="http://www.cse.iitb.ac.in/graphics/icvgip2012/scripts/elegant-press.js"></script>
+    <script type="text/javascript" src="http://www.cse.iitb.ac.in/graphics/icvgip2012/scripts/cross-slide.min.js"></script>
+    <script type="text/javascript" src="http://www.cse.iitb.ac.in/graphics/icvgip2012/scripts/cross-slide-config.js"></script>
+    <script type="text/javascript" src="http://www.cse.iitb.ac.in/graphics/icvgip2012/scripts/jquery.badBrowser.js"></script> 
+    <script type="text/javascript" src="http://www.cse.iitb.ac.in/graphics/icvgip2012/menu/menu.js"></script>
+    <script type="text/javascript" src="http://www.cse.iitb.ac.in/graphics/icvgip2012/scripts/jquery.dotdotdot.js"></script>
+
+<!--[if IE]><style>#header h1 a:hover{font-size:75px;}</style><![endif]-->
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $(".person").wrapInner("<div class='pos-inner'></div>").wrapInner("<div class='pos-outer'></div>");
+        $(".address .website").each(function(index, element) {
+            $(this).wrap('<a href="' + $(element).text() + '" target="_blank"></a>');
+        });
+
+        //$("#news-list").sortable().disableSelection();
+
+        $("table.news-list td.edit_td").live("click", function() { // Using old jQuery -- Use on() instead of live() in new version!
+            var ID=$(this).closest("tr.edit_tr").attr('id');
+            console.log("id=" + ID);
+            $("#date_"+ID).hide();
+            $("#content_"+ID).hide();
+            $("#date_input_"+ID).show();
+            $("#content_input_"+ID).show();
+        });
+        
+        // Edit input box click action
+        $("table.news-list input.editbox").live("mouseup", function() { // Using old jQuery -- Use on() instead of live() in new version!
+            return false;
+        });
+
+        // Outside click action
+        $(document).mouseup(function() {
+            $("table.news-list td.edit_td").each(function() {
+                $(this).children(".text + input.editbox:visible").each(function() {
+                    $(this).prev().html($(this).val()); // NOote: html() is used! Use text() if any problems!
+                });
+            });
+            $("table.news-list input.editbox").hide();
+            $("table.news-list .text").show();
+        });
+
+        // REF: http://www.no-margin-for-errors.com/projects/prettyphoto-jquery-lightbox-clone/documentation/
+        // Change default prettyPhoto options
+        // REF: http://amburiroy.wordpress.com/2012/03/06/remove-annoying-prettyphoto0-string-from-url/
+        // Modified "deeplinking:true" to "deeplinking:false" in elegant-press.js
+    });
+
+    /* REF: http://demo.petiar.sk/smartfloat/ */
+    // This is a demo of a simple jQuery script which allows you to have floated elements
+    // which various height in variable width design. Try it by changing the width of your browser's window.
+    //
+    // This script has been written by petiar and you can use it freely as you wish.
+    // However, it would be nice if you did not remove following line. Thanks! :-)
+    // (c) http://petiar.sk - jQuery, Drupal, CodeIgniter
+
+    $(window).load(function () {
+
+        calc();
+
+        $(window).resize(function() {
+	        calc();
+        })
+
+        function calc() {
+	
+	        var row = 0;
+	        var rowheight = 0;
+	        var elements = new Array();
+	
+	        // .item is the base class - it identifies elements we are going to align
+	        $('.multicolumn4 > .item').each(function(index, element) {
+		        var height = $(this).height();
+		        var p = $(this).position();
+		        var top = p.top;
+
+		        if (top != row) {
+			        setHeight(elements, rowheight);
+			        // we need to set the position one more time because the object could have been
+			        // moved after setting height to previous ones
+			        var p = $(this).position();
+			        var top = p.top;
+			
+			        row = top;
+			        elements.length = 0;
+			        rowheight = 0;
+		        }
+		
+		        elements.push($(this));
+		        if (height > rowheight) {
+			        rowheight = height;
+		        }
+
+	        });
+	        if (elements.length > 0) {
+		        setHeight(elements, rowheight);
+	        }
+        }
+
+        function setHeight(elements, height) {
+	        $.each(elements, function(key, value) {
+		        $(this).css('height', height);
+	        })
+        }
+    })        
+</script>
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-30241550-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+    </head>
+
+    <body>
+
+        <div class="main-container">
+    <header>
+        <table>
+            <tr>
+                <td><img id="logo_iitb" src="images/logo_iitb.svg" /></td>
+                <td>
+                    <h1><a href="index.php">ICVGIP 2012</a></h1>
+                    <p id="tagline1"><strong>The Eighth Indian Conference on <br/> Vision, Graphics and Image Processing</strong></p>
+		    <p id="tagline1"><strong>16th to 19th December, 2012</strong></p>  
+                </td>
+                <td style="text-transform:none; font-style:italic; font-size:1.2em; font-weight:bold">
+                    <img id="logo_iuprai" src="images/logo_iuprai.svg" />
+                </td> 
+            </tr>
+        </table>
+    </header>
+</div>
+<script type="text/javascript">
+    $(document).ready(function() {
+        var url = window.location.pathname;
+        var basename = url.substring(url.lastIndexOf('/') + 1);
+        $("ul.menu > li").each(function(){
+            if( $(this).find("a[href='" + basename + "']").length ){
+                $(this).addClass("current");
+            }
+        });
+    });
+</script>
+
+<div id="nav-container" style="position: relative; padding: 0;">
+    <div id="menu">
+        <ul class="menu">
+            <li><a href="index.php"><span>Home</span></a></li>
+            <li><a href="javascript:;" class="parent"><span>For Attendees</span></a>
+                <div><ul>
+                        <li><a href="registration.php"><span>Registration and Accomodation</span></a></li>
+                        <li><a href="alt_accommodation.php"><span>Alternative Accommodation</span></a></li>
+                        <li><a href="javascript:;" class="parent"><span>Program</span></a>
+                            <div><ul>
+                                    <li><a href="schedule.php"><span>Schedule</span></a></li>
+                                    <li><a href="tutorials.php"><span>Tutorials</span></a></li>
+                                    <li><a href="plenary-talks.php"><span>Plenary Talks</span></a></li>
+                                    <li><a href="coloc-events.php"><span>Co-located Events</span></a></li>
+
+                                </ul></div>
+                        </li>
+                        <li><a href="javascript:;" class="parent"><span>Travelling</span></a>
+                            <div><ul>
+			    
+                                    <li><a href="travel.php"><span>Reaching IIT Bombay</span></a></li>
+				    <li><a href="acco-info.php"><span>Reaching the Delegate/Student Accommodations</span></a></li>
+                                    <li><a href="travel-visa.php"><span>Visa Related</span></a></li>
+                                </ul></div>
+                        </li>
+                        <li><a href="javascript:;" class="parent"><span>General Information</span></a>
+                            <div><ul>
+                                    <li><a href="about-icvgip.php"><span>About ICVGIP:<br/>The History</span></a></li>
+                                    <li><a href="about-mumbai.php"><span>About Mumbai:<br/>The Host City</span></a></li>
+                                    <li><a href="about-iitb.php"><span>About IIT Bombay:<br/>The Institute</span></a></li>
+				    <li><a href="about-vmcc.php"><span>About VMCC:<br/>The Venue</span></a></li>
+                                </ul></div>
+                        </li>
+                        <li><a href="local-info-booklet.php"><span>Local Information Booklet</span></a></li>	
+                    </ul></div>
+            </li>
+            <li><a href="javascript:;" class="parent"><span>For Submitters</span></a>
+                <div><ul>
+                        <li><a href="call-for-papers.php"><span>Call for Papers</span></a></li>
+			<li><a href="call-for-workshops.php"><span>Call for Workshops</span></a></li>	 
+                        <li><a href="important-dates.php"><span>Important Dates</span></a></li>
+                        <li><a href="submission.php"><span>Submission Instructions</span></a></li>
+			<li><a href="camera-ready.php"><span>Camera Ready Instructions</span></a></li>
+			<li><a href="poster-specs.php"><span>Poster and Spotlight Instructions</span></a></li>
+                    </ul></div>
+            </li>
+            <li><a href="javascript:;" class="parent"><span>People</span></a>
+                <div><ul>
+                        <li><a href="program-committee.php#Chairs"><span>Chairs</span></a></li>
+			<li><a href="program-committee.php#PapersCommittee"><span>Papers Committee</span></a></li>
+                        <li><a href="organizing-committee.php"><span>Organising Committee</span></a></li>
+                    </ul></div>
+            </li>
+            <li><a href="javascript:;" class="parent"><span>Sponsorship</span></a>
+                <div><ul>
+                        <li><a href="sponsors.php"><span>List of Sponsors</span></a></li>
+                        <li><a href="sponsorship-packages.php"><span>Become a Sponsor</span></a></li>
+                    </ul></div>
+            </li>
+	    <li><a href="javascript:;" class="parent"><span>Feedback</span></a>
+	    	<div><ul>   
+	    		<li><a href="feedback.php"><span>Feedback</span></a></li>
+			<li><a href="faq.php"><span>FAQs</span></a></li>	
+		</ul></div>
+            <li><a href="contact.php"><span>Contact</span></a></li>
+        </ul>
+    </div>
+</div>
+
+        <div class="main-container">
+            <div class="container1">
+
+                <article class="box">
+                
+                    <div class="multicolumn">
+                        <div class="col1">
+                            <h4>ICVGIP 2012 is over ( 
+<i><a href="photos.html">click for photos</a>)</i>! Thank you for joining us in the conference.</h4>
+
+                            <p>The <strong>eighth edition</strong> of this highly successful series will be held at the
+                                <a href="http://www.iitb.ac.in"><strong>Indian
+                                Institute of Technology
+                                Bombay</strong></a> from <strong>16 to
+                                19 December, 2012</strong>.  The
+                                objective of this conference is to
+                                serve as a platform to bring together
+                                researchers to present original ideas
+                                and solutions, discuss new problems,
+                                and share information on
+                                state-of-the-art technologies in
+                                anything related to visual
+                                information.
+                                </p>
+                                <p>
+                                Read more about the history of ICVGIP <a href="about-icvgip.php">here</a>.
+                                Also check out information about <a href="about-iitb.php">the venue &mdash; IIT Bombay</a>
+                                and about <a href="about-mumbai.php"> the host city &mdash; Mumbai</a>.
+                            </p>
+                            
+		            <h4>Latest Updates</h4>
+                            
+                            
+    <div id="news-list-short" class="news-list">                        <p>
+                        <span><strong>ICVGIP 2012 proceedings are now available at <a href='http://dl.acm.org/citation.cfm?id=2425333'>ACM Digital Library</a>.</strong></span>
+                        <span><em>(Jan 10, 2013)</em></span>
+                        </p>
+                                            <p>
+                        <span><strong> Visit links: <a href='http://www.cse.iitb.ac.in/graphics/icvgip2012/plenary-talks.pho'>Plenary Talks</a> for plenary slides and <a href='http://www.cse.iitb.ac.in/graphics/icvgip2012/paper-schedule.php'>papers</a> for oral, and poster spotlight slides.</strong></span>
+                        <span><em>(Jan 10, 2013)</em></span>
+                        </p>
+                                            <p>
+                        <span>ICVGIP 2012 got over today! The <strong><a href='http://www.cse.iitb.ac.in/graphics/icvgip2012/best-paper.php'>best paper</a></strong> award went to Uddipan Mukherjee and Gopi M. from UC Irvine.</span>
+                        <span><em>(Dec 19, 2012)</em></span>
+                        </p>
+                    <br/><p class="center"><a href="http://www.cse.iitb.ac.in/graphics/icvgip2012/news/news-list.php?all=true&iframe=true&width=60%&height=100%" data-gal="prettyPhoto[news]" title="All Updates">Older Updates</a></p></div>    
+
+    <script type="text/javascript">
+    $(document).ready(function() {
+        $("#news-list-full.news-list a, #news-list-short.news-list a").attr("target", "_blank"); // Do this only if different domain :)
+    });
+    </script>
+
+
+
+		
+                        </div>
+                    
+                        <div class="col2">
+                            <h4>Important Dates</h4>
+                            <p>
+                                <table align="center">
+    <tr>
+        <td class="key nowrap">Pre-Submissions Abstract <br> (Recommended)</td>
+        <td class="value"> <strong>Jul 31, 2012 </strong></td>
+    </tr>
+    <tr>
+        <td class="key nowrap">Paper submissions due <br> <strong> (No
+    extensions) </strong></td>
+        <td class="value">Aug 7, 2012, 23:59 GMT </td>
+    </tr>
+    <tr>
+        <td class="key nowrap">Author Rebuttal Period</td>
+        <td class="value">Sep 17, 2012, 17:00 GMT to Sep 19, 2012, 12:00 (noon) GMT</td>
+    </tr>
+    <tr>
+        <td class="key nowrap">Decision notification</td>
+        <td class="value"><s> Sep 30, 2012</s><br/>  Delayed to Oct 3, 2012.</td>
+    </tr>
+    <tr>
+        <td class="key nowrap">Camera ready papers due</td>
+        <td class="value">Oct 31, 2012, 23:59 GMT</td>
+    </tr>
+</table>
+
+                            </p>
+			    
+			    <h4>Questions?</h4>
+                            <p>
+                                Please check out the <a href="faq.php">FAQs</a> page to get solutions to most 
+                                common questions. If that does not help, or for any further enquiries please 
+                                <!--feel free to --> drop an email to <a href="http://www.google.com/recaptcha/mailhide/d?k=01Rhj9ajPChMzfc-EAJDlkAw==&amp;c=vfZhKEHV9OlG6njQKzeMr0CQJqn6XoEVSvcPXNvQC5k=">icvgip12@cse.iitb.ac.in</a>.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- <h4>Topics To Be Included</h4> -->
+                    <!-- <p> -->
+                    <!--     Following are the topics of interest (but are not restricted) to be included in this conference. -->
+                    <!--     Please also see <a href="call-for-papers.php"><strong>Call for Papers</strong></a>. -->
+                    <!-- </p> -->
+                    <!-- <div class="center" style="width: 80%"> -->
+                    <!--     <table>
+    <tr>
+        <td class="value" style="vertical-align: top">
+            <ul>
+                <li>Segmentation, Registration and Representation</li> 
+                <li>Restoration and Super-Resolution</li>
+                <li>Pattern Analysis and Machine Learning</li>
+                <li>Object Recognition and Classification</li>
+                <li>Motion and Video Analysis</li>
+                <li>Image and Video Retrieval</li>
+                <li>Surveillance and Activity Recognition</li>
+                <li>Vision-based Graphics</li>
+		<li>Medical Image Analysis</li>
+                <li>Document Image Analysis</li>
+                <li>Applications on Handheld Devices</li>
+                <li>Performance Evaluation</li>
+                <li>Mathematical Methods</li>
+            </ul>
+        </td>
+        <td class="value" style="vertical-align: top">
+            <ul>
+		<li>Image and Video Coding</li>
+                <li>Shape-from-X</li>
+                <li>Rendering Techniques</li>
+                <li>Modelling and Animation</li>
+                <li>Scientific Visualization</li>
+                <li>Real-Time Graphics</li>
+                <li>Virtual and Augmented Reality</li>
+                <li>Human Computer Interaction</li>
+                <li>Hardware for Vision and Graphics</li>
+                <li>Computational Photography</li>
+                <li>Color Processing</li>
+                <li>Multi-band processing and fusion</li>
+                <li>Biometrics</li>
+                <li>Remote Sensing</li>
+            </ul>
+        </td>
+    </tr>
+</table>
+
+ -->
+                    <!-- </div> -->
+                    
+                    <!-- <div class="multicolumn"> -->
+                    <!--     <div class="col1"> -->
+                    <!--         <h4>Submission</h4> -->
+                    <!--         <p> -->
+                    <!--             <\!-- Registrations are now open! You can register <a href="registration.php">here</a>.<br/> -\-> -->
+                    <!--             If you are an author, submit your work <a href="submission.php">here</a>. -->
+                    <!--         </p> -->
+                    <!--     </div> -->
+                    <!--     <div class="col2"> -->
+                   
+                    <!--     </div> -->
+                    <!-- </div> -->
+
+                </article>
+
+                <p><br class="clear"/></p>
+
+            </div>
+
+            <br class="clear"/>
+<div class="calloutcontainer">
+    <footer>
+        <div class="calloutoverlay"></div>
+        <p class="tagline_left">Copyright &copy; 2012 - <a href="#">IIT Bombay</a></p>
+        <p class="tagline_right">
+            Website: <a href="http://www.cse.iitb.ac.in/~mihirgokani" title="Mihir Gokani" target="_blank">Mihir Gokani</a>
+            | Template: <a href="http://www.priteshgupta.com/" title="Pritesh Gupta" target="_blank" >Pritesh Gupta</a>
+            | Menu: <a href="http://apycom.com/">Apycom</a>
+        </p>
+        <br class="clear" />
+    </footer>
+</div>
+        </div>
+    </body>
+</html>

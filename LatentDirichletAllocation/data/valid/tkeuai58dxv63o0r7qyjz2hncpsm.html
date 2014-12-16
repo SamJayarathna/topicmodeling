@@ -1,0 +1,489 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<link href="http://purl.org/DC/elements/1.0/" rel="schema.DC"/>
+<link rel="SHORTCUT ICON" href="http://www.ibm.com/favicon.ico"/>
+<meta name="DC.Publisher" content="IBM Corporation"/>
+<meta name="DC.Rights" content="© Copyright IBM Corp. 2014"/>
+<meta name="DC.Date" scheme="iso8601" content="2013-03-22"/>
+<meta name="DC.Subject" scheme="IBM_SubjectTaxonomy" content="IBM101"/>
+<meta name="DC.Type" scheme="IBM_ContentClassTaxonomy" content="CT002"/>
+<meta name="DC.Language" scheme="rfc1766" content="en-US"/>
+<meta name="IBM.Effective" scheme="W3CDTF" content="2013-03-19"/>
+<meta name="IBM.Country" content="US"/>
+<meta name="Security" content="Public"/>
+<meta name="Owner" content="John Richards/Watson/IBM"/>
+<meta name="Robots" content="index,follow"/>
+<meta name="Keywords" content="IBM, IBM people"/>
+<meta name="Description" content="IBM people and projects"/>
+
+<link href="//1.www.s81c.com/common/v17/css/www.css" rel="stylesheet" title="www" type="text/css"/>
+<script src="//1.www.s81c.com/common/js/dojo/www.js" type="text/javascript"></script>
+<script type="text/javascript" src="scripts/researcher_feedback.js"></script>
+<script type="text/javascript" src="scripts/researcher_contact.js"></script>
+
+<script type="text/javascript" src="libjs/sysutils.js"></script>
+<script type="text/javascript" src="libjs/ajaxreq.js"></script>
+<script type="text/javascript" src="libjs/ajaxutils.js"></script>
+<script type="text/javascript" src="libjs/ajaxjsreq.js"></script>
+<script type="text/javascript" src="libjs/htmlutils.js"></script>
+<script type="text/javascript" src="libjs/logfile.js"></script>
+<script type="text/javascript" src="scripts/researcher.js"></script>
+<script type="text/javascript" src="scripts/researcher_db.js"></script>
+<script type="text/javascript" src="libjs/cssutils.js"></script>
+<script type="text/javascript" src="libjs/htmlutils.js"></script>
+<script type="text/javascript" src="scripts/researcher_model.js"></script>
+
+<script type="text/javascript">
+ibmweb.config.set({
+siteid:'www',
+greeting:{enabled:false},
+signin:{enabled:false},
+footermenu:{enabled:true}
+});
+</script>
+<link href="res.css" rel="stylesheet" type="text/css"></link>
+
+
+<script type="text/javascript">
+
+var is_internal_server = "";
+var edit_server = "resweb.watson.ibm.com/researcher/";
+var view_server = "researcher.watson.ibm.com/researcher/";
+
+var resEditCookie = dojo.cookie("res-cwacheck");			// set by cwacheck.php if successful log on
+var cookie_shortname = '';
+var cookie_domain = '';
+if (resEditCookie != null) {
+	var cookie_parts = resEditCookie.split('@');
+	cookie_shortname = cookie_parts[0];
+	cookie_domain = cookie_parts[1];
+	}
+var person = "us-wegman";
+var researcher_name = "Mark Wegman";
+var researcher_role = "IBM Fellow/Chief Scientist Software Technology";
+var researcher_shortname = "wegman";
+var researcher_domain = "us.ibm.com";
+var research_area_url = "view_group.php?id=1718";
+var research_area_name = "Computer Science";
+// jtr001 start
+//var leftr = researcher_shortname.split("").reverse().join("");
+//var rightr = researcher_domain.split("").reverse().join("");
+var researcher_display_email = "";
+var leftr, rightr;
+if (researcher_display_email == '') {
+	leftr = researcher_shortname.split("").reverse().join("");
+	rightr = researcher_domain.split("").reverse().join("");
+	}
+else {
+	var parts = researcher_display_email.split("@");
+	leftr = parts[0].split("").reverse().join("");
+	rightr = parts[1].split("").reverse().join("");
+	}
+// jtr001 end
+var researcher_id = "2";
+var researcher_publish = "1";
+var researcher_publications = "1";
+var researcher_patents = "1";
+var showEditButton = false;
+
+var person_tabs = Array();
+var groups_order = Array();
+var explicit_externalization_for_groups = Array();
+var n_additional_items = "3";
+var additional_items = Array();
+additional_items[0] = [753 , 'Engineering paradise' , 1 , 1.0, 'http://www.youtube.com/watch?v=Y0DxmthvkKU&feature=youtu.be'];additional_items[1] = [1239 , 'Managing businesses that design' , 0 , 1.0, ''];additional_items[2] = [5435 , 'tester' , 0 , 99.9, ''];groups_order[0] = ['3', 'projects'];groups_order[1] = ['2', 'areas'];groups_order[2] = ['1', 'associations'];explicit_externalization_for_groups[0] = '3';explicit_externalization_for_groups[1] = '8';explicit_externalization_for_groups[2] = '10';person_tabs[0] = [84 , 'Honors' , 1 , 1.0];person_tabs[1] = [85 , 'Leisure' , 1 , 1.0];person_tabs[2] = [1215 , 'Advice to new researchers' , 1 , 1.0];
+function editProfile() {
+	window.location.replace('http://'+edit_server+'edit.php');
+}
+
+function pageLoaded() {
+	if (researcher_publish == 0)
+		document.getElementById('not_externalized').innerHTML = '<div class="res-alert">Page not available.</div><br/>';
+	if (is_internal_server)
+		showInternalItems();
+	else {
+		var img = new Image();
+		img.onload = function() { internalImageLoaded(); }
+		img.src = "http://"+edit_server+"images/a_black.png";
+		}
+}
+
+function internalImageLoaded() {
+	if (researcher_publish > 0)
+		showInternalItems();
+	else {
+		// view the non-externalized profile on the internal edit server
+		location.replace('http://'+edit_server+'view.php?person='+person);
+		}
+}
+
+function showInternalItems() {
+	var id, name, publish, url, rank, next_rank, type, div, listArray, innerHTML;
+	var nonExternalized = false;
+	var buttonString = 'Create/Edit Profile';
+	if (resEditCookie) {
+		if (researcher_shortname.toLowerCase() == cookie_shortname.toLowerCase() & researcher_domain.toLowerCase() == cookie_domain.toLowerCase()) {
+			showEditButton = true;
+			buttonString = 'Edit Profile';
+			}
+		}
+	else
+		showEditButton = true;
+	if (showEditButton)
+		document.getElementById('edit_profile').innerHTML = "<input name='editProfileButton' type='button' value='"+ buttonString + "' onClick='editProfile()' />";
+	if (researcher_publish == 0) {
+		nonExternalized = true;
+		if (showEditButton)
+			document.getElementById('not_externalized').innerHTML = '<div class="res-alert">This profile is not externalized. Click on the Edit Profile button to change this.</div><br/>';
+		else
+			document.getElementById('not_externalized').innerHTML = '<div class="res-alert">This profile is not externalized.</div><br/>';
+		}
+		
+	// re-render additional items to show both externalized and non-externalized groups if needed
+	if (n_additional_items > 0) {
+		innerHTML = '';
+		innerHTML += '<h2>More Information</h2>';
+		innerHTML += '<ul>';
+		var viewer = 'view_person_subpage.php';
+		// render overflow tabs if any
+		for (var i=0; i<additional_items.length; i++) {	
+			id = additional_items[i][0];
+			name = additional_items[i][1];
+			publish = additional_items[i][2];
+			url = additional_items[i][4];
+			if (url == '') {
+				if (publish > 0)
+					innerHTML += "<li><a href='" + viewer + "?id=" + id + "'>" + name+ "</a>";
+				// jtr007 start
+				// else
+				else {
+					nonExternalized = true;
+					innerHTML += "<li><a href='http://" + edit_server + viewer + "?id=" + id + "'><span class=res-group-unpublished>" + name+ "</span><span class=res-group-unpublished-note> not externalized</span></a>";
+					}
+				// jtr007 end
+				}
+			}
+		// render links if any
+		for (var i=0; i<additional_items.length; i++) {	
+			name = additional_items[i][1];
+			url = additional_items[i][4];
+			if (url != '')
+				innerHTML += "<li><a href='" + url + "'>" + name + "</a>";
+			}
+		innerHTML += '</ul>';
+		innerHTML += '<br/>';
+		document.getElementById('additional_items').innerHTML = innerHTML;
+		}
+		
+	// re-render groups to show both externalized and non-externalized groups if needed
+	innerHTML = '';
+	for (var i = 0; i < groups_order.length; i++) {
+		type = groups_order[i][0];
+		div = groups_order[i][1];
+		var table = 'group_types';
+		var where = uriEncode64('id='+type);
+		var url = "select_items.php?table="+table+"&where="+where;
+		var group_types = ajaxSimpleJSQuery(url);
+		list_name = group_types[1][2];
+		innerHTML += '<div id="' + div + '">';
+		list_array = get_list_contents(type);
+		if (list_array.length > 0 || (type == 2 && research_area_name != '')) {
+			innerHTML += '<h2>' + list_name + '</h2>';
+			innerHTML += '<ul>';
+			if (type == 2 && research_area_name != '')
+				innerHTML += '<li><a href="' + research_area_url + '">' + research_area_name + '</a></li>';
+			for (var j = 0; j < list_array.length; j++) {
+				if (list_array[j][2] != '') { // external url
+					innerHTML += '<li><a href="' + list_array[j][2] + '">' + list_array[j][1] + '</a></li>'; }
+				else { // group is internal to this application, generate the url
+					if (explicit_externalization_for_groups.indexOf(type) >= 0) {
+						if (list_array[j][3] == 1)
+							innerHTML += '<li><a href="view_group.php?id=' + list_array[j][0] + '">' + list_array[j][1] + '</a></li>';				
+						// jtr007 start
+						// else
+						else {
+							nonExternalized = true;
+							innerHTML += '<li><a href="http://' + edit_server + 'view_group.php?id=' + list_array[j][0] + '"><span class=res-group-unpublished>' + list_array[j][1] + '</span><span class=res-group-unpublished-note> not externalized</span></a></li>';
+							}			
+						// jtr007 end
+						}
+					else
+						innerHTML += '<li><a href="view_group.php?id=' + list_array[j][0] + '">' + list_array[j][1] + '</a></li>'; }
+				}
+			innerHTML += '</ul>';
+			innerHTML += '<br/>';
+			}
+		innerHTML += '</div>';
+		}
+	document.getElementById('researcher_groups').innerHTML = innerHTML;
+	
+	// re-render tabs to show both externalized and non-externalized tabs if needed
+	innerHTML = '<div id="nonexternalized_tabs"></div>';
+	innerHTML += '<div class="ibm-graphic-tabs">';
+	innerHTML += '<div class="ibm-tab-section">';
+	innerHTML += '<h2 class="ibm-access">Tab navigation</h2>';
+	innerHTML += '<ul class="ibm-tabs">';
+	if (researcher_publish > 0)
+		innerHTML += '<li class="ibm-active"><a href="view.php?person=' + person + '">Profile</a></li>';
+	else
+		innerHTML += '<li class="ibm-active"><a href="http://' + edit_server + 'view.php?person=' + person + '"><span class="res-tab-unpublished">Profile</span></a></li>';
+	if (researcher_publications > 0)
+		innerHTML += '<li><a href="view_person_pubs.php?person=' + person + '&t=1">Publications</a></li>';
+	else {
+		nonExternalized = true;
+		innerHTML += '<li><a href="http://' + edit_server + 'view_person_pubs.php?person=' + person + '&t=1"><span class="res-tab-unpublished">Publications</span></a></li>';
+		}
+	if (researcher_patents > 0)
+		innerHTML += '<li><a href="view_person_pubs.php?person=' + person + '&t=2">Patents</a></li>';
+	else {
+		nonExternalized = true;
+		innerHTML += '<li><a href="http://' + edit_server + 'view_person_pubs.php?person=' + person + '&t=2"><span class="res-tab-unpublished">Patents</span></a></li>';
+		}
+	var viewer = 'view_person_subpage.php';
+	for (var i=0; i<person_tabs.length; i++) {	
+		id = person_tabs[i][0];
+		name = person_tabs[i][1];
+		if (person_tabs[i][2])
+			innerHTML += '<li><a href="' + viewer + '?id=' + id + '">' + name + '</a></li>';
+		else {
+			nonExternalized = true;
+			innerHTML += '<li><a href="http://' + edit_server + viewer + '?id=' + id + '"><span class="res-tab-unpublished">' + name + '</span></a></li>';
+			}
+		}
+	innerHTML += "</ul>";
+	innerHTML += "</div>";
+	innerHTML += "</div>";
+	if (nonExternalized) {
+		document.getElementById('rendered_tabs').innerHTML = innerHTML;
+		// document.getElementById('nonexternalized_tabs').innerHTML = '<span class="res-instructions">Tabs with </span><span class="res-tab-unpublished-string">This Kind of Text</span><span class="res-instructions"> are not externalized.</span><br/><br/>';  // jtr007
+		document.getElementById('nonexternalized_tabs').innerHTML = '<span class="res-instructions">Items with </span><span class="res-tab-unpublished-string">This Kind of Text</span><span class="res-instructions"> are not externalized.</span><br/><br/>';  // jtr007
+		}
+	document.getElementById('last_updated').innerHTML = 'last updated ' + '07/04/2014';
+}
+
+function get_list_contents(type) {
+	var results, answer = Array();
+	if (type == 9) {
+		var table = 'groups';
+		var owner = 'R_' + researcher_id;
+		var where = uriEncode64('owner="' + owner + '" AND type=9');
+		var sortby = 'rank';
+		var url = "select_items.php?table="+table+"&where="+where+"&sorton="+sortby;
+		try { results = ajaxSimpleJSQuery(url); }
+		catch(e) {
+			Logger.pushError(phpFile + " failed: "+e.message);
+			return NaN;
+			}
+		for (var i=1; i < results.length; i++)
+			answer[i-1] = [results[i][0], results[i][4], results[i][5]];
+		}
+	else {
+		from = 'researcher_group_entries AS rge INNER JOIN groups AS g';
+		on = 'rge.group_id=g.id';
+		where = 'g.type='+type+' AND rge.researcher_id='+researcher_id;
+		orderBy = 'g.name';
+		//query = "libphp/generic_select.php?"
+		query = "select_items_generic.php?"
+							+ "from="		+uriEncode64(from)
+							+ "&on="		+uriEncode64(on)
+							+ "&where="		+uriEncode64(where)
+							+ "&sorton="	+uriEncode64(orderBy);
+		try { results = ajaxSimpleJSQuery(query); }
+		catch(e) { 
+			Logger.pushError(phpFile + " failed: "+e.message);
+			return NaN;
+			}
+		for (var i=1; i < results.length; i++)
+			answer[i-1] = [results[i][0], results[i][7], results[i][8], results[i][3]];
+		}
+	return answer;
+}
+
+function res_tabs_content(currentTabAlert) {
+	var answer = '';
+	if (researcher_publish == 0)
+		answer += '<div class="res-alert">This Profile is not yet externalized. To change this, click on the Edit Profile button above.</div><br/>';
+	answer += '<div class="ibm-graphic-tabs">';
+	answer += '<div class="ibm-tab-section">';
+	answer += '<h2 class="ibm-access">Tab navigation</h2>';
+	answer += '<ul class="ibm-tabs">';
+	if (researcher_publish > 0)
+		answer += '<li class="ibm-active"><a href="view.php?person=' + person + '">Profile</a></li>';
+	else
+		answer += '<li class="ibm-active"><a href="http://' + edit_server + 'view.php?person=' + person + '"><span class="res-tab-unpublished">Profile</span></a></li>';
+	if (researcher_publications > 0)
+		answer += '<li><a href="view_person_pubs.php?person=' + person + '&t=1">Publications</a></li>';
+	if (researcher_patents > 0)
+		answer += '<li><a href="view_person_pubs.php?person=' + person + '&t=2">Patents</a></li>';
+	// get all subpages for this user
+	var table = 'groups';
+	var owner = 'R_' + researcher_id;
+	var where = uriEncode64('owner="' + owner + '" AND type=0');
+	var sortby = 'rank';
+	var url = "select_items.php?table="+table+"&where="+where+"&sorton="+sortby;
+	var groups = ajaxSimpleJSQuery(url);
+	var i, id, name, viewer = 'view_person_subpage.php';
+	for (i=1; i < groups.length; i++) {	
+		id = groups[i][0];
+		name = groups[i][4];
+		if (groups[i][11] > 0)
+			answer += '<li><a href="' + viewer + '?id=' + id + '">' + name + '</a></li>';
+		}
+	answer += "</ul>";
+	answer += "</div>";
+	answer += "</div>";
+	answer += "</div>";
+	return answer;
+}
+
+</script>
+
+<title>Mark Wegman - IBM</title>
+</head>
+<!-- eTree :.: Breadcrumb trail :.: I788950K67987B31-->
+<!-- eTree :.: Left navigation :.: -->
+<!-- eTree :.: Tab navigation :.: E695038X41213S02-->
+<body id="ibm-com" onload="pageLoaded()">
+<div id="ibm-top" class="ibm-landing-page">
+
+<!-- MASTHEAD_BEGIN -->
+<div id="ibm-masthead">
+<div id="ibm-mast-options">
+<ul>
+<li id="ibm-geo"><a href="http://www.ibm.com/planetwide/select/selector.html"><span class="ibm-access">Select a country/region: </span>United States</a></li>
+</ul>
+</div>
+<div id="ibm-universal-nav">
+<ul id="ibm-unav-links">
+<li id="ibm-home"><a href="http://www.ibm.com/us/en/">IBM®</a></li>
+</ul>
+<ul id="ibm-menu-links">
+<li><a href="http://www.ibm.com/sitemap/us/en/">Site map</a></li>
+</ul>
+<div id="ibm-search-module">
+<form method="get" action="people.php" id="ibm-search-form">
+<p>
+<label for="q"><span class="ibm-access">Search for people</span></label>
+<input type="text" maxlength="100" value="" name="q" id="q"/>
+<input type="submit" id="ibm-search" class="ibm-btn-search" value="Submit"/>
+</p>
+</form>
+</div>
+</div>
+</div>
+<!-- MASTHEAD_END -->
+
+
+<!-- LEADSPACE_BEGIN -->
+<div id="ibm-leadspace-head" class="ibm-alternate ibm-alternate-background" style="background: url(//research.ibm.com/software/IBMResearch/image/ibm_research_banner_lead.jpg) no-repeat 50% 50%;">
+<div id="ibm-leadspace-body">
+<!-- Breadcrumb trail -->
+<ul id="ibm-navigation-trail">
+<li><a href="people.php">Our people</a></li></ul>
+<h1>&nbsp;</h1>
+<p><em><span style="color: #333333">&nbsp;</span></em></p>
+</div>
+</div>
+<!-- LEADSPACE_END -->
+<!-- TABS_BEGIN -->
+<div id="ibm-content-nav">
+<div id="ibm-primary-tabs">
+<h2 class="ibm-access">Primary tab navigation</h2>
+<ul class="ibm-tabs">
+<li><a href="http://www.research.ibm.com/index.shtml">Featured research</a></li>
+<li><a href="http://www.research.ibm.com/cognitive-computing/index.shtml">Cognitive computing</a></li>
+<li><a href="http://www.research.ibm.com/client-programs/index.shtml">Client programs</a></li>
+<li><a href="http://www.research.ibm.com/labs/">Locations</a></li>
+<li class="ibm-active"><a href="people.php?sn=1&amp;q=">Our people</a></li>
+<li><a href="http://www.research.ibm.com/careers/index.shtml">Careers</a><span class="ibm-access"> - selected tab</span></li>
+</ul>
+</div>
+</div>
+<!-- TABS_END -->
+
+<div id="ibm-pcon">
+<div id="ibm-content">
+<div id="x-ibm-content-body">
+<span class="res-feedback-link"><script type="text/javascript">gen_feedback_link(leftr, rightr);</script></span>
+<div id="ibm-content-main">
+
+<div id="not_externalized"></div>
+
+<div class="ibm-columns">
+
+<div class="ibm-col-6-2">
+<div class="res-left">
+<div id="researcher_photo"><a href='view.php?person=us-wegman'><img class='res-person-photo' src='photos/2.jpg' alt='Mark Wegman photo' title='Mark Wegman' width='150' height='150'></a></div><div id="additional_items"><h2>More Information</h2><ul><li><a href='http://www.youtube.com/watch?v=Y0DxmthvkKU&feature=youtu.be'>Engineering paradise</a></ul><br/></div><div id="researcher_groups"><div id='projects'><h2>Project Pages</h2><ul><li><a href="view_group.php?id=31">External Web Presence</a></li><li><a href="view_group.php?id=102">Hash Functions and Their Applications</a></li><li><a href="view_group.php?id=245">Renaissance</a></li><li><a href="view_group.php?id=184">Rock Climbing</a></li><li><a href="view_group.php?id=471">Software Development Governance</a></li><li><a href="view_group.php?id=4928">Technical interests at IBM Research </a></li></ul><br/></div><div id='areas'><h2>Professional Interests</h2><ul><li><a href="view_group.php?id=1718">Computer Science</a></li><li><a href="view_group.php?id=134">Algorithms and Theory</a></li><li><a href="view_group.php?id=3">Programming Languages & Software Engineering</a></li></ul><br/></div><div id='associations'><h2>Professional Associations</h2><ul><li><a href="http://www.acm.org">ACM</a></li><li><a href="http://ieee.org">IEEE </a></li><li><a href="http://www.nae.edu/">National Academy of Engineering</a></li></ul><br/></div></div></div>
+</div>
+
+<div class="ibm-col-6-4">
+
+<h2 class="ibm-access">Contact Information</h2><div id='researcher_name' class='res-person-name-left'>Mark Wegman<span class='res-action-button' id='edit_profile'></span></div><div class="res-person-contact-left"><div id='researcher_role'>IBM Fellow/Chief Scientist Software Technology</div><div id='researcher_location'>Thomas J. Watson Research Center, Yorktown Heights, NY  USA</div><span id='researcher_email'><span class="res-contact-link"><script type="text/javascript">gen_contact_link(leftr, rightr);</script></span></span><span id='researcher_phone'>&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;+1<img class="res-dash" src="images/dash.png" alt="dash" title="dash">914<img class="res-dash" src="images/dash.png" alt="dash" title="dash">945<img class="res-dash" src="images/dash.png" alt="dash" title="dash">4900</span></div><br/>
+<br/>
+
+<div class="res-person-description-left">
+
+<div id="rendered_tabs"><div class="ibm-graphic-tabs"><div class="ibm-tab-section"><h2 class="ibm-access">Tab navigation</h2><ul class='ibm-tabs'><li class='ibm-active'><a href='view.php?person=us-wegman'>Profile</a></li><li><a href="view_person_pubs.php?person=us-wegman&t=1">Publications</a></li><li><a href="view_person_pubs.php?person=us-wegman&t=2">Patents</a></li><li><a href='view_person_subpage.php?id=84'>Honors</a></li><li><a href='view_person_subpage.php?id=85'>Leisure</a></li><li><a href='view_person_subpage.php?id=1215'>Advice to new researchers</a></li></ul></div></div></div><div id="researcher_description"><p><span style="color: #555555;"><strong>Things I'm proud of:</strong></span></p>
+<p>Being one of the inventors of the Static Single Assignment form, used in the analysis portion of most if not all modern optimizing compilers. SIGPLAN recognized this work in 2006 with its Programming Languages Achievement Award.</p>
+<p>Making contributions to algorithms and information theory, for example Universal Hash Functions, one of the earliest and most important randomized algorithms. Contributing to the data compression ideas embodied in all modern modems, GIF format files and the UNIX Compress utility.</p>
+<p>Being named an IBM, ACM and IEEE Fellow and elected to the National Academy of Engineering.</p>
+<p>Finding two climbs so badly mislabeled as 5.12's that even I could climb them.</p>
+<hr />
+<p><span style="color: #555555;"><strong>Things I like to think about:</strong></span></p>
+<p>Making software developers, and perhaps other parts of the economy, more efficient. I'm currently working on a white paper about this called "Managing Businesses That Design", (future link). My motivation to make software developers more efficient is in some sense related to my motivation to make machines more efficient through compiler optimization. The techniques, of course, are very different.</p>
+<p>Thinking about algorithms (e.g. Universal Hash Functions), information theory (e.g. compression algorithms) and mathematically modeling real world information so it can be manipulated.</p>
+<hr />
+<p><span style="color: #555555;"><strong>Things I think are important:</strong></span></p>
+<p>Trends in technology mean that frequency will not be increasing at the rate at which we are accustomed. Over time programmers have used higher levels of abstraction using the changes in our machines to compensate for the potential slowdown. We cannot make a programmer's job easier by introducing parallelism, the new direction in hardware. I think software will continue to become less efficient. We need a whole new approach to optimization to address this kind of inefficiency. <a href="files/us-wegman/app731.pdf">Here's</a> an example of what might be an interesting approach.</p>
+<hr />
+<p><span style="color: #555555;"><strong>Brief bio:</strong></span></p>
+<p><br />B.A., New York University, Washington Square College <br />Ph.D., University of California, Berkeley <br />Joined IBM Research in 1975 <br />Currently CTO Software Technology <br /> See honors section for more detail.</p>
+<p>&nbsp;</p></div><div id="last_updated" class="res-lastUpdated"></div>
+</div>
+</div>
+
+</div>
+
+</div>
+<div id="ibm-content-sidebar">
+ </div>
+</div>
+</div>
+</div>
+<div id="ibm-related-content">
+<!-- RELATED_CONTENT_BEGIN -->
+
+ 
+<div id="ibm-merchandising-module">
+<!-- ibm-merchandising-module -->
+</div>
+
+<!-- RELATED_CONTENT_END -->
+</div>
+<!-- FOOTER_BEGIN -->
+<div id="ibm-footer-module">
+</div>
+<div id="ibm-footer">
+<h2 class="ibm-access">Footer links
+</h2>
+<ul>
+<li><a href="http://www.ibm.com/contact/us/en/">Contact</a></li>
+<li><a href="http://www.ibm.com/privacy/us/en/">Privacy</a></li>
+<li><a href="http://www.ibm.com/legal/us/en/">Terms of use</a></li>
+<li><a href="http://www.ibm.com/accessibility/us/en/">Accessibility</a></li>
+</ul>
+</div>
+<!-- FOOTER_END -->
+</div>
+<div class="ibm-legal-text">  
+IBM is not responsible for, and does not validate or confirm, the correctness or accuracy of any user content posted. IBM does not endorse any user content. User content does not represent the views or opinions of IBM. IBM, in its sole discretion, reserves the right to remove any content.
+</div>
+
+</div>
+<div id="ibm-metrics">
+<script src="//www.ibm.com/common/stats/stats.js" type="text/javascript">//</script>
+</div>
+</body>
+</html>

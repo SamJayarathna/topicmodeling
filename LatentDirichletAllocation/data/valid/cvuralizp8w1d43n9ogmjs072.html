@@ -1,0 +1,862 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+
+  <title>POPL 2011: 38th ACM SIGACT-SIGPLAN Symposium on Principles of Programming Languages</title>
+  <style type="text/css">
+    body { margin: 15px; padding: 15px; background-color: #feffff;}
+    a.plain { text-decoration: none; }
+    a.icfplogo { float: right; }
+    a.acmlogo { float: left; }
+
+ 
+table {
+ table-layout: fixed;
+ width: 100%;
+}
+
+
+li {
+  line-height: 30px;  
+   
+}
+
+
+
+A:link {text-decoration: none; color: #0033BB}
+A:visited {text-decoration: none; color: #0033BB;}
+A:active {text-decoration: none; color: #0033BB;}
+A:hover {text-decoration: underline; color: #0033BB;}
+
+h2 {
+	font-family: Arial, Helvetica, sans-serif;
+        border-style: solid;
+        border-width: thin;
+	font-size: 16pt;
+	color: #15317e;
+	padding-top: 8px;
+	padding-bottom: 8px;
+background-color: #afdcec;
+text-align: center;
+}
+h1 {
+text-align: center;
+color: #000055;
+font-family: Arial,Helvetica,sans-serif;
+}
+
+    h3 { margin-bottom: 0em; font-family: Arial, Helvetica; font-size: 12pt; margin-top:0.8cm; 
+}
+
+    h4 { margin-bottom: 0em; }
+    p {line-height: 1.3;} 	
+    p.toppar { text-indent: 25px; margin-bottom: 0; margin-top: 0; line-height: 1.4; text-align: justify; }
+    body { font-family: "Helvetica", sans-serif; }
+    p.person { margin-left: 2em; margin-top: 0em; }
+    table.dates { margin-top: 0em; }
+    div.indent { margin-left: +2em; }
+  </style>
+</head>
+<body>
+
+      
+<table border="0" cellpadding="20" cellspacing="20">
+
+  <tbody>
+
+    <tr>
+
+      <td style="font-family: Arial, Helvetica, sans-serif;
+        border-style: solid;
+        border-width: thin;
+	font-size: 12pt;
+	color: #15317e;
+	padding-top: 8px;
+	padding-bottom: 8px;
+background-color: #afdcec;"
+        width="12%" valign="top">
+      <div align="left">
+      <p><b><a href="http://www.cse.psu.edu/popl/11">Home</a> 
+      </b></p>
+
+	<p><b><font face="Arial"><a 
+       href="https://regmaster3.com/2011conf/POPL11/register.php">Registration  URL</a></font></b></p>
+<!--
+ <p><b><font face="Arial"><a
+      href="visa.html">Student travel awards</a></font></b></p>
+-->
+	
+      <p><b><font face="Arial"><a
+      href="program.html">Conference Program (now with links to slides! <img src="new.gif">)</a></font></b></p>
+
+  <p><b><font face="Arial"><a
+      href="http://portal.acm.org/citation.cfm?id=1926385&CFID=15500376&CFTOKEN=82006583&preflayout=flat#prox">Link to POPL 2011 videos <img src="new.gif"></a></font></b></p>
+
+	
+	
+<!--
+		<p><b><font face="Arial"><a href="POPLCallPrint.pdf">Call For papers (pdf)</a></font></b></p>
+-->
+	
+      <p><b><font face="Arial"><a href="#schedule"> Workshops and Co-located Events</a></font></b></p>
+
+	
+      
+	
+
+
+
+      <p><b><font face="Arial"><a href="#Conference%20Organizers"> Conference Organizers</a></font></b></p>
+
+	<!--
+     <p><b><font face="Arial"><a href="#AffiliatedEvents">Affiliated Events</a></font></b></p>
+
+      <p><b><font face="Arial"><a href="#Sponsors">Sponsors</a></font></b></p>
+-->
+
+
+ <p><b><font face="Arial"><a
+      href="http://www.cse.psu.edu/popl/12"">POPL 2012!</a></font></b></p>
+
+
+	
+      <p><b><font face="Arial"><a
+      href="http://www.sigplan.org/awards.htm">SIGPLAN Awards</a></font></b></p>
+
+      </div>
+
+      <b><font face="Arial"> </font></b></td>
+
+<td>
+<table width="50%">
+<td>
+<center>
+<img src="POPL.png">
+</center>
+  </td>
+  <tbody>
+  <tr>
+<td>
+
+<!--  <h2>Welcome</h2> -->
+
+
+<div class="indent">
+<br><br>
+  <center>
+<font size="+1"><b>***  <img src="new.gif"> The <a href="program.html">program</a> now carries links to slides for most of the presentations. </a>
+  </font></center>
+
+</div>
+<div class="indent">
+<br>
+  <center>
+<font size="+1"><b>*** <img src="new.gif"><a href="http://portal.acm.org/citation.cfm?id=1926385&CFID=15500376&CFTOKEN=82006583&preflayout=flat#prox">ACM digital library page</a> (includes links to videos for many of the talks).
+  </font></center>
+
+</div>
+<br>
+
+
+
+</td>
+</tr>
+
+<tr>
+  <td>  
+<!---------------------------------------------------------------------------->
+<h2>Scope</h2>
+<p style="padding-top: 10px; padding-botton:15px;">
+The annual Symposium on Principles of Programming Languages is a forum
+for
+the discussion of all aspects of programming languages and systems,
+with
+emphasis on how principles underpin practice. Both theoretical and
+experimental papers are welcome, on topics ranging from formal
+frameworks to
+experience reports.
+</p>
+</td>
+</tr>
+
+<tr>
+<td>
+<h2>Program</h2>
+<p>
+The <a href="program.html">conference program</a> is now out; a 
+<a href="accepted-papers.html">list of accepted papers</a> is also separately available. This year's program consists of 49 research presentations and three invited talk sessions. More information on the invited talks is available <a href="events.html">here</a>.
+</p>
+
+  <p>In addition to showcasing some of the best research on Programming Languages, POPL 2011 will offer some <a href="events.html">"extra-curricular" attractions</a>, including a Games and Jazz Dinner and an Xbox Raffle. 
+</p>
+
+
+  </td>
+  </tr>
+  
+<tr>
+  <td>
+<h2>Conference hotel</h2>
+
+
+<p>
+The conference will be held at the Omni Austin Hotel in downtown Austin, TX.
+To make reservations at the special conference rate of $169/night, go to 
+<a href="http://www.omnihotels.com/FindAHotel/AustinDowntown/MeetingFacilities/ACMPOPL2011.aspx">http://www.omnihotels.com/FindAHotel/AustinDowntown/MeetingFacilities/ACMPOPL2011.aspx</a>.
+Alternately, call the hotel directly at +1-512-476-3700 and mention the group ACM/POPL 2011. You can also call the Omni 800 number 1-800-THE-OMNI (+1-800-843-6664); however, because there are two Omnis in Austin, you should  specify the Omni Austin Hotel Downtown in this case. 
+</p>
+<p>
+We realize that you may want to consider other hotels. Before you decide, please read <a href="staying-at-hotel.html">why you should try to stay at the conference hotel</a>. 
+</p>
+<p>
+To be eligible for the special conference rate, bookings must be made by December 21, 2010. However, as 
+the conference rate applies only to a limited number of rooms,  
+attendees are encouraged to make their hotel reservations at the earliest opportunity.  
+</p>
+
+<h3>Pre-POPL 2011 trip report from the general chair</h3>
+<p> 
+Your general chair, Tom Ball, recently visited Austin, TX to scope out the conference hotel. Here is his <a href="http://research.microsoft.com/en-us/people/tball/popl2011.aspx">trip report</a>.
+</p>
+
+
+  </td>
+</tr>
+
+
+
+
+<tr><td>
+<h2>
+Registration
+  </h2>
+<p>To register for POPL, visit the URL
+<a href="https://regmaster3.com/2011conf/POPL11/register.php">
+  https://regmaster3.com/2011conf/POPL11/register.php</a>. The early registration deadline is December 31, 2010.</p>
+<p>
+<b>*** Important note:</b> This year, we are capping the registration for POPL at 300 in order to provide an optimal conference experience at the Omni Hotel.  Therefore, please register early!
+</p>  
+  <p>The registration fees of POPL and associated events are as follows:</p>
+		<table>
+		  <tr bgcolor="#dddddd">
+		    <td valign=center>&nbsp;</td>
+		    <th colspan="4"> Price on or before<br />
+		      31 December 2010</th>
+		    <th colspan="4">Price after 31 December<br />
+		      and On-site</th>
+	      </tr>
+		  <tr>
+		    <td align=center><strong>Notice:</strong><br />
+            <em>All prices are in U.S. dollars</em></td>
+		    <th>ACM &amp; <br />
+		      SIG</th>
+		    <th>ACM | SIG</th>
+		    <th>Non-<br />
+		      member</th>
+		    <th>Student</th>
+		    <th>ACM &amp;<br />
+		      SIG</th>
+		    <th>ACM | SIG</th>
+		    <th>Non-<br />
+		      member</th>
+		    <th>Student</th>
+	      </tr>
+		  <tr bgcolor="#dddddd">
+		    <td><a href="http://www.cse.psu.edu/popl/11/" target="_blank">POPL </a></td>
+		    <td align="center" bgcolor="#CCCCFF">$480</td>
+		    <td align="center" bgcolor="#CCCCFF">$520</td>
+		    <td align="center" bgcolor="#CCCCFF">$560</td>
+		    <td align="center" bgcolor="#CCCCFF">$240</td>
+		    <td align="center" bgcolor="#AAAADD">$600</td>
+		    <td align="center" bgcolor="#AAAADD">$640</td>
+		    <td align="center" bgcolor="#AAAADD">$680</td>
+		    <td align="center" bgcolor="#AAAADD">$270</td>
+	      </tr>
+		  <tr bgcolor="#dddddd">
+		    <td><a href="http://research.microsoft.com/en-us/events/tptpa2011/default.aspx" target="_blank">TPTPA </a></td>
+		    <td align="center" bgcolor="#CCCCFF">$80</td>
+		    <td align="center" bgcolor="#CCCCFF">$80</td>
+		    <td align="center" bgcolor="#CCCCFF">$100</td>
+		    <td align="center" bgcolor="#CCCCFF">$50</td>
+		    <td align="center" bgcolor="#AAAADD">$120</td>
+		    <td align="center" bgcolor="#AAAADD">$120</td>
+		    <td align="center" bgcolor="#AAAADD">$140</td>
+		    <td align="center" bgcolor="#AAAADD">$80</td>
+	      </tr>
+		  <tr bgcolor="#dddddd">
+		    <td><a href="http://isabelle.in.tum.de/nominal/activities/nominal-popl11/" target="_blank">Nominal </a></td>
+		    <td align="center" bgcolor="#CCCCFF">$80</td>
+		    <td align="center" bgcolor="#CCCCFF">$80</td>
+		    <td align="center" bgcolor="#CCCCFF">$110</td>
+		    <td align="center" bgcolor="#CCCCFF">$50</td>
+		    <td align="center" bgcolor="#AAAADD">$120</td>
+		    <td align="center" bgcolor="#AAAADD">$120</td>
+		    <td align="center" bgcolor="#AAAADD">$150</td>
+		    <td align="center" bgcolor="#AAAADD">$80</td>
+	      </tr>
+		  <tr bgcolor="#dddddd">
+		    <td><a href="http://damp2011.cs.uchicago.edu/" target="_blank">DAMP</a></td>
+		    <td align="center" bgcolor="#CCCCFF">$80</td>
+		    <td align="center" bgcolor="#CCCCFF">$80</td>
+		    <td align="center" bgcolor="#CCCCFF">$110</td>
+		    <td align="center" bgcolor="#CCCCFF">$50</td>
+		    <td align="center" bgcolor="#AAAADD">$120</td>
+		    <td align="center" bgcolor="#AAAADD">$120</td>
+		    <td align="center" bgcolor="#AAAADD">$150</td>
+		    <td align="center" bgcolor="#AAAADD">$80</td>
+	      </tr>
+		  <tr bgcolor="#dddddd">
+		    <td><a href="http://www.program-transformation.org/PEPM11" target="_blank">PEPM</a></td>
+		    <td align="center" bgcolor="#CCCCFF">$240</td>
+		    <td align="center" bgcolor="#CCCCFF">$240</td>
+		    <td align="center" bgcolor="#CCCCFF">$290</td>
+		    <td align="center" bgcolor="#CCCCFF">$90</td>
+		    <td align="center" bgcolor="#AAAADD">$280</td>
+		    <td align="center" bgcolor="#AAAADD">$280</td>
+		    <td align="center" bgcolor="#AAAADD">$330</td>
+		    <td align="center" bgcolor="#AAAADD">$120</td>
+	      </tr>
+		  <tr bgcolor="#dddddd">
+		    <td><a href="http://www.mpi-sws.org/~dreyer/tldi2011/" target="_blank">TLDI</a></td>
+		    <td align="center" bgcolor="#CCCCFF">$60</td>
+		    <td align="center" bgcolor="#CCCCFF">$60</td>
+		    <td align="center" bgcolor="#CCCCFF">$80</td>
+		    <td align="center" bgcolor="#CCCCFF">$40</td>
+		    <td align="center" bgcolor="#AAAADD">$100</td>
+		    <td align="center" bgcolor="#AAAADD">$100</td>
+		    <td align="center" bgcolor="#AAAADD">$120</td>
+		    <td align="center" bgcolor="#AAAADD">$70</td>
+	      </tr>
+		  <tr bgcolor="#dddddd">
+		    <td><a href="http://wrigstad.com/stop11/" target="_blank">STOP</a></td>
+		    <td align="center" bgcolor="#CCCCFF">$80</td>
+		    <td align="center" bgcolor="#CCCCFF">$80</td>
+		    <td align="center" bgcolor="#CCCCFF">$100</td>
+		    <td align="center" bgcolor="#CCCCFF">$60</td>
+		    <td align="center" bgcolor="#AAAADD">$120</td>
+		    <td align="center" bgcolor="#AAAADD">$120</td>
+		    <td align="center" bgcolor="#AAAADD">$140</td>
+		    <td align="center" bgcolor="#AAAADD">$90</td>
+	      </tr>
+		  <tr bgcolor="#dddddd">
+		    <td><a href="http://research.ihost.com/verico/" target="_blank">VERICO</a></td>
+		    <td align="center" bgcolor="#CCCCFF">$50</td>
+		    <td align="center" bgcolor="#CCCCFF">$50</td>
+		    <td align="center" bgcolor="#CCCCFF">$50</td>
+		    <td align="center" bgcolor="#CCCCFF">$50</td>
+		    <td align="center" bgcolor="#AAAADD">$90</td>
+		    <td align="center" bgcolor="#AAAADD">$90</td>
+		    <td align="center" bgcolor="#AAAADD">$90</td>
+		    <td align="center" bgcolor="#AAAADD">$80</td>
+	      </tr>
+		  <tr bgcolor="#dddddd">
+		    <td><a href="http://cseweb.ucsd.edu/plpv11/" target="_blank">PLPV</a></td>
+		    <td align="center" bgcolor="#CCCCFF">$80</td>
+		    <td align="center" bgcolor="#CCCCFF">$80</td>
+		    <td align="center" bgcolor="#CCCCFF">$80</td>
+		    <td align="center" bgcolor="#CCCCFF">$60</td>
+		    <td align="center" bgcolor="#AAAADD">$120</td>
+		    <td align="center" bgcolor="#AAAADD">$120</td>
+		    <td align="center" bgcolor="#AAAADD">$120</td>
+		    <td align="center" bgcolor="#AAAADD">$90</td>
+	      </tr>
+		  <tr bgcolor="#dddddd">
+		    <td><a href="http://www.dcc.fc.up.pt/PADL-2011/" target="_blank">PADL Symposium</a></td>
+		    <td align="center" bgcolor="#CCCCFF">$275</td>
+		    <td align="center" bgcolor="#CCCCFF">$275</td>
+		    <td align="center" bgcolor="#CCCCFF">$300</td>
+		    <td align="center" bgcolor="#CCCCFF">$225</td>
+		    <td align="center" bgcolor="#AAAADD">$325</td>
+		    <td align="center" bgcolor="#AAAADD">$325</td>
+		    <td align="center" bgcolor="#AAAADD">$350</td>
+		    <td align="center" bgcolor="#AAAADD">$275</td>
+	      </tr>
+ </tr>
+		  <tr bgcolor="#dddddd">
+		    <td><a href="http://www.dcc.fc.up.pt/PADL-2011/" target="_blank">VMCAI Conference</a></td>
+		    <td align="center" bgcolor="#CCCCFF">$450</td>
+		    <td align="center" bgcolor="#CCCCFF">$450</td>
+		    <td align="center" bgcolor="#CCCCFF">$450</td>
+		    <td align="center" bgcolor="#CCCCFF">$350</td>
+		    <td align="center" bgcolor="#AAAADD">$500</td>
+		    <td align="center" bgcolor="#AAAADD">$500</td>
+		    <td align="center" bgcolor="#AAAADD">$500</td>
+		    <td align="center" bgcolor="#AAAADD">$400</td>
+	      </tr>
+
+
+	      
+    </table>
+</td></tr>
+
+
+<tr><td>
+<h2>Visa support letters</h2>
+
+<p>Requests for visa support letters for purposes of attending or presenting at POPL 2011 are handled by ACM.
+ For more information, go <a href="visa.html">here</a>. The same page also contains archived information for authors, and about student travel awards.
+  </p>
+</td></tr>
+
+<tr>
+  <td>    
+<h2><a name="schedule">Colocated conference and workshop schedule</a></h2>
+<p>
+This year, POPL has ten co-located events!
+
+</ul>
+<br>
+<center>
+<table cellpadding="0" border="1" width="85%">
+
+<tbody>
+<tr>
+<td width="100" style="padding: 2pt;">
+<p align="center" style="text-align: center;" class="MsoNormal"><b><span style="font-size: 12pt;">Jan 23 (Su)</span></b></p>
+</td>
+<td width="80" style="width: 90pt; padding: 2pt;">
+<p align="center" style="text-align: center;" class="MsoNormal"><b><span style="font-size: 12pt;">Jan 24 (M)</span></b></p>
+</td>
+<td width="100" style="padding: 2pt;">
+<p align="center" style="text-align: center;" class="MsoNormal"><b><span style="font-size: 12pt;">Jan 25 (Tu)</span></b></p>
+</td>
+<td width="140" valign="top" style="width: 45.55pt; padding: 2pt;">
+<p align="center" style="text-align: center;" class="MsoNormal"><b><span style="font-size: 12pt;">Jan</span></b></p>
+
+<p align="center" style="text-align: center;" class="MsoNormal"><b><span style="font-size: 12pt;">26 (W)</span></b></p>
+</td>
+<td width="88" valign="top" style="width: 45.95pt; padding: 2pt;">
+<p align="center" style="text-align: center;" class="MsoNormal"><b><span style="font-size: 12pt;">Jan</span></b></p>
+<p align="center" style="text-align: center;" class="MsoNormal"><b><span style="font-size: 12pt;">27 (Th)</span></b></p>
+</td>
+<td width="88" style="width: 45.95pt; padding: 2pt;">
+<p align="center" style="text-align: center;" class="MsoNormal"><b><span style="font-size: 11pt;">Jan 28 (F)</span></b></p>
+</td>
+<td width="108" valign="top" style="width: 100.35pt; padding: 2pt;">
+<p align="center" style="text-align: center;" class="MsoNormal"><b><span style="font-size: 11pt;">Jan 29 (Sat)</span></b></p>
+</td>
+
+</tr>
+<tr>
+<td  style="background: none repeat scroll 0% 0% rgb(246, 227, 206); padding: 3pt;" colspan="3">
+<p align="center" style="text-align: center;" class="MsoNormal"><span style="font-size: 11pt;">
+Conference on Verification, Model Checking, and Abstract Interpretation (<a href="http://vmcai11.cis.ksu.edu/">VMCAI 2011</a>) 
+</span></p>
+</td>
+<td width="278" valign="top" style="width: 208.45pt; padding: 7.5pt;" rowspan="3" colspan="3">
+<p class="MsoNormal"><span style="font-size: 11pt;"></span></p>
+</td>
+<td width="108" valign="top" style="width: 81.35pt; background: none repeat scroll 0% 0% rgb(253, 233, 217); padding: 2pt;">
+<p align="center" style="text-align: center;" class="MsoNormal"><span style="font-size: 11pt;">
+Workshop on Script to Program Evolution (<a 
+href="http://wrigstad.com/stop11/">STOP 2011</a>)</span></p>
+</td>
+</tr>
+<tr>
+<td width="100" style="width: 90.35pt; background: none repeat scroll 0% 0% rgb(218, 238, 243); padding: 3pt;">
+<p align="center" style="text-align: center;" class="MsoNormal"><span style="font-size: 11pt;">
+ Tutorial on Using Nominal Isabelle for PL Research
+ (<a href="http://isabelle.in.tum.de/nominal/activities/nominal-popl11/">Nominal 2011</a>)</span></p>
+
+</td>
+<td width="181" style="width: 135.7pt; background: none repeat scroll 0% 0% rgb(236, 248, 224); padding: 2pt;" colspan="2">
+<p align="center" style="text-align: center;" class="MsoNormal"><span style="font-size: 11pt;">
+ Tutorial on Theorem Proving Tools for Program Analysis (<a 
+href="http://research.microsoft.com/en-us/events/tptpa2011/default.aspx">TPTPA 2011</a>)</span></p>
+</td>
+<td width="108" valign="top" style="width: 81.35pt; background: none repeat scroll 0% 0%; padding: 2pt;">
+  <!--
+<p align="center" style="text-align: center;" class="MsoNormal"><span style="font-size: 11pt;">
+ Workshop on Commutativity in Parallel Programming
+ (COMMUTE)</span></p>
+  -->
+</td>
+</tr>
+<tr>
+
+<td width="90" style="width: 67.2pt; background: none repeat scroll 0% 0% rgb(229, 223, 236); padding: 4pt;">
+<p align="center" style="text-align: center;" class="MsoNormal"><span style="font-size: 11pt;">
+Declarative Aspects of Multicore Programming (<a href="http://damp2011.cs.uchicago.edu/">DAMP 2011</a>)</span></p>
+</td>
+ 
+
+
+<td width="181" style="width: 135.7pt; background: none repeat scroll 0% 0% rgb(242, 219, 219); padding: 4pt;" colspan="2">
+<p align="center" style="text-align: center;" class="MsoNormal"><span style="font-size: 11pt;">
+Workshop on Partial Evaluation and Program Manipulation (<a href="http://www.program-transformation.org/PEPM11">PEPM 2011</a>)
+</span></p>
+</td>
+
+<td width="138" valign="top" style="width: 100.35pt; background: none repeat scroll 0% 0% rgb(242, 219, 219); padding: 2pt;">
+<p align="center" style="text-align: center;" class="MsoNormal"><span style="font-size: 11pt;">
+Verification of Concurrent Data Structures <br>(<a href="http://research.ihost.com/verico/">Verico 2011</a>) <br> 
+ <i><small> [Now merged with 
+ COMMUTE 2011]</small></i></span></p>
+</td>
+</tr>
+<tr>
+
+ <td width="90" style="width: 67.35pt; background: none repeat scroll 0% 0% white; padding: 2pt;">
+</td>
+
+  <td width="181" style="width: 135.85pt; background: none repeat scroll 0% 0% rgb(234, 241, 221); padding: 2pt;" colspan="2">
+<p align="center" style="text-align: center;" class="MsoNormal"><span style="font-size: 11pt;">
+Symposium on Practical Aspects of Declarative Languages (<a href="http://www.dcc.fc.up.pt/PADL-2011/">PADL 2011</a>)</span></p>
+</td>
+
+
+
+
+
+
+
+
+
+<td width="278" valign="top" style="width: 208.45pt; background: none repeat scroll 0% 0% rgb(246, 227, 206); padding: 2pt;" colspan="3">
+<br><br><p align="center" style="text-align: center;" class="MsoNormal"><span style="font-size: 14pt;"><b>POPL!</b></span></p>
+
+</td>
+<td width="108" valign="top" style="width: 81.35pt; background: none repeat scroll 0% 0% rgb(229, 223, 236); padding: 7.5pt;">
+<p align="center" style="text-align: center;" class="MsoNormal"><span style="font-size: 11pt;">
+Programming Languages meets Program Verification (<a href="http://cseweb.ucsd.edu/plpv11/">PLPV 2011</a>) </span></p>
+</td>
+</tr>
+<tr>
+<td width="181" style="width: 135.85pt; padding: 7.5pt;" colspan="2">
+<p class="MsoNormal"><span style="font-size: 11pt;"></span></p>
+</td>
+<td style="width: 200pt; padding:4pt">
+<p align="center" style="text-align: center;" class="MsoNormal"><span style="font-size: 11pt;">
+Types in Language Design and Implementation (<a href="http://www.mpi-sws.org/~dreyer/tldi2011">TLDI 2011</a>)</span></p>
+</td>
+<td width="278" valign="top" style="width: 208.45pt; padding: 7.5pt;" colspan="3">
+<p class="MsoNormal"><span style="font-size: 11pt;"></span></p>
+</td>
+
+<td width="108" valign="top" style="width: 81.35pt; background: none repeat scroll 0% 0% white; padding: 7.5pt;">
+<p align="center" style="text-align: center;" class="MsoNormal"><span style="font-size: 11pt;"></span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</center>
+
+</td>
+</tr>
+<tr>
+  <td>
+<h2><a name="Conference Organizers">Organizers</a></h2>
+<table style="border-collapse: collapse;" border="0"
+ bordercolor="#111111" cellpadding="0" cellspacing="0">
+  <tbody>
+    <tr>
+      <td valign="top" width="200"><font face="Arial"><b>General Chair:</b></font></td>
+      <td><font face="Arial"> <a href="http://research.microsoft.com/en-us/people/tball/">Thomas Ball</a><br>
+Microsoft Research<br>
+One Microsoft Way, Redmond, WA 98052, USA. <br>	
+      <span style="font-family: Courier New;">tball@microsoft.com</span> </font></td>
+    </tr>
+    <tr>
+      <td valign="top">
+      <p style="margin-top: 0pt; margin-bottom: 0pt;">&nbsp;</p>
+      <p style="margin-top: 0pt; margin-bottom: 0pt;"><b><font
+ face="Arial">Program Chair:</font></b></p>
+      <b> </b></td>
+      <td>
+      <p style="margin-top: 0pt; margin-bottom: 0pt;">&nbsp;</p>
+      <p style="margin-top: 0pt; margin-bottom: 0pt;"><font face="Arial">
+      <a href="http://www.math.tau.ac.il/~msagiv/">Mooly Sagiv</a><br>
+Schreiber 317, School of Computer Science<br>
+Tel-Aviv University, 
+Tel-Aviv 69978, Israel<br>
+      <span style="font-family: Courier New;">msagiv@post.tau.ac.il</span><br>
+      </font></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" width="300">
+      <p style="margin-top: 0pt; margin-bottom: 0pt;">&nbsp;</p>
+      <p style="margin-top: 0pt; margin-bottom: 0pt;"><font face="Arial"><b>Program
+Committee: <br>
+      </b></font></p>
+      <p style="margin-top: 0pt; margin-bottom: 0pt;"><font face="Arial"><b><br>
+      </b></font></p>
+      </td>
+      <td>&nbsp;
+      <table style="border-width: 0px; width: 100%;" border="1"
+ cellspacing="5">
+        <tbody>
+          <tr>
+            <td style="border-style: none; border-width: medium;"> <a
+ href="http://www.di.ens.fr/~rcousot/">Radhia Cousot</a></td>
+            <td style="border-style: none; border-width: medium;">&Eacute;cole Normale Sup&eacute;rieure</td>
+          </tr>
+          <tr>
+            <td style="border-style: none; border-width: medium;"> <a
+ href="http://www.comlab.ox.ac.uk/people/oege.demoor/">Oege de Moor</a></td>
+            <td style="border-style: none; border-width: medium;">Oxford University
+Computing Laboratory</td>
+          </tr>
+          <tr>
+            <td style="border-style: none; border-width: medium;"> <a
+ href="http://www.mpi-sws.org/~dreyer/">Derek Dreyer</a></td>
+            <td style="border-style: none; border-width: medium;">MPI-SWS</td>
+          </tr>
+          <tr>
+            <td style="border-style: none; border-width: medium;"> <a
+ href="http://www.cs.toronto.edu/~azadeh/">Azadeh Farzan</a></td>
+            <td style="border-style: none; border-width: medium;">University of Toronto</td>
+          </tr>
+          <tr>
+            <td style="border-style: none; border-width: medium;"> <a
+ href="http://www.research.att.com/people/Fisher_Kathleen_S">Kathleen Fisher</a></td>
+            <td style="border-style: none; border-width: medium;">AT&T Laboratories</td>
+          </tr>
+          <tr>
+            <td style="border-style: none; border-width: medium;"> <a
+ href="http://www.cs.rit.edu/~mtf/">Matthew Fluet</a></td>
+            <td style="border-style: none; border-width: medium;">Rochester Institute of Technology</td>
+          </tr>
+          <tr>
+            <td style="border-style: none; border-width: medium;"> <a
+ href="http://www.cs.umd.edu/~jfoster/">Jeff Foster</a></td>
+            <td style="border-style: none; border-width: medium;">University of Maryland</td>
+          </tr>
+          <tr>
+            <td style="border-style: none; border-width: medium;"> <a
+ href="http://www.cs.williams.edu/~freund/">Stephen Freund</a></td>
+            <td style="border-style: none; border-width: medium;">Williams College</td>
+          </tr>
+          <tr>
+            <td style="border-style: none; border-width: medium;"> <a
+ href="http://www.doc.ic.ac.uk/~pg/"> Philippa Gardner</a></td>
+            <td style="border-style: none; border-width: medium;">Imperial College, London</td>
+          </tr>
+          <tr>
+            <td style="border-style: none; border-width: medium;"> <a
+ href="http://www.cs.washington.edu/homes/djg/">Dan Grossman</a></td>
+            <td style="border-style: none; border-width: medium;">University of Washington</td>
+          </tr>
+          <tr>
+            <td style="border-style: none; border-width: medium;"> <a
+ href="http://research.microsoft.com/en-us/um/people/sumitg/">Sumit Gulwani</a></td>
+            <td style="border-style: none; border-width: medium;">Microsoft Research</td>
+          </tr>
+          <tr>
+            <td style="border-style: none; border-width: medium;"> <a
+ href="http://research.microsoft.com/en-us/um/people/tharris/">Tim Harris</a></td>
+            <td style="border-style: none; border-width: medium;">Microsoft Research</td>
+          </tr>
+          <tr>
+            <td style="border-style: none; border-width: medium;"> <a
+ href="http://www.kb.ecei.tohoku.ac.jp/~koba/">Naoki Kobayashi</a></td>
+            <td style="border-style: none; border-width: medium;">Tohoku University</td>
+          </tr>
+          <tr>
+            <td style="border-style: none; border-width: medium;"> <a
+ href="http://lara.epfl.ch/~kuncak/">Viktor Kuncak</a></td>
+            <td style="border-style: none; border-width: medium;">EPFL</td>
+          </tr>
+          <tr>
+            <td style="border-style: none; border-width: medium;"> <a
+ href="http://www.kenmcmil.com">Ken McMillan</a></td>
+            <td style="border-style: none; border-width: medium;">Cadence Research Laboratories</td>
+          </tr>
+          <tr>
+            <td style="border-style: none; border-width: medium;"> <a
+ href="http://www.brics.dk/~amoeller/">Anders M&oslash;ller</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td style="border-style: none; border-width: medium;">Aarhus University</td>
+          </tr>
+          <tr>
+            <td style="border-style: none; border-width: medium;"> <a
+ href="http://pm.ethz.ch/people/mueller/">Peter M&uuml;ller</a></td>
+            <td style="border-style: none; border-width: medium;">ETH Zurich</td>
+          </tr>
+          <tr>
+            <td style="border-style: none; border-width: medium;"> <a
+ href="http://software.imdea.org/people/nanevski/home.html">Aleks Nanevski</a></td>
+            <td style="border-style: none; border-width: medium;">IMDEA Software</td>
+          </tr>
+          <tr>
+            <td style="border-style: none; border-width: medium;"> <a
+ href="http://www.cs.stevens.edu/~naumann/">David Naumann</a></td>
+            <td style="border-style: none; border-width: medium;">Stevens Institute of Technology</td>
+          </tr>
+          <tr>
+            <td style="border-style: none; border-width: medium;"> <a
+ href="http://www.cs.mcgill.ca/~prakash/">Prakash Panangaden</a></td>
+            <td style="border-style: none; border-width: medium;">McGill University</td>
+          </tr>
+ <tr>
+            <td style="border-style: none; border-width: medium;"> <a
+ href="http://research.microsoft.com/en-us/people/grama">G. Ramalingam</a></td>
+            <td style="border-style: none; border-width: medium;">Microsoft Research</td>
+          </tr>
+	  <tr>
+            <td style="border-style: none; border-width: medium;"> <a
+ href="http://www.cs.purdue.edu/homes/jv/">Jan Vitek</a></td>
+            <td style="border-style: none; border-width: medium;">Purdue University</td>
+          </tr>
+<tr>
+            <td style="border-style: none; border-width: medium;"> <a 
+href="http://www.cs.technion.ac.il/~yahave">Eran 
+Yahav</a></td>
+            <td style="border-style: none; border-width: medium;">Technion, 
+Israel</td>
+          </tr>
+	  <tr>
+            <td style="border-style: none; border-width: medium;"> <a
+ href="http://www.dcs.qmul.ac.uk/~hyang/Public/Home.html">Hongseok Yang</a></td>
+            <td style="border-style: none; border-width: medium;">Queen Mary, University of London</td>
+          </tr>
+	  <tr>
+            <td style="border-style: none; border-width: medium;"> <a
+ href="http://www.cis.upenn.edu/~stevez/">Steve Zdancewic</a></td>
+            <td style="border-style: none; border-width: medium;">University of Pennsylvania</td>
+          </tr>
+	  
+        </tbody>
+      </table>
+      </td>
+    </tr>
+
+
+ <td valign="top">
+      <p style="margin-top: 0pt; margin-bottom: 0pt;">&nbsp;</p>
+      <p style="margin-top: 0pt; margin-bottom: 0pt;"><b><font
+ face="Arial">Workshops Chair:</font></b></p>
+      <b> </b></td>
+      <td>
+      <p style="margin-top: 0pt; margin-bottom: 0pt;">&nbsp;</p>
+      <p style="margin-top: 0pt; margin-bottom: 0pt;"><font face="Arial">
+      <a href="http://matt.might.net/">Matthew Might</a><br>
+ University of Utah
+      </font></p>
+      </td>
+    </tr>
+
+
+
+ <td valign="top">
+      <p style="margin-top: 0pt; margin-bottom: 0pt;">&nbsp;</p>
+      <p style="margin-top: 0pt; margin-bottom: 0pt;"><b><font
+ face="Arial">Treasurer:</font></b></p>
+      <b> </b></td>
+      <td>
+      <p style="margin-top: 0pt; margin-bottom: 0pt;">&nbsp;</p>
+      <p style="margin-top: 0pt; margin-bottom: 0pt;"><font face="Arial">
+      <a href="http://www.cs.colorado.edu/~bec/">Bor-Yuh Evan Chang</a><br>
+University of Colorado, Boulder
+      </font></p>
+      </td>
+    </tr>    
+
+    <td valign="top">
+      <p style="margin-top: 0pt; margin-bottom: 0pt;">&nbsp;</p>
+      <p style="margin-top: 0pt; margin-bottom: 0pt;"><b><font
+ face="Arial">Publicity:</font></b></p>
+      <b> </b></td>
+      <td>
+      <p style="margin-top: 0pt; margin-bottom: 0pt;">&nbsp;</p>
+      <p style="margin-top: 0pt; margin-bottom: 0pt;"><font face="Arial">
+      <a href="http://www.cse.psu.edu/~swarat">Swarat Chaudhuri</a><br>
+Pennsylvania State University
+      </font></p>
+      </td>
+    </tr>    
+
+   <td valign="top">
+      <p style="margin-top: 0pt; margin-bottom: 0pt;">&nbsp;</p>
+      <p style="margin-top: 0pt; margin-bottom: 0pt;"><b><font
+ face="Arial">POPL Logo:</font></b></p>
+      <b> </b></td>
+      <td>
+      <p style="margin-top: 0pt; margin-bottom: 0pt;">&nbsp;</p>
+      <p style="margin-top: 0pt; margin-bottom: 0pt;"><font face="Arial">
+      <!--<a href="http://www.cse.psu.edu/%7swarat">-->Jan Christiansen</a><br>
+Christian-Albrechts University, Kiel
+      </font></p>
+      </td>
+    </tr>          
+</tbody>
+</table>
+<br><br>
+<h2>Sponsors</h2>
+
+<table class="dates" border="0"
+ cellpadding="10" cellspacing="5">
+<tbody>
+  <tr>
+<td>
+  <a href="http://research.google.com/"><img width=200 src="googlelogo.jpg"></a>
+</td>
+    
+  <td>
+  <a href="http://www.research.ibm.com/"><img width=300 src="ibm-research-logo.jpg"></a>
+</td>
+</tr>
+<tr>
+  <td>
+  <a href="http://www.intel.com/"><img width=100 
+src="intel-logo.jpg"></a>
+</td>
+
+<td>    
+      <a href="http://research.microsoft.com/"><img src="microsoft.jpg"></a>
+</td>
+<td>
+<a href="http://www.mozilla.org/"><img width=250 align=middle src="mozilla-logo.bmp"></a>
+</td>
+</tr>
+<tr>
+
+<td>
+<a href="http://www.nec-labs.com/"><img width=130 align=middle src="nec-blue.gif"></a>
+</td>
+<td>
+<a href="http://www.nsf.gov/"><img width=130 align=middle 
+src="nsf-logo.gif"></a>
+</td>
+<td>
+<a href="http://www.cs.utexas.edu/"><img width=150 align=middle src="UTaustin.png"></a>
+</td>
+
+</tr>
+</tbody>
+</table>
+
+
+</td>
+</tr>
+
+
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+
+<br><br>
+<hr style="width: 80%;><br>
+<br>
+<br>
+<div style="margin-left: 40px;"><br>
+</div>
+<!-- Start of StatCounter Code -->
+<!--
+<script type="text/javascript">
+var sc_project=4293201; 
+var sc_invisible=1; 
+var sc_partition=54; 
+var sc_click_stat=1; 
+var sc_security="981bc000"; 
+</script>
+
+<script type="text/javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><div class="statcounter"><a title="hits counter" href="http://www.statcounter.com/free_hit_counter.html" target="_blank"><img class="statcounter" src="http://c.statcounter.com/4293201/0/981bc000/1/" alt="hits counter" ></a></div></noscript>
+-->
+<!-- End of StatCounter Code -->
+</body>
+</html>

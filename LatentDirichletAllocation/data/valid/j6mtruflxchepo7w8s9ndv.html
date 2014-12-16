@@ -1,0 +1,427 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/issta2014-template.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="icon" 
+      type="image/png" 
+      href="/favicon.png">
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>ISSTA 2014</title>
+<!-- InstanceEndEditable -->
+<!-- InstanceBeginEditable name="head" -->
+<!-- InstanceEndEditable -->
+<style type="text/css">
+<!--
+body {
+	font: 80%/1.4 Arial, Helvetica, sans-serif;
+	background-color: #001525;
+	margin: 0;
+	padding: 0;
+	color: #000;
+	overflow-y: scroll;
+	overflow-x: auto;
+}
+
+/* ~~ Element/tag selectors ~~ */
+ul, ol, dl { /* Due to variations between browsers, it's best practices to zero padding and margin on lists. For consistency, you can either specify the amounts you want here, or on the list items (LI, DT, DD) they contain. Remember that what you do here will cascade to the .nav list unless you write a more specific selector. */
+	padding: 0 15px 0 0;
+	margin: 0;
+}
+h1, h2, h3, h4, h5, h6, p {
+	margin-top: 0;	 /* removing the top margin gets around an issue where margins can escape from their containing div. The remaining bottom margin will hold it away from any elements that follow. */
+	padding-right: 15px;
+	padding-left: 15px; /* adding the padding to the sides of the elements within the divs, instead of the divs themselves, gets rid of any box model math. A nested div with side padding can also be used as an alternate method. */
+}
+a img { /* this selector removes the default blue border displayed in some browsers around an image when it is surrounded by a link */
+	border: none;
+}
+/* ~~ Styling for your site's links must remain in this order - including the group of selectors that create the hover effect. ~~ */
+a:link {
+	color: #42413C;
+	text-decoration: underline; /* unless you style your links to look extremely unique, it's best to provide underlines for quick visual identification */
+}
+a:visited {
+	color: #6E6C64;
+	text-decoration: underline;
+}
+a:hover, a:active, a:focus { /* this group of selectors will give a keyboard navigator the same hover experience as the person using a mouse. */
+	text-decoration: none;
+}
+
+/* ~~ this fixed width container surrounds the other divs ~~ */
+.container {
+	width: 960px;
+	background-color: #FFF;
+	margin-left: 0; /* the auto value on the sides, coupled with the width, centers the layout */
+	padding: 0;
+}
+.sponsor{
+        background-color: #FFFFFF;
+        color: #1E1E1F;
+	border-collapse: collapse;
+        margin: 0 auto;
+        align: center;
+        text-align: center;
+        width: 140px;
+}
+/* ~~ the header is not given a width. It will extend the full width of your layout. It contains an image placeholder that should be replaced with your own linked logo ~~ */
+.header {
+	background-color: #000000;
+}
+
+/* ~~ This is the layout information. ~~ 
+
+1) Padding is only placed on the top and/or bottom of the div. The elements within this div have padding on their sides. This saves you from any "box model math". Keep in mind, if you add any side padding or border to the div itself, it will be added to the width you define to create the *total* width. You may also choose to remove the padding on the element in the div and place a second div within it with no width and the padding necessary for your design.
+
+*/
+
+.content {
+	padding: 10px 0;
+}
+
+/* ~~ The footer ~~ */
+.footer {
+	padding: 2px 2px;
+	background-color: #9EB0DD;
+	font: 79%/1.4 Arial, Helvetica, sans-serif;
+}
+.footer td {
+	vertical-align:top;
+}
+
+/* ~~ miscellaneous float/clear classes ~~ */
+.fltrt {  /* this class can be used to float an element right in your page. The floated element must precede the element it should be next to on the page. */
+	float: right;
+	margin-left: 8px;
+}
+.fltlft { /* this class can be used to float an element left in your page. The floated element must precede the element it should be next to on the page. */
+	float: left;
+	margin-right: 8px;
+}
+.clearfloat { /* this class can be placed on a <br /> or empty div as the final element following the last floated div (within the #container) if the #footer is removed or taken out of the #container */
+	clear:both;
+	height:0;
+	font-size: 1px;
+	line-height: 0px;
+}
+.topmenu {
+	background-color: #1E1E1F;
+	color: #1E1E1F;
+	border-collapse: collapse;
+	border: 1px solid #1E1E1F;
+}
+.topmenu td {
+	outline: solid;
+	outline-color: #1E1E1F;
+	outline-width: 0px;
+	background-color: #313856;
+	text-align: left;
+	padding-left: 5px;
+	border-left-width: 4px;
+	border-left-color: #8c96df;
+	border-left-style: solid;
+}
+.topmenu a:link {
+	text-decoration:none;
+	color:#FFF; 
+}
+.topmenu a:hover {
+	text-decoration: underline;
+	color: #FFFD7F;
+}
+.topmenu a:visited {
+	color:#FFF; 
+}
+ol {
+	text-indent:hanging;
+	margin-left:5em;
+}
+ol li {
+	margin-top:1px;
+	margin-bottom:1px;	
+}
+ul {
+	text-indent:hanging;
+	margin-left:5em;
+}
+ul li {
+	margin-top:1px;
+	margin-bottom:1px;	
+}
+.mainblock {
+	margin: 0px;
+	padding: 0px;	
+}
+.leftcol {
+	background-color: #1E1E1F;	
+}
+.linkbutton {
+	background-color: #C1E5EE;
+	color: #003295;
+	padding-left: 4px;
+	padding-right: 4px;
+	border-left-style: solid;
+	border-left-width: 2px;
+	border-left-color: #009;
+	border-right-style: solid;
+	border-right-width: 2px;
+	border-right-color: #009;
+}
+.linkbutton a {
+	text-decoration: none;
+}
+.linkbutton a:hover {
+	text-decoration: underline;
+}
+.linkbutton a:visited {
+	text-decoration: none;
+	color: #003295;
+}
+-->
+</style>
+</head>
+
+<body>
+
+<center><div class="container" height="167">
+  <div class="header">
+    <img src="img/issta-header.jpg" />
+    <!-- end .header --></div>
+  <div class="mainblock">
+  <table width="960" border="0" cellspacing="0">
+      <tr>
+      	<td width="140" align="left" valign="top" class="leftcol">
+          <div class="topmenu">
+            <table width="100%">
+                <tr><td><a href="index.html">About</a></td></tr>
+	       <tr><td><a href="program.html">Program</a></td></tr>
+                <tr><td><a href="invited.html">Invited Speakers</a></td></tr>
+                <tr><td><a href="dates.html">Important Dates</a></td></tr>
+                <tr><td><a href="demo.html">Tool Demonstrations</a></td></tr>
+                <tr><td><a href="artifacts.html">Artifact Evaluation</a></td></tr>
+                <tr><td><a href="doctoral.html">Doctoral Symposium</a></td></tr>
+                <tr><td><a href="pc.html">Program Committee</a></td></tr>
+                <tr><td><a href="organization.html">Organization</a></td></tr>
+                <tr><td><a href="events.html">Co-located Events</a></td></tr>
+		<tr><td><a href="registration.html">Registration</a></td></tr>
+                <tr><td><a href="travel.html">Travel</a></td></tr>
+            </table>
+          </div>
+     	</td>
+        <td valign="top" width="840">  
+          <div class="content">
+            <!-- InstanceBeginEditable name="Content" --><h2>ISSTA '14: International Symposium on Software Testing and Analysis</h2>
+<p>ISSTA is the leading research symposium on software testing and
+analysis, bringing together academics, industrial researchers, and
+practitioners to exchange new ideas, problems, and experience on how
+to analyze and test software systems.  ISSTA 2014 was held in
+<a href="http://www3.hilton.com/en/hotels/california/hilton-san-jose-SJCSHHF/index.html">Hilton
+San Jose, Bay Area, California</a> on July 21-25, 2014.</p>
+
+<h3>Awards</h3>
+
+<h4><a href="pc.html">Program Committee</a> awarded three ACM SIGSOFT Distinguished Paper Awards:</h4>
+
+<ul>
+<li>
+Hybrid Security Analysis of Web JavaScript Code via Dynamic Partial Evaluation<br>
+Omer Tripp, Pietro Ferrara, and Marco Pistoia<br>
+<i><small>(IBM Research, USA)</small></i>
+<li>
+CrashLocator: Locating Crashing Faults Based on Crash Stacks<br>
+Rongxin Wu, Hongyu Zhang, Shing-Chi Cheung, and Sunghun Kim<br>
+<i><small>(Hong Kong University of Science and Technology, Hong Kong; Microsoft Research, China)</small></i>
+<li>
+Efficient Mutation Analysis by Propagating and Partitioning Infected Execution States<br>
+René Just, Michael D. Ernst, and Gordon Fraser<br>
+<i><small>(University of Washington, USA; University of Sheffield, UK)</small></i>
+</ul>
+
+<br>
+<h4><a href="artifacts.html">Artifact Evaluation Committee</a> awarded one Best Artifact Award:</h4>
+
+<ul>
+<li>
+Covrig: A Framework for the Analysis of Code, Test, and Coverage Evolution in Real Software<br>
+Paul Marinescu, Petr Hosek, and Cristian Cadar<br>
+<i><small>(Imperial College London, UK)</small></i>
+</ul>
+
+<!--
+<h3><a href="invited.html">Invited Speakers</a></h3>
+<p><a href="http://users.soe.ucsc.edu/~cormac/">Cormac Flanagan</a> (University of California, Santa Cruz)</p>
+<p><a href="http://www.eecs.berkeley.edu/~kuehl/">Andreas Kuehlmann</a> (Coverity)</p>
+<p><a href="http://www.darpa.mil/Our_Work/I2O/Personnel/Mr_Michael_Walker.aspx">Mike Walker</a> (DARPA's Cyber Grand Challenge)</p>
+-->
+
+<!--
+<h3>Technical Program</h3>
+
+<p>Authors are invited to submit technical papers describing original
+research in testing or analysis of software.  Papers
+describing theoretical or empirical research, new techniques, or
+in-depth case studies of testing and analysis methods and tools are
+welcome.  Submissions must be original and should not have been
+published previously or be under consideration for publication while
+being evaluated for this symposium. Authors are required to adhere to
+the <a href="http://www.acm.org/publications/policies/plagiarism_policy">ACM
+Policy and Procedures on Plagiarism</a> and
+the <a href="http://www.acm.org/publications/policies/sim_submissions">ACM
+Policy on Prior Publication and Simultaneous Submissions</a>.</p>
+
+<h3><a id="submission">Technical Paper Submission Guidelines</a></h3>
+
+<p>Technical papers must be prepared
+in <a href="http://www.acm.org/sigs/publications/proceedings-templates">ACM
+conference format</a> and must not exceed 10 pages (including figures
+and appendices but NOT including references).  That is, any pages
+after the tenth must contain only references.  All submissions must be
+in English.  The submissions should list the paper authors
+recognizably not anonymously (i.e., ISSTA does <i>not</i> use double
+blind reviews).  Submit your papers via the
+<a href="https://www.easychair.org/conferences/?conf=issta2014">EasyChair
+ISSTA 2014 submission website</a>.
+Submissions that do not adhere to these guidelines or that violate
+formatting will be declined without review.</p>
+
+<h3>Workshops</h3>
+
+<p>Organizers are invited to submit proposals for full-day and
+half-day workshop on topics related to software testing and analysis.
+Proposals should include a description of the theme and scope of the
+workshop, including its relevance to the field of software testing and
+analysis.  The proposal should also provide information about the
+intended number of participants, the workshop format and the
+background of the organizers (including relevant past experience on
+organizing workshops).  Proposals may be up to 2 pages in ACM
+conference format.</p>
+
+<h3>Tool Demonstrations</h3>
+
+<p>This track provides an opportunity for researchers, educators,
+practitioners, and software tool vendors to present their experiences,
+challenges, and solutions in software analysis and testing using live
+presentations of new tools and prototypes as well as interactive
+results and data sets.  We invite new and innovative research tool
+demonstrations that show early implementations of research concepts as
+well as mature prototypes and tools demonstrating advances in
+usability, scalability, and applicability to new problem domains.  Visit
+<a href="demo.html">Tool Demonstrations</a> page for additional
+information.</p>
+-->
+            <!-- InstanceEndEditable --><!-- end .content -->
+          </div>         
+
+<div class="content" align="center">
+<style type="text/css">
+<!--/*--><![CDATA[/* ><!--*/
+
+ p.gold {
+        color:#fdd017;
+        padding:0;
+        margin:0;
+        font-weight:bold;
+text-align:center;
+    }
+p.silver {
+text-align:center;
+        color:#c0c0c0;
+        padding:0;
+        margin:0;
+        font-weight:bold;
+    }
+    p.bronze {
+text-align:center;
+        color:#a67d3d;
+        padding:0;
+        margin:0;
+        font-weight:bold;
+    }
+table.gold tr td {
+text-align:center;
+}
+    table.gold {
+        border:3px solid #fdd017;
+        width:50%;
+        margin:0 2px;
+    }
+    table.silver {
+        border:3px solid #c0c0c0;
+        width:50%;
+        margin:0 2px;
+    }
+    table.bronze {
+        border:3px solid #a67d3d;
+        width:50%;
+        margin:0 2px;
+    }
+
+/*--><!]]>*/
+</style>
+<p><b>Sponsored By / In Cooperation With</b></p>
+<table><tr>
+<td></td>
+<td><img src="picture_library/sigsoft.gif"></td> 
+<td><img src="picture_library/acm.png"></td>
+<td><img src="picture_library/sigplan.jpeg"</td>
+</tr>
+</table>
+<p class="gold">Gold Donors</p>
+<!--<table class="gold"><tr>-->
+<table><tr>
+<td><img src="picture_library/fujitsu.gif"></td>
+<td><img src="picture_library/ms.jpg"></td>
+<td><img src="picture_library/nasa.png"></td>
+<td><img src="picture_library/sgt.png"></td>
+</tr>
+</table>
+
+<p class="silver">Silver Donors</p>
+<!--<table class="silver"><tr>-->
+<table><tr>
+<td><img src="picture_library/oracle.gif"</td>
+<td><img src="picture_library/ibm_small.jpeg"></td>
+<td><img src="picture_library/MathWorks.jpeg"></td>
+</tr>
+</table>
+
+<p class="bronze">Bronze Donors</p>
+<!--<table class="bronze"><tr>-->
+<table><tr>
+<td><img src="picture_library/nec_logo_blue_small.jpg"></td>
+<td><img src="picture_library/coverity_small.jpeg"></td>   
+<td><img src="picture_library/Google.png"></td>
+<td><img src="picture_library/Samsung.jpeg"></td>
+<td><img src="picture_library/parasoft.gif"></td>
+</tr>
+</table>       
+          
+</div>
+
+  </td>
+  </tr>
+  </table>
+  </div>
+
+    
+ 
+
+  <div class="footer">
+            <table width="100%">
+                <tr>
+                    <td width="50%">
+                        <strong>ISSTA '14: International Symposium on Software Testing and Analysis</strong><br />
+                        Bay Area, California, July 21 – 25, 2014
+                    </td>
+                    <td width="50%">
+                        <b>General Chair:</b> <a href="mailto:corina.s.pasareanu@nasa.gov">Corina Pasareanu</a><br />
+                        <b>Program Chair:</b> <a href="mailto:marinov@illinois.edu">Darko Marinov</a><br />
+			<b>Local Organization Chair:</b> <a href="mailto:oksana.tkachuk@nasa.gov">Oksana Tkachuk</a>
+                  </td>
+                </tr>
+            </table>   
+            <!-- end .footer -->
+          </div>
+<!-- end .container --></div></center>
+</body>
+<!-- InstanceEnd --></html>

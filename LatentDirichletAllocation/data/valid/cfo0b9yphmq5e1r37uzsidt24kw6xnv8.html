@@ -1,0 +1,591 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="Contents" rev="Start" 
+		href="http://dhtmlkitchen.com/dhtml/ui/menutree/index.jsp" 
+		type="text/html" media="All" 
+		hreflang="en" charset="iso-8859-1">
+<meta name="copyright" content="Garrett Smith">
+<title>VIS03 : </title>
+<style type="text/css">
+		@import url(menu4.css);
+	</style>
+<script src="src/Optimized/utils.js" type="text/javascript"></script>
+<script src="src/Optimized/AnimTree.js" type="text/javascript"></script>
+<script src="src/Optimized/persistentTree.js" type="text/javascript"></script>
+<script type="text/javascript">
+  TreeParams = {
+  
+       // You will probably have to change these.
+
+  /** TreeParams:
+   *  OPEN_MULTIPLE_MENUS     --  boolean
+   *                         if true, more than one menu can 
+   *                         be open at a time. Otherwise, 
+   *                         opening a new menu closes any 
+   *                         open menu.
+   *
+   *  OPEN_WHILE_CLOSING      --  boolean
+   *                         If OPEN_MULTIPLE_MENUS is true,
+   *                         OPEN_WHILE_CLOSING will simultaneously
+   *                         open a new menu while closing the 
+   *                         currently open menu.
+   *                       
+   *  TIME_DELAY              --  int
+   *                         How slowly a menuNode collapses
+   *                         in milliseconds. (0 to 100).
+   */
+      
+      OPEN_MULTIPLE_MENUS    : true,
+      
+      OPEN_WHILE_CLOSING     : false,
+      TIME_DELAY             : 1,
+      
+      OPEN_MENU_ICON         : "img/open-menu-blue.gif",
+      CLOSED_MENU_ICON       : "img/closed-menu-blue.gif" // don't add a comma after last property!
+  
+  };
+</script>
+<script type="text/javascript">
+<!--
+function init(){
+
+	// activateMenu("links");
+	restoreTreeState("nav","links");
+	saveTreeOnUnload("nav");
+
+}
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//-->
+</script>
+</head>
+<body background="img/bkgd-1.gif" onload="init();MM_preloadImages('img/register-on.gif')">
+<div id="nav" style="top:172px">  
+        <div id="Schedule" class="button"> <span class="buttonlabel" onclick='toggleMenu(this)'
+			onmouseover='buttonOver(this)'
+			onmouseout='buttonOff(this)' > <img src='img/closed-menu.gif' 
+					title='click to toggle menu'
+					alt='*' 
+					>Week-at-a-Glance</span> </div>      
+  <div class="menu" id="ScheduleMenu"> 
+    <div class="menuItem"><a href="schedule/sunday.html">Sunday, Oct. 19</a></div>
+    <div class="menuItem"><a href="schedule/monday.html">Monday, Oct. 20</a></div>
+    <div class="menuItem"><a href="schedule/tuesday.html">Tuesday, Oct. 21</a></div>
+    <div class="menuItem"><a href="schedule/wednesday.html">Wednesday, Oct. 22</a></div>
+    <div class="menuItem"><a href="schedule/thursday.html">Thursday, Oct. 23</a></div>
+    <div class="menuItem"><a href="schedule/friday.html">Friday, Oct. 24</a></div>
+  </div>
+        <div id="PVG" class="button"> <span class="buttonlabel"> <img src='img/menu-link.gif' 
+					alt='*'
+					><a href="misc/pvg.html" class="buttonlink">PVG 
+          Sessions</a></span> </div>
+        <div id="InfoVis" class="button"> <span class="buttonlabel"> <img src='img/menu-link.gif' 
+					alt='*'
+					><a href="misc/infovis.html" class="buttonlink">InfoVis 
+          Sessions</a></span> </div>
+        <div id="Sessions" class="button"> <span class="buttonlabel" onclick='toggleMenu(this)'
+			onmouseover='buttonOver(this)'
+			onmouseout='buttonOff(this)' > <img src='img/closed-menu.gif'
+					title='click to toggle menu'
+					alt='*'
+					longdesc=''
+				>VIS Sessions</span> </div>
+  <div class="menu" id="SessionsMenu"> 
+    <div class="menuItem"><a href="session/overview.html">Overview &amp; Topics</a></div>
+    <div class="menuItem"><a href="session/keynote.html">Keynote Speaker</a></div>
+    <div class="menuItem"><a href="session/capstone.html">Capstone Speaker</a></div>
+    <div class="menuItem"><a href="session/workshops.html">Workshops</a></div>
+    <div class="menuItem"><a href="session/tutorials.html">Tutorials</a></div>
+    <div class="menuItem"><a href="session/papers.html">Papers</a></div>
+    <div class="menuItem"><a href="session/applications.html">Applications</a></div>
+    <div class="menuItem"><a href="session/panels.html">Panels</a></div>
+    <div class="menuItem"><a href="session/posters.html">Posters</a></div>
+    <div class="menuItem"><a href="session/bofs.html">BOF Meetings</a></div>
+    <div class="menuItem"><a href="session/demos.html">Demos</a></div>
+  </div>
+        <div id="Exhibition" class="button"> <span class="buttonlabel"  onclick='toggleMenu(this)'
+			onmouseover='buttonOver(this)'
+			onmouseout='buttonOff(this)' > <img src='img/closed-menu.gif'
+					title='click to toggle menu'
+					alt='*'
+					longdesc=''
+					>Exhibition</span> </div>
+        
+  <div class="menu" id="ExhibitionMenu"> 
+    <div class="menuItem"><a href="exhibition/exhibition.html">Exhibit at Vis 
+      2003!</a></div>
+    <div class="menuItem"><a href="exhibition/supporters.html">Supporters</a></div>
+  </div>
+        <div id="Registration" class="button"> <span class="buttonlabel"  onclick='toggleMenu(this)'
+			onmouseover='buttonOver(this)'
+			onmouseout='buttonOff(this)' > <img src='img/closed-menu.gif'
+					title='click to toggle menu'
+					alt='*'
+					longdesc=''
+					>Registration</span> </div>
+        
+  <div class="menu" id="RegistrationMenu"> 
+    <div class="menuItem"><a href="registration/forms.html">Rates</a></div>
+    <div class="menuItem"><a href="registration/hotel.html">Hotel</a></div>
+    <div class="menuItem"><a href="registration/seattle.html">Seattle</a></div>
+  </div>
+  
+          <div id="Volunteers" class="button"> <span class="buttonlabel"  
+			onclick='toggleMenu(this)' 
+			onmouseover='buttonOver(this)' 
+			onmouseout='buttonOff(this)' > <img src='img/closed-menu.gif'
+					title='click to toggle menu'
+					alt='*'
+					longdesc=''
+					>Student Volunteers</span> </div>
+<!--Preference Registration (to appear)<p-->
+<!--a href="http://www.itlabs.umn.edu/classes/Spring-2003/csci1103/vis2003/job/">Preference Registration</a><br> (to appear)<p-->
+  <div class="menu" id="VolunteersMenu"> 
+    <div class="menuItem"><a href="volunteer/vol-info.html">Volunteer Info</a></div>
+    <div class="menuItem"><a href="volunteer/vol-news.html">Volunteer News</a></div>
+    <div class="menuItem"><a href="volunteer/vol-form.html">Application Form</a></div>
+  </div>
+        <div id="cfp" class="button"> <span class="buttonlabel" onclick='toggleMenu(this)'
+			onmouseover='buttonOver(this)'
+			onmouseout='buttonOff(this)' > <img 
+					 src='img/closed-menu.gif' 
+					title='click to toggle menu'
+					alt='*'
+					longdesc=''
+					>Call for Participation</span> </div>
+        
+  <div class="menu" id="cfpMenu"> 
+    <div class="menuItem"><a href="cfp/deadlines.html">Deadlines &amp; Submissions</a></div>
+    <div class="menuItem"><a href="cfp/papers.html">Papers</a></div>
+    <div class="menuItem"><a href="cfp/applications.html">Applications</a></div>
+    <div class="menuItem"><a href="cfp/panels.html">Panels</a></div>
+    <div class="menuItem"><a href="cfp/tutorials.html">Tutorials</a></div>
+    <div class="menuItem"><a href="cfp/workshops.html">Workshops</a></div>
+    <div class="menuItem"><a href="cfp/posters.html">Posters</a></div>
+    <div class="menuItem"><a href="cfp/bofs.html">BOF Meetings</a></div>
+    <div class="menuItem"><a href="cfp/demos.html">Demos</a></div>
+    <div class="menuItem"><a href="cfp/instructions.html">Submission Instructions</a></div>
+  </div>
+        <div id="SiteMap" class="button"> <span class="buttonlabel"> <img src='img/menu-link.gif' 
+					alt='*'
+					><a href="misc/sitemap.html" class="buttonlink">Site Map</a></span> 
+        </div>
+        <div id="Committee" class="button"> <span class="buttonlabel"  
+			onclick='toggleMenu(this)' 
+			onmouseover='buttonOver(this)' 
+			onmouseout='buttonOff(this)' > <img src='img/closed-menu.gif'
+					title='click to toggle menu'
+					alt='*'
+					longdesc=''
+					>Committee</span> </div>
+        
+  <div class="menu" id="CommitteeMenu"> 
+    <div class="menuItem"><a href="committee/conference.html">Conference Committee</a></div>
+    <div class="menuItem"><a href="committee/steering.html">Steering Committee</a></div>
+    <div class="menuItem"><a href="committee/program.html">Program Committee</a></div>
+  </div>
+        <div id="Contact" class="button"> <span class="buttonlabel"> <img src='img/menu-link.gif' 
+					alt='*'
+					><a href="mailto:info@vis.computer.org" class="buttonlink">Email 
+          Us</a></span> </div>
+        <span class="footer">&nbsp;&copy; 2003 IEEE | <a href="misc/credits.html"><span class="footer">Credits</span></a></span> 
+      </div>
+<table border="0" cellpadding="0" cellspacing="0" bgcolor="#ffffff">
+  <tr> 
+    <td nowrap><img src="pic/zfibre-86.jpg" width="86" height="64" hspace="0"><img src="img/spacer.gif" width="4" height="1"><img src="pic/fish-110.gif" width="110" height="64"></td>
+    <td nowrap>&nbsp;</td>
+    <td rowspan="3" nowrap><img src="img/logo.gif" width="328" height="132"><img src="img/spacer.gif" width="4" height="64"></td>
+    <td colspan="3" valign="middle" nowrap background="img/bkgd-mdBlue.gif"> 
+      <table border="0" cellpadding="0" cellspacing="0">
+        <tr> 
+          <td rowspan="2"><img src="pic/jellyfish-110.jpg" width="96" height="64" align="absmiddle"><img src="img/bkgd-white.gif" width="4" height="64" align="absmiddle">&nbsp;&nbsp;</td>
+          <td><a href="https://newton.computer.org/conferences/vis03.nsf" onMouseOver="MM_swapImage('reg','','img/register-on.gif',1)" onMouseOut="MM_swapImgRestore()"><img src="img/register.gif" name="reg" width="160" height="21" border="0" id="reg"></a></td>
+        </tr>
+        <tr> 
+          <form method="get" action="http://search.atomz.com/search/">
+            <td><input type="hidden" name="sp-a" value="sp1001800f">
+<input type="text" name="sp-q" size="18" align="absmiddle" class="search"><input name="go" type=image onMouseOver="MM_swapImage('go','','img/search-on.gif',1)" onMouseOut="MM_swapImgRestore()" src="img/search-off.gif" alt="Go" align="absmiddle" width=40 height=21 hspace=0 border=0></td></form>
+        </tr>
+      </table></td>
+    
+  </tr>
+  <tr> 
+    <td valign="top"></td>
+    <td valign="top"></td>
+    <td valign="top"></td>
+    <td></td>
+    <td width="100%"><img src="img/spacer.gif" width="100" height="4"></td>
+  </tr>
+  <tr> 
+    <td><img src="pic/flap-64.gif" width="64" height="64"><img src="pic/dimple-64.jpg" hspace="4"><img src="pic/blackholes5-64.jpg" width="64" height="64"></td>
+    <td></td>
+    <td nowrap><img src="pic/tree-76.jpg" width="76" height="64"><img src="pic/drops2-64.jpg" width="64" height="64" hspace="4"><img src="pic/teddy-64.gif" width="64" height="64"></td>
+    <td>&nbsp;</td>
+    <td width="100%" bgcolor="#336699"><img src="img/spacer.gif" width="121" height="10"></td>
+  </tr>
+  <tr> 
+    <td><img src="img/spacer.gif" width="200" height="4"></td>
+    <td><img src="img/spacer.gif" width="4" height="4"></td>
+    <td colspan="2"><img src="img/spacer.gif" width="530" height="4"></td>
+    <td><img src="img/spacer.gif" width="4" height="4"></td>
+    <td><img src="img/spacer.gif" width="4" height="4"></td>
+  </tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td valign="top"><img src="img/menu.gif" width="200" height="30" border="0" usemap="#Map"></td>
+    <td valign="top"><img src="img/spacer.gif" width="4" height="30"></td>
+    <td valign="bottom"><img src="img/venue-hp.gif" width="530" height="30"><br> 
+    </td>
+    <td width="5" height="20" rowspan="3" valign="top">&nbsp;</td>
+    <td width="100%" rowspan="3" valign="top" background="img/bkgd-ltBlue.gif" bgcolor="#CCCCFF"><img src="img/spacer.gif" width="40" height="30"></td>
+  </tr>
+  <tr> 
+    <td rowspan="4" valign="top"> <img src="img/spacer.gif" width="200" height="1" name=""> 
+    </td>
+    <td rowspan="4" valign="top">&nbsp;</td>
+    <td valign="top"><span class="PageTitle">New and Updated</span><br> 
+<p class="newsTight">
+
+The 2003 IEEE Visualization Conference was held at the
+<a
+href="http://www.doubletree.com/en/dt/hotels/index.jhtml;jsessionid=LQE32Z5GLRID4CSGBIU222QKIYFC3UUC?ctyhocn=CTAC-DT">Doubletree
+Hotel</a>, 18740 Pacific Highway South, Seattle, Washington 98188, near the Seattle-Tacoma Airport. 
+
+<p class="news">
+<table cells=2 border="0" cellspacing="0" cellpadding="0">
+
+<!--
+<tr>
+<td valign="top" nowrap>
+<p class="newsTight">
+<img src="img/small_grnball.gif" vspace=2px border="0" alt="** ">
+</td>
+<td>
+<p class="newsTight">
+<b>Advance registration is now closed.  Please register on-site at the
+conference.  See you there!</b></a>
+</td>
+</tr>
+-->
+
+<tr>
+<td valign="top" nowrap>
+<p class="newsTight">
+<img src="img/small_grnball.gif" vspace=2px border="0" alt="** ">
+</td>
+<td>
+<p class="newsTight">
+<b>Thanks the attendees and our sponsors for making Visualization 2003
+a great success. See you in Austin
+for <a href="http://vis.computer.org/vis2004/">Visualization 2004!</a></b></a>
+</td>
+</tr>
+
+<tr>
+<td valign="top" nowrap>
+<p class="newsTight">
+<img src="img/small_grnball.gif" vspace=2px border="0" alt="** ">
+</td>
+<td>
+<p class="newsTight">
+<b><a
+href="http://ncmir.ucsd.edu/vis2003/evaluation/evaluation.ehtml">Submit
+your conference evaluation electronically here.</a></b>
+</td>
+</tr>
+
+<tr>
+<td valign="top" nowrap>
+<p class="newsTight">
+<img src="img/small_grnball.gif" vspace=2px border="0" alt="** ">
+</td>
+<td>
+<p class="newsTight">
+<strong>Foreign visitors</strong>: The State Department has <i>postponed</i> its requirement for
+machine-readable passports until October 26, 2004.
+
+Please see the <strong><a
+href="http://www.state.gov/r/pa/prs/ps/2003/24407.htm">press
+statement</a></strong> from the U.S. State Department for information.
+<!--
+See the <a href="http://travel.state.gov/specialnotice.html">U.S. Department of State</a> for news regarding
+visa requirements.
+
+<br>
+<br>
+If you have previously visited the United States without a visa,
+please note that after October 1, 2003, you will only be able to do
+this if you have first obtained a machine-readable passport. If you
+have not yet obtained a machine-readable passport, or your country is
+not yet producing them, you must apply for a visitor's visa at the
+U.S. consulate in your country.
+
+<br> If you are planning to attend Visualization 2003, we urge you to
+apply for your visa immediately.
+-->
+</td>
+</tr>
+
+<!--
+<tr>
+<td valign="top" nowrap>
+<p class="newsTight">
+<img src="img/small_grnball.gif" vspace=2px border="0" alt="** ">
+</td>
+<td>
+<p class="newsTight">
+<a href="session/speaker-info.html#templates">
+<b>Speakers: Get your PowerPoint template here.</b></a>
+</td>
+</tr>
+
+<tr>
+<td valign="top" nowrap>
+<p class="newsTight">
+<img src="img/small_grnball.gif" vspace=2px border="0" alt="** ">
+</td>
+<td>
+<p class="newsTight">
+<a href="session/speaker-info.html#av">
+<b>Audio Visual Information for Speakers now available.</b></a>
+</td>
+</tr>
+
+<tr>
+<td valign="top" nowrap>
+<p class="newsTight">
+<img src="img/small_grnball.gif" vspace=2px border="0" alt="** ">
+</td>
+<td>
+<p class="newsTight">
+<a href="exhibition/exhibition.html#exhibitor_info">
+<b>Exhibitor information available.</b></a>
+</td>
+</tr>
+-->
+<!--
+<tr>
+<td valign="top" nowrap>
+<p class="newsTight">
+<img src="img/small_grnball.gif" vspace=2px border="0" alt="** ">
+</td>
+<td>
+<p class="newsTight">
+<b>Early Registration Extended.</b>
+<br><a href="registration/forms.html">Early Registration deadlines</a> have been extended because of weather
+related disruptions at IEEE Headquarters in Washington, DC, and the US
+Eastern Seaboard.
+Early Registration will be accepted until close of business Wednesday,
+September 24, 2003.
+
+</td>
+</tr>
+-->
+
+<!--
+<tr>
+<td valign="top" nowrap>
+<p class="newsTight">
+<img src="img/small_grnball.gif" vspace=2px border="0" alt="** ">
+</td>
+<td>
+<p class="newsTight">
+<a href="https://newton.computer.org/conferences/vis03.nsf">
+Airline discount for conference attendees.</a>
+</td>
+</tr>
+
+
+<tr>
+<td valign="top" nowrap>
+<p class="newsTight">
+<img src="img/small_grnball.gif" vspace=2px border="0" alt="** ">
+</td>
+<td>
+<p class="newsTight">
+<a href="cfp/bofs.html">Plan a BOF session.</a>
+</td>
+</tr>
+-->
+</table>
+	<p><small><a
+
+	href="http://vis.computer.org/vis2003/misc/credits.html">
+	Image credits</a></small>.
+      </td>
+  </tr>
+  <tr> 
+    <td height="22">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td><img src="img/spacer.gif" width="532" height="4"></td>
+    <td><img src="img/spacer.gif" width="4" height="4"></td>
+    <td><img src="img/spacer.gif" width="40" height="4"></td>
+  </tr>
+  <tr> 
+    <td height="20" colspan="3" background="img/bkgd-mdBlue.gif" bgcolor="#9999CC"><img src="img/support.gif" width="100" height="21"></td>
+  </tr>
+  <tr>
+    <td valign="top">&nbsp;</td>
+  </tr>	
+  <tr> 
+    <td valign="top">&nbsp;</td>
+    <td valign="top">&nbsp;</td>
+    <td height="20" colspan="3" valign="middle">
+<a href="http://www.kitware.com/">
+        <img src="pic/logo-kitware.gif" border="0" width = "151" height = "45" hspace="10" align="absmiddle">
+	</a>
+<a href="http://www.chevrontexaco.com/">
+        <img src="pic/logo-chevron-texaco.gif" border="0" width = "180" height = "19" hspace="10" align="absmiddle">
+	</a>
+    </td>
+  </tr>
+<tr><td>&nbsp;</td></tr>
+  <tr> 
+    <td valign="top">&nbsp;</td>
+    <td valign="top">&nbsp;</td>
+    <td height="20" colspan="3" valign="middle">
+<a href="http://www.sgi.com/">
+        <img src="pic/logo-sgilogo.gif" border="0" width = "56" height = "45" hspace="10" align="absmiddle">
+</a>
+<a href="http://research.microsoft.com/">
+        <img src="pic/logo-microsoft.gif" border="0" width = "176" height = "40" hspace="10" align="absmiddle">
+</a>
+<a href="http://www.pnl.gov">
+	<img src="pic/logo-pnl.gif" border="0" width="118" height="45" hspace="10" align="absmiddle">
+</a>
+	<hr>
+	</a>
+    </td>
+  </tr>
+  <tr>
+    <td valign="top">&nbsp;</td>
+  </tr>	
+  <tr> 
+    <td valign="top">&nbsp;</td>
+    <td valign="top">&nbsp;</td>
+    <td height="20" colspan="3" valign="middle">
+<a href="http://www.research.ibm.com/">
+	<img src="pic/logo-ibm.gif" border="0" width="150" height="16" hspace="10" align="absmiddle">
+	</a>
+<a href="http://www.merl.com/">
+	<img src="pic/logo-merl.gif" border="0" width="172" height="28" hspace="10" align="absmiddle">
+	</a>
+<a href="http://www.ati.com/">
+	<img src="pic/logo-ati.gif" border="0" width="45" height="32" hspace="10" align="absmiddle">
+</a>
+<a href="http://www.sun.com/">
+        <img src="pic/logo-sunlogo.gif" border="0" width = "81" height = "35" hspace="10" align="absmiddle">
+</a>	
+    </td>
+  </tr>
+  <tr>
+    <td valign="top">&nbsp;</td>
+  </tr>	
+  <tr> 
+    <td valign="top">&nbsp;</td>
+    <td valign="top">&nbsp;</td>
+    <td height="20" colspan="3" valign="middle">
+<a href="http://www.palgrave.com/">
+        <img src="pic/logo-palgrave_logo.gif" border="0" width = "106" height = "35" hspace="10" align="absmiddle">
+</a>
+<a href="http://www-mitpress.mit.edu">
+        <img src="pic/logo-mit_press.gif" border="0" width = "22" height = "35" hspace="10" align="absmiddle">
+</a>
+<!--
+<a href="http://www.wiley.com/WileyCDA/Section/id-2925.html">
+        <img src="pic/logo-wiley.gif" border="0" width = "141" height = "35" hspace="10" align="absmiddle">
+</a>
+-->
+<a href="http://www.graphstream.com/">
+        <img src="pic/logo-graphstream.gif" border="0" width = "169" height = "35" hspace="10" align="absmiddle">
+</a>	
+<a href="http://www.itk.org/">
+        <img src="pic/logo-itklogo.gif" border="0" width = "53" height = "35" hspace="10" align="absmiddle">
+</a>	
+    </td>
+  </tr>
+  <tr>
+    <td valign="top">&nbsp;</td>
+  </tr>	
+  <tr> 
+    <td valign="top">&nbsp;</td>
+    <td valign="top">&nbsp;</td>
+	<td>
+<a href="http://www.springer.de/">
+        <img src="pic/logo-springer.gif" border="0" width = "61"
+    height = "35" hspace="10" align="absmiddle">
+</a>	
+
+<a href="http://www.bh.com/mk/">
+        <img src="pic/logo-morgan-kaufmann.gif" border="0" width = "121" height = "35" hspace="10" align="absmiddle">
+</a>	
+
+<a href="http://www.wkap.nl">
+        <img src="pic/logo-kluwer.gif" border="0" width = "205" height = "35" hspace="10" align="absmiddle">
+</a>	
+
+<a href="http://www.akpeters.com/">
+        <img src="pic/logo-akpeters.gif" border="0" width = "23" height = "35" hspace="10" align="absmiddle">
+</a>	
+
+</td>
+</tr>    
+
+  <tr>
+    <td valign="top">&nbsp;</td>
+  </tr>	
+  <tr> 
+    <td valign="top">&nbsp;</td>
+    <td valign="top">&nbsp;</td>
+    <td height="20" colspan="3" valign="middle">
+<a href="http://www.blackwellpublishing.com/">
+	<img src="pic/logo-blackwell.gif" border="0" width="105" height="35" hspace="10" align="absmiddle">
+</a>
+    </td>
+
+	
+  </tr>
+  <tr>
+    <td valign="top">&nbsp;</td>
+  </tr>	
+  <tr> 
+    <td valign="top">&nbsp;</td>
+    <td valign="top">&nbsp;</td>
+    <td height="20" colspan="3" valign="middle">
+<a href="http://www.ieee.org/">
+	<img src="pic/logo-ieee.gif" border="0" width="74" height="23" hspace="10" align="absmiddle">
+</a>
+<a href="http://www.computer.org/">
+	<img src="pic/logo-cs.gif" border="0" width="61" height="40" hspace="10" align="absmiddle">
+</a>
+    </td>
+
+	
+  </tr>
+</table>
+</body>
+</html>

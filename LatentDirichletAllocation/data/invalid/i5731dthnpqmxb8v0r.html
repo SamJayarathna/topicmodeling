@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Home</title>
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<link rel="pingback" href="http://VIZSEC2010.ORG/xmlrpc.php" />
+<link rel="alternate" type="application/rss+xml" title="Vizsec 2010 &raquo; Feed" href="http://VIZSEC2010.ORG/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Vizsec 2010 &raquo; Comments Feed" href="http://VIZSEC2010.ORG/comments/feed/" />
+<link rel='stylesheet' id='pinboard-web-font-css'  href='http://fonts.googleapis.com/css?family=Open+Sans:300,300italic,regular,italic,600,600italic|Oswald:300,300italic,regular,italic,600,600italic&#038;subset=latin' type='text/css' media='all' />
+<link rel='stylesheet' id='pinboard-css'  href='http://VIZSEC2010.ORG/wp-content/themes/pinboard/style.css' type='text/css' media='all' />
+<link rel='stylesheet' id='colorbox-css'  href='http://VIZSEC2010.ORG/wp-content/themes/pinboard/styles/colorbox.css' type='text/css' media='all' />
+<link rel='stylesheet' id='mediaelementplayer-css'  href='http://VIZSEC2010.ORG/wp-content/themes/pinboard/styles/mediaelementplayer.css' type='text/css' media='all' />
+	<!--[if lt IE 9]>
+	<script src="http://VIZSEC2010.ORG/wp-content/themes/pinboard/scripts/html5.js" type="text/javascript"></script>
+	<![endif]-->
+<script type='text/javascript' src='http://VIZSEC2010.ORG/wp-content/themes/pinboard/scripts/ios-orientationchange-fix.js'></script>
+<script type='text/javascript' src='http://VIZSEC2010.ORG/wp-includes/js/jquery/jquery.js?ver=1.11.0'></script>
+<script type='text/javascript' src='http://VIZSEC2010.ORG/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
+<script type='text/javascript' src='http://VIZSEC2010.ORG/wp-content/themes/pinboard/scripts/jquery.flexslider-min.js'></script>
+<script type='text/javascript' src='http://VIZSEC2010.ORG/wp-content/themes/pinboard/scripts/jquery.fitvids.js'></script>
+<script type='text/javascript' src='http://VIZSEC2010.ORG/wp-content/themes/pinboard/scripts/jquery.colorbox.js'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://VIZSEC2010.ORG/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://VIZSEC2010.ORG/wp-includes/wlwmanifest.xml" /> 
+<link rel='next' title='Rapid Finance' href='http://VIZSEC2010.ORG/rapid-finance/' />
+<meta name="generator" content="WordPress 3.9.2" />
+<link rel='canonical' href='http://VIZSEC2010.ORG/' />
+<link rel='shortlink' href='http://VIZSEC2010.ORG/' />
+<script>
+/* <![CDATA[ */
+	jQuery(document).ready(function($) {
+		$('#access .menu > li > a').each(function() {
+			var title = $(this).attr('title');
+			if(typeof title !== 'undefined' && title !== false) {
+				$(this).append('<br /> <span>'+title+'</span>');
+				$(this).removeAttr('title');
+			}
+		});
+		function pinboard_move_elements(container) {
+			if( container.hasClass('onecol') ) {
+				var thumb = $('.entry-thumbnail', container);
+				if('undefined' !== typeof thumb)
+					$('.entry-container', container).before(thumb);
+				var video = $('.entry-attachment', container);
+				if('undefined' !== typeof video)
+					$('.entry-container', container).before(video);
+				var gallery = $('.post-gallery', container);
+				if('undefined' !== typeof gallery)
+					$('.entry-container', container).before(gallery);
+				var meta = $('.entry-meta', container);
+				if('undefined' !== typeof meta)
+					$('.entry-container', container).after(meta);
+			}
+		}
+		function pinboard_restore_elements(container) {
+			if( container.hasClass('onecol') ) {
+				var thumb = $('.entry-thumbnail', container);
+				if('undefined' !== typeof thumb)
+					$('.entry-header', container).after(thumb);
+				var video = $('.entry-attachment', container);
+				if('undefined' !== typeof video)
+					$('.entry-header', container).after(video);
+				var gallery = $('.post-gallery', container);
+				if('undefined' !== typeof gallery)
+					$('.entry-header', container).after(gallery);
+				var meta = $('.entry-meta', container);
+				if('undefined' !== typeof meta)
+					$('.entry-header', container).append(meta);
+				else
+					$('.entry-header', container).html(meta.html());
+			}
+		}
+		if( ($(window).width() > 960) || ($(document).width() > 960) ) {
+			// Viewport is greater than tablet: portrait
+		} else {
+			$('#content .hentry').each(function() {
+				pinboard_move_elements($(this));
+			});
+		}
+		$(window).resize(function() {
+			if( ($(window).width() > 960) || ($(document).width() > 960) ) {
+									$('.page-template-template-full-width-php #content .hentry, .page-template-template-blog-full-width-php #content .hentry, .page-template-template-blog-four-col-php #content .hentry').each(function() {
+						pinboard_restore_elements($(this));
+					});
+							} else {
+				$('#content .hentry').each(function() {
+					pinboard_move_elements($(this));
+				});
+			}
+			if( ($(window).width() > 760) || ($(document).width() > 760) ) {
+				var maxh = 0;
+				$('#access .menu > li > a').each(function() {
+					if(parseInt($(this).css('height'))>maxh) {
+						maxh = parseInt($(this).css('height'));
+					}
+				});
+				$('#access .menu > li > a').css('height', maxh);
+			} else {
+				$('#access .menu > li > a').css('height', 'auto');
+			}
+		});
+		if( ($(window).width() > 760) || ($(document).width() > 760) ) {
+			var maxh = 0;
+			$('#access .menu > li > a').each(function() {
+				var title = $(this).attr('title');
+				if(typeof title !== 'undefined' && title !== false) {
+					$(this).append('<br /> <span>'+title+'</span>');
+					$(this).removeAttr('title');
+				}
+				if(parseInt($(this).css('height'))>maxh) {
+					maxh = parseInt($(this).css('height'));
+				}
+			});
+			$('#access .menu > li > a').css('height', maxh);
+							$('#access li').mouseenter(function() {
+					$(this).children('ul').css('display', 'none').stop(true, true).fadeIn(250).css('display', 'block').children('ul').css('display', 'none');
+				});
+				$('#access li').mouseleave(function() {
+					$(this).children('ul').stop(true, true).fadeOut(250).css('display', 'block');
+				});
+					} else {
+			$('#access li').each(function() {
+				if($(this).children('ul').length)
+					$(this).append('<span class="drop-down-toggle"><span class="drop-down-arrow"></span></span>');
+			});
+			$('.drop-down-toggle').click(function() {
+				$(this).parent().children('ul').slideToggle(250);
+			});
+		}
+					$('#slider').flexslider({
+				selector: '.slides > li',
+				video: true,
+				prevText: '&larr;',
+				nextText: '&rarr;',
+				pausePlay: true,
+				pauseText: '||',
+				playText: '>',
+				before: function() {
+					$('#slider .entry-title').hide();
+				},
+				after: function() {
+					$('#slider .entry-title').fadeIn();
+				}
+			});
+						$('audio,video').mediaelementplayer({
+			videoWidth: '100%',
+			videoHeight: '100%',
+			audioWidth: '100%',
+			alwaysShowControls: true,
+			features: ['playpause','progress','tracks','volume'],
+			videoVolume: 'horizontal'
+		});
+		$(".entry-attachment, .entry-content").fitVids({ customSelector: "iframe[src*='wordpress.tv'], iframe[src*='www.dailymotion.com'], iframe[src*='blip.tv'], iframe[src*='www.viddler.com']"});
+	});
+	jQuery(window).load(function() {
+					jQuery('.entry-content a[href$=".jpg"],.entry-content a[href$=".jpeg"],.entry-content a[href$=".png"],.entry-content a[href$=".gif"],a.colorbox').colorbox({
+				maxWidth: '100%',
+				maxHeight: '100%',
+			});
+			});
+/* ]]> */
+</script>
+<style type="text/css">
+																																											</style>
+<style type="text/css">
+	#site-title a,
+	#site-description {
+		color:#333;
+	}
+</style>
+<style type="text/css" id="custom-background-css">
+body.custom-background { background-image: url('http://VIZSEC2010.ORG/wp-content/themes/pinboard/images/bg.jpg'); background-repeat: repeat; background-position: top left; background-attachment: fixed; }
+</style>
+</head>
+
+<body class="home page page-id-6 page-template-default custom-background">
+	<div id="wrapper">
+		<header id="header">
+			<div id="site-title">
+								<a class="home" href="http://VIZSEC2010.ORG/" rel="home">Vizsec 2010</a>
+			</div>
+							<div id="sidebar-header" class="widget-area" role="complementary">
+		<aside id="text-2" class="widget widget_text">			<div class="textwidget"></div>
+		</aside><!-- .widget -->	</div><!-- #sidebar-header -->
+			<div class="clear"></div>
+			<nav id="access">
+				<a class="nav-show" href="#access">Show Navigation</a>
+				<a class="nav-hide" href="#nogo">Hide Navigation</a>
+				<div class="menu-main-menu-container"><ul id="menu-main-menu" class="menu"><li id="menu-item-14" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-6 current_page_item menu-item-14"><a href="http://VIZSEC2010.ORG/">Home</a></li>
+<li id="menu-item-15" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15"><a href="http://VIZSEC2010.ORG/online-casinos/">Online Casinos</a></li>
+<li id="menu-item-16" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16"><a href="http://VIZSEC2010.ORG/rapid-finance/">Rapid Finance</a></li>
+</ul></div>				<div class="clear"></div>
+			</nav><!-- #access -->
+		</header><!-- #header -->														<div id="container">
+		<section id="content" class="column twothirdcol">
+							<article class="post-6 page type-page status-publish hentry column onecol" id="post-6">
+					<div class="entry">
+						<header class="entry-header">
+							<h1 class="entry-title">Home</h1>
+						</header><!-- .entry-header -->
+						<div class="entry-content">
+							<p style="text-align: justify;">Inside web page exactly where you satisfy your competition</p>
+<p style="text-align: justify;"><a href="http://VIZSEC2010.ORG/wp-content/uploads/2014/04/57181_max.jpg"><img class="alignleft size-full wp-image-7" src="http://VIZSEC2010.ORG/wp-content/uploads/2014/04/57181_max.jpg" alt="57181_max" width="300" height="300" /></a>Intelligent bidders place their particular bids into BidBuddy, the actual white-colored bar that you simply observe on this web page, and permit this particular automatic program to bid on their behalf. To discover BidBuddy, you have to dual-click on the auction from the homepage. Dual-clicking on the auction item won’t permit clients to see much more concerning the auction product, but it also enables these phones observe additional information that may assist customers make better, much more accountable, bidding choices. Requested on the amount of prices for bids a person offers in his / her account, it may be smart to offer on an additional auction rather that might be simpler to succeed.</p>
+<p style="text-align: justify;">Home elevators this particular inside web page consists of:</p>
+<p style="text-align: justify;">• The particular profession of additional bidders that helps you to decide if this could be a prosperous bidder that could outbid everybody else. If a bidder is definitely a lawyer or even professional that could spell cash. Consequently, an individual with limited funds might have a much better possibility of successful in an additional auction.<br />
+• How many auctions every bidder has already gained. Should you observe 5/6 this means this particular bidder currently won 5 auctions out of the optimum of 6 permitted each week on items really worth less than $200.<br />
+• Exactly what date every bidder signed up with the Deal Dash penny-auction website that assists to look for the experience degree of additional customers.<br />
+• Exactly what condition the particular bidder originates from. Occasionally you will notice N/A because the condition will.</p>
+<p style="text-align: justify;">Seven Behaviors of Intelligent Bidders</p>
+<p style="text-align: justify;">You’re an intelligent bidder if:</p>
+<p style="text-align: justify;">1. You usually utilize Bid Buddy to put your estimates for you personally. If you do this particular, you won’t have to be worried about slicing the clock simply because Bid Buddy will simply utilize your prices for bids once the time clock gets right down to the final 1 or 2 seconds.<br />
+2. An individual begin bidding on low-cost products simply before you get more putting in a bid encounter.<br />
+3. An individual regularly go to the webpage as well as examine the actual invariably winners list regarding items which regularly market for that minimum quantity of bids.<br />
+4. You are able to determine the display titles of energy bidders and/or BIN bidders that in no way end and sometimes bid over and above the significance of the items and also you attempt to avoid bidding in the exact same auctions<br />
+5. You understand the most effective days and/or greatest occasions of the day time when the competitors are actually lower.<br />
+6. You search for designs in the putting in a bid procedure. For instance, occasionally whenever a product offers additional high, next time it pops up for bid, it might sell additional reduced.<br />
+7. You examine “one for each household” display titles to determine the number of energy bidders already are secured out from successful a specific auction. Once the majority of the energy bidders have already received and therefore are right now secured out from the bidding procedure, it could be a great time to get involved with the actual auction.</p>
+<p style="text-align: justify;">Example of a successful bidder -</p>
+<p style="text-align: justify;"><a title="loose beads" href="http://loosebeads.com/bulk-beads/">Loose Beads</a> saved 95% on their usual inventory cost by buying <a title="bulk beads" href="http://loosebeads.com/bulk-beads/">bulk beads</a> through intelligent bidding. You can find more information on the by clicking <a title="loose beads" href="http://loosebeads.com/bulk-beads/">here</a>.</p>
+							<div class="clear"></div>
+						</div><!-- .entry-content -->
+											</div><!-- .entry -->
+					
+
+						</article><!-- .post -->
+					</section><!-- #content -->
+					<div id="sidebar" class="column threecol">
+			<div class="column twocol">
+		<div id="sidebar-left" class="widget-area" role="complementary">
+			<div class="column onecol"><aside id="text-5" class="widget widget_text">			<div class="textwidget"></div>
+		</aside><!-- .widget --></div>		</div><!-- #sidebar-left -->
+	</div><!-- .twocol -->
+		<div class="column twocol">
+		<div id="sidebar-right" class="widget-area" role="complementary">
+			<div class="column onecol"><aside id="text-4" class="widget widget_text">			<div class="textwidget"></div>
+		</aside><!-- .widget --></div>		</div><!-- #sidebar-right -->
+	</div><!-- .twocol -->
+	</div><!-- #sidebar -->				<div class="clear"></div>
+	</div><!-- #container -->
+						<div id="sidebar-footer-wide" class="widget-area" role="complementary">
+		<aside id="text-3" class="widget widget_text">			<div class="textwidget"></div>
+		</aside><!-- .widget -->		<div class="clear"></div>
+	</div><!-- #sidebar-home -->
+				<div id="footer">
+				<div id="footer-area" class="widget-area" role="complementary">
+		<div class="column threecol"><aside id="text-6" class="widget widget_text">			<div class="textwidget"></div>
+		</aside><!-- .widget --></div>		<div class="clear"></div>
+	</div><!-- #footer-area -->
+			<div id="copyright">
+				<p class="copyright twocol">© 2014 Vizsec 2010</p>
+								<div class="clear"></div>
+			</div><!-- #copyright -->
+		</div><!-- #footer -->
+	</div><!-- #wrapper -->
+<script type='text/javascript'>
+/* <![CDATA[ */
+var mejsL10n = {"language":"en-US","strings":{"Close":"Close","Fullscreen":"Fullscreen","Download File":"Download File","Download Video":"Download Video","Play\/Pause":"Play\/Pause","Mute Toggle":"Mute Toggle","None":"None","Turn off Fullscreen":"Turn off Fullscreen","Go Fullscreen":"Go Fullscreen","Unmute":"Unmute","Mute":"Mute","Captions\/Subtitles":"Captions\/Subtitles"}};
+var _wpmejsSettings = {"pluginPath":"\/wp-includes\/js\/mediaelement\/"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://VIZSEC2010.ORG/wp-includes/js/mediaelement/mediaelement-and-player.min.js?ver=2.14.2'></script>
+<script type='text/javascript' src='http://VIZSEC2010.ORG/wp-includes/js/mediaelement/wp-mediaelement.js?ver=3.9.2'></script>
+<script type='text/javascript' src='http://VIZSEC2010.ORG/wp-includes/js/comment-reply.min.js?ver=3.9.2'></script>
+</body>
+</html>

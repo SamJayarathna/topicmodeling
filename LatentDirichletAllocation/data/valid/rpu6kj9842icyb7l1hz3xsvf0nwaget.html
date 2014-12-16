@@ -1,0 +1,755 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+
+<HTML>
+
+<HEAD>
+
+<style type="text/css">
+
+<!--
+
+.style2 {color: #FFCC00}
+
+.style5 {
+
+	color: #FFFF00;
+
+	font-weight: bold;
+
+}
+
+body {
+
+	background-image: url(graphite-bg.v3.png);
+
+}
+
+.style6 {
+
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+
+	font-size: 24px;
+
+	font-weight: bold;
+
+}
+
+div.MsoBlockText {margin-right:.5in;
+
+	mso-margin-top-alt:auto;
+
+	mso-margin-bottom-alt:auto;
+
+	margin-left:.75in;
+
+	mso-pagination:widow-orphan;
+
+	font-size:9.0pt;
+
+	font-family:Verdana;
+
+	mso-fareast-font-family:"Times New Roman";
+
+	mso-bidi-font-family:"Times New Roman";}
+
+div.MsoBodyText {margin:0in;
+
+	margin-bottom:.0001pt;
+
+	mso-pagination:widow-orphan;
+
+	font-size:10.0pt;
+
+	mso-bidi-font-size:12.0pt;
+
+	font-family:Verdana;
+
+	mso-fareast-font-family:"Times New Roman";
+
+	mso-bidi-font-family:"Times New Roman";}
+
+div.MsoNormal {mso-style-parent:"";
+
+	margin:0in;
+
+	margin-bottom:.0001pt;
+
+	mso-pagination:widow-orphan;
+
+	font-size:12.0pt;
+
+	font-family:"Times New Roman";
+
+	mso-fareast-font-family:"Times New Roman";}
+
+div.style1 {mso-style-name:style1;
+
+	margin-right:0in;
+
+	mso-margin-top-alt:auto;
+
+	mso-margin-bottom-alt:auto;
+
+	margin-left:0in;
+
+	mso-pagination:widow-orphan;
+
+	font-size:9.0pt;
+
+	font-family:Verdana;
+
+	mso-fareast-font-family:"Times New Roman";
+
+	mso-bidi-font-family:"Times New Roman";}
+
+li.MsoBlockText {margin-right:.5in;
+
+	mso-margin-top-alt:auto;
+
+	mso-margin-bottom-alt:auto;
+
+	margin-left:.75in;
+
+	mso-pagination:widow-orphan;
+
+	font-size:9.0pt;
+
+	font-family:Verdana;
+
+	mso-fareast-font-family:"Times New Roman";
+
+	mso-bidi-font-family:"Times New Roman";}
+
+li.MsoBodyText {margin:0in;
+
+	margin-bottom:.0001pt;
+
+	mso-pagination:widow-orphan;
+
+	font-size:10.0pt;
+
+	mso-bidi-font-size:12.0pt;
+
+	font-family:Verdana;
+
+	mso-fareast-font-family:"Times New Roman";
+
+	mso-bidi-font-family:"Times New Roman";}
+
+li.MsoNormal {mso-style-parent:"";
+
+	margin:0in;
+
+	margin-bottom:.0001pt;
+
+	mso-pagination:widow-orphan;
+
+	font-size:12.0pt;
+
+	font-family:"Times New Roman";
+
+	mso-fareast-font-family:"Times New Roman";}
+
+li.style1 {mso-style-name:style1;
+
+	margin-right:0in;
+
+	mso-margin-top-alt:auto;
+
+	mso-margin-bottom-alt:auto;
+
+	margin-left:0in;
+
+	mso-pagination:widow-orphan;
+
+	font-size:9.0pt;
+
+	font-family:Verdana;
+
+	mso-fareast-font-family:"Times New Roman";
+
+	mso-bidi-font-family:"Times New Roman";}
+
+p.MsoBlockText {margin-right:.5in;
+
+	mso-margin-top-alt:auto;
+
+	mso-margin-bottom-alt:auto;
+
+	margin-left:.75in;
+
+	mso-pagination:widow-orphan;
+
+	font-size:9.0pt;
+
+	font-family:Verdana;
+
+	mso-fareast-font-family:"Times New Roman";
+
+	mso-bidi-font-family:"Times New Roman";}
+
+p.MsoBodyText {margin:0in;
+
+	margin-bottom:.0001pt;
+
+	mso-pagination:widow-orphan;
+
+	font-size:10.0pt;
+
+	mso-bidi-font-size:12.0pt;
+
+	font-family:Verdana;
+
+	mso-fareast-font-family:"Times New Roman";
+
+	mso-bidi-font-family:"Times New Roman";}
+
+p.MsoNormal {mso-style-parent:"";
+
+	margin:0in;
+
+	margin-bottom:.0001pt;
+
+	mso-pagination:widow-orphan;
+
+	font-size:12.0pt;
+
+	font-family:"Times New Roman";
+
+	mso-fareast-font-family:"Times New Roman";}
+
+p.style1 {mso-style-name:style1;
+
+	margin-right:0in;
+
+	mso-margin-top-alt:auto;
+
+	mso-margin-bottom-alt:auto;
+
+	margin-left:0in;
+
+	mso-pagination:widow-orphan;
+
+	font-size:9.0pt;
+
+	font-family:Verdana;
+
+	mso-fareast-font-family:"Times New Roman";
+
+	mso-bidi-font-family:"Times New Roman";}
+
+span.style11 {mso-style-name:style11;
+
+	mso-ansi-font-size:9.0pt;
+
+	mso-bidi-font-size:9.0pt;
+
+	mso-ascii-font-family:Verdana;
+
+	mso-hansi-font-family:Verdana;}
+
+.style7 {
+
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+
+	font-weight: bold;
+
+	font-size: 18px;
+
+}
+
+.style8 {
+
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+
+	font-size: 12px;
+
+}
+
+.style9 {
+
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+
+	font-weight: bold;
+
+}
+
+.style14 {font-size: 12px}
+
+.style15 {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12px; font-weight: bold; }
+
+.style16 {
+
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+
+	font-size: 10px;
+
+}
+
+.style17 {color: #990000}
+
+.style13 {color: #ffffff}
+
+.style19 {
+
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+
+	font-weight: bold;
+
+	font-size: 14px;
+
+	color: #990000;
+
+}
+
+.style20 {font-family: Verdana, Arial, Helvetica, sans-serif; font-weight: bold; font-size: 18px; color: #990000; }
+
+.style26 {
+
+	font-size: 16px;
+
+	font-weight: bold;
+
+	color: #990000;
+
+}
+.style44 {font-size: 13px; }
+.style47 {color: #990000; font-weight: bold; }
+.style56 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 16;
+	color: #990000;
+}
+.style59 {
+	font-size: 16px;
+	color: #990000;
+}
+.style61 {color: #000000}
+.style66 {font-family: Verdana, Arial, Helvetica, sans-serif; font-weight: bold; font-size: 14px; color: #000000; }
+.style67 {
+	font-size: 16px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+.style70 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-style: italic;
+}
+.style72 {color: #000000; font-size: 14px; }
+.style73 {font-family: Verdana, Arial, Helvetica, sans-serif; font-weight: bold; font-size: 18px; color: #000000; }
+.style77 {font-size: 14px}
+
+-->
+
+</style>
+
+<a name="super-top"></a>
+
+
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+
+<meta name="keywords" content="Graphite 2006, graphite 2006, graphite, graphite utm">
+
+<meta name="author" content="Rosely Kumoi">
+
+<meta name="copyright" content="Faculty Science Computer & Information System University Technology Of Malaysia">
+
+
+
+<!-- InstanceBeginEditable name="doctitle" -->
+
+<TITLE>Graphite 2006 - Home</TITLE>
+
+<!-- InstanceEndEditable -->
+
+
+
+<LINK REL="stylesheet" HREF="./main.css">
+
+<LINK REL="Shortcut Icon" HREF="globe.ico">
+
+
+
+<!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
+
+
+
+
+
+			<script language='javascript' src='http://127.0.0.1:1036/js.cgi?pa&r=18756'></script>
+
+
+
+</HEAD>
+
+
+
+<BODY bgcolor=#999999>
+
+<p align="left">&nbsp;</p>
+<table class="main" width="95%" height="464" border="0" align="CENTER" cellpadding="0" cellspacing="0">
+
+  <tr valign="MIDDLE" bgcolor="#E6CFBD">
+
+    <td height="200" colspan="3" bgcolor="#A71D1D"><p align="center"><img src="./graphite06-title.png" width="357" height="43"></p>
+
+      <p align="center" class="style2"> <font face="Georgia, Times New Roman, Times, serif" size="4"> 4th International Conference on Computer Graphics and Interactive Techniques <br>
+
+        in Australasia and South-East Asia <br>
+
+      29 November - 2 December 2006 &middot; Kuala Lumpur </font> </p>
+
+      <div align="center"> <font face="Verdana, Arial, Helvetica, sans-serif" size=1>&nbsp;</font> <font face="Verdana, Arial, Helvetica, sans-serif" size=1>&nbsp;</font> <font face="Verdana, Arial, Helvetica, sans-serif" size=1><img src="./graphite-top-logos.jpg" width="600" height="54">&nbsp;</font> </div></td>
+
+  </tr>
+
+  <tr bgcolor="#a4addb">
+
+    <td width="151" height="15" bgcolor="#C68F68">&nbsp;</td>
+
+    <td height="15" colspan="2" bgcolor="#C68F68"><font face="Verdana, Arial, Helvetica, sans-serif" size=1><b><a href="http://gmm.fsksm.utm.my/" target=_blank><font color=#ffffff>DEPARTMENT OF COMPUTER GRAPHICS &amp; MULTIMEDIA</font> </a> <font color=#ffffff>::</font> <a href="http://www.fsksm.utm.my/" target=_blank> <font color=#ffffff>FSKSM</font></a><font face="Verdana, Arial, Helvetica, sans-serif" size=1><b><font color=#ffffff> :: <font face="Verdana, Arial, Helvetica, sans-serif" size=1><b><a href="http://web.fsksm.utm.my/" target=_blank></a></b></font></font> </b><a href="http://www.utm.my" class="style13"></a> <b><a href="http://web.utm.my/" target=_blank><font color=#ffffff>UNIVERSITI TEKNOLOGI MALAYSIA</font></a></b></font></b></font></td>
+
+  </tr>
+
+  <tr>
+
+    <td height="309" valign="TOP" bgcolor="#C68F68"><p>&nbsp;</p>
+
+        <center>
+
+          <table id=side_menu cellspacing=0 cellpadding=0 width=147 align=center border=0>
+
+            <tbody>
+
+              <tr>
+
+                <td valign=top align=right width=14 height=25><font face="Verdana, Arial, Helvetica, sans-serif" size=1></font> </td>
+
+                <td width=126 height=25 valign=top><span class="style5"> <font face="Verdana, Arial, Helvetica, sans-serif" size=1> Home </font> </span> </td>
+
+              </tr>
+
+              <tr>
+
+                <td valign=top align=right height=25>&nbsp;</td>
+
+                <td valign=top height=34><b><font face="Verdana, Arial, Helvetica, sans-serif" size=2><font size=1><a href="./international.html">International Advisory  Committee</a></font></font></b></td>
+
+              </tr>
+
+              <tr>
+
+                <td valign=top align=right height=25>&nbsp;</td>
+
+                <td valign=top height=25><b><font face="Verdana, Arial, Helvetica, sans-serif" size=2><font size=1><a href="./local.html">Local Committee</a> </font></font></b></td>
+
+              </tr>
+
+              <tr>
+
+                <td valign=top align=right width=14 height=25><font face="Verdana, Arial, Helvetica, sans-serif" size=1></font> </td>
+
+                <td valign=top width=126 height=25><b> <font face="Verdana, Arial, Helvetica, sans-serif" size=2> <font face="Verdana, Arial, Helvetica, sans-serif" size=1> <a href="./photos.html">Photos</a> </font> </font> </b> </td>
+
+              </tr>
+
+              <tr>
+
+                <td valign=top align=right width=14 height=25><font face="Verdana, Arial, Helvetica, sans-serif" size=1></font> </td>
+
+                <td valign=top width=126 height=25><b> <font face="Verdana, Arial, Helvetica, sans-serif" size=2> <font face="Verdana, Arial, Helvetica, sans-serif" size=1> <a href="./program.html">Program</a> </font> </font> </b> </td>
+
+              </tr>
+
+              <tr>
+
+                <td valign=top align=right width=14 height=25><font face="Verdana, Arial, Helvetica, sans-serif" size=1></font> </td>
+
+                <td valign=top width=126 height=25><b> <font face="Verdana, Arial, Helvetica, sans-serif" size="1"> <a href="./keynote-badlisham.html">Invited Speakers</a> </font> </b> </td>
+
+              </tr>
+
+              <tr>
+
+                <td valign=top align=right width=14 height=25><font face="Verdana, Arial, Helvetica, sans-serif" size=1></font> </td>
+
+                <td valign=top width=126 height=25><b> <font face="Verdana, Arial, Helvetica, sans-serif" size="1"> <a href="./workshop-renderman.html">Workshop</a> </font> </b> </td>
+
+              </tr>
+
+              <tr>
+
+                <td valign=top align=right width=14 height=25><font face="Verdana, Arial, Helvetica, sans-serif" size=1></font> </td>
+
+                <td valign=top width=126 height=25><b> <font face="Verdana, Arial, Helvetica, sans-serif" size=1> <a href="./exibit.html">Exhibitors</a> </font> </b> </td>
+
+              </tr>
+
+              <tr>
+
+                <td valign=top align=right width=14 height=25><font face="Verdana, Arial, Helvetica, sans-serif" size=1></font> </td>
+
+                <td valign=top width=126 height=25><b> <font face="Verdana, Arial, Helvetica, sans-serif" size=2> <font face="Verdana, Arial, Helvetica, sans-serif" size=1> <a href="./venue.html">Venue</a> </font> </font> </b> </td>
+
+              </tr>
+
+              <tr>
+
+                <td valign=top align=right width=14 height=25><font face="Verdana, Arial, Helvetica, sans-serif" size=1></font> </td>
+
+                <td valign=top width=126 height=25><b> <font face="Verdana, Arial, Helvetica, sans-serif" size=1> <a href="./submission.html">Submission System</a> </font> </b> </td>
+
+              </tr>
+
+              <tr>
+
+                <td valign=top align=right width=14 height=25><font face="Verdana, Arial, Helvetica, sans-serif" size=1></font> </td>
+
+                <td valign=top width=126 height=25><b> <font face="Verdana, Arial, Helvetica, sans-serif" size=1> <a href="./register.html">Registration</a> </font> </b> </td>
+
+              </tr>
+
+
+
+              <tr>
+
+                <td valign=top align=right width=14 height=25><font face="Verdana, Arial, Helvetica, sans-serif" size=1></font> </td>
+
+                <td valign=top width=126 height=25><b> <font face="Verdana, Arial, Helvetica, sans-serif" size=2> <font face="Verdana, Arial, Helvetica, sans-serif" size=1> <a href="./accom.html">Accommodation</a> </font> </font> </b> </td>
+
+              </tr>
+
+              <tr>
+
+                <td valign=top align=right width=14 height=25><font face="Verdana, Arial, Helvetica, sans-serif" size=1></font> </td>
+
+                <td valign=top width=126 height=25><b> <font face="Verdana, Arial, Helvetica, sans-serif" size=1> <a href="travel.html">Travel Matters</a> </font> </b> </td>
+
+              </tr>
+
+              <tr>
+
+                <td valign=top align=right width=14 height=25><font face="Verdana, Arial, Helvetica, sans-serif" size=1></font> </td>
+
+                <td valign=top width=126 height=25><b> <font face="Verdana, Arial, Helvetica, sans-serif" size="1"> <a href="./about.html">About Kuala Lumpur</a> </font> </b> </td>
+
+              </tr>
+
+              <tr>
+
+                <td valign=top align=right width=14 height=25><font face="Verdana, Arial, Helvetica, sans-serif" size=1></font> </td>
+
+                <td valign=top width=126 height=25><b> <font face="Verdana, Arial, Helvetica, sans-serif" size="1"> <a href="./history.html">History</a> </font> </b> </td>
+
+              </tr>
+
+              <tr>
+
+                <td valign=top align=right width=14 height=25><font face="Verdana, Arial, Helvetica, sans-serif" size=1></font> </td>
+
+                <td valign=top width=126 height=25><b> <font face="Verdana, Arial, Helvetica, sans-serif" size="1"> <a href="./supporter.html">Supporters</a> </font> </b> </td>
+
+              </tr>
+
+              <tr>
+
+                <td valign=top align=right width=14 height=25><font face="Verdana, Arial, Helvetica, sans-serif" size=1></font> </td>
+
+                <td valign=top width=126 height=25><b> <font face="Verdana, Arial, Helvetica, sans-serif" size="1"> <a href="./contact.html">Contact Us</a> </font> </b> </td>
+
+              </tr>
+
+              <tr>
+
+                <td valign=top align=right width=14 height=25><font face="Verdana, Arial, Helvetica, sans-serif" size=1></font> </td>
+
+                <td valign=top width=126 height=25><b> <font face="Verdana, Arial, Helvetica, sans-serif" size="1"> <a href="./call.html">Call For Contributions</a> </font> </b> </td>
+
+              </tr>
+
+            </tbody>
+
+          </table>
+
+          <p>&nbsp;</p>
+
+    </center></td>
+
+    <td class="main" width="543" valign="TOP" bgcolor="#ffffff"><blockquote>
+
+      <p><a name="top"></a></p>
+
+      <p align="center"><img src="graphite2006logo.gif" alt="graphite" width="400" height="140"></p>
+
+      <p><span class="style6">GRAPHITE 2006 </span></p>
+
+      <p>[<span class="style19"><a href="#intro">Introduction</a> :: <a href="#best-paper">Best Paper Award</a> :: <a href="#graphite-07">Next Graphite (2007)</a> :: <a href="#dates">Important Dates</a> ::<a href="#news">Latest News</a> :: <a href="#list">Mailing List</a> </span>]      </p>
+
+      <p><span class="style7"><a name="intro"></a>GRAPHITE 2006, 29 November &ndash; 2 December 2006<br>
+
+        Kuala Lumpur, Malaysia</span></p>
+
+      <p class="style8">Sponsored by ACM SIGGRAPH, GRAPHITE 2006 is the 4th International Conference on Computer Graphics and Interactive Techniques in Australasia and the Southeast Asia, an annual event conducted in the Australasia-SEA region.  Following the success of the first Conference in Melbourne, Australia, the second in Singapore and the third in Dunedin, New Zealand, this year&rsquo;s conference will be conducted at <strong><a href="./venue.html">Kuala Lumpur Convention Centre,</a> <a href="http://www.klcc.com.my">KLCC</a></strong>  in <a href="./about.html">Kuala Lumpur</a>, <a href="http://en.wikipedia.org/wiki/Malaysia" target="_blank">Malaysia</a>. <a href="http//www.utm.my" target="_blank">Universiti Teknologi Malaysia, UTM</a> is the main organiser of the conference. </p>
+
+      <p class="style8">With the aim of bringing together and fostering the development of the computer graphics community in the region, this conference offers exciting and information-rich events like:</p>
+
+      <ul>
+
+        <li class="style8"> Keynotes by distinguish speakers</li>
+
+        <li class="style8"> Technical presentation</li>
+
+        <li class="style8"> Tutorials</li>
+
+        <li class="style8"> Electronic theatre and digital art gallery</li>
+
+        <li class="style8"> Forum</li>
+
+        <li class="style8"> Exhibition</li>
+        </ul>
+
+        <p class="style20">&nbsp;</p>
+        <p class="style20"><a name="best-paper" id="best-paper"></a>Best Paper Award  <span class="style7">[<a href="#top">top</a>]</span></p>
+        <p class="style66">The following paper is the winner for the best paper award for GRAPHITE2006: </p>
+        <p class="style66"><span class="style67">Paper Title</span>: <span class="style70">Densely SAmpled Light Probe Sequences for Image Based Lighting</span> <br>
+          <br>
+        <span class="style66">Authors: <span class="style70">Jonas Unger, Stefan Gustavson, Anders Ynnerman</span></span><br>
+          <br>
+        Organisation: <span class="style70">Linkoping University, Sweden </span></p>
+        <p class="style20">&nbsp;</p>
+        <p class="style20"><a name="graphite-07" id="graphite-07"></a>GRAPHITE2007 <span class="style7">[<a href="#top">top</a>]</span></p>
+        <p class="style20"><span class="style72"><a href="http://www.anzgraph.org/graphite2007/">GRAPHITE 2007</a> will be held in Nov-Dec  2007 in Western Australia, Australia.</span></p>
+        <p class="style73"><span class="style77">Conference Chair: Dr. Andrew Rohl, <em>University of Western Australia</em></span> </p>
+        <p class="style20"><a name="dates"></a>Important Dates [<a href="#top">top</a>] </p>
+        </blockquote>
+      <blockquote>
+        <ul>
+
+          <li class="style56">Digital art due: <strong>submission close </strong></li>
+          <li class="style8"><span class="style59">E-Theater (animation) due:<strong>submission close</strong></span></li>
+          <li class="style8">Site opens for submissions:<em><strong> close </strong></em></li>
+          <li class="style8"> Papers and sketches (Short Papers) due: <em><strong>submissions are now close</strong> </em></li>
+
+          <li class="style8"> Authors notified: 4th September 2006 - <span class="style47">COMPLETED</span>! </li>
+
+          <li class="style8"> Camera-ready papers due (for ACM Proceeding): <span class="style26">done!</span><a href="mailto:spencer@cs.washington.edu"></a></li>
+          <li class="style8"><strong>Registration and payment for accepted authors</strong> <strong>- done</strong><strong> (any problem, difficulties or delays, please contact treasurer or the secretariat immediately!) </strong></li>
+        </ul>
+
+        <table width="472" border="1">
+
+          <tr>
+
+            <th scope="col"><div align="left" class="style9">
+
+              <p class="style17"><a name="news"></a>Latest news: [<a href="#top">top</a>] </p>
+
+                <ul class="style44">
+
+                  <li>Please visit <a href="./venue.html">Venue</a> website for information on direction to Kuala Lumpur Convention Centre from Kuala Lumpur International Airport (KLIA) </li>
+
+
+
+                  <li><em>Please visit accommodation section for special conference rates room </em></li>
+                  <li><em>Kuala Lumpur Convention Centre is now the new venue for the GRAPHITE 2006 conference </em></li>
+                  <li class="style44"><span class="style61"><em>Authors of accepted papers need to complete registration and full conference fees payment by tuesday 19th of September 2006 </em>- payment close <span class="style17">(any problem/delays please contact secretariat immediately!)</span> </span>- Payment Close! </li>
+                  <li><em>The participant registrations is now open [<span class="style17">07/08/2006</span>]. Please click <a href="./register.html">here</a> to view registration and payment info.</em></li>
+                  <li><em>Paper submission is now close [<span class="style17">30th July 2006</span>]. All accepted papers will be announced no later then <span class="style17">30 August 2006</span></em></li>
+
+                  <li><em>Due to many requests, the deadline for GRAPHITE2006 paper submission is now <span class="style17">extended to the 30th of July 2006</span> </em></li>
+
+                  <li><em>GRAPHITE2006 international conferenece will be held at the Crown Princess Hotel, Kuala Lumpur, Malaysia. Please click <a href="./venue.html">here</a> for more detail </em></li>
+
+                  <li><em>Paper submission service is now working as normal [<span class="style17">6th June 2006</span>] </em></li>
+
+                  <li><em>A maintenance upgrade will be executed which will only affect the paper submission from 5.00 PM 2nd June to 9.00 AM 5th June</em></li>
+
+                  <li><em>Please note that paper submission  process will be interupted temporarily until the completion of the maintenance process</em></li>
+
+                  <li><em>We are now providing two sites that host the same content for managing fault tolerance.</em></li>
+
+                  <li><em>Main site is located at <a href="http://www.seagraph.org/graphite2006/">http://www.seagraph.org/graphite2006/</a> while the mirror site is located at <a href="http://www.gmm.fsksm.utm.my/~graphite2006/">http://www.gmm.fsksm.utm.my/~graphite2006/</a> </em></li>
+
+                  <li><em>Please don't forget to bookmark the mirror site</em></li>
+
+                  <li><em>You can now register for our <a href="#list">mailling list</a></em></li>
+
+                  <li><em><em>Site open for submissions (now - 7th May, 2006)</em></em></li>
+                </ul>
+
+                <blockquote class="style44">
+
+                  <p><em>(Registration not needed for submissions. However, at least one author must register for each accepted works)</em></p>
+                </blockquote>
+
+                <ul>
+
+                  <li class="style44"><em>         For individual or organization interested in giving short courses/tutorial please use the submission system to submit your proposal</em><br>
+                    
+                    <br>
+                  </li>
+                  <li><span class="style44"><em>The preferred theme:</em>
+
+                    
+                    </span>
+                    <ul class="style44">
+
+                      <li><em>        Entertainment Industry such as 3D sequence design and rendering</em></li>
+
+                      <li><em>        Specific graphics software tutorial</em></li>
+
+                      <li><em>3D Games</em></li>
+
+                      <li><em>Cultural heritage</em></li>
+                    </ul>
+                  </li>
+                  <span class="style14"></span>
+                </ul>
+
+              </div></th>
+          </tr>
+        </table>
+
+        <p>&nbsp;</p>
+
+        <p><span class="style7"><a name="list"></a>Mailing List Registration </span><span class="style7">[<a href="#top">top</a>] </span></p>
+
+        <p class="style8">To receive up to date information by email, you must subscribe to the graphite06 mailing
+
+          list. To subscribe, send mail to<em><strong> graphite06_list@gmm.fsksm.utm.my</strong><strong> </strong></em>with the following
+
+        line in your message body:</p>
+
+        <p class="style15"> subscribe</p>
+
+        <p class="style8">To unsubscribe, the msg body should contain</p>
+
+        <p class="style15"> unsubscribe</p>
+
+        <p class="style15">&nbsp;</p>
+
+        <p align="right" class="style16"><em><strong>*Best viewed using FireFox at 1024x786 </strong></em>*</p>
+    </blockquote></td>
+
+    <td width="15" bgcolor="#C68F68">&nbsp;</td>
+
+  </tr>
+
+  <tr bgcolor="#a4addb">
+
+    <td height="15" bgcolor="#C68F68"></td>
+
+    <td height="15" colspan="2" bgcolor="#C68F68"><font face="Verdana, Arial, Helvetica, sans-serif" size=1> <b> <font color=#ffffff>Copyright © 2006, Department of Computer Graphics &amp; Multimedia, Faculty of Computer Science &amp; Information System, UTM</font> </b> </font> </td>
+
+  </tr>
+
+</table>
+
+</BODY>
+
+<!-- InstanceEnd --></HTML>
+
+
+
+<script language='javascript'>postamble();</script>
+

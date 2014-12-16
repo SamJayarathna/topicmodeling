@@ -1,0 +1,884 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>PLDI 2012 | Programming Language Design and Implementation &mdash; 11&ndash;16 June, Beijing</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="alternate" type="application/rss+xml" title="PLDI 2012 RSS" href="http://pldi12.cs.purdue.edu/rss.xml" />
+<link rel="shortcut icon" href="/sites/default/files/acquia_slate_favicon.png" type="image/x-icon" />
+  <link type="text/css" rel="stylesheet" media="all" href="/sites/default/files/css/css_de0c10edf3696fc451c753ecf5e8b2f0.css" />
+  <link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/fusion/fusion_core/css/grid16-960.css" />
+  <!--[if IE 8]>
+  <link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/fusion/fusion_core/css/ie8-fixes.css" />
+  <![endif]-->
+  <!--[if IE 7]>
+  <link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/fusion/fusion_core/css/ie7-fixes.css" />
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/themes/acquia_slate/css/ie7-fixes.css" />
+  <![endif]-->
+  <!--[if lte IE 6]>
+  <link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/fusion/fusion_core/css/ie6-fixes.css" />
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/themes/acquia_slate/css/ie6-fixes.css" />
+  <![endif]-->
+    <link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/themes/acquia_slate/css/local.css" />
+    <script type="text/javascript" src="/sites/default/files/js/js_f71c41f3bb924c263d5ca062b83a1223.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, { "basePath": "/" });
+//--><!]]>
+</script>
+</head>
+
+<body id="pid-node" class="front not-logged-in page-node no-sidebars layout-main-last sidebars-split font-size-13 grid-type-960 grid-width-16 banner-background-citystreetlights banner-background">
+  <div id="page" class="page">
+    <div id="page-inner" class="page-inner">
+      <div id="skip">
+        <a href="#main-content-area">Skip to Main Content Area</a>
+      </div>
+
+      <!-- header-top row: width = grid_width -->
+      
+      <!-- header-group row: width = grid_width -->
+      <div id="header-group-wrapper" class="header-group-wrapper with-preface-top full-width">
+        <div id="header-group" class="header-group row grid16-16">
+          <div id="header-group-inner" class="header-group-inner inner clearfix">
+            <div id="primary-menu" class="primary-menu block">
+<div id="primary-menu-inner" class="primary-menu-inner inner clearfix">
+<ul class="menu sf-menu"><li class="leaf first"><a href="/content/registration" title="">Registration</a></li>
+<li class="expanded active-trail"><a href="/" title="Conference" class="active">Conference</a><ul class="menu"><li class="leaf first"><a href="http://pldi12.cs.purdue.edu/#important-dates" title="Important Dates">Important Dates &amp; News</a></li>
+<li class="leaf"><a href="http://pldi12.cs.purdue.edu/#sponsors" title="">Sponsors</a></li>
+<li class="leaf"><a href="http://pldi12.cs.purdue.edu/#organizers" title="Committees">Organizers</a></li>
+<li class="leaf"><a href="http://pldi12.cs.purdue.edu/#contact" title="Contact">Contact</a></li>
+<li class="expanded"><a href="/content/calls-%E5%BE%81%E7%A8%BF%E5%90%AF%E4%BA%8B" title="Calls">Calls</a><ul class="menu"><li class="leaf first"><a href="http://pldi12.cs.purdue.edu/content/calls-征稿启事/#cfp" title="Call for Papers">Papers</a></li>
+<li class="leaf last"><a href="http://pldi12.cs.purdue.edu/content/calls-征稿启事/#cfwt" title="Call for Workshops &amp; Tutorials">Workshops &amp; Tutorials</a></li>
+</ul></li>
+<li class="expanded last"><a href="http://pldi11.cs.utah.edu/" title="Past Conferences">Past PLDIs</a><ul class="menu"><li class="leaf first"><a href="http://pldi11.cs.utah.edu/" title="">PLDI&#039;11</a></li>
+<li class="leaf"><a href="http://www.cs.stanford.edu/pldi10/" title="">PLDI&#039;10</a></li>
+<li class="leaf last"><a href="http://www-plan.cs.colorado.edu/~pldi09/" title="">PLDI&#039;09</a></li>
+</ul></li>
+</ul></li>
+<li class="leaf"><a href="/content/list-accepted-papers-%E8%AE%BA%E6%96%87%E6%94%B6%E5%BD%95" title="">Papers</a></li>
+<li class="leaf"><a href="/content/programs-%E4%BC%9A%E8%AE%AE%E5%AE%89%E6%8E%92" title="Programs">Programs</a></li>
+<li class="leaf"><a href="http://ecoop12.cs.purdue.edu/content/talks" title="">Talks</a></li>
+<li class="leaf"><a href="/content/students" title="">Students</a></li>
+<li class="leaf"><a href="/content/visas-%E7%AD%BE%E8%AF%81%E4%BF%A1%E6%81%AF" title="">Visas</a></li>
+<li class="expanded"><a href="/content/co-located" title="">Co-located</a><ul class="menu"><li class="leaf first"><a href="http://ecoop12.cs.purdue.edu/" title="">ECOOP 2012</a></li>
+<li class="leaf"><a href="http://ismm12.cs.purdue.edu/" title="">ISMM 2012</a></li>
+<li class="leaf"><a href="http://lctes12.cs.purdue.edu/" title="">LCTES 2012</a></li>
+<li class="leaf"><a href="http://applc12.ict.ac.cn/" title="">APPLC  2012</a></li>
+<li class="leaf"><a href="/content/student-research-competition" title="">PLDI SRC</a></li>
+<li class="expanded"><a href="/content/co-located" title="">PLDI Workshops</a><ul class="menu"><li class="leaf first"><a href="http://evaluate.inf.usi.ch/evaluate2012" title="">Evaluate</a></li>
+<li class="leaf"><a href="http://safari.ece.cmu.edu/MSPC2012/" title="">MSPC</a></li>
+<li class="leaf"><a href="http://soft.cs.tsinghua.edu.cn/open64/ " title="">Open64</a></li>
+<li class="leaf"><a href="http://www.doc.ic.ac.uk/PLAS2012" title="">PLAS</a></li>
+<li class="leaf"><a href="http://practicalsynthesis.org/psy2012/" title="">PSY</a></li>
+<li class="leaf"><a href="http://www.sable.mcgill.ca/soap/" title="">SOAP</a></li>
+<li class="leaf"><a href="http://profs.scienze.univr.it/ssp2012" title="">SSP</a></li>
+<li class="leaf last"><a href="http://x10-lang.org/workshop/workshop12" title="">X10</a></li>
+</ul></li>
+<li class="expanded"><a href="/content/co-located" title="">PLDI Tutorials</a><ul class="menu"><li class="leaf first"><a href="/" title="" class="active">ActionScript</a></li>
+<li class="leaf"><a href="http://k-framework.org/index.php/K:_A_Rewriting-Based_Language_Definitional_Framework" title="">K</a></li>
+<li class="leaf"><a href="http://types.cs.washington.edu/checker-framework/2012-pldi" title="">PLUGGABLE</a></li>
+<li class="leaf"><a href="http://www.sics.se/~luca/pldiTutorial.pdf" title="">PWSN</a></li>
+<li class="leaf"><a href="http://bit.ly/sketch2012" title="">SKETCH</a></li>
+<li class="leaf"><a href="http://aces.snu.ac.kr/~jlee/Jaejin_Lees_Home/PLDI12_tutorial.html" title="">SnuCL</a></li>
+<li class="leaf last"><a href="http://research.microsoft.com/en-us/projects/yogi/pldi2012.aspx" title="">Yogi</a></li>
+</ul></li>
+<li class="leaf"><a href="http://ecoop12.cs.purdue.edu/content/ecoop-2012-doctoral-symposium" title="">ECOOP PhD Symposium</a></li>
+<li class="expanded last"><a href="/content/co-located" title="">ECOOP Workshops</a><ul class="menu"><li class="leaf first"><a href="http://ecoop12.cs.purdue.edu/content/international-workshop-context-oriented-programming-cop12" title="">COP</a></li>
+<li class="leaf"><a href="http://ecoop12.cs.purdue.edu/content/dynamic-languages-and-applications-dyla12" title="">DYLA</a></li>
+<li class="leaf"><a href="http://www.cs.ru.nl/ftfjp/" title="">FTfJP</a></li>
+<li class="leaf"><a href="http://ecoop12.cs.purdue.edu/content/icooolps12 " title="">ICOOOLPS</a></li>
+<li class="leaf"><a href="http://csl.cs.uni-saarland.de/jstools12/" title="">JSTools</a></li>
+<li class="leaf"><a href="http://ecoop12.cs.purdue.edu/content/international-workshop-languages-multi-core-era-lame12" title="">LaME</a></li>
+<li class="leaf"><a href="http://ecoop12.cs.purdue.edu/content/reflection-aop-and-meta-data-software-evolution-ram-se12" title="">RAM-SE</a></li>
+<li class="leaf last"><a href="http://ecoop12.cs.purdue.edu/content/script-program-evolution-stop" title="">STOP</a></li>
+</ul></li>
+</ul></li>
+<li class="leaf"><a href="/content/laowai-survival-guide" title="">Laowai Guide</a></li>
+<li class="leaf"><a href="/content/social-program" title="">Touring</a></li>
+<li class="expanded last"><a href="/content/venue-%E4%BC%9A%E8%AE%AE%E5%9C%B0%E7%82%B9" title="Venues">Venue</a><ul class="menu"><li class="leaf first"><a href="http://pldi12.cs.purdue.edu/content/venue-会议地点/#venue" title="">Conference Venue</a></li>
+<li class="leaf"><a href="http://pldi12.cs.purdue.edu/content/venue-会议地点/#directions" title="">Directions</a></li>
+<li class="leaf"><a href="http://pldi12.cs.purdue.edu/content/venue-会议地点/#travel-grants" title="Travel Grants">Travel Grants</a></li>
+<li class="leaf"><a href="http://pldi12.cs.purdue.edu/content/venue-会议地点/#budgeting" title="">Budgeting</a></li>
+<li class="leaf"><a href="http://pldi12.cs.purdue.edu/content/venue-会议地点/#visa " title="">Visas</a></li>
+<li class="leaf last"><a href="http://pldi12.cs.purdue.edu/content/venue-会议地点/#visiting-beijing" title="">Visiting Beijing</a></li>
+</ul></li>
+</ul></div><!-- /primary-menu-inner -->
+</div><!-- /primary-menu -->
+                        <div id="header-site-info" class="header-site-info with-preface-top block">
+              <div id="header-site-info-inner" class="header-site-info-inner inner clearfix">
+                                                <div id="logo">
+                  <a href="/" title="Home"><img src="/sites/default/files/acquia_slate_logo.png" alt="Home" /></a>
+                </div>
+                                                <div id="site-name-wrapper" class="clearfix">
+                                    <span id="site-name" class="with-slogan"><a href="/" title="Home">PLDI 2012</a></span>
+                                                      <span id="slogan">Programming Language Design and Implementation &mdash; 11&ndash;16 June, Beijing</span>
+                                  </div><!-- /site-name-wrapper -->
+                                              </div><!-- /header-site-info-inner -->
+            </div><!-- /header-site-info -->
+                      </div><!-- /header-group-inner -->
+
+          <!-- preface-top row: width = grid_block -->
+          <div id="preface-top" class="preface-top block">
+<div id="preface-top-inner" class="preface-top-inner inner clearfix">
+  
+<div id="block-block-1" class="block block-block odd first last  grid16-16">
+  <div class="inner clearfix">
+    <div class="corner-top"><div class="corner-top-right corner"></div><div class="corner-top-left corner"></div></div>
+    <div class="inner-inner">
+                  <div class="content clearfix">
+        <p><br /></p>
+      </div><!-- /content -->
+    </div><!-- /inner-inner -->
+    <div class="corner-bottom"><div class="corner-bottom-right corner"></div><div class="corner-bottom-left corner"></div></div>
+  </div><!-- /block-inner -->
+</div><!-- /block -->
+</div><!-- /preface-top-inner -->
+</div><!-- /preface-top -->
+          
+        </div><!-- /header-group -->
+      </div><!-- /header-group-wrapper -->
+
+      <!-- main row: width = grid_width -->
+      <div id="main-wrapper" class="main-wrapper full-width">
+        <div id="main" class="main row grid16-16">
+          <div id="main-inner" class="main-inner inner clearfix">
+            
+            <!-- main group: width = grid_width - sidebar_first_width -->
+            <div id="main-group" class="main-group row nested grid16-16">
+              <div id="main-group-inner" class="main-group-inner inner clearfix">
+                
+                <div id="main-content" class="main-content row nested">
+                  <div id="main-content-inner" class="main-content-inner inner clearfix">
+                    <!-- content group: width = grid_width - (sidebar_first_width + sidebar_last_width) -->
+                    <div id="content-group" class="content-group row nested grid16-12">
+                      <div id="content-group-inner" class="content-group-inner inner clearfix">
+                                                                                                                        <div id="content-region" class="content-region row nested">
+                          <div id="content-region-inner" class="content-region-inner inner clearfix">
+                            <a name="main-content-area" id="main-content-area"></a>
+                                                        <div id="content-inner" class="content-inner block">
+                              <div id="content-inner-inner" class="content-inner-inner inner clearfix">
+                                                                                                <div id="content-content" class="content-content">
+                                  
+<div id="node-17" class="node odd sticky teaser node-type-page">
+  <div class="inner">
+    
+        <h2 class="title"><a href="/content/about-%E5%85%B3%E4%BA%8E" title="About  关于">About  关于</a></h2>
+    
+    
+    
+    <div class="content clearfix">
+      <p>PLDI is a forum where researchers, developers, educators, and practitioners exchange information on the latest practical and experimental work in the design and implementation of programming languages.  PLDI seeks original research papers that focus on the design, implementation, development, and use of programming languages.  PLDI emphasizes innovative and creative approaches to compile-time and runtime technology; novel language designs and features; and results from implementations.</p>
+<p>
+The 33rd  ACM SIGPLAN conference on Programming Language Design and Implementation will have a number of firsts...</p>
+<ul>
+<li> first time PLDI is located in Asia;
+</li><li> first co-location between PLDI and ECOOP;
+</li><li> introduce new events to PLDI such as the Asian Experience Track;
+</li><li> will provide a family friendly conference with child care activities.
+</li></ul>
+
+<p>
+The conference will be held at the Crowne Plaza Wuzhou with additional accommodations in a number of nearby hotels. Travel grants for students and young researchers will ensure that the PLDI remains affordable for all potential attendees. A number of social events as well as touring options will be provided for the curious and adventurous.
+</p>
+<h2 class="extra-margin-title"><a name="important-dates">Proceeding Download</a></h2>
+<p>If you are in the internal network of the conferences, click <a href="http://10.10.0.240/">here</a> for a fast downloading of the proceedings. </p>
+<h2 class="extra-margin-title"><a name="important-dates">Important Dates &amp; News  重要日期与通知</a></h2>
+<p>For technical papers note the following dates:</p>
+<ul>
+<li><strike>Full papers are due on Sunday, November 6, 2011.</strike></li>
+<li><strike>Author responses are solicited from December 21-23, 2011. </strike></li>
+<li><strike>Notification of acceptance are mailed on Thursday February 2, 2012.</strike></li>
+<li><strike>Camera ready copies are due on March 26, 2012.</strike></li>
+<li><strike>Early registration deadline is May 1, 2012</strike></li>
+</ul>
+<p>If you plan to attend PLDI 2012, please plan applying for the Visa to China ahead of time. Click <a href="http://pldi12.cs.purdue.edu/content/visas-%E7%AD%BE%E8%AF%81%E4%BF%A1%E6%81%AF">here</a> for the Visa application information.</p>
+<h2 class="extra-margin-title"><a name="organizers">Organizers  组织者</a></h2>
+<table>
+<tbody>
+<tr>
+<td>Conference Chairs:</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><a href="http://www.cs.purdue.edu/homes/jv/">Jan Vitek</a></td>
+<td>Purdue University</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="http://www.linkedin.com/profile/view?id=21171614/">Haibo Lin</a></td>
+<td>Microsoft</td>
+</tr>
+<tr>
+<td>Coordination:</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><a href="http://sourcedb.ict.cas.cn/en/eictexpert/fas/200909/t20090917_2496613.html">Xiaobing Feng</a></td>
+<td>ICT, Chinese Academy of Sciences</td>
+</tr>
+<tr>
+<td>Workshop Chairs:</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><a href="http://www.cs.purdue.edu/homes/xyzhang/">Xiangyu Zhang</a></td>
+<td>Purdue University</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="http://sourcedb.ict.cas.cn/en/eictexpert/fas/200909/t20090917_2496738.html">Chengyong Wu</a></td>
+<td>ICT, Chinese Academy of Sciences</td>
+</tr>
+<tr>
+<td>Tutorial Chair:</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><a href="http://www.cs.utah.edu/~mflatt/">Matthew Flatt</a></td>
+<td>University of Utah</td>
+</tr>
+<tr>
+<td>Publicity Chair:</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><a href="http://matt.might.net/">Matthew Might</a></td>
+<td>University of Utah</td>
+</tr>
+<tr>
+<td>Pacific Publicity Chair:</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><a href="http://www.cse.ust.hk/~charlesz/">Charles Zhang</a></td>
+<td>The Hongkong University of Science and Technology </td>
+</tr>
+<tr>
+<td>Student Research Competition Chair:</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><a href="http://people.csail.mit.edu/asolar/"> Armando Solar-Lezama </a></td>
+<td>MIT</td>
+</tr>
+<tr>
+<td>Finance and Sponsorship Chair:</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><a href="http://www.cs.ucr.edu/~neamtiu/"> Iulian Neamtiu </a></td>
+<td> University of California, Riverside </td>
+</tr>
+<tr>
+<td> Chairman Laowai:</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><a href="mailto:smcdirm@microsoft.com"> Sean McDirmid </a></td>
+<td> Microsoft Research Asia </td>
+</tr>
+<tr>
+<td>Program Chair:</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://researcher.ibm.com/researcher/view.php?person=us-ftip">Frank Tip</a></td>
+<td>IBM T.J. Watson Research Center</td>
+</tr>
+<tr>
+<td>Program Committee:</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><a href="http://www.hpl.hp.com/personal/Hans_Boehm/">Hans-J. Boehm</a></td>
+<td>HP Labs</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="http://hpc.cs.tsinghua.edu.cn/research/cluster/cwg.html">Wenguang Chen</a></td>
+<td>Tsinghua University</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="mailto:jd11.choi@samsung.com">Jong-Deok Choi</a></td>
+<td>Samsung Electronics</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="http://www.azulsystems.com/blogs/cliff">Cliff Click</a></td>
+<td>Azul Systems</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="http://research.microsoft.com/~bycook">Byron Cook</a></td>
+<td>Microsoft Research and QM, Univ. of London</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="http://www.cs.colorado.edu/~diwan">Amer Diwan</a></td>
+<td>Google and University of Colorado at Boulder</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="http://www.doc.ic.ac.uk/~scd">Sophia Drossopoulou</a></td>
+<td>Imperial College London</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="http://www.doc.ic.ac.uk/~susan">Susan Eisenbach</a></td>
+<td>Imperial College London</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="http://www.eecs.northwestern.edu/~robby/">Robby Findler</a></td>
+<td>Northwestern University</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://researcher.ibm.com/researcher/view.php?person=us-sjfink">Stephen Fink</a></td>
+<td>IBM T. J. Watson Research Center</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="http://users.soe.ucsc.edu/~cormac/">Cormac Flanagan</a></td>
+<td>University of California, Santa Cruz</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="http://www.cs.williams.edu/~freund/">Stephen Freund</a></td>
+<td>Williams College</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="http://research.microsoft.com/en-us/um/people/pg/">Patrice Godefroid</a></td>
+<td>Microsoft Research</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="http://www.cs.washington.edu/homes/djg">Dan Grossman</a></td>
+<td>University of Washington</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="http://www.cs.tufts.edu/~sguyer/">Samuel Guyer</a></td>
+<td>Tufts University</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="http://www.sable.mcgill.ca/~hendren">Laurie Hendren</a></td>
+<td>McGill University</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="http://www.cs.purdue.edu/~hosking">Tony Hosking</a></td>
+<td>Purdue University</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="http://parasol.tamu.edu/~jarvi/">Jaakko Järvi</a></td>
+<td>Texas A&amp;M University</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="http://plg.uwaterloo.ca/~olhotak/">Ondrej Lhotak</a></td>
+<td>University of Waterloo</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="http://pages.cs.wisc.edu/~liblit/">Ben Liblit</a></td>
+<td>University of Wisconsin–Madison</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="http://www.cs.utexas.edu/users/lin">Calvin Lin</a></td>
+<td>The University of Texas at Austin</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="http://www.princeton.edu/~mrm/">Margaret Martonosi</a></td>
+<td>Princeton University</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="http://www.cs.ucla.edu/~todd">Todd Millstein</a></td>
+<td>University of California, Los Angeles</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="http://cs.au.dk/~amoeller">Anders Møller</a></td>
+<td>Aarhus University</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="http://inf.usi.ch/nystrom">Nathaniel Nystrom</a></td>
+<td>University of Lugano, Switzerland</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="http://polaris.cs.uiuc.edu/~padua/">David Padua</a></td>
+<td>University of Illinois</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="http://people.cs.vt.edu/~ryder/">Barbara Ryder</a></td>
+<td>Virginia Tech</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="http://www.cs.ucdavis.edu/~su">Zhendong Su</a></td>
+<td>University of California, Davis</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="http://people.csail.mit.edu/emina/">Emina Torlak</a></td>
+<td>LogicBlox</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="http://carch.ict.ac.cn/~wucg">Chenggang Wu</a></td>
+<td>ICT, Chinese Academy of Sciences</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="http://www.cs.technion.ac.il/~yahave">Eran Yahav</a></td>
+<td>Technion, Israel</td>
+</tr>
+<tr>
+<td>External Review Committee:</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><a href="http://webdocs.cs.ualberta.ca/~amaral/">J. Nelson Amaral</a></td>
+<td>University of Alberta</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="http://domino.research.ibm.com/comm/research_people.nsf/pages/marnold.index.html">Matthew Arnold</a></td>
+<td>IBM T. J. Watson Research Center</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="http://users.cecs.anu.edu.au/~steveb/">Steve Blackburn</a></td>
+<td>Australian National University</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="http://www.cs.cmu.edu/~guyb/">Guy Blelloch</a></td>
+<td>CMU</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="http://www.cs.pomona.edu/~kim/">Kim Bruce</a></td>
+<td>Pomona</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="http://www.cs.washington.edu/homes/luisceze/">Luis Ceze</a></td>
+<td>University of Washington</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="http://www.hpl.hp.com/people/dhruva_chakrabarti/">Dhruva Chakrabarti</a></td>
+<td>HP Labs</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://researcher.ibm.com/researcher/view.php?person=us-satishchandra">Satish Chandra</a></td>
+<td>IBM India Research</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="http://www.cs.colorado.edu/~bec/">Bor-Yuh Evan Chang</a></td>
+<td>University of Colorado at Boulder</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="http://www.cs.rice.edu/~sc40/">Swarat Chaudhuri</a></td>
+<td>Rice University</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="http://www.cs.rochester.edu/~cding/">Chen Ding</a></td>
+<td>University of Rochester</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="http://pure.au.dk/portal/en/eernst@cs.au.dk">Erik Ernst</a></td>
+<td>Aarhus University</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="http://www.cs.toronto.edu/~azadeh/">Azadeh Farzan</a></td>
+<td>University of Toronto</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="http://www.cs.utah.edu/~mflatt/">Matthew Flatt</a></td>
+<td>University of Utah</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="http://www.cs.umd.edu/~jfoster/">Jeffrey S. Foster</a></td>
+<td>University of Maryland, College Park</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="http://www.cs.cmu.edu/~rxg/">Ronald Garcia</a></td>
+<td>University of British Columbia</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="http://www.cs.nyu.edu/rgrimm/">Robert Grimm</a></td>
+<td>NYU</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="http://www.nec-labs.com/~agupta/">Aarti Gupta</a></td>
+<td>NEC Labs</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="http://www.cs.ucsb.edu/~benh/">Ben Hardekopf</a></td>
+<td>University of California, Santa Barbara</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="http://research.microsoft.com/en-us/people/chrishaw/">Chris Hawblitzel</a></td>
+<td>Microsoft Research</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="http://cs.lth.se/gorel_hedin">Görel Hedin</a></td>
+<td>Lund University</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="http://research.google.com/pubs/author38135.html">Robert Hundt</a></td>
+<td>Google</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="http://www.cs.kent.ac.uk/people/staff/rej/">Richard Jones</a></td>
+<td>University of Kent</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="http://www.linkedin.com/pub/roy-ju/4/a/147">Roy Ju</a></td>
+<td>AMD</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="http://www.cs.brown.edu/~sk/">Shriram Krishnamurthi</a></td>
+<td>Brown University</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="http://www1.cs.columbia.edu/~martha/">Martha Kim</a></td>
+<td>Columbia University</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="http://www.complang.tuwien.ac.at/knoop/">Jens Knoop</a></td>
+<td>Vienna University of Technology</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="http://www.cs.rutgers.edu/~uli/">Ulrich Kremer</a></td>
+<td>Rutgers</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="http://g.oswego.edu/">Doug Lea</a></td>
+<td>State University of New York at Oswego</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="http://pllab.cs.nthu.edu.tw/~jklee/">Jenq-Kuen Lee</a></td>
+<td>National Tsing Hua University</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="http://cseweb.ucsd.edu/~lerner/">Sorin Lerner</a></td>
+<td>University of California, San Diego</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="http://www.cs.utexas.edu/~mckinley/">Kathryn S McKinley</a></td>
+<td>The University of Texas at Austin</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="http://matt.might.net/">Matthew Might</a></td>
+<td>University of Utah</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="http://www.ssw.uni-linz.ac.at/General/Staff/HM/">Hanspeter Mössenböck</a></td>
+<td>Johannes Kepler University Linz</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="http://www.eecs.umich.edu/~nsatish">Satish Narayanasamy</a></td>
+<td>University of Michigan</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="http://homepages.mcs.vuw.ac.nz/~kjx/">James Noble</a></td>
+<td>Victoria University of Wellington</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="http://research.microsoft.com/en-us/people/qadeer/">Shaz Qadeer</a></td>
+<td>Microsoft Research</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="http://research.microsoft.com/en-us/people/grama/">G. Ramalingam</a></td>
+<td>Microsoft Research India</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="http://www.cs.utah.edu/~regehr/">John Regehr</a></td>
+<td>University of Utah</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="http://www.comlab.ox.ac.uk/people/max.schaefer/">Max Schaefer</a></td>
+<td>University of Oxford</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://researcher.ibm.com/researcher/view.php?person=us-msridhar">Manu Sridharan</a></td>
+<td>IBM T. J. Watson Research Center</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="http://www.in.ohm-hochschule.de/professors/praun/">Christoph von Praun</a></td>
+<td>Georg-Simon-Ohm Hochschule Nürnberg</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="http://www.research.ibm.com/people/m/mvaziri/">Mandana Vaziri</a></td>
+<td>IBM T. J. Watson Research Center</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="http://www.adamwelc.org/">Adam Welc</a></td>
+<td>Adobe</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="http://techresearch.intel.com/ResearcherDetails.aspx?Id=220">Youfeng Wu</a></td>
+<td>Intel</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="http://www.cis.upenn.edu/~stevez/">Steve Zdancewic</a></td>
+<td>University of Pennsylvania</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="http://www.cs.purdue.edu/homes/xyzhang/">Xiangyu Zhang</a></td>
+<td>Purdue University</td>
+</tr>
+<tr>
+<td>Webmaster:</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><a href="http://web.ics.purdue.edu/~zhao54/">Lei Zhao</a></td>
+<td>Purdue University</td>
+</tr>
+</tbody>
+</table>
+    </div>
+
+    
+      </div><!-- /inner -->
+
+  </div><!-- /node-17 -->
+  
+<div id="block-views-news-block_1" class="block block-views odd first  grid16-0">
+  <div class="inner clearfix">
+    <div class="corner-top"><div class="corner-top-right corner"></div><div class="corner-top-left corner"></div></div>
+    <div class="inner-inner">
+                  <h2 class="title block-title">News</h2>
+            <div class="content clearfix">
+        <div class="view view-news view-id-news view-display-id-block_1 view-dom-id-1">
+    
+  
+  
+      <div class="view-empty">
+      <p>No news items have been published.</p>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>       </div><!-- /content -->
+    </div><!-- /inner-inner -->
+    <div class="corner-bottom"><div class="corner-bottom-right corner"></div><div class="corner-bottom-left corner"></div></div>
+  </div><!-- /block-inner -->
+</div><!-- /block -->
+                                </div><!-- /content-content -->
+                                                              </div><!-- /content-inner-inner -->
+                            </div><!-- /content-inner -->
+                          </div><!-- /content-region-inner -->
+                        </div><!-- /content-region -->
+
+                                              </div><!-- /content-group-inner -->
+                    </div><!-- /content-group -->
+
+                    <div id="sidebar-last" class="sidebar-last row nested grid16-4">
+<div id="sidebar-last-inner" class="sidebar-last-inner inner clearfix">
+  
+<div id="block-block-7" class="block block-block odd first  grid16-4">
+  <div class="inner clearfix">
+    <div class="corner-top"><div class="corner-top-right corner"></div><div class="corner-top-left corner"></div></div>
+    <div class="inner-inner">
+                  <div class="content clearfix">
+        <h2 class="extra-margin-title"><a name="sponsors">Sponsors  赞助人</a></h2>
+<p><a href="http://www.acm.org/"><img style="width:90%; border-radius:5px;"  src="/sites/default/files/sigplan-logo.png" /></a><br />
+<a href="http://www.nsf.gov/"><img style="width:90%; border-radius:5px;"  src="/sites/default/files/nsf_logo.jpg" /></a></p>
+<h2 class="extra-margin-title"><a name="sponsors">Supporters  支持者</a></h2>
+<h3>Gold</h3>
+<p><a href="http://research.microsoft.com/"><img style="width:90%; border-radius:5px;" src="/sites/default/files/microsoft.jpg" /></a></p>
+<h3>Silver</h3>
+<p><a href="http://www.research.ibm.com/"><img style="width:90%; border-radius:5px;" src="/sites/default/files/ibmresearch_logo.gif" /></a><br />
+<a href="http://www.qualcomm.com/about/businesses/quicinc"><img style="width:90%; border-radius:5px;" src="/sites/default/files/qualcomm_logo.jpg" /></a><br />
+<a href="http://www.samsung.com/"><img style="width:90%; border-radius:5px;" src="/sites/default/files/samsung_logo.jpg" /></a></p>
+<h3>Bronze</h3>
+<p><a href="http://www.logicblox.com/"><img style="width:90%; border-radius:5px;" src="/sites/default/files/lb_logo_white_medium.jpg" /></a><br />
+<a href="http://www.vmware.com/"><img style="width:90%; border-radius:5px;" src="/sites/default/files/vmware_logo.jpg" /></a><br />
+<a href="http://www.hpl.hp.com/"><img style="width:90%; border-radius:5px;" src="/sites/default/files/hplab_logo.png" /></a><br />
+<a href="http://www.adobe.com/"><img style="width:90%; border-radius:5px;" src="/sites/default/files/adobe-logo.jpg" /></a><br />
+<a href="https://www.google.com/"><img style="width:90%; border-radius:5px;" src="/sites/default/files/google-logo.jpg" /></a><br />
+<a href="http://www.azulsystems.com/"><img style="width:90%; border-radius:5px;" src="/sites/default/files/azul_logo.png" /></a></p>
+<h2 class="extra-margin-title"><a name="friends">Friends 友情链接</a></h2>
+<p><a href="http://popl.mpi-sws.org/2013/"><img style="width:90%; border-radius:5px;" src="/sites/default/files/popl_logo.jpg" /></a></p>
+      </div><!-- /content -->
+    </div><!-- /inner-inner -->
+    <div class="corner-bottom"><div class="corner-bottom-right corner"></div><div class="corner-bottom-left corner"></div></div>
+  </div><!-- /block-inner -->
+</div><!-- /block -->
+  
+<div id="block-block-6" class="block block-block even   grid16-4">
+  <div class="inner clearfix">
+    <div class="corner-top"><div class="corner-top-right corner"></div><div class="corner-top-left corner"></div></div>
+    <div class="inner-inner">
+                  <div class="content clearfix">
+        <script src="http://widgets.twimg.com/j/2/widget.js"></script><script>
+new TWTR.Widget({
+  version: 2,
+  type: 'profile',
+  rpp: 4,
+  interval: 30000,
+  width: 220,
+  height: 300,
+  theme: {
+    shell: {
+      background: '#333333',
+      color: '#ffffff'
+    },
+    tweets: {
+      background: '#000000',
+      color: '#ffffff',
+      links: '#4aed05'
+    }
+  },
+  features: {
+    scrollbar: false,
+    loop: false,
+    live: false,
+    hashtags: true,
+    timestamp: true,
+    avatars: false,
+    behavior: 'all'
+  }
+}).render().setUser('pldi2012').start();
+</script><p>
+<a href="http://twitter.com/pldi2012"><img width="40px" height="40px" alt="" src="/sites/default/files/Twitter-48x48.png" /></a><a href="http://www.facebook.com/event.php?eid=195323457176764"><img width="40px" height="40px" alt="" src="/sites/default/files/FaceBook-48x48.png" /></a><a href="http://events.linkedin.com/PLDI-2012-Programming-Language-Design/pub/640201"><img width="40px" height="40px" alt="" src="/sites/default/files/linkedin-2.png" /></a><a href="http://www.tripit.com/trip/public/id/5F60A665706B"> <img width="40px" height="40px" alt="" src="/sites/default/files/tripit.png" /></a></p>
+      </div><!-- /content -->
+    </div><!-- /inner-inner -->
+    <div class="corner-bottom"><div class="corner-bottom-right corner"></div><div class="corner-bottom-left corner"></div></div>
+  </div><!-- /block-inner -->
+</div><!-- /block -->
+  
+<div id="block-block-5" class="block block-block odd  last  grid16-4">
+  <div class="inner clearfix">
+    <div class="corner-top"><div class="corner-top-right corner"></div><div class="corner-top-left corner"></div></div>
+    <div class="inner-inner">
+                  <div class="content clearfix">
+        <h2 class="extra-margin-title"><a name="contact"> Contact  联系方式</a></h2>
+<p>Please contact us via <a href="mailto:pldi12@cs.purdue.edu">this email</a>.</p>
+      </div><!-- /content -->
+    </div><!-- /inner-inner -->
+    <div class="corner-bottom"><div class="corner-bottom-right corner"></div><div class="corner-bottom-left corner"></div></div>
+  </div><!-- /block-inner -->
+</div><!-- /block -->
+</div><!-- /sidebar-last-inner -->
+</div><!-- /sidebar-last -->
+                  </div><!-- /main-content-inner -->
+                </div><!-- /main-content -->
+
+                              </div><!-- /main-group-inner -->
+            </div><!-- /main-group -->
+          </div><!-- /main-inner -->
+        </div><!-- /main -->
+      </div><!-- /main-wrapper -->
+
+      <!-- postscript-bottom row: width = grid_width -->
+      
+      <!-- footer row: width = grid_width -->
+      
+      <!-- footer-message row: width = grid_width -->
+      <div id="footer-message-wrapper" class="footer-message-wrapper full-width">
+        <div id="footer-message" class="footer-message row grid16-16">
+          <div id="footer-message-inner" class="footer-message-inner inner clearfix">
+            <div id="footer-message-text" class="footer-message-text block">
+<div id="footer-message-text-inner" class="footer-message-text-inner inner clearfix">
+<a href="http://www.purdue.edu">Purdue University</a></div><!-- /footer-message-text-inner -->
+</div><!-- /footer-message-text -->
+          </div><!-- /footer-message-inner -->
+        </div><!-- /footer-message -->
+      </div><!-- /footer-message-wrapper -->
+
+    </div><!-- /page-inner -->
+  </div><!-- /page -->
+  <script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, { "CToolsAJAX": { "scripts": { "/sites/all/modules/contrib/jquery_update/replace/jquery.min.js?P": true, "/misc/drupal.js?P": true }, "css": { "/modules/node/node.css?P": true, "/modules/system/defaults.css?P": true, "/modules/system/system.css?P": true, "/modules/system/system-menus.css?P": true, "/modules/user/user.css?P": true, "/sites/all/modules/contrib/cck/theme/content-module.css?P": true, "/sites/all/modules/contrib/ctools/css/ctools.css?P": true, "/sites/all/modules/contrib/date/date.css?P": true, "/sites/all/modules/contrib/date/date_popup/themes/datepicker.css?P": true, "/sites/all/modules/contrib/date/date_popup/themes/jquery.timeentry.css?P": true, "/sites/all/modules/contrib/filefield/filefield.css?P": true, "/sites/all/modules/contrib/ubercart/uc_order/uc_order.css?P": true, "/sites/all/modules/contrib/ubercart/uc_product/uc_product.css?P": true, "/sites/all/modules/contrib/ubercart/uc_store/uc_store.css?P": true, "/sites/all/modules/contrib/cck/modules/fieldgroup/fieldgroup.css?P": true, "/sites/all/modules/contrib/views/css/views.css?P": true, "/sites/all/themes/fusion/fusion_core/css/style.css?P": true, "/sites/all/themes/fusion/fusion_core/css/typography.css?P": true, "/sites/all/themes/fusion/fusion_core/css/superfish.css?P": true, "/sites/all/themes/fusion/fusion_core/css/superfish-navbar.css?P": true, "/sites/all/themes/fusion/fusion_core/css/superfish-vertical.css?P": true, "/sites/all/themes/themes/acquia_slate/css/fusion-acquia-slate-style.css?P": true } } });
+//--><!]]>
+</script>
+</body>
+</html>

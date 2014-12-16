@@ -1,0 +1,324 @@
+<html>
+
+<head>
+  <title>PASTE 2013</title>
+<STYLE type="text/css">
+
+body { 
+  font-family: arial, helvetica, sans-serif; 
+  font-size: 11pt; 
+  background-color: white; 
+  width: 1000px;
+	}
+
+P { 
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+   }
+
+
+H1 {
+  text-align: left; 
+  color: black ;
+}
+
+
+H2 {
+  text-align: center; 
+  background-color: #C49D9D; 
+  font-size: larger; 
+  color:black;
+  padding: 0.25em 0.25em 0.25em 0.25em;
+  margin-top: 2em;
+  margin-bottom: 1em;
+}
+
+H3 {
+  text-align:center;
+  font-size: 18pt;
+}
+
+H4 {
+  text-align:center;
+  font-size: 14pt;
+}
+
+A:link {
+  color: black;
+  background: inherit;
+  text-decoration: underline;
+  font-weight: bolder;
+}
+
+A:visited {
+  color: black;
+  background: inherit;
+  text-decoration: underline;
+  font-weight: bolder;
+}
+
+</STYLE>
+
+</head>
+
+<body>
+<h1> <img src="paste-banner.gif" style='vertical-align:center' alt=" 11th ACM SIGPLAN-SIGSOFT Workshop on Program Analysis for Software Tools and Engineering (PASTE)"/>
+</h1>
+
+<h3>
+   colocated with <a href="http://pldi2013.ucombinator.org/">PLDI 2013</a>, Seattle, WA
+<br>
+   June 20, 2013
+</h3>
+
+<center>
+<table>
+<tbody>
+<tr>
+<td>Sponsored by   </td>
+<td><a href="http://www.acm.org/" rel="nofollow"><img alt="ACM" border="0" height="48" src="acmlogo.gif?height=48" /></a></td>
+<td style="background-color:rgb(255,255,255);color:rgb(0,0,0)"><b><font size="5"><i>SIGPLAN</i></font></b></td>
+<td><img alt="ACM SIGSOFT" border="0" height="48" src="sigsoft.gif?height=48" /></td>
+</tr>
+</tbody>
+</table>
+</center>
+
+<h2>About PASTE</h2>
+<p>
+ PASTE 2013 is the eleventh workshop in a series that meets roughly
+ every 18 months, alternating between programming language and
+ software engineering venues and intending to serve as a bridge
+ between the two. The meeting brings together the program analysis,
+ software tools, and software engineering communities to focus on
+ applications of program analysis techniques in software tools.
+</p>
+
+<!--
+<h2>Submission Site</h2>
+
+The <A HREF="https://www.easychair.org/conferences/?conf=paste2013">submission site</a> is now open.
+-->
+
+
+<h2>Call for Participation and Lightning Talks</h2>
+
+<p>
+PASTE 2013 will include technical papers, a keynote
+presentation, and a <b>lightning talks session open to all attendees</b>; see
+the call for lightning talks below for more details.  
+<p>
+<p>
+Please register for PASTE through
+the <a href="http://pldi2013.ucombinator.org/">PLDI registration
+system</a>.  Hotel information is also <a href="http://pldi2013.ucombinator.org/#hotel">available</a>.
+
+
+<h2>Workshop Schedule</h2>
+
+<p>
+<b>The workshop will be held in the Belltown Conference room.  Breakfast will be served from 8:00-9:00 in the 4th floor foyer.</b>
+<p>
+
+<b>9:00 - 10:00 Keynote</b><br>
+<p style="margin-left: 1.5em">
+<i>Rebooting Type Systems with SMT</i><br>
+<a href="http://goto.ucsd.edu/~rjhala/">Ranjit Jhala</a>, University of California, San Diego<br>
+</p>
+<p style="margin-left: 1.5em">
+Programs written in so-called dynamic languages like JavaScript, Python and
+Ruby make heavy use of features like the combination of run-time type tests, 
+value-indexed dictionaries, polymorphism, and higher-order functions, that 
+are beyond the reach of classical, syntax-directed type systems.
+We present a new SMT-based technique called "Nested Refinement Types" 
+wherein types are described via logical formulas that constrain the 
+sets of values corresponding to the types. 
+By encoding the typing relation itself as a predicate in the refinement 
+logic, and using a new subtyping algorithm that co-ordinates SMT-based 
+logical implication and syntactic subtyping, we can automatically verify 
+programs using the sophisticated dynamic idioms described above.
+</p><p style="margin-left: 1.5em">
+We have used nested refinements to develop Dependent JavaScript (DJS), 
+a statically typed dialect of the imperative, object-oriented, dynamic 
+language. DJS supports the particularly challenging features such as 
+run-time type-tests,higher-order functions, extensible objects, 
+prototype inheritance, and arrays. With our implementation of DJS, 
+we demonstrate that the type system is expressive enough to reason 
+about a variety of tricky idioms found in small examples drawn from 
+several sources, including the popular book JavaScript: The Good Parts 
+and the SunSpider benchmark suite.
+</p><p style="margin-left: 1.5em">
+(Joint work with Ravi Chugh, David Herman, Patrick Rondon, and Panagiotis Vekris)
+</p><br>
+
+
+<b>10:00 - 10:30 Coffee Break</b><br><br>
+
+<b>10:30 - 12:00 Technical Papers</b><br>
+
+<p style="margin-left: 1.5em">
+<i>Automated Inference of Atomic Sets for Safe Concurrent Execution</i> <br>
+P. Dinges, M. Charalambides, G. Agha <br>
+
+<p style="margin-left: 1.5em">
+<i>A Comprehensive Toolchain for Workload Characterization Across JVM
+Languages</i><br>
+A. Sarimbekov, S. Kell, L. Bulej, A. Sewe, Y. Zheng,
+D. Ansaloni, W. Binder
+<br>
+
+<p style="margin-left: 1.5em">
+<i>ShadowData --- Shadowing Heap Objects in Java</i><br>
+M. Vitasek, W. Binder, M. Hauswirth
+</p>
+
+<b>12:00 - 2:00 Lunch and Flex Time</b><br><br>
+
+<b>2:00 - 3:30 Technical Papers</b><br>
+
+<p style="margin-left: 1.5em">
+<i>A Proper Performance Evaluation System That Summarizes Code Placement
+Effects</i><br>
+M. Yasugi, Y. Matsuda, T. Ugawa
+
+<!--
+<p style="margin-left: 1.5em">
+<i>Automatically Mining Program Build Information via Signature
+Matching</i><br>
+C. Lu
+-->
+
+<p style="margin-left: 1.5em">
+<i>Increasing Human-Tool Interaction via the Web</i><br>
+T. Ball, J. De Halleux, D. Leijen, N. Swamy<br></p>
+
+
+<p style="margin-left: 1.5em">
+<i>Exploring Program Phases for Statistical Bug Localization</i><br>
+V. Modi, S. Roy, S. Aggarwal
+</p>
+
+
+<b>3:30 - 4:00 Coffee Break</b><br><br>
+
+<b>4:00 - 5:30 Lightning Talks</b><br>
+
+<p style="margin-left: 1.5em">
+<i>Lightning Talks [4:00-5:30].  Open to all PASTE participants.<br>
+ (There are still a couple of talk slots available --- please see the details below if you are interested in presenting.)</i>
+
+
+<H2>Call for Lightning Talks</h2>
+<p>
+Lightning talks can describe early research ideas or results, research
+perspectives or positions, and other topics of interest to the PASTE
+community.  Tool demonstrations are also welcome.  Lightning talks
+will be allocated 10 minute slots, which will consist of 5 minutes for
+presentation and 5 minutes for discussion.
+<p>
+Researchers who would like to present a lightning talk should send the
+following information
+to <a href="mailto:paste13@cs.williams.edu">paste13@cs.williams.edu</a>:
+<p>
+<ul>
+ <li> Presenter name, affiliation, and email address
+ <li> Proposed title
+ <li>  A short paragraph describing the talk
+ <li> Please include "PASTE lightning talk submission" in the email
+   subject
+</ul>
+<p>
+Lightning talks will be accepted based on relevance to the workshop.
+<p>
+
+
+
+
+
+<!--
+<h2> Call for Contributions </h2>
+<p>
+The Call for Papers is available in either <a href="cfp.html">HTML</a> 
+or <a href="cfp.txt">text</a>.
+</p>
+-->
+
+<h2>Important dates</h2>
+
+<p>
+<table>
+<tr><td>full paper submission &nbsp;</td> 
+    <td>Friday, February 15, 2013  &nbsp;&nbsp;&nbsp; <a href="cfp.html">(Call For Papers)</a></td>
+</tr>
+<tr><td>notification</td>
+    <td>Friday, March 29, 2013</td> 
+</tr>
+<tr><td>camera-ready paper</td>
+    <td>May 1, 2013</td> 
+</tr>
+<tr><td>lighting talks submission</td>
+    <td>Friday, May 10, 2013 (5pm EST)</td> 
+</tr>
+<tr><td>workshop</td>
+    <td>Thursday, June 20, 2013</td>
+</tr>
+</table>
+</p>
+
+<h2>Workshop Co-Chairs</h2>
+
+<p>
+<table style="width:650px">
+  <tr><td><a href="http://www.cs.williams.edu/~freund/">Stephen N. Freund</a></td>     <td>Williams College</td>
+  <tr><td><a href="http://ti.arc.nasa.gov/profile/pcorina/">Corina Pasareanu</a></td>     <td>CMU (Silicon Valley) and NASA Ames</td>
+</table>
+</p>
+
+
+<h2>Program Committee</h2>
+
+<p>
+<table style="width:650px">
+ <tr><td><a href="http://www.math.umass.edu/People/avrunin">George Avrunin<a></td>    <td>University of Massachusetts</td>
+ <tr><td><a href="http://www.bodden.de/">Eric Bodden</a></td>                         <td>EC Spride and Technical University Darmstadt</td>
+ <tr><td><a href="http://www.cs.toronto.edu/~chechik">Marsha Chechik</a></td>         <td>University of Toronto</a>
+ <tr><td><a href="http://www.cs.williams.edu/~freund/">Stephen N. Freund</a> (co-chair)</td>     <td>Williams College</td>
+ <tr><td><a href="http://users.ece.utexas.edu/~khurshid/">Sarfraz Khurshid</a></td>   <td>The University of Texas at Austin</td>
+ <tr><td><a href="http://pages.cs.wisc.edu/~liblit">Ben Liblit</a></td>               <td>University of Wisconsin-Madison</td>
+ <tr><td><a href="http://www.cs.rpi.edu/~milanova/">Ana  Milanova</a></td>            <td>Rensselaer Polytechnic Institute</td>
+ <tr><td><a href="http://research.microsoft.com/~adityan">Aditya Nori</a></td>        <td>Microsoft Research India</td>
+ <tr><td><a href="http://ti.arc.nasa.gov/profile/pcorina/">Corina Pasareanu</a> (co-chair)</td>  <td>CMU (Silicon Valley) and NASA Ames</td>
+ <tr><td><a href="http://shemesh.larc.nasa.gov/people/sjp/">Suzette Person</a></td>   <td>NASA Langley Research Center</td>
+</table>
+</p>
+
+
+<h2>Previous PASTE Workshops</h2>
+
+
+<p>
+<table style="width:650px" border="0" cellpadding="0" cellspacing="10">
+
+<tr><td><a href="https://sites.google.com/site/paste2011/">PASTE 2011</a> at ESEC/FSE 2011</td></tr>
+
+<tr><td><a href="http://cseweb.ucsd.edu/paste2010/">PASTE 2010</a> at PLDI 2010</td></tr>
+
+<tr><td><a href="http://paste2008.cs.brown.edu/">PASTE 2008</a> at FSE 2008</td></tr>
+
+<tr><td><a href="http://paste07.cs.washington.edu/">PASTE 2007</a> at PLDI 2007</td></tr>
+
+<tr><td><a href="http://groups.csail.mit.edu/pag/paste2005/">PASTE 2005</a> at ESEC/FSE 2005</td></tr>
+
+<tr><td><a href="http://www.st.cs.uni-saarland.de/paste/">PASTE 2004</a> at PLDI 2004 </td></tr>
+
+<tr><td><a href="http://people.cis.ksu.edu/~santos/paste2002/index.html">PASTE 2002</a> at FSE 2002</td></tr>
+
+<tr><td>PASTE 2001 at PLDI 2001</td></tr>
+
+<tr><td><a href="http://cseweb.ucsd.edu/users/wgg/paste99.html">PASTE 1999</a> at ESEC/FSE 1999</td></tr>
+
+<tr><td>PASTE 1998 at PLDI 1998</td></tr>
+</table>
+<h2 style="background-color:#940D0D"></h2>
+</body>
+</html>

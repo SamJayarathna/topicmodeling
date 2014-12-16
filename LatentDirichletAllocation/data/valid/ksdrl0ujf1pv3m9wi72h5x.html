@@ -1,0 +1,442 @@
+<!doctype html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!-- Consider adding an manifest.appcache: h5bp.com/d/Offline -->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+
+  <!-- Use the .htaccess and remove these lines to avoid edge case issues.
+       More info: h5bp.com/b/378 -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta http-equiv="Expires" content="-1">
+  <meta http-equiv="Pragma" content="no-cache">
+
+  <title>MobiSys 2014 - The 12th International Conference on Mobile Systems, Applications, and Services</title>
+  <meta name="description" content="MobiSys 2014 seeks to present innovative and significant research on the design, implementation, usage, and evaluation of mobile computing and wireless systems, applications, and services.">
+  <meta name="author" content="Jing" >
+
+  <!-- Mobile viewport optimized: j.mp/bplateviewport -->
+  <meta name="viewport" content="width=initial-scale=maximum-scale,maximum-scale=1">
+
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
+
+  <!-- CSS: implied media=all -->
+  <!-- CSS concatenated and minified via ant build script-->
+  <link rel="stylesheet" href="css/style05.css">
+  <!-- end CSS-->
+
+  <!-- More ideas for your <head> here: h5bp.com/d/head-Tips -->
+
+  <!-- Facebook sharing settings: in comment to avoid validation errors -->
+  <!--
+	<meta property="og:title" content="MobiSys 2012. The 10th International Conference on Mobile Systems, Applications, and Services." />
+	<meta property="og:description" content="MobiSys 2009 seeks to present innovative and significant research on the design, implementation, usage, and evaluation of mobile computing and wireless systems, applications, and services." />
+	<meta property="og:image" content="fbimage.png" />
+  -->
+  <meta property="og:image" content="images/bannerlogo.jpg" />
+  
+  <!-- All JavaScript at the bottom, except for Modernizr / Respond.
+       Modernizr enables HTML5 elements & feature detects; Respond is a polyfill for min/max-width CSS3 Media Queries
+       For optimal performance, use a custom Modernizr build: www.modernizr.com/download/ -->
+  <script src="js/libs/modernizr-2.0.6.min.js"></script>
+</head>
+
+<style type="text/css">
+nav {
+	position:relative;
+}
+#overflowNav {
+	position:absolute;
+	top:-30px;
+	right:0px;
+	border-left: 1px solid black;
+	border-top: 1px solid black;
+	display:none;
+}
+</style>
+<script>
+function toggleDiv(id) {
+	var obj = document.getElementById(id);
+	if (obj.style.display == 'block')
+		obj.style.display = 'none';
+	else
+		obj.style.display = 'block';
+}
+
+</script>
+
+<body id="index" style="background-color:#ddd" >
+
+  <div id="container" style="
+  -moz-box-shadow:    0px 1px 5px 3px #bbb;
+  -webkit-box-shadow: 0px 1px 5px 3px #bbb;
+  box-shadow:         0px 1px 5px 3px #bbb;
+  ">
+    <header>
+    	
+<style type="text/css">
+.title a.closeBtn {
+display:block;position:absolute; top:1px; right:1px; font-weight:bold; border:1px solid #aaa; 
+font-size:10px; line-height:8px; height:10px;width:10px; text-align:center; color: #aaa;
+text-decoration:none;
+}
+.title a.closeBtn:hover {
+	border: 1px solid black;
+	color: black;
+}
+   
+   
+.photoAttrib {
+position:absolute;
+width: 200px;
+top:0px;
+height: 300px;
+left:0px;
+overflow:hidden;
+}
+.photoAttrib a#showLink {
+	position: absolute;
+	padding: 0px 4px; 
+	bottom:1px; left:2px; 
+	font-size:8pt;
+	display:block;
+	color: #aaa;
+	border:1px solid #aaa;
+	text-decoration:none;
+	background-color: black;
+}
+
+.photoAttrib a#showLink:hover, #photoInfo a#hideLink:hover {
+	color:#fff;
+	border-color: #fff;
+}
+
+#photoInfo a#hideLink {
+	position:absolute;
+	padding: 0px 14px; 
+	font-size:8pt;
+	display:block;
+	color: #aaa;
+	border:1px solid #aaa;
+	text-decoration:none;
+	bottom:1px;
+	left:2px;
+}
+
+.photoAttrib #photoInfoPane {
+	position:absolute;
+	width: 200px;
+	top:0px;
+	height: 300px;
+	left:-200px;
+	background-color: black;
+	color:white;
+}
+.photoAttrib #photoInfo {
+	position:absolute;
+	width: 180px;
+	top:0px;
+	height: 260px;
+	left:-200px;
+	color:white;
+	font-size: 8pt;
+	padding: 20px 10px;
+}
+#photoInfo a {
+	color: #ddeeff;
+}
+
+#photoInfo .flick {
+	font-size:10pt;
+	font-weight:bold;
+	color: #00aaff;
+}
+#photoInfo .flickr {
+	font-size:10pt;
+	font-weight:bold;
+	color: #ff00aa;
+}
+a.aflickr {
+	text-decoration:none;
+}
+a.aflickr:hover {
+	text-decoration:underline;
+}
+#photoInfo p {
+display:block;
+text-align: left;
+}
+</style>
+
+<script>
+function photoInfo() {
+$('#showLink').hide();
+$('#photoInfoPane').css({opacity:0.7});
+$('#photoInfoPane').animate({
+    left: '+=200'
+  }, 300, function() {
+    // Animation complete.
+  });
+$('#photoInfo').animate({
+    left: '+=200'
+  }, 300, function() {
+    // Animation complete.
+  });	
+}
+
+function photoInfoHide() {
+	$('#showLink').show();
+	$('#photoInfoPane').animate({
+	    left: '-=200'
+	  }, 300, function() {
+	    // Animation complete.
+	  });
+	$('#photoInfo').animate({
+	    left: '-=200'
+	  }, 300, function() {
+	    // Animation complete.
+	  });	
+	
+}
+</script>
+
+    	<section class="title" style="position:relative">
+    		<img src="images/bannerlogo.jpg" width="800" height="300" />
+			<div class="photoAttrib">
+					<a href="javascript:photoInfo()" id="showLink">Photo info</a>
+					<div id="photoInfoPane"></div>
+					<div id="photoInfo">
+						<p style="margin-bottom:20px">Photo from <a href="http://www.smugmug.com">SmugMug</a>.</p>
+
+						<div>
+							<div style="margin-bottom:5px">Description: <b>Photo of The Mount Washington Hotel at Bretton Woods</b></div>
+							<a href="http://photos.davidkotz.org/Travel/2013/2013-Mount-Washington-Hotel/i-zCcjZZ4"><img width="70" src="images/bannerimage.jpg"
+						style="float:left; margin-right:5px;"/></a>
+						</div>
+						<div style="clear:both"></div>
+						<p style="margin-top:20px">The photo is copyrighted by its owner. All rights reserved. Unauthorized use prohibited.</p>
+
+						<a href="javascript:photoInfoHide()" id="hideLink">Close</a>
+					</div>
+			</div>
+			<h1>MobiSys 2014</h1>
+			<p><strong>The 12th International Conference on Mobile Systems, Applications, and Services</strong><br />
+			Bretton Woods, NH, USA</p>
+		</section>
+		
+		<nav class="clearfix" style="width:800; overflow:hide"> 
+			<a href="index.php" class="selected">HOME</a>
+			<a href="org.php" >ORGANIZERS</a>
+			<a href="program.php" >PROGRAM</a>
+			<a href="workshops.php" >WORKSHOPS</a>
+			<a href="demos.php" >POSTER / DEMO</a>
+			<a href="video.php" >VIDEO</a>
+			<a href="venue.php" >VENUE</a>
+			<a href="grant.php" >TRAVEL GRANTS</a>
+			<a href="reg.php" >REGISTRATION</a>
+			<a title="Inactive Pages" href="#" onclick="toggleDiv('overflowNav')" style="padding-left:11px; padding-right:11px">...</a>
+			<div id="overflowNav">
+				<a href="submission.php" >SUBMISSION</a>
+				<a href="cfp.php" >CFP</a>
+				<a href="cfws.php" >CF WORKSHOPS</a>
+				<a href="cfvideo.php" >CF VIDEO</a>
+				<a href="cfdemos.php" >CF POSTER / DEMO</a>
+
+			</div>
+		</nav>
+		
+    </header>
+<style>
+  .bottom-three {
+     margin-bottom: 3cm;
+  }
+</style>
+
+    <div id="main" role="main" class="hasInfobox">
+		<aside>
+			<section id="info">
+				<h3>Find us on Facebook and Twitter!</h3> 
+				<a href="https://www.facebook.com/groups/MobiSys2014/"><img alt="facebook" src="images/facebook.png" /></a>	
+				<a href="https://twitter.com/MobiSys2014"><img alt="twitter" src="images/twitter.png" /></a>	
+				</br>
+				</br>
+				<p class="info">Follow the latest news about MobiSys&nbsp;2014 on twitter and facebook.<br /> 
+				Please, include <strong>#Mobisys2014</strong> in your twitter posts.</p>
+			</section>
+		</aside>
+		<!--  info -->
+		<section id="content" class="narrow">
+			<h1>MobiSys 2014</h1> 
+			<p style="margin-bottom:12pt"><strong>The 12th International Conference on Mobile Systems,<br />Applications, and Services<br /> 
+			Bretton Woods, NH, USA</strong></p> 
+			
+<!-- 			<div style="border: 1px solid #aaa;background-color:#e8f4ff; padding: 10px 20px; margin-bottom:20px; margin-right:15px">
+				<h3>Accomodation - More hotels to choose from!</h3>
+				<p>
+				If you are finding it difficult to find a room at the Low Wood Bay, we have included a number of alternative 
+				hotels to choose from. Check the <a href="venue.php#hotels">hotel page</a> for more details.</p>
+			
+			</div> -->
+			
+			
+			<p>MobiSys 2014 seeks to present innovative and significant research on the design, implementation, 
+			usage, and evaluation of mobile computing and wireless systems, applications, and services. This 
+			conference builds on the success of the previous eleven MobiSys conferences. It is sponsored by 
+			ACM SIGMOBILE.</p> 	
+			
+					
+			<div style="clear:both;"></div>
+			
+		</section>
+		<p class="bottom-three"></p>		
+
+		<div id="news">
+			<h3>News</h3>
+			<ul>
+				<li><span class="date">19 June 2014</span> - Conference ended - thanks to all those who attended!</li>
+
+				<li><span class="date">16 June 2014</span> - Proceedings are available via the program or through the ACM Digital Library Mobile App (<a href="https://itunes.apple.com/us/app/acm-digital-library/id743395884?mt=8">iPhone</a>) (<a href="https://play.google.com/store/apps/details?id=com.acm.dl">Android</a>).</li>
+
+				<li><span class="date">4 June 2014</span> - MobiSys 2014 main conference papers are publicly available. <a href="program.php">More details...</a></li>
+				<li><span class="date">8 May 2014</span> - MobiSys 2014 transportation information is updated. <a href="venue.php">More details...</a></li>
+				<li><span class="date">11 April 2014</span> - MobiSys 2014 Call for Participation is announced. <a href="participation.php">More details...</a></li>
+				<li><span class="date">10 April 2014</span> - Registration for MobiSys 2014 is open now. <a href="reg.php">More details...</a></li>
+				<li><span class="date">10 April 2014</span> - Preliminary program is posted. <a href="program.php">More details...</a></li>
+				<li><span class="date">9 April 2014</span> - Information for registration is posted. <a href="reg.php">More details...</a></li>
+				<li><span class="date">20 Mar 2014</span> - The MARS workshop changed the title to: Mobile Augmented Reality and Robotic Technology-Based Systems.</li>
+				<li><span class="date">27 Feb 2014</span> - Call for Student Travel Grant Application is announced. <a href="grant.php">More details...</a></li>
+				<li><span class="date">24 Feb 2014</span> - Call for Videos is announced. <a href="cfvideo.php">More details...</a></li>
+				<li><span class="date">19 Feb 2014</span> - Call for Posters and Demos is announced. <a href="cfdemos.php">More details...</a></li>
+				<li><span class="date">6 Feb 2014</span> - The MCS 2014 workshop website goes live. <a href="workshops.php">More details...</a></li>
+				<li><span class="date">1 Feb 2014</span> - The Physical Analytics workshop website goes live. <a href="workshops.php">More details...</a></li>
+				<li><span class="date">14 Jan 2014</span> - The MARS workshop website goes live. <a href="workshops.php">More details...</a></li>
+				<li><span class="date">19 Nov 2013</span> - The PhD Forum website goes live. <a href="workshops.php">More details...</a></li>
+				<li><span class="date">9 Nov 2013</span> - The Submission website is open. <a href="submission.php">More details...</a></li>
+				<li><span class="date">6 Sep 2013</span> - Call for Workshop Propsals is announced. <a href="cfws.php">More details...</a></li>
+				<li><span class="date">4 Sep 2013</span> - Call for Papers is ready for download. <a href="cfp.php">More details...</a></li>
+				<li><span class="date">27 Aug 2013</span> - MobiSys 2014 webpage goes live. </li>
+			
+			</ul>
+		</div>
+    </div>
+
+    <footer >
+    	<section class="sponsors">
+    		<h3></h3>
+
+			<ul class="clearfix">
+    		 <li>
+    		    <h2>Sponsors: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				    <a href="http://www.acm.org/"><img alt="ACM" src="images/acm.jpg" style="height: 65px;" /></a>&nbsp;&nbsp;
+						<a href="http://www.sigmobile.org/"><img alt="SIGMobile" src="images/sigmobile.jpg" style="height: 65px;"/></a>&nbsp;&nbsp;
+						</h2>
+				
+						<h2>Silver Supporters: &nbsp;&nbsp;&nbsp;
+					  <a href="http://www.facebook.com"><img alt="Facebook" src="images/facebook.jpg" style="height: 45px;"/></a>&nbsp;&nbsp;&nbsp;
+						<a href="http://www.google.com"><img alt="Google" src="images/google.jpg" style="height: 40px;"/></a>&nbsp;
+			      <a href="http://www.htc.com"><img alt="HTC" src="images/htc.png" style="height: 40px;"/></a>&nbsp;&nbsp;
+						<a href="http://www.intel.com"><img alt="Intel" src="images/intel.jpg" style="height: 45px;"/></a>&nbsp;
+						</h2>
+						
+						<h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<a href="http://research.microsoft.com"><img alt="Microsoft" src="images/microsoft_logo.jpg" style="height:80px;"/></a>&nbsp;
+						<a href="http://www.nokia.com"><img alt="Nokia" src="images/nokia1.png" style="height: 40px"/></a>&nbsp;&nbsp;
+						</h2>
+			  
+						<h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<a href="http://www.telefonica.com"><img alt="Telefornica" src="images/telefornica.gif" style="height: 40px;"/></a>&nbsp;&nbsp;
+						</h2>
+
+			      <h2>Bronze Supporters: &nbsp;
+			      <a href="http://www.brocade.com/"><img
+						alt="brocade" src="images/brocade.png" style="height: 75px;"/></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<a href="http://http://www.ibm.com/"><img
+						alt="IBM_Research" src="images/ibm.png" style="height: 43px;"/></a>
+						</h2>
+						<h2>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<a href="
+						http://www.ists.dartmouth.edu/"><img
+						alt="ISTS" src="images/ists.jpg" style="height: 48px;"/></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<a href="
+						http://www.hp.com/"><img
+						alt="hp" src="images/hp-logo.jpeg" style="height: 56px" /></a>&nbsp;
+						</h2>
+			  		<h2>Travel Grant Supporter: &nbsp;&nbsp;&nbsp;
+						<a href="http://www.nsf.gov/"><img alt="NSF" src="images/NSF.png" style="height: 65px;"/></a>&nbsp;	
+						</h2>
+						<h2>Travel Partner: &nbsp;&nbsp;&nbsp;
+						<a href="http://www.zimride.com/"><img alt="zimride" src="images/zimride.jpg" style="height: 50px;"/></a>&nbsp;	
+						</h2>
+						<h2>Locally Organized by: &nbsp;&nbsp;&nbsp;
+						<a href="http://cs.dartmouth.edu"><img alt="Dartmouth" src="images/dartmouth.png" style="height: 36px;"/></a>&nbsp;	
+						</h2>
+				</li>
+			    
+    		   	
+			</ul>
+			<br/>
+			<p style="text-align:center">For general inquiries about MobiSys2014, please contact <a href="mailto:mobisys14chairs@sigmobile.org">mobisys14chairs@sigmobile.org</a>.</p> 
+			<br/>
+    	</section>
+    	
+
+			
+		<section id="lowerFooter" class="clearfix">
+			<nav class="clearfix"> 
+			<a href="index.php" class="selected">HOME</a>
+			<a href="org.php" >ORGANIZERS</a>
+	 		<a href="program.php" >PROGRAM</a>
+			<a href="cfp.php" >CFP</a>
+			<a href="reg.php" >REGISTRATION</a>
+			<a href="venue.php" >VENUE / HOTEL</a>
+			</nav>
+		</section>
+    	
+
+    </footer>
+  </div> <!--! end of #container -->
+
+
+  <!-- JavaScript at the bottom for fast page loading -->
+
+  <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/libs/jquery-1.6.2.min.js"><\/script>')</script>
+
+
+  <!-- scripts concatenated and minified via ant build script-->
+  <script defer src="js/plugins.js"></script>
+  <script defer src="js/script.js"></script>
+
+  
+  <!-- end scripts-->
+
+		
+  <!-- Change UA-XXXXX-X to be your site's ID -->
+  <script>
+    window._gaq = [['_setAccount','UA-15305295-3'],['_trackPageview'],['_trackPageLoadTime']];
+    Modernizr.load({
+      load: ('https:' == location.protocol ? '//ssl' : '//www') + '.google-analytics.com/ga.js'
+    });
+  </script>
+  
+	
+
+
+  <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you want to support IE 6.
+       chromium.org/developers/how-tos/chrome-frame-getting-started -->
+  <!--[if lt IE 7 ]>
+    <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
+    <script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
+  <![endif]-->
+  
+</body>
+</html>

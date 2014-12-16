@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="utf-8" />
+<title>Web Search and Data Mining (WSDM) 2012</title>
+<script type="text/javascript"> 
+ 
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-3116463-8']);
+  _gaq.push(['_trackPageview']);
+ 
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+ 
+</script> 
+<link rel="stylesheet" href="/css/reset.css" /> 
+<link rel="stylesheet" href="/css/text.css" /> 
+<link rel="stylesheet" href="/css/960.css" /> 
+<link rel="stylesheet" href="/css/accordionImageMenu.css" type="text/css" />
+<link rel="stylesheet" href="/css/wsdm.css" /> 
+<script type="text/javascript"
+src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script type="text/javascript" src="/js/jquery-ui.js"></script>
+<script type="text/javascript" src="/js/accordionImageMenu.js"></script>
+<script type="text/javascript"> 
+$(document).ready(function() {
+	
+$("ul#topnav li").hover(function() { //Hover over event on list item
+	$(this).css({ 'background' : '#003264 url(topnav_active.gif) repeat-x'}); //Add background color + image on hovered list item
+	$(this).find("span").show(); //Show the subnav
+} , function() { //on hover out...
+	$(this).css({ 'background' : 'none'}); //Ditch the background
+	$(this).find("span").hide(); //Hide the subnav
+});
+	
+});
+
+$(document).ready(function() {
+	$('#acc-menu2').AccordionImageMenu({
+	  'border' : 1,
+	  'duration': 400,
+	  'openDim': 200,
+	  'closeDim': 60,
+          'position': 'vertical',
+	  'effect': 'easeOutQuint',
+	  'fadeInTitle': false,
+         'width':450,
+	});
+});
+</script> 
+</head> 
+<body> 
+  <div id="main-nav">
+  <div class="container_12"> 
+      <div class="grid_12"> 
+	<table id="Table_01" width="940" height="300" border="0" cellpadding="0" cellspacing="0">
+	  <tr>
+	    <td colspan="2">
+	      <img src="/img/topheader.png?1312770667" width="940" height="246" alt=""></td>
+	  </tr>
+	  <tr>
+	    <td>
+	      <img src="/img/bottomheader.png?1312770667" width="163" height="54" alt=""></td>
+	    <td width="777" height="54" bgcolor="#003264">
+	      <ul id="topnav"> 
+		<li><a href="http://www.wsdm2012.org">Home &nbsp;&nbsp;&nbsp;&nbsp;</a></li> 
+		<li> 
+		  <a href="#">About &nbsp;&nbsp;&nbsp;&nbsp;</a> 
+		  <span> 
+                    <a href="/about/wsdm.html">The WSDM Conference</a> |
+                    <a href="/about/seattle.html">Seattle</a> |
+                    <a href="/about/oc.html">Organizing Committee</a> |
+                    <a href="/about/pc.html">Program Committee</a> |
+                    <a href="/about/ethics.html">Ethics and COI</a>
+		  </span> 
+		</li> 
+		<li> 
+		  <a href="#">Authors &nbsp;&nbsp;&nbsp;&nbsp;</a> 
+		  <span> 
+		    <a href="/authors/paperscfp.html">Papers CFP</a> |
+		    <a href="/authors/tutorialscfp.html">Tutorials CFP</a> |
+		    <a href="/authors/workshopcfp.html">Workshops CFP</a> |
+		    <a href="/authors/doccon.html">Doctoral Consortium CFP</a> |
+		    <a href="/authors/paperinst.html">Paper instructions</a>
+		    <!-- <a href="/authors/posterinst.html">Poster instructions</a>-->
+		  </span> 
+		</li> 
+		<li> 
+		  <a href="#">Attendees &nbsp;&nbsp;&nbsp;&nbsp;</a> 
+		  <span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		    <a href="/attend/registration.html">Registration</a> |
+		    <a href="/attend/studentgrants.html">Travel grants</a> |
+		    <a href="/attend/venue.html">Venue and hotel</a> |
+		    <a href="/attend/transportation.html">Travel information</a> |
+		    <a href="/attend/registration.html#visa">Visas</a>
+		    <!-- <a href="/attend/cfpart.html">Call for participation</a>--> 
+		  </span> 
+		</li>
+		<li> 
+		  <a href="#">Program &nbsp;&nbsp;&nbsp;&nbsp;</a> 
+		  <span> 
+		    <a href="/program/overview.html">Overview</a> |
+		    <a href="/program/detailed.html">Detailed program</a> |
+		    <a href="/program/keynotes.html">Keynotes</a> |
+		    <a href="/program/tutorials.html">Tutorials</a> |
+		    <a href="/program/workshops.html">Workshops</a> | 
+		    <a href="/program/doccon.html">Doctoral Consortium</a>
+		  </span> 
+		</li>
+		<li> 
+		  <a href="#">Sponsors &nbsp;&nbsp;&nbsp;&nbsp;</a> 
+		  <span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		    <a href="/sponsors/sponsors.html">Sponsoring WSDM</a> |
+		    <a href="/sponsors/exhibit.html">Exhibiting</a> |
+		    <!-- <a href="/sponsors/list.html">Sponsors list</a> -->
+		  </span> 
+		</li>
+		<li><a href="/about/contactus.html">Contact Us</a></li> 
+	      </ul>
+	  </tr>
+	</table>
+      </div>
+    </div>
+  </div>
+
+  <div class="container_12"> 
+    <div class="clear"></div>
+
+<div class="grid_6">
+<div id="main-body"><center>
+<!-- P style="color: red;">Last day of regular registration is 1/31/2012.
+After that, it switches to late/onsite.  Please <A HREF="/attend/registration.html">register now</A> to take
+advantage of the regular rates.</P -->
+	<h5>WSDM 2012</h5>
+	<p>WSDM (pronounced "wisdom") is the premier international ACM conference covering research in the areas of search and data mining on the Web. The Fifth ACM WSDM Conference will take place in Seattle, Washington, USA during February 8-12, 2012.</p>
+	
+	<p>WSDM publishes original, high quality papers and presentations related to search and data mining on the Web and the Social Web, with an emphasis on practical but principled novel models of search, retrieval and data mining, algorithm design and analysis, economic implications, and in-depth experimental analysis of accuracy and performance.</p>
+	
+	<P>WSDM 2012 is a highly selective, single track meeting that includes invited talks as well as oral and poster presentations of refereed papers.</p>
+
+	  <h5>Breaking News</h5>
+	  <P><B>February 10, 2012</B> - The reception tonight will be
+	  at the Space Needle.  You can use your WSDM badge to ride
+	  the monorail to the Needle and then to get to the top.
+	  You're welcome to wander the top floor but the reception is
+	  at the SkyLine Level (both are free with your badge)</P>
+	  <P><B>February 9, 2012</B> - We are pleased to announce
+	  that Adam Sadilek, Henry Kautz and Jeffrey Bigham won the
+	  Best Paper Award for their paper "Finding Your Friends and
+	  Following Them to Where You Are" and Yaron Singer for his
+	  Best Student Paper Award for "How to Win Friends and Influence People, Truthfully: Influence Maximization Mechanisms for Social Networks."</P>
+	  <P><B>February 5, 2012</B> - For those of you starting to
+	  travel into town, we've updated the <A
+	  HREF="/attend/transportation.html">transportation</A> and <A
+	  HREF="/about/seattle.html">local information</A> pages.</P>
+	  <P><B>February 3, 2012</B> - Specifics about the
+	  registration desk have been posted on the <A
+	  HREF="/program/detailed.html">detailed program page</A>.
+	  You can also find a printable (PDF) version of the program
+	  <A HREF="/printable_program.pdf">here</A>.</P>
+	  <P><B>January 31, 2012</B> - One more week until the conference! A complete program (with 5 best paper nominees!) is now <A HREF="/program/detailed.html">available</A>.  We have all kinds of new social events scheduled on Wednesday and Friday. Please <A HREF="/attend/registration.html">register today</A> to take advantage of the regular rates.</P>
+	  <P><B>October 27, 2011</B> - We are delighted to announce that our keynote speakers will be Hal Varian, Chief Economist at Google, and Hilary Mason, Chief Scientist at bitly</P>
+	  <P><B>October 26, 2011</B> - 75 papers have been accepted (of 362 submissions, an acceptance rate of 20.7%)</p>
+	  
+	  <div id="acc-menu2"><a href="/about/seattle.html">
+	      <span>Venue</span> 
+              <img title="Grand Hyatt" src="img/accord4.png" alt="" width="450" height="200" /></a><br/><a href="/about/seattle.html">
+	      <span>Nature</span><img title="Rainier" src="img/accord2.png" alt="" width="450" height="200"/></a><br/> <a href="/about/seattle.html">
+	      <span>Seattle</span><img  title="Skyline" src="img/accord3.png" alt="" width="450" height="200" /></a><br/> <a href="/about/seattle.html">
+	      <span>Local</span><img  title="Market" src="img/accord1.png" alt="" width="450" height="200" /></a></div></center>
+	
+	<BR><BR>
+
+</div></div>	
+        <div class="grid_3">
+     <div id="sponsorbar">
+       <h5>Platinum Sponsors</h5>
+      <A HREF="http://research.microsoft.com/"><IMG SRC="img/MSResearch.jpg" ALT="Microsoft Research"></A>
+       <BR>
+      <A HREF="http://labs.ebay.com/"><IMG SRC="img/ebay.jpg" ALT="eBay"></A>
+<BR>
+       <h5>Gold Sponsors</h5>
+     <A HREF="http://labs.yahoo.com/"><IMG SRC="img/yahoo.jpg" ALT="Yahoo!"></A>
+      <BR>
+     <A HREF="http://www.google.com/"><IMG SRC="img/googlelogo.png" ALT="Google"></A>
+     <BR>
+       <h5>Silver Sponsors</h5>
+     <A HREF="http://www.adobe.com/"><IMG SRC="img/adobe_logo.png" ALT="Adobe"></A>
+      <BR><BR>
+     <A HREF="http://www.amazon.com/"><IMG SRC="img/amazon_logo.png" ALT="Amazon"></A>
+     <BR>
+      <h5>Bronze Sponsors</h5>
+      <A HREF="http://www.surfcanyon.com/"><IMG SRC="img/SurfCanyon.jpg" ALT="Surf Canyon"></A>
+      <BR>
+      <A HREF="http://www.yandex.com"><IMG SRC="img/yandexlogo.png" ALT="Yandex"></A>
+       <BR><BR>
+      <h5>SIG Sponsors</H5>
+      <IMG SRC="img/sponsors_web.png">
+
+
+
+      </div>
+    </div>
+    <div class="grid_3">
+      <div id="sidebar">
+        <h5>Quick links</h5>
+	<UL>
+	  <LI><A HREF="/attend/registration.html">Registration</A></LI>
+	  <LI><A HREF="/program/workshops.html">Workshops</A></LI>
+	  <LI><A HREF="/program/tutorials.html">Tutorials</A></LI>
+          <LI><A HREF="/program/detailed.html">Program</A> (<A HREF="/printable_program.pdf">PDF</A>)</LI>
+	  <LI><A HREF="/attend/transportation.html">Travel Information</A></LI>
+	  <LI><A HREF="/attend/venue.html">Venue</A></LI>
+	  <LI><A HREF="/about/seattle.html">Local Info (to do/see/eat)</A></LI>
+	</UL>
+	
+        <h5>Key dates</h5>
+	<UL>
+	  <LI style="text-decoration: line-through; color: gray;">Jul. 1, 2011 - Workshop proposals due</li>
+	  <LI  style="text-decoration: line-through; color: gray;">Aug. 1, 2011 - Workshop notifications</li>
+	  <LI style="text-decoration: line-through; color: gray;">Aug. 4, 2011 - Paper abstracts due</li>
+	  <LI  style="text-decoration: line-through; color: gray;">Aug. 11, 2011 - Papers due</LI>
+	  <LI   style="text-decoration: line-through; color: gray;">Sep. 1, 2011 - Tutorial proposals due</LI>
+	  <LI    style="text-decoration: line-through; color: gray;">Sep. 16, 2011 - Doctoral Consortium submissions due</LI>
+	  <LI    style="text-decoration: line-through; color: gray;">Oct. 15, 2011 - Tutorial notifications</LI>
+	  <LI    style="text-decoration: line-through; color: gray;">Oct. 26, 2011 - Paper notifications</LI>
+	  <LI    style="text-decoration: line-through; color: gray;">Oct. 26, 2011 - Doctoral consoritum notifications</LI>
+	  <LI     style="text-decoration: line-through; color: gray;">Nov. 1, 2011 - Tutorial camera ready</LI>
+          <LI    style="text-decoration: line-through; color: gray;">Dec. 5, 2011 - WSCD Workshop papers due</LI> 
+	  <LI     style="text-decoration: line-through; color: gray;">Dec. 7, 2011 - Camera ready deadline (Accepted papers and Doctoral Consortium)</LI>
+	  <LI     style="text-decoration: line-through; color: gray;"> Dec. 12, 2011 - DDR Workshop papers due</LI>
+	  <LI     style="text-decoration: line-through; color: gray;">Jan. 31, 2012 - Regular Registration Deadline</LI>
+	  <LI>Feb. 8, 2012 - Conference begins</LI>
+	</UL>
+	
+	<h5>Follow us</h5>
+	<p><A
+	      HREF="http://www.facebook.com/pages/WSDM-2012/181632515191560"><IMG SRC="/img/facebook-32.png"></A> <A HREF="http://twitter.com/wsdm2012"><IMG SRC="/img/twitter-32.png"></A></p>
+	<BR>
+	<script src="http://widgets.twimg.com/j/2/widget.js"></script>
+	<script>
+	  new TWTR.Widget({
+	  version: 2,
+	  type: 'search',
+	  search: 'wsdm2012',
+	  interval: 6000,
+	    title: 'wsdm2012',
+	    subject: '',
+	    width: 'auto',
+	    height: 300,
+	    theme: {
+	    shell: {
+	    background: '#640000',
+	    color: '#ffffff'
+	    },
+	    tweets: {
+	    background: '#ffffff',
+	    color: '#444444',
+	    links: '#1985b5'
+	    }
+	    },
+	    features: {
+	    scrollbar: false,
+	    loop: true,
+	    live: true,
+	    hashtags: true,
+	    timestamp: true,
+	    avatars: true,
+	    toptweets: true,
+	    behavior: 'default'
+	    }
+	    }).render().start();
+	</script>
+	<BR><BR>
+      </div>
+    </div>
+  </div>
+	  
+  <div id="footer">
+    <div class="container_12">
+      <div class="grid_9">
+	<BR>
+	<h5>&nbsp;</h5>
+      </div>
+      <div class="grid_3">
+	<BR>
+	<h5>&nbsp;</h5>
+      </div>
+    </div>
+  </div>
+
+  <!-- end .container_16 --> 
+</body> 
+</html>
